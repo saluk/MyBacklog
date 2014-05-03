@@ -25,8 +25,8 @@ class Game:
     def hours_minutes(self):
         s = self.playtime
         min = s/60.0
-        hour = min/60.0
-        min = min-int(hour)*60.0
+        hour = int(min/60.0)
+        min = min-hour*60.0
         return hour,min
     @property
     def gameid(self):
