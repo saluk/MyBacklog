@@ -9,7 +9,9 @@ from PyQt5.QtWidgets import *
  
 class Form(QWidget):
     def __init__(self, parent=None):
-        self.games = []
+        self.games = data.Games()
+        self.games.load("games.json")
+        self.gamelist = []
         
         super(Form, self).__init__(parent)
  
@@ -22,11 +24,10 @@ class Form(QWidget):
 
         self.game_scroller = QScrollArea()
         self.game_scroller.setWidgetResizable(True)
-        self.game_scroller.setFixedHeight(400)
-        self.game_scroller.setFixedWidth(600)
+        #self.game_scroller.setFixedHeight(400)
+        #self.game_scroller.setFixedWidth(600)
         self.game_scroller.setWidget(self.games_list_widget)
         buttonLayout1.addWidget(self.game_scroller)
-        #self.games_list_widget.setFixedHeight(400)
         
         self.import_steam_button = QPushButton("Import Steam")
         buttonLayout1.addWidget(self.import_steam_button)
@@ -52,9 +53,10 @@ class Form(QWidget):
             #~ QMessageBox.information(self, "Success!",
                                     #~ "Hello \"%s\"!" % name)
     def update_gamelist_widget(self):
+        self.gamelist = self.games.list()
         while not self.games_list_widget_layout.isEmpty():
             self.games_list_widget_layout.removeWidget(self.games_list_widget_layout.itemAt(0))
-        for g in self.games:
+        for g in self.gamelist:
             w = QWidget()
             box = QHBoxLayout()
             w.setLayout(box)
@@ -69,8 +71,10 @@ class Form(QWidget):
         self.game_scroller.verticalScrollBar().setValue(0)
         self.update()
     def import_steam(self):
-        self.games = steamapi.import_steam()
+        games = steamapi.import_steam()
+        self.games.add_games(games)
         self.update_gamelist_widget()
+        self.games.save("games.json")
     def run_game(self,game):
         print ("run game",game.name,game.gameid)
         if game.source=="steam":

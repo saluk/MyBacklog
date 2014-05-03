@@ -40,7 +40,7 @@ def import_steam(userid=MY_STEAM_ID):
         set_finished = 0
         if g in is_finished:
             set_finished = 1
-        library.append(data.Game(name=g["name"],minutes=g["playtime_forever"],finished=set_finished,source="steam",gameid=g["appid"]))
+        library.append(data.Game(name=g["name"],minutes=g["playtime_forever"],finished=set_finished,source="steam",steamid=g["appid"]))
     return library
 
 if __name__=="__main__":
