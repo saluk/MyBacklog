@@ -100,7 +100,7 @@
     "steam_11140": {
         "finished": 1, 
         "name": "Sherlock Holmes: The Awakened - Remastered", 
-        "playtime": 0.0, 
+        "playtime": 36000.0, 
         "source": "steam", 
         "steamid": 11140
     }, 
@@ -205,7 +205,7 @@
     "steam_12110": {
         "finished": 1, 
         "name": "Grand Theft Auto: Vice City", 
-        "playtime": 0.0, 
+        "playtime": 108000, 
         "source": "steam", 
         "steamid": 12110
     }, 
@@ -527,7 +527,7 @@
     "steam_17410": {
         "finished": 1, 
         "name": "Mirror's Edge", 
-        "playtime": 0.0, 
+        "playtime": 25200.0, 
         "source": "steam", 
         "steamid": 17410
     }, 
@@ -765,7 +765,7 @@
     "steam_20530": {
         "finished": 1, 
         "name": "Red Faction", 
-        "playtime": 0.0, 
+        "playtime": 23400.0, 
         "source": "steam", 
         "steamid": 20530
     }, 
