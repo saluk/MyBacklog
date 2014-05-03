@@ -64,6 +64,9 @@ class Form(QWidget):
             label = QLabel(g.name)
             box.addWidget(label)
             
+            label = QLabel("%.2d:%.2d"%g.hours_minutes)
+            box.addWidget(label)
+            
             run = QPushButton("play")
             box.addWidget(run)
             run.clicked.connect(self.make_callback(g))
