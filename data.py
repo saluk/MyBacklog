@@ -74,4 +74,4 @@ class Games:
             cur_game.finished = 1
     def list(self):
         v = self.games.values()
-        return v
+        return sorted(v,key=lambda g:(g.finished,g.name))

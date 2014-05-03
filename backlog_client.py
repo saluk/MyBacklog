@@ -61,11 +61,16 @@ class Form(QWidget):
             box = QHBoxLayout()
             w.setLayout(box)
             
+            if g.finished:
+                w.setStyleSheet("QWidget {background-color: green}")
+            
             label = QLabel(g.name)
             box.addWidget(label)
             
             label = QLabel("%.2d:%.2d"%g.hours_minutes)
             box.addWidget(label)
+            if g.playtime < 500:
+                label.setStyleSheet("QWidget {background-color: red}")
             
             run = QPushButton("play")
             box.addWidget(run)
