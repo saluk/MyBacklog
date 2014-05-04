@@ -5,14 +5,16 @@ from datetime import timedelta
 import json
 
 class Game:
-    args = [("name","s"),("playtime","f"),("finished","i"),("source","s")]
+    args = [("name","s"),("playtime","f"),("finished","i"),("source","s"),("hidden","i")]
     source_args = {"steam":[("steamid","i")],"gog":[("gogid","s"),("install_path","s")]}
     def __init__(self,**kwargs):
         dontsavekeys = set(dir(self))
         self.name = ""
         self.playtime = 0
         self.finished = 0
+        self.hidden = 0
         self.source = "steam"
+        
         self.steamid = ""
         self.gogid = ""
         self.install_path = ""
