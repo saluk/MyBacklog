@@ -29,6 +29,16 @@
         "source": "gog", 
         "steamid": ""
     }, 
+    "gog_pod_gold": {
+        "finished": 0, 
+        "gogid": "pod_gold", 
+        "hidden": 0, 
+        "install_path": "C:\\GOG Games\\POD GOLD\\Launch POD GOLD.lnk", 
+        "name": "Pod", 
+        "playtime": 431.2725441455841, 
+        "source": "gog", 
+        "steamid": ""
+    }, 
     "steam_102500": {
         "finished": 0, 
         "gogid": "", 

@@ -41,6 +41,8 @@ class Game:
     def gameid(self):
         if self.source == "steam":
             return "steam_%s"%self.steamid
+        elif self.source == "gog":
+            return "gog_%s"%self.gogid
         return "ERROR"
     def dict(self):
         d = {}
@@ -81,6 +83,7 @@ class Games:
             cur_game.playtime = game.playtime
         if game.finished:
             cur_game.finished = 1
+        return game
     def list(self):
         v = self.games.values()
         return sorted(v,key=lambda g:(g.finished,g.name))
