@@ -12,6 +12,8 @@ class Game:
         self.finished = 0
         self.source = "steam"
         self.steamid = ""
+        self.gogid = ""
+        self.install_path = ""
         self.savekeys = set(dir(self)) - dontsavekeys
         for k in kwargs:
             if hasattr(self,k):

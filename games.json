@@ -1,6 +1,26 @@
 {
+    "gog_atlantis2_beyond_atlantis": {
+        "finished": 0, 
+        "gogid": "atlantis2_beyond_atlantis", 
+        "install_path": "C:\\GOG Games\\Atlantis2\\atlantis2.exe", 
+        "name": "Atlantis 2: Beyond Atlantis", 
+        "playtime": 500.8468236923218, 
+        "source": "gog", 
+        "steamid": ""
+    }, 
+    "gog_atlantis_the_lost_tales": {
+        "finished": 1, 
+        "gogid": "atlantis_the_lost_tales", 
+        "install_path": "C:\\GOG Games\\Atlantis - The Lost Tales\\Launch Atlantis - The Lost Tales.lnk", 
+        "name": "Atlantis: The Lost Tales", 
+        "playtime": 33304.03, 
+        "source": "gog", 
+        "steamid": ""
+    }, 
     "steam_102500": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Kingdoms of Amalur: Reckoning\u2122", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -8,6 +28,8 @@
     }, 
     "steam_104100": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Inside a Star-filled Sky ", 
         "playtime": 600.0, 
         "source": "steam", 
@@ -15,6 +37,8 @@
     }, 
     "steam_105100": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Lume", 
         "playtime": 25320.0, 
         "source": "steam", 
@@ -22,6 +46,8 @@
     }, 
     "steam_105600": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Terraria", 
         "playtime": 17580.0, 
         "source": "steam", 
@@ -29,6 +55,8 @@
     }, 
     "steam_105800": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "PixelJunk Eden", 
         "playtime": 780.0, 
         "source": "steam", 
@@ -36,6 +64,8 @@
     }, 
     "steam_107100": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Bastion", 
         "playtime": 15840.0, 
         "source": "steam", 
@@ -43,6 +73,8 @@
     }, 
     "steam_107200": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Space Pirates and Zombies", 
         "playtime": 2580.0, 
         "source": "steam", 
@@ -50,6 +82,8 @@
     }, 
     "steam_107300": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Breath of Death VII ", 
         "playtime": 20280.0, 
         "source": "steam", 
@@ -57,6 +91,8 @@
     }, 
     "steam_107310": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Cthulhu Saves the World ", 
         "playtime": 780.0, 
         "source": "steam", 
@@ -64,6 +100,8 @@
     }, 
     "steam_107410": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Arma 3", 
         "playtime": 13200.0, 
         "source": "steam", 
@@ -71,6 +109,8 @@
     }, 
     "steam_108800": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Crysis 2 Maximum Edition", 
         "playtime": 6840.0, 
         "source": "steam", 
@@ -78,6 +118,8 @@
     }, 
     "steam_11040": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Sherlock Holmes: Nemesis", 
         "playtime": 53100.0, 
         "source": "steam", 
@@ -85,6 +127,8 @@
     }, 
     "steam_110800": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "L.A. Noire", 
         "playtime": 146160.0, 
         "source": "steam", 
@@ -92,6 +136,8 @@
     }, 
     "steam_11130": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Sherlock Holmes: The Mystery of The Mummy", 
         "playtime": 19560.0, 
         "source": "steam", 
@@ -99,6 +145,8 @@
     }, 
     "steam_11140": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Sherlock Holmes: The Awakened - Remastered", 
         "playtime": 36000.0, 
         "source": "steam", 
@@ -106,6 +154,8 @@
     }, 
     "steam_11150": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Sherlock Holmes: The Secret of the Silver Earring", 
         "playtime": 31860.0, 
         "source": "steam", 
@@ -113,6 +163,8 @@
     }, 
     "steam_11180": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Sherlock Holmes: The Mystery of The Persian Carpet", 
         "playtime": 13380.0, 
         "source": "steam", 
@@ -120,6 +172,8 @@
     }, 
     "steam_111800": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Blocks That Matter", 
         "playtime": 2520.0, 
         "source": "steam", 
@@ -127,6 +181,8 @@
     }, 
     "steam_11190": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Sherlock Holmes versus Jack the Ripper", 
         "playtime": 21780.0, 
         "source": "steam", 
@@ -134,6 +190,8 @@
     }, 
     "steam_11200": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Shadowgrounds: Survivor", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -141,6 +199,8 @@
     }, 
     "steam_112100": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Avadon: The Black Fortress", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -148,6 +208,8 @@
     }, 
     "steam_113020": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Monaco", 
         "playtime": 2040.0, 
         "source": "steam", 
@@ -155,6 +217,8 @@
     }, 
     "steam_113200": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Binding of Isaac", 
         "playtime": 6840.0, 
         "source": "steam", 
@@ -162,6 +226,8 @@
     }, 
     "steam_11420": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Clive Barker's Jericho", 
         "playtime": 5340.0, 
         "source": "steam", 
@@ -169,6 +235,8 @@
     }, 
     "steam_11450": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Overlord", 
         "playtime": 30540.0, 
         "source": "steam", 
@@ -176,6 +244,8 @@
     }, 
     "steam_115100": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Costume Quest", 
         "playtime": 12240.0, 
         "source": "steam", 
@@ -183,6 +253,8 @@
     }, 
     "steam_115110": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Stacking", 
         "playtime": 1320.0, 
         "source": "steam", 
@@ -190,6 +262,8 @@
     }, 
     "steam_115120": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Iron Brigade", 
         "playtime": 1320.0, 
         "source": "steam", 
@@ -197,6 +271,8 @@
     }, 
     "steam_12100": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Grand Theft Auto III", 
         "playtime": 11580.0, 
         "source": "steam", 
@@ -204,6 +280,8 @@
     }, 
     "steam_12110": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Grand Theft Auto: Vice City", 
         "playtime": 108000, 
         "source": "steam", 
@@ -211,6 +289,8 @@
     }, 
     "steam_12120": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Grand Theft Auto: San Andreas", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -218,6 +298,8 @@
     }, 
     "steam_12130": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Manhunt", 
         "playtime": 1560.0, 
         "source": "steam", 
@@ -225,6 +307,8 @@
     }, 
     "steam_12140": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Max Payne", 
         "playtime": 30120.0, 
         "source": "steam", 
@@ -232,6 +316,8 @@
     }, 
     "steam_12150": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Max Payne 2: The Fall of Max Payne", 
         "playtime": 24300.0, 
         "source": "steam", 
@@ -239,6 +325,8 @@
     }, 
     "steam_12160": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Midnight Club II", 
         "playtime": 1260.0, 
         "source": "steam", 
@@ -246,6 +334,8 @@
     }, 
     "steam_12170": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Grand Theft Auto", 
         "playtime": 1560.0, 
         "source": "steam", 
@@ -253,6 +343,8 @@
     }, 
     "steam_12180": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Grand Theft Auto 2", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -260,6 +352,8 @@
     }, 
     "steam_12190": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Wild Metal Country", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -267,6 +361,8 @@
     }, 
     "steam_12200": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Bully: Scholarship Edition", 
         "playtime": 1680.0, 
         "source": "steam", 
@@ -274,6 +370,8 @@
     }, 
     "steam_12210": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Grand Theft Auto IV", 
         "playtime": 35640.0, 
         "source": "steam", 
@@ -281,6 +379,8 @@
     }, 
     "steam_12220": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Grand Theft Auto: Episodes from Liberty City", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -288,6 +388,8 @@
     }, 
     "steam_12230": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Grand Theft Auto III", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -295,6 +397,8 @@
     }, 
     "steam_12240": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Grand Theft Auto: Vice City", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -302,6 +406,8 @@
     }, 
     "steam_12250": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Grand Theft Auto: San Andreas", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -309,6 +415,8 @@
     }, 
     "steam_12310": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Culpa Innata", 
         "playtime": 72060.0, 
         "source": "steam", 
@@ -316,6 +424,8 @@
     }, 
     "steam_12320": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Sacred Gold", 
         "playtime": 6060.0, 
         "source": "steam", 
@@ -323,6 +433,8 @@
     }, 
     "steam_12340": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Jack Keane", 
         "playtime": 75720.0, 
         "source": "steam", 
@@ -330,6 +442,8 @@
     }, 
     "steam_12710": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Overlord: Raising Hell", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -337,6 +451,8 @@
     }, 
     "steam_12810": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Overlord II", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -344,6 +460,8 @@
     }, 
     "steam_12840": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "DiRT 2", 
         "playtime": 780.0, 
         "source": "steam", 
@@ -351,6 +469,8 @@
     }, 
     "steam_130": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Half-Life: Blue Shift", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -358,6 +478,8 @@
     }, 
     "steam_13200": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Unreal II: The Awakening", 
         "playtime": 3600.0, 
         "source": "steam", 
@@ -365,6 +487,8 @@
     }, 
     "steam_13210": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Unreal Tournament 3: Black Edition", 
         "playtime": 8460.0, 
         "source": "steam", 
@@ -372,6 +496,8 @@
     }, 
     "steam_13230": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Unreal Tournament 2004", 
         "playtime": 4800.0, 
         "source": "steam", 
@@ -379,6 +505,8 @@
     }, 
     "steam_13240": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Unreal Tournament: Game of the Year Edition", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -386,6 +514,8 @@
     }, 
     "steam_13250": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Unreal Gold", 
         "playtime": 97140.0, 
         "source": "steam", 
@@ -393,6 +523,8 @@
     }, 
     "steam_13510": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tom Clancy's Ghost Recon: Advanced Warfighter 2", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -400,6 +532,8 @@
     }, 
     "steam_13560": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tom Clancy's Splinter Cell", 
         "playtime": 55320.0, 
         "source": "steam", 
@@ -407,6 +541,8 @@
     }, 
     "steam_13570": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tom Clancy's Splinter Cell: Chaos Theory", 
         "playtime": 10260.0, 
         "source": "steam", 
@@ -414,6 +550,8 @@
     }, 
     "steam_13580": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tom Clancy's Splinter Cell: Double Agent", 
         "playtime": 1260.0, 
         "source": "steam", 
@@ -421,6 +559,8 @@
     }, 
     "steam_13620": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tom Clancy's Ghost Recon: Desert Siege", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -428,6 +568,8 @@
     }, 
     "steam_13630": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tom Clancy's Ghost Recon: Island Thunder", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -435,6 +577,8 @@
     }, 
     "steam_13640": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tom Clancy's Ghost Recon: Advanced Warfighter", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -442,6 +586,8 @@
     }, 
     "steam_1500": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Darwinia", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -449,6 +595,8 @@
     }, 
     "steam_1510": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Uplink", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -456,6 +604,8 @@
     }, 
     "steam_15170": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Heroes of Might & Magic V", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -463,6 +613,8 @@
     }, 
     "steam_1520": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "DEFCON", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -470,6 +622,8 @@
     }, 
     "steam_1530": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Multiwinia", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -477,6 +631,8 @@
     }, 
     "steam_15300": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tom Clancy's Ghost Recon", 
         "playtime": 15480.0, 
         "source": "steam", 
@@ -484,6 +640,8 @@
     }, 
     "steam_15370": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Heroes of Might & Magic V: Tribes of the East", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -491,6 +649,8 @@
     }, 
     "steam_15380": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Heroes of Might & Magic V: Hammers of Fate", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -498,6 +658,8 @@
     }, 
     "steam_15560": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "AaaaaAAaaaAAAaaAAAAaAAAAA!!! for the Awesome", 
         "playtime": 720.0, 
         "source": "steam", 
@@ -505,6 +667,8 @@
     }, 
     "steam_17300": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Crysis", 
         "playtime": 7260.0, 
         "source": "steam", 
@@ -512,6 +676,8 @@
     }, 
     "steam_17330": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Crysis Warhead", 
         "playtime": 22380.0, 
         "source": "steam", 
@@ -519,6 +685,8 @@
     }, 
     "steam_17340": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Crysis Wars", 
         "playtime": 1080.0, 
         "source": "steam", 
@@ -526,6 +694,8 @@
     }, 
     "steam_17410": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Mirror's Edge", 
         "playtime": 25200.0, 
         "source": "steam", 
@@ -533,6 +703,8 @@
     }, 
     "steam_17450": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Dragon Age: Origins", 
         "playtime": 78120.0, 
         "source": "steam", 
@@ -540,6 +712,8 @@
     }, 
     "steam_18040": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "DeathSpank", 
         "playtime": 56940.0, 
         "source": "steam", 
@@ -547,6 +721,8 @@
     }, 
     "steam_18050": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "DeathSpank: Thongs Of Virtue", 
         "playtime": 18720.0, 
         "source": "steam", 
@@ -554,6 +730,8 @@
     }, 
     "steam_18070": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Baconing", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -561,6 +739,8 @@
     }, 
     "steam_18700": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "And Yet It Moves", 
         "playtime": 1920.0, 
         "source": "steam", 
@@ -568,6 +748,8 @@
     }, 
     "steam_19680": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Alice: Madness Returns", 
         "playtime": 22980.0, 
         "source": "steam", 
@@ -575,6 +757,8 @@
     }, 
     "steam_19900": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Far Cry 2", 
         "playtime": 61320.0, 
         "source": "steam", 
@@ -582,6 +766,8 @@
     }, 
     "steam_200260": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Batman: Arkham City GOTY", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -589,6 +775,8 @@
     }, 
     "steam_200510": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "XCOM: Enemy Unknown", 
         "playtime": 10980.0, 
         "source": "steam", 
@@ -596,6 +784,8 @@
     }, 
     "steam_200710": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Torchlight II", 
         "playtime": 4020.0, 
         "source": "steam", 
@@ -603,6 +793,8 @@
     }, 
     "steam_200900": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Cave Story+", 
         "playtime": 120.0, 
         "source": "steam", 
@@ -610,6 +802,8 @@
     }, 
     "steam_200960": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Geneforge 1", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -617,6 +811,8 @@
     }, 
     "steam_200980": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Geneforge 2", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -624,6 +820,8 @@
     }, 
     "steam_200990": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Geneforge 3", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -631,6 +829,8 @@
     }, 
     "steam_201000": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Geneforge 4", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -638,6 +838,8 @@
     }, 
     "steam_201010": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Geneforge 5", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -645,6 +847,8 @@
     }, 
     "steam_201280": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Deus Ex: Human Revolution - The Missing Link", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -652,6 +856,8 @@
     }, 
     "steam_201310": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "X3: Albion Prelude", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -659,6 +865,8 @@
     }, 
     "steam_201830": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Jurassic Park: The Game", 
         "playtime": 15780.0, 
         "source": "steam", 
@@ -666,6 +874,8 @@
     }, 
     "steam_201870": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Assassin's Creed Revelations", 
         "playtime": 83520.0, 
         "source": "steam", 
@@ -673,6 +883,8 @@
     }, 
     "steam_202090": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Magicka: Wizard Wars", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -680,6 +892,8 @@
     }, 
     "steam_202170": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Sleeping Dogs\u2122", 
         "playtime": 124200.0, 
         "source": "steam", 
@@ -687,6 +901,8 @@
     }, 
     "steam_202200": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Galactic Civilizations II: Ultimate Edition", 
         "playtime": 3480.0, 
         "source": "steam", 
@@ -694,6 +910,8 @@
     }, 
     "steam_203160": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tomb Raider", 
         "playtime": 17160.0, 
         "source": "steam", 
@@ -701,6 +919,8 @@
     }, 
     "steam_203770": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Crusader Kings II", 
         "playtime": 74400.0, 
         "source": "steam", 
@@ -708,6 +928,8 @@
     }, 
     "steam_204060": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Superbrothers: Sword & Sworcery EP", 
         "playtime": 12120.0, 
         "source": "steam", 
@@ -715,6 +937,8 @@
     }, 
     "steam_204100": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Max Payne 3", 
         "playtime": 39900.0, 
         "source": "steam", 
@@ -722,6 +946,8 @@
     }, 
     "steam_204240": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Bridge", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -729,6 +955,8 @@
     }, 
     "steam_204450": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Call of Juarez Gunslinger", 
         "playtime": 98400.0, 
         "source": "steam", 
@@ -736,6 +964,8 @@
     }, 
     "steam_204630": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Retro City Rampage\u2122", 
         "playtime": 2280.0, 
         "source": "steam", 
@@ -743,6 +973,8 @@
     }, 
     "steam_20500": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Red Faction: Guerrilla ", 
         "playtime": 33540.0, 
         "source": "steam", 
@@ -750,6 +982,8 @@
     }, 
     "steam_20510": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "S.T.A.L.K.E.R.: Clear Sky", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -757,6 +991,8 @@
     }, 
     "steam_205100": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Dishonored", 
         "playtime": 38880.0, 
         "source": "steam", 
@@ -764,6 +1000,8 @@
     }, 
     "steam_20530": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Red Faction", 
         "playtime": 23400.0, 
         "source": "steam", 
@@ -771,6 +1009,8 @@
     }, 
     "steam_20550": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Red Faction II", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -778,6 +1018,8 @@
     }, 
     "steam_205650": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Testament of Sherlock Holmes", 
         "playtime": 37680.0, 
         "source": "steam", 
@@ -785,6 +1027,8 @@
     }, 
     "steam_205790": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Dota 2 Test", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -792,6 +1036,8 @@
     }, 
     "steam_20710": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Mr. Robot", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -799,6 +1045,8 @@
     }, 
     "steam_207170": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Legend of Grimrock", 
         "playtime": 14400.0, 
         "source": "steam", 
@@ -806,6 +1054,8 @@
     }, 
     "steam_207320": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Ys: The Oath in Felghana", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -813,6 +1063,8 @@
     }, 
     "steam_207350": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Ys Origin", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -820,6 +1072,8 @@
     }, 
     "steam_207610": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Walking Dead", 
         "playtime": 48960.0, 
         "source": "steam", 
@@ -827,6 +1081,8 @@
     }, 
     "steam_20820": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Shatter", 
         "playtime": 6960.0, 
         "source": "steam", 
@@ -834,6 +1090,8 @@
     }, 
     "steam_208480": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Assassin\u2019s Creed\u00ae III", 
         "playtime": 260280.0, 
         "source": "steam", 
@@ -841,6 +1099,8 @@
     }, 
     "steam_208580": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Star Wars: Knights of the Old Republic II", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -848,6 +1108,8 @@
     }, 
     "steam_208600": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Lunar Flight", 
         "playtime": 3420.0, 
         "source": "steam", 
@@ -855,6 +1117,8 @@
     }, 
     "steam_208730": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Game of Thrones ", 
         "playtime": 3960.0, 
         "source": "steam", 
@@ -862,6 +1126,8 @@
     }, 
     "steam_20900": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Witcher: Enhanced Edition", 
         "playtime": 174420.0, 
         "source": "steam", 
@@ -869,6 +1135,8 @@
     }, 
     "steam_209170": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Call of Duty: Ghosts - Multiplayer", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -876,6 +1144,8 @@
     }, 
     "steam_209330": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "A Valley Without Wind", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -883,6 +1153,8 @@
     }, 
     "steam_209370": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Analogue: A Hate Story", 
         "playtime": 9660.0, 
         "source": "steam", 
@@ -890,6 +1162,8 @@
     }, 
     "steam_209830": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Lone Survivor: The Director's Cut", 
         "playtime": 3300.0, 
         "source": "steam", 
@@ -897,6 +1171,8 @@
     }, 
     "steam_2100": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Dark Messiah of Might & Magic Single Player", 
         "playtime": 2820.0, 
         "source": "steam", 
@@ -904,6 +1180,8 @@
     }, 
     "steam_21100": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "F.E.A.R. 3", 
         "playtime": 600.0, 
         "source": "steam", 
@@ -911,6 +1189,8 @@
     }, 
     "steam_211260": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "They Bleed Pixels", 
         "playtime": 5580.0, 
         "source": "steam", 
@@ -918,6 +1198,8 @@
     }, 
     "steam_211400": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Deadlight", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -925,6 +1207,8 @@
     }, 
     "steam_211420": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Dark Souls: Prepare to Die Edition", 
         "playtime": 105900.0, 
         "source": "steam", 
@@ -932,6 +1216,8 @@
     }, 
     "steam_212680": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "FTL: Faster Than Light", 
         "playtime": 22320.0, 
         "source": "steam", 
@@ -939,6 +1225,8 @@
     }, 
     "steam_2130": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Dark Messiah of Might & Magic Multi-Player", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -946,6 +1234,8 @@
     }, 
     "steam_213670": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "South Park\u2122: The Stick of Truth\u2122", 
         "playtime": 38340.0, 
         "source": "steam", 
@@ -953,6 +1243,8 @@
     }, 
     "steam_214340": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Deponia", 
         "playtime": 27360.0, 
         "source": "steam", 
@@ -960,6 +1252,8 @@
     }, 
     "steam_214560": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Mark of the Ninja", 
         "playtime": 2700.0, 
         "source": "steam", 
@@ -967,6 +1261,8 @@
     }, 
     "steam_214770": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Guacamelee! Gold Edition", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -974,6 +1270,8 @@
     }, 
     "steam_214830": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Half Minute Hero: Super Mega Neo Climax Ultimate Boy", 
         "playtime": 1440.0, 
         "source": "steam", 
@@ -981,6 +1279,8 @@
     }, 
     "steam_215160": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Book of Unwritten Tales", 
         "playtime": 41280.0, 
         "source": "steam", 
@@ -988,6 +1288,8 @@
     }, 
     "steam_215670": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Home", 
         "playtime": 3420.0, 
         "source": "steam", 
@@ -995,6 +1297,8 @@
     }, 
     "steam_21660": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Street Fighter IV", 
         "playtime": 11100.0, 
         "source": "steam", 
@@ -1002,6 +1306,8 @@
     }, 
     "steam_21690": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Resident Evil 5", 
         "playtime": 2580.0, 
         "source": "steam", 
@@ -1009,6 +1315,8 @@
     }, 
     "steam_217140": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Rise of the Triad", 
         "playtime": 3660.0, 
         "source": "steam", 
@@ -1016,6 +1324,8 @@
     }, 
     "steam_218090": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Unity of Command", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1023,6 +1333,8 @@
     }, 
     "steam_219150": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Hotline Miami", 
         "playtime": 7020.0, 
         "source": "steam", 
@@ -1030,6 +1342,8 @@
     }, 
     "steam_219890": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Antichamber", 
         "playtime": 5040.0, 
         "source": "steam", 
@@ -1037,6 +1351,8 @@
     }, 
     "steam_219990": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Grim Dawn", 
         "playtime": 7920.0, 
         "source": "steam", 
@@ -1044,6 +1360,8 @@
     }, 
     "steam_220": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Half-Life 2", 
         "playtime": 10500.0, 
         "source": "steam", 
@@ -1051,6 +1369,8 @@
     }, 
     "steam_220090": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Journey Down: Chapter One", 
         "playtime": 900.0, 
         "source": "steam", 
@@ -1058,6 +1378,8 @@
     }, 
     "steam_220200": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Kerbal Space Program", 
         "playtime": 66960.0, 
         "source": "steam", 
@@ -1065,6 +1387,8 @@
     }, 
     "steam_220240": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Far Cry\u00ae 3", 
         "playtime": 97560.0, 
         "source": "steam", 
@@ -1072,6 +1396,8 @@
     }, 
     "steam_220740": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Chaos on Deponia", 
         "playtime": 71220.0, 
         "source": "steam", 
@@ -1079,6 +1405,8 @@
     }, 
     "steam_220780": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Thomas Was Alone", 
         "playtime": 14220.0, 
         "source": "steam", 
@@ -1086,6 +1414,8 @@
     }, 
     "steam_220860": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "McPixel", 
         "playtime": 26880.0, 
         "source": "steam", 
@@ -1093,6 +1423,8 @@
     }, 
     "steam_22100": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Mount & Blade", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1100,6 +1432,8 @@
     }, 
     "steam_22120": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Penumbra: Black Plague", 
         "playtime": 39000.0, 
         "source": "steam", 
@@ -1107,6 +1441,8 @@
     }, 
     "steam_22140": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Penumbra: Requiem", 
         "playtime": 18000.0, 
         "source": "steam", 
@@ -1114,6 +1450,8 @@
     }, 
     "steam_22180": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Penumbra: Overture", 
         "playtime": 32160.0, 
         "source": "steam", 
@@ -1121,6 +1459,8 @@
     }, 
     "steam_221810": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Cave", 
         "playtime": 18600.0, 
         "source": "steam", 
@@ -1128,6 +1468,8 @@
     }, 
     "steam_221830": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Book of Unwritten Tales: The Critter Chronicles", 
         "playtime": 29460.0, 
         "source": "steam", 
@@ -1135,6 +1477,8 @@
     }, 
     "steam_222660": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Retro/Grade", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1142,6 +1486,8 @@
     }, 
     "steam_222730": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Reus", 
         "playtime": 480.0, 
         "source": "steam", 
@@ -1149,6 +1495,8 @@
     }, 
     "steam_222980": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Dead Pixels", 
         "playtime": 1140.0, 
         "source": "steam", 
@@ -1156,6 +1504,8 @@
     }, 
     "steam_22320": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Elder Scrolls III: Morrowind", 
         "playtime": 25200.0, 
         "source": "steam", 
@@ -1163,6 +1513,8 @@
     }, 
     "steam_223220": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Giana Sisters: Twisted Dreams", 
         "playtime": 600.0, 
         "source": "steam", 
@@ -1170,6 +1522,8 @@
     }, 
     "steam_22330": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Elder Scrolls IV: Oblivion ", 
         "playtime": 35400.0, 
         "source": "steam", 
@@ -1177,6 +1531,8 @@
     }, 
     "steam_223510": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Miasmata", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1184,6 +1540,8 @@
     }, 
     "steam_223530": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Left 4 Dead 2 Beta", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1191,6 +1549,8 @@
     }, 
     "steam_22370": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Fallout 3 - Game of the Year Edition", 
         "playtime": 60.0, 
         "source": "steam", 
@@ -1198,6 +1558,8 @@
     }, 
     "steam_22380": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Fallout: New Vegas", 
         "playtime": 17400.0, 
         "source": "steam", 
@@ -1205,6 +1567,8 @@
     }, 
     "steam_223810": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Ys I", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1212,6 +1576,8 @@
     }, 
     "steam_223870": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Ys II", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1219,6 +1585,8 @@
     }, 
     "steam_224480": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Octodad: Dadliest Catch", 
         "playtime": 1860.0, 
         "source": "steam", 
@@ -1226,6 +1594,8 @@
     }, 
     "steam_224960": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tomb Raider I", 
         "playtime": 59640.0, 
         "source": "steam", 
@@ -1233,6 +1603,8 @@
     }, 
     "steam_224980": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tomb Raider: The Last Revelation", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1240,6 +1612,8 @@
     }, 
     "steam_225000": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tomb Raider: Chronicles", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1247,6 +1621,8 @@
     }, 
     "steam_225020": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tomb Raider (VI): The Angel of Darkness", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1254,6 +1630,8 @@
     }, 
     "steam_225080": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Brothers - A Tale of Two Sons", 
         "playtime": 11220.0, 
         "source": "steam", 
@@ -1261,6 +1639,8 @@
     }, 
     "steam_225260": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Br\u00fctal Legend", 
         "playtime": 10560.0, 
         "source": "steam", 
@@ -1268,6 +1648,8 @@
     }, 
     "steam_225300": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tomb Raider II", 
         "playtime": 15660.0, 
         "source": "steam", 
@@ -1275,6 +1657,8 @@
     }, 
     "steam_225320": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tomb Raider III: Adventures of Lara Croft", 
         "playtime": 300.0, 
         "source": "steam", 
@@ -1282,6 +1666,8 @@
     }, 
     "steam_227000": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Primordia", 
         "playtime": 25500.0, 
         "source": "steam", 
@@ -1289,6 +1675,8 @@
     }, 
     "steam_227220": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Sang-Froid - Tales of Werewolves", 
         "playtime": 3000.0, 
         "source": "steam", 
@@ -1296,6 +1684,8 @@
     }, 
     "steam_227780": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Serious Sam Classics: Revolution", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1303,6 +1693,8 @@
     }, 
     "steam_228320": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "A Valley Without Wind 2", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1310,6 +1702,8 @@
     }, 
     "steam_228960": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Skulls of the Shogun", 
         "playtime": 1740.0, 
         "source": "steam", 
@@ -1317,6 +1711,8 @@
     }, 
     "steam_230050": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "DLC Quest", 
         "playtime": 5340.0, 
         "source": "steam", 
@@ -1324,6 +1720,8 @@
     }, 
     "steam_230820": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Night of the Rabbit", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1331,6 +1729,8 @@
     }, 
     "steam_231160": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Swapper", 
         "playtime": 11580.0, 
         "source": "steam", 
@@ -1338,6 +1738,8 @@
     }, 
     "steam_231200": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Kentucky Route Zero", 
         "playtime": 4200.0, 
         "source": "steam", 
@@ -1345,6 +1747,8 @@
     }, 
     "steam_232430": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Gone Home", 
         "playtime": 10620.0, 
         "source": "steam", 
@@ -1352,6 +1756,8 @@
     }, 
     "steam_232790": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Broken Age", 
         "playtime": 19620.0, 
         "source": "steam", 
@@ -1359,6 +1765,8 @@
     }, 
     "steam_233230": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Kairo", 
         "playtime": 1320.0, 
         "source": "steam", 
@@ -1366,6 +1774,8 @@
     }, 
     "steam_233270": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Far Cry\u00ae 3 Blood Dragon", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1373,6 +1783,8 @@
     }, 
     "steam_233390": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Cart Life", 
         "playtime": 3420.0, 
         "source": "steam", 
@@ -1380,6 +1792,8 @@
     }, 
     "steam_233450": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Prison Architect", 
         "playtime": 22140.0, 
         "source": "steam", 
@@ -1387,6 +1801,8 @@
     }, 
     "steam_233720": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Surgeon Simulator 2013", 
         "playtime": 5760.0, 
         "source": "steam", 
@@ -1394,6 +1810,8 @@
     }, 
     "steam_233740": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Organ Trail: Director's Cut", 
         "playtime": 23100.0, 
         "source": "steam", 
@@ -1401,6 +1819,8 @@
     }, 
     "steam_233980": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Unepic", 
         "playtime": 5040.0, 
         "source": "steam", 
@@ -1408,6 +1828,8 @@
     }, 
     "steam_234190": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Receiver", 
         "playtime": 2220.0, 
         "source": "steam", 
@@ -1415,6 +1837,8 @@
     }, 
     "steam_234370": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Shattered Haven", 
         "playtime": 300.0, 
         "source": "steam", 
@@ -1422,6 +1846,8 @@
     }, 
     "steam_234390": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Teleglitch: Die More Edition", 
         "playtime": 900.0, 
         "source": "steam", 
@@ -1429,6 +1855,8 @@
     }, 
     "steam_23460": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Ceville", 
         "playtime": 37620.0, 
         "source": "steam", 
@@ -1436,6 +1864,8 @@
     }, 
     "steam_234650": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Shadowrun Returns", 
         "playtime": 11520.0, 
         "source": "steam", 
@@ -1443,6 +1873,8 @@
     }, 
     "steam_234710": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Poker Night 2", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1450,6 +1882,8 @@
     }, 
     "steam_234900": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Anodyne", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1457,6 +1891,8 @@
     }, 
     "steam_236090": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Dust: An Elysian Tail", 
         "playtime": 5280.0, 
         "source": "steam", 
@@ -1464,6 +1900,8 @@
     }, 
     "steam_236850": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Europa Universalis IV", 
         "playtime": 11460.0, 
         "source": "steam", 
@@ -1471,6 +1909,8 @@
     }, 
     "steam_237990": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Banner Saga", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1478,6 +1918,8 @@
     }, 
     "steam_238010": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Deus Ex: Human Revolution - Director's Cut", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1485,6 +1927,8 @@
     }, 
     "steam_238280": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Legend of Dungeon", 
         "playtime": 4440.0, 
         "source": "steam", 
@@ -1492,6 +1936,8 @@
     }, 
     "steam_238320": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Outlast", 
         "playtime": 14340.0, 
         "source": "steam", 
@@ -1499,6 +1945,8 @@
     }, 
     "steam_238890": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Skyward Collapse", 
         "playtime": 480.0, 
         "source": "steam", 
@@ -1506,6 +1954,8 @@
     }, 
     "steam_239030": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Papers, Please", 
         "playtime": 7860.0, 
         "source": "steam", 
@@ -1513,6 +1963,8 @@
     }, 
     "steam_239350": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Spelunky", 
         "playtime": 145260.0, 
         "source": "steam", 
@@ -1520,6 +1972,8 @@
     }, 
     "steam_239700": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Hate Plus", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1527,6 +1981,8 @@
     }, 
     "steam_241600": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Rogue Legacy", 
         "playtime": 56160.0, 
         "source": "steam", 
@@ -1534,6 +1990,8 @@
     }, 
     "steam_241910": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Goodbye Deponia", 
         "playtime": 37620.0, 
         "source": "steam", 
@@ -1541,6 +1999,8 @@
     }, 
     "steam_242050": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Assassin's Creed IV Black Flag", 
         "playtime": 36480.0, 
         "source": "steam", 
@@ -1548,6 +2008,8 @@
     }, 
     "steam_242780": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Cognition: An Erica Reed Thriller", 
         "playtime": 11220.0, 
         "source": "steam", 
@@ -1555,6 +2017,8 @@
     }, 
     "steam_242920": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Banished", 
         "playtime": 6300.0, 
         "source": "steam", 
@@ -1562,6 +2026,8 @@
     }, 
     "steam_243200": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Memoria", 
         "playtime": 780.0, 
         "source": "steam", 
@@ -1569,6 +2035,8 @@
     }, 
     "steam_24420": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Aquaria", 
         "playtime": 1380.0, 
         "source": "steam", 
@@ -1576,6 +2044,8 @@
     }, 
     "steam_244590": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Epigenesis", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1583,6 +2053,8 @@
     }, 
     "steam_244730": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Divekick", 
         "playtime": 8700.0, 
         "source": "steam", 
@@ -1590,6 +2062,8 @@
     }, 
     "steam_244810": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Foul Play", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1597,6 +2071,8 @@
     }, 
     "steam_247870": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Redshirt", 
         "playtime": 3960.0, 
         "source": "steam", 
@@ -1604,6 +2080,8 @@
     }, 
     "steam_248190": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Knytt Underground", 
         "playtime": 5640.0, 
         "source": "steam", 
@@ -1611,6 +2089,8 @@
     }, 
     "steam_248820": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Risk of Rain", 
         "playtime": 600.0, 
         "source": "steam", 
@@ -1618,6 +2098,8 @@
     }, 
     "steam_24960": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Battlefield: Bad Company 2", 
         "playtime": 31980.0, 
         "source": "steam", 
@@ -1625,6 +2107,8 @@
     }, 
     "steam_2500": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Shadowgrounds", 
         "playtime": 4140.0, 
         "source": "steam", 
@@ -1632,6 +2116,8 @@
     }, 
     "steam_250580": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Paranautical Activity", 
         "playtime": 1140.0, 
         "source": "steam", 
@@ -1639,6 +2125,8 @@
     }, 
     "steam_252630": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Eldritch", 
         "playtime": 1920.0, 
         "source": "steam", 
@@ -1646,13 +2134,17 @@
     }, 
     "steam_255280": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "1954 Alcatraz", 
-        "playtime": 0.0, 
+        "playtime": 8.10487675666809, 
         "source": "steam", 
         "steamid": 255280
     }, 
     "steam_255300": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Journey of a Roach", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1660,6 +2152,8 @@
     }, 
     "steam_25700": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Madballs in...Babo: Invasion", 
         "playtime": 6360.0, 
         "source": "steam", 
@@ -1667,6 +2161,8 @@
     }, 
     "steam_25890": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Hearts of Iron III", 
         "playtime": 2340.0, 
         "source": "steam", 
@@ -1674,6 +2170,8 @@
     }, 
     "steam_264240": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "CONSORTIUM", 
         "playtime": 8100.0, 
         "source": "steam", 
@@ -1681,6 +2179,8 @@
     }, 
     "steam_26500": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Cogs", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1688,6 +2188,8 @@
     }, 
     "steam_265330": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Gomo", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1695,6 +2197,8 @@
     }, 
     "steam_26800": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Braid", 
         "playtime": 10140.0, 
         "source": "steam", 
@@ -1702,6 +2206,8 @@
     }, 
     "steam_26900": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Crayon Physics Deluxe", 
         "playtime": 600.0, 
         "source": "steam", 
@@ -1709,6 +2215,8 @@
     }, 
     "steam_2760": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Neverwinter Nights 2: Platinum", 
         "playtime": 6780.0, 
         "source": "steam", 
@@ -1716,6 +2224,8 @@
     }, 
     "steam_280": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Half-Life: Source", 
         "playtime": 15120.0, 
         "source": "steam", 
@@ -1723,6 +2233,8 @@
     }, 
     "steam_2800": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "X2: The Threat", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1730,6 +2242,8 @@
     }, 
     "steam_28050": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Deus Ex: Human Revolution", 
         "playtime": 29040.0, 
         "source": "steam", 
@@ -1737,6 +2251,8 @@
     }, 
     "steam_2810": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "X3: Reunion", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1744,6 +2260,8 @@
     }, 
     "steam_2820": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "X3: Terran Conflict", 
         "playtime": 5340.0, 
         "source": "steam", 
@@ -1751,6 +2269,8 @@
     }, 
     "steam_2840": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "X: Beyond the Frontier", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1758,6 +2278,8 @@
     }, 
     "steam_2850": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "X-Tension", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1765,6 +2287,8 @@
     }, 
     "steam_29720": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Guild Wars", 
         "playtime": 539880.0, 
         "source": "steam", 
@@ -1772,6 +2296,8 @@
     }, 
     "steam_31170": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tales of Monkey Island: Chapter 1 - Launch of the Screaming Narwhal", 
         "playtime": 19140.0, 
         "source": "steam", 
@@ -1779,6 +2305,8 @@
     }, 
     "steam_31180": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tales of Monkey Island: Chapter 2 - The Siege of Spinner Cay ", 
         "playtime": 16140.0, 
         "source": "steam", 
@@ -1786,6 +2314,8 @@
     }, 
     "steam_31190": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tales of Monkey Island: Chapter 3 - Lair of the Leviathan ", 
         "playtime": 16320.0, 
         "source": "steam", 
@@ -1793,6 +2323,8 @@
     }, 
     "steam_31200": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tales of Monkey Island: Chapter 4 - The Trial and Execution of Guybrush Threepwood ", 
         "playtime": 19140.0, 
         "source": "steam", 
@@ -1800,6 +2332,8 @@
     }, 
     "steam_31210": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tales of Monkey Island: Chapter 5 - Rise of the Pirate God", 
         "playtime": 25200.0, 
         "source": "steam", 
@@ -1807,6 +2341,8 @@
     }, 
     "steam_32360": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Secret of Monkey Island: Special Edition", 
         "playtime": 25800.0, 
         "source": "steam", 
@@ -1814,6 +2350,8 @@
     }, 
     "steam_32380": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Star Wars Jedi Knight: Dark Forces II", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1821,6 +2359,8 @@
     }, 
     "steam_32390": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Star Wars - Jedi Knight: Mysteries of the Sith", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1828,6 +2368,8 @@
     }, 
     "steam_32400": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Star Wars: Dark Forces", 
         "playtime": 28440.0, 
         "source": "steam", 
@@ -1835,6 +2377,8 @@
     }, 
     "steam_32460": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Monkey Island 2: Special Edition", 
         "playtime": 26100.0, 
         "source": "steam", 
@@ -1842,6 +2386,8 @@
     }, 
     "steam_3270": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Painkiller Overdose", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1849,6 +2395,8 @@
     }, 
     "steam_33220": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tom Clancy's Splinter Cell: Conviction", 
         "playtime": 2280.0, 
         "source": "steam", 
@@ -1856,6 +2404,8 @@
     }, 
     "steam_33460": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "From Dust", 
         "playtime": 3000.0, 
         "source": "steam", 
@@ -1863,6 +2413,8 @@
     }, 
     "steam_33650": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Puzzler World ", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1870,6 +2422,8 @@
     }, 
     "steam_340": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Half-Life 2: Lost Coast", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1877,6 +2431,8 @@
     }, 
     "steam_34010": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Alpha Protocol", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1884,6 +2440,8 @@
     }, 
     "steam_34330": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Total War: SHOGUN 2", 
         "playtime": 3480.0, 
         "source": "steam", 
@@ -1891,6 +2449,8 @@
     }, 
     "steam_35000": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Mini Ninjas", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1898,6 +2458,8 @@
     }, 
     "steam_35010": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Batman: Arkham Asylum", 
         "playtime": 79560.0, 
         "source": "steam", 
@@ -1905,6 +2467,8 @@
     }, 
     "steam_35070": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Flora's Fruit Farm", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1912,6 +2476,8 @@
     }, 
     "steam_35130": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Lara Croft and the Guardian of Light", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1919,6 +2485,8 @@
     }, 
     "steam_35140": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Batman: Arkham Asylum GOTY Edition", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1926,6 +2494,8 @@
     }, 
     "steam_35460": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Ball", 
         "playtime": 4500.0, 
         "source": "steam", 
@@ -1933,6 +2503,8 @@
     }, 
     "steam_35700": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Trine", 
         "playtime": 6900.0, 
         "source": "steam", 
@@ -1940,6 +2512,8 @@
     }, 
     "steam_35720": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Trine 2", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1947,6 +2521,8 @@
     }, 
     "steam_3590": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Plants vs. Zombies: Game of the Year", 
         "playtime": 1440.0, 
         "source": "steam", 
@@ -1954,6 +2530,8 @@
     }, 
     "steam_360": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Half-Life Deathmatch: Source", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1961,6 +2539,8 @@
     }, 
     "steam_37260": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Emerald City Confidential", 
         "playtime": 28500.0, 
         "source": "steam", 
@@ -1968,6 +2548,8 @@
     }, 
     "steam_37400": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Time Gentlemen, Please!", 
         "playtime": 22680.0, 
         "source": "steam", 
@@ -1975,6 +2557,8 @@
     }, 
     "steam_37420": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Ben There, Dan That!", 
         "playtime": 4980.0, 
         "source": "steam", 
@@ -1982,6 +2566,8 @@
     }, 
     "steam_380": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Half-Life 2: Episode One", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -1989,6 +2575,8 @@
     }, 
     "steam_39530": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Painkiller: Black Edition", 
         "playtime": 6600.0, 
         "source": "steam", 
@@ -1996,6 +2584,8 @@
     }, 
     "steam_39560": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Painkiller: Resurrection", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2003,6 +2593,8 @@
     }, 
     "steam_400": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Portal", 
         "playtime": 31440.0, 
         "source": "steam", 
@@ -2010,6 +2602,8 @@
     }, 
     "steam_40300": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Risen", 
         "playtime": 203580.0, 
         "source": "steam", 
@@ -2017,6 +2611,8 @@
     }, 
     "steam_40390": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Risen 2 - Dark Waters", 
         "playtime": 24540.0, 
         "source": "steam", 
@@ -2024,6 +2620,8 @@
     }, 
     "steam_40700": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Machinarium", 
         "playtime": 22020.0, 
         "source": "steam", 
@@ -2031,6 +2629,8 @@
     }, 
     "steam_40720": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Samorost 2", 
         "playtime": 1920.0, 
         "source": "steam", 
@@ -2038,6 +2638,8 @@
     }, 
     "steam_40800": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Super Meat Boy", 
         "playtime": 17100.0, 
         "source": "steam", 
@@ -2045,6 +2647,8 @@
     }, 
     "steam_40930": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Misadventures of P.B. Winterbottom", 
         "playtime": 900.0, 
         "source": "steam", 
@@ -2052,6 +2656,8 @@
     }, 
     "steam_40990": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Mafia", 
         "playtime": 10140.0, 
         "source": "steam", 
@@ -2059,6 +2665,8 @@
     }, 
     "steam_41000": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Serious Sam HD: The First Encounter", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2066,6 +2674,8 @@
     }, 
     "steam_41050": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Serious Sam Classic: The First Encounter", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2073,6 +2683,8 @@
     }, 
     "steam_41060": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Serious Sam Classic: The Second Encounter", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2080,6 +2692,8 @@
     }, 
     "steam_41100": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Hammerfight", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2087,6 +2701,8 @@
     }, 
     "steam_41500": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Torchlight", 
         "playtime": 37860.0, 
         "source": "steam", 
@@ -2094,6 +2710,8 @@
     }, 
     "steam_41800": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Gratuitous Space Battles", 
         "playtime": 540.0, 
         "source": "steam", 
@@ -2101,6 +2719,8 @@
     }, 
     "steam_420": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Half-Life 2: Episode Two", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2108,6 +2728,8 @@
     }, 
     "steam_42890": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Sword of the Stars Complete Collection", 
         "playtime": 3900.0, 
         "source": "steam", 
@@ -2115,6 +2737,8 @@
     }, 
     "steam_42910": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Magicka", 
         "playtime": 5700.0, 
         "source": "steam", 
@@ -2122,6 +2746,8 @@
     }, 
     "steam_43110": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Metro 2033", 
         "playtime": 34440.0, 
         "source": "steam", 
@@ -2129,6 +2755,8 @@
     }, 
     "steam_4540": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Titan Quest", 
         "playtime": 23340.0, 
         "source": "steam", 
@@ -2136,6 +2764,8 @@
     }, 
     "steam_4550": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Titan Quest: Immortal Throne", 
         "playtime": 4920.0, 
         "source": "steam", 
@@ -2143,6 +2773,8 @@
     }, 
     "steam_4600": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Full Pipe", 
         "playtime": 4620.0, 
         "source": "steam", 
@@ -2150,6 +2782,8 @@
     }, 
     "steam_46250": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "NecrovisioN: Lost Company", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2157,6 +2791,8 @@
     }, 
     "steam_4700": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Medieval II: Total War", 
         "playtime": 33300.0, 
         "source": "steam", 
@@ -2164,6 +2800,8 @@
     }, 
     "steam_47780": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Dead Space 2", 
         "playtime": 2040.0, 
         "source": "steam", 
@@ -2171,6 +2809,8 @@
     }, 
     "steam_4780": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Medieval II: Total War Kingdoms", 
         "playtime": 2940.0, 
         "source": "steam", 
@@ -2178,6 +2818,8 @@
     }, 
     "steam_48000": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "LIMBO", 
         "playtime": 16560.0, 
         "source": "steam", 
@@ -2185,6 +2827,8 @@
     }, 
     "steam_48190": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Assassin's Creed Brotherhood", 
         "playtime": 240180.0, 
         "source": "steam", 
@@ -2192,6 +2836,8 @@
     }, 
     "steam_48700": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Mount & Blade: Warband", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2199,6 +2845,8 @@
     }, 
     "steam_48720": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Mount & Blade: With Fire and Sword", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2206,6 +2854,8 @@
     }, 
     "steam_49520": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Borderlands 2", 
         "playtime": 16680.0, 
         "source": "steam", 
@@ -2213,6 +2863,8 @@
     }, 
     "steam_49600": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Beat Hazard", 
         "playtime": 7680.0, 
         "source": "steam", 
@@ -2220,6 +2872,8 @@
     }, 
     "steam_49800": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Flight of the Icarus", 
         "playtime": 780.0, 
         "source": "steam", 
@@ -2227,6 +2881,8 @@
     }, 
     "steam_50": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Half-Life: Opposing Force", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2234,6 +2890,8 @@
     }, 
     "steam_500": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Left 4 Dead", 
         "playtime": 43860.0, 
         "source": "steam", 
@@ -2241,6 +2899,8 @@
     }, 
     "steam_50000": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Nimbus", 
         "playtime": 600.0, 
         "source": "steam", 
@@ -2248,6 +2908,8 @@
     }, 
     "steam_50300": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Spec Ops: The Line", 
         "playtime": 5040.0, 
         "source": "steam", 
@@ -2255,6 +2917,8 @@
     }, 
     "steam_50620": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Darksiders", 
         "playtime": 24900.0, 
         "source": "steam", 
@@ -2262,6 +2926,8 @@
     }, 
     "steam_50650": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Darksiders II", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2269,6 +2935,8 @@
     }, 
     "steam_550": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Left 4 Dead 2", 
         "playtime": 41340.0, 
         "source": "steam", 
@@ -2276,6 +2944,8 @@
     }, 
     "steam_55110": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Red Faction: Armageddon", 
         "playtime": 7200.0, 
         "source": "steam", 
@@ -2283,6 +2953,8 @@
     }, 
     "steam_55230": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Saints Row: The Third", 
         "playtime": 88800.0, 
         "source": "steam", 
@@ -2290,6 +2962,8 @@
     }, 
     "steam_57200": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Puzzle Dimension", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2297,6 +2971,8 @@
     }, 
     "steam_57300": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Amnesia: The Dark Descent", 
         "playtime": 27300.0, 
         "source": "steam", 
@@ -2304,6 +2980,8 @@
     }, 
     "steam_57400": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Batman: Arkham City\u2122", 
         "playtime": 78360.0, 
         "source": "steam", 
@@ -2311,6 +2989,8 @@
     }, 
     "steam_57800": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Doc Clock: The Toasted Sandwich of Time", 
         "playtime": 1080.0, 
         "source": "steam", 
@@ -2318,6 +2998,8 @@
     }, 
     "steam_58200": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Jolly Rover", 
         "playtime": 7500.0, 
         "source": "steam", 
@@ -2325,6 +3007,8 @@
     }, 
     "steam_58230": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "MacGuffin's Curse", 
         "playtime": 34200.0, 
         "source": "steam", 
@@ -2332,6 +3016,8 @@
     }, 
     "steam_58570": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Next BIG Thing", 
         "playtime": 25020.0, 
         "source": "steam", 
@@ -2339,6 +3025,8 @@
     }, 
     "steam_6020": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Star Wars Jedi Knight: Jedi Academy", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2346,6 +3034,8 @@
     }, 
     "steam_6030": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Star Wars - Jedi Knight II: Jedi Outcast", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2353,6 +3043,8 @@
     }, 
     "steam_60600": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "ProtoGalaxy", 
         "playtime": 420.0, 
         "source": "steam", 
@@ -2360,6 +3052,8 @@
     }, 
     "steam_6120": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Shank", 
         "playtime": 1380.0, 
         "source": "steam", 
@@ -2367,6 +3061,8 @@
     }, 
     "steam_620": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Portal 2", 
         "playtime": 73980.0, 
         "source": "steam", 
@@ -2374,6 +3070,8 @@
     }, 
     "steam_63710": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "BIT.TRIP RUNNER", 
         "playtime": 2100.0, 
         "source": "steam", 
@@ -2381,6 +3079,8 @@
     }, 
     "steam_644": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Portal 2 Publishing Tool", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2388,6 +3088,8 @@
     }, 
     "steam_65560": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Painkiller: Redemption", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2395,6 +3097,8 @@
     }, 
     "steam_6850": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Hitman 2: Silent Assassin", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2402,6 +3106,8 @@
     }, 
     "steam_6860": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Hitman: Blood Money", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2409,6 +3115,8 @@
     }, 
     "steam_6870": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Battlestations: Midway", 
         "playtime": 33660.0, 
         "source": "steam", 
@@ -2416,6 +3124,8 @@
     }, 
     "steam_6880": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Just Cause", 
         "playtime": 9240.0, 
         "source": "steam", 
@@ -2423,6 +3133,8 @@
     }, 
     "steam_6900": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Hitman: Codename 47", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2430,6 +3142,8 @@
     }, 
     "steam_6910": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Deus Ex: Game of the Year Edition", 
         "playtime": 1860.0, 
         "source": "steam", 
@@ -2437,6 +3151,8 @@
     }, 
     "steam_6920": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Deus Ex: Invisible War", 
         "playtime": 300.0, 
         "source": "steam", 
@@ -2444,6 +3160,8 @@
     }, 
     "steam_6980": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Thief: Deadly Shadows", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2451,6 +3169,8 @@
     }, 
     "steam_70": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Half-Life", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2458,6 +3178,8 @@
     }, 
     "steam_7000": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tomb Raider: Legend", 
         "playtime": 31260.0, 
         "source": "steam", 
@@ -2465,6 +3187,8 @@
     }, 
     "steam_7010": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Project: Snowblind", 
         "playtime": 8700.0, 
         "source": "steam", 
@@ -2472,6 +3196,8 @@
     }, 
     "steam_70120": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Hacker Evolution Duality", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2479,6 +3205,8 @@
     }, 
     "steam_7020": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Rogue Trooper", 
         "playtime": 2760.0, 
         "source": "steam", 
@@ -2486,6 +3214,8 @@
     }, 
     "steam_70300": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "VVVVVV", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2493,6 +3223,8 @@
     }, 
     "steam_70420": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Chantelise", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2500,6 +3232,8 @@
     }, 
     "steam_7060": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Infernal", 
         "playtime": 3060.0, 
         "source": "steam", 
@@ -2507,6 +3241,8 @@
     }, 
     "steam_72200": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Universe Sandbox", 
         "playtime": 300.0, 
         "source": "steam", 
@@ -2514,6 +3250,8 @@
     }, 
     "steam_72850": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "The Elder Scrolls V: Skyrim", 
         "playtime": 78480.0, 
         "source": "steam", 
@@ -2521,6 +3259,8 @@
     }, 
     "steam_7650": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "X-COM: Terror from the Deep", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2528,6 +3268,8 @@
     }, 
     "steam_7660": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "X-COM: Apocalypse", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2535,6 +3277,8 @@
     }, 
     "steam_7730": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "X-COM: Interceptor", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2542,6 +3286,8 @@
     }, 
     "steam_7760": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "X-COM: UFO Defense", 
         "playtime": 4380.0, 
         "source": "steam", 
@@ -2549,6 +3295,8 @@
     }, 
     "steam_7770": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "X-COM: Enforcer", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2556,6 +3304,8 @@
     }, 
     "steam_7850": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Cryostasis", 
         "playtime": 9060.0, 
         "source": "steam", 
@@ -2563,6 +3313,8 @@
     }, 
     "steam_7860": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "NecroVisioN", 
         "playtime": 11400.0, 
         "source": "steam", 
@@ -2570,6 +3322,8 @@
     }, 
     "steam_8000": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tomb Raider: Anniversary", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2577,6 +3331,8 @@
     }, 
     "steam_80300": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Puzzle Bots", 
         "playtime": 11820.0, 
         "source": "steam", 
@@ -2584,6 +3340,8 @@
     }, 
     "steam_8080": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Kane & Lynch: Dead Men", 
         "playtime": 24120.0, 
         "source": "steam", 
@@ -2591,6 +3349,8 @@
     }, 
     "steam_8100": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Conflict: Denied Ops", 
         "playtime": 2520.0, 
         "source": "steam", 
@@ -2598,6 +3358,8 @@
     }, 
     "steam_8140": {
         "finished": 1, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Tomb Raider: Underworld", 
         "playtime": 55380.0, 
         "source": "steam", 
@@ -2605,6 +3367,8 @@
     }, 
     "steam_8160": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Shellshock 2: Blood Trails", 
         "playtime": 660.0, 
         "source": "steam", 
@@ -2612,6 +3376,8 @@
     }, 
     "steam_8170": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Battlestations: Pacific", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2619,6 +3385,8 @@
     }, 
     "steam_8190": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Just Cause 2", 
         "playtime": 10080.0, 
         "source": "steam", 
@@ -2626,6 +3394,8 @@
     }, 
     "steam_8500": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "EVE Online", 
         "playtime": 224820.0, 
         "source": "steam", 
@@ -2633,6 +3403,8 @@
     }, 
     "steam_8850": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "BioShock 2", 
         "playtime": 22500.0, 
         "source": "steam", 
@@ -2640,6 +3412,8 @@
     }, 
     "steam_8870": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "BioShock Infinite", 
         "playtime": 9300.0, 
         "source": "steam", 
@@ -2647,6 +3421,8 @@
     }, 
     "steam_8930": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Sid Meier's Civilization V", 
         "playtime": 38340.0, 
         "source": "steam", 
@@ -2654,6 +3430,8 @@
     }, 
     "steam_8980": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Borderlands", 
         "playtime": 59220.0, 
         "source": "steam", 
@@ -2661,6 +3439,8 @@
     }, 
     "steam_91310": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Dead Island", 
         "playtime": 12000.0, 
         "source": "steam", 
@@ -2668,6 +3448,8 @@
     }, 
     "steam_92000": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Hydrophobia: Prophecy", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2675,6 +3457,8 @@
     }, 
     "steam_92800": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "SpaceChem", 
         "playtime": 4320.0, 
         "source": "steam", 
@@ -2682,6 +3466,8 @@
     }, 
     "steam_93200": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Revenge of the Titans", 
         "playtime": 2400.0, 
         "source": "steam", 
@@ -2689,6 +3475,8 @@
     }, 
     "steam_94200": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Jamestown", 
         "playtime": 2580.0, 
         "source": "steam", 
@@ -2696,6 +3484,8 @@
     }, 
     "steam_9500": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Gish", 
         "playtime": 0.0, 
         "source": "steam", 
@@ -2703,6 +3493,8 @@
     }, 
     "steam_95300": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Capsized", 
         "playtime": 600.0, 
         "source": "steam", 
@@ -2710,6 +3502,8 @@
     }, 
     "steam_98100": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "TRAUMA", 
         "playtime": 720.0, 
         "source": "steam", 
@@ -2717,6 +3511,8 @@
     }, 
     "steam_98200": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Frozen Synapse", 
         "playtime": 660.0, 
         "source": "steam", 
@@ -2724,6 +3520,8 @@
     }, 
     "steam_98800": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Dungeons of Dredmor", 
         "playtime": 1080.0, 
         "source": "steam", 
@@ -2731,6 +3529,8 @@
     }, 
     "steam_99400": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "Garshasp: The Monster Slayer", 
         "playtime": 2220.0, 
         "source": "steam", 
@@ -2738,6 +3538,8 @@
     }, 
     "steam_99700": {
         "finished": 0, 
+        "gogid": "", 
+        "install_path": "", 
         "name": "NightSky", 
         "playtime": 1920.0, 
         "source": "steam", 

@@ -2,6 +2,7 @@
 import data
 import steamapi
 import os
+import time
 os.environ["QT_QPA_PLATFORM_PLUGIN_PATH"]="C:\\Python33\\Lib\\site-packages\\PyQt5\\plugins\\platforms"
 
 from PyQt5.QtCore import *
@@ -9,6 +10,8 @@ from PyQt5.QtWidgets import *
  
 class Form(QWidget):
     def __init__(self, parent=None):
+        self.timer_started = 0
+        
         self.games = data.Games()
         self.games.load("games.json")
         self.gamelist = []
@@ -33,6 +36,7 @@ class Form(QWidget):
         buttonLayout1.addWidget(self.import_steam_button)
         self.import_steam_button.clicked.connect(self.import_steam)
  
+        self.buttonLayout1 = buttonLayout1
         mainLayout = QGridLayout()
         # mainLayout.addWidget(nameLabel, 0, 0)
         mainLayout.addLayout(buttonLayout1, 0, 1)
@@ -86,9 +90,30 @@ class Form(QWidget):
     def run_game(self,game):
         print ("run game",game.name,game.gameid)
         if game.source=="steam":
-            os.system("c:\\steam\\steam.exe -applaunch %d"%game.gameid)
+            os.system("c:\\steam\\steam.exe -applaunch %d"%game.steamid)
+        if game.source=="gog":
+            curdir = os.path.abspath(os.curdir)
+            os.chdir(game.install_path.rsplit("\\",1)[0])
+            os.system('"'+game.install_path+'"')
+            os.chdir(curdir)
+        
+        self.timer_started = time.time()
+        self.stop_playing_button = QPushButton("Stop Playing "+game.name)
+        self.buttonLayout1.addWidget(self.stop_playing_button)
+        self.stop_playing_button.clicked.connect(self.stop_callback(game))
+    def stop_playing(self,game):
+        self.buttonLayout1.removeWidget(self.stop_playing_button)
+        self.stop_playing_button.close()
+        del self.stop_playing_button
+        elapsed_time = time.time()-self.timer_started
+        QMessageBox.information(self, "Success!",
+                                    "You played for %d seconds" % elapsed_time)
+        game.playtime += elapsed_time
+        self.games.save("games.json")
     def make_callback(self,game):
         return lambda: self.run_game(game)
+    def stop_callback(self,game):
+        return lambda: self.stop_playing(game)
  
 if __name__ == '__main__':
     import sys
