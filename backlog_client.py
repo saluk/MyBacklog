@@ -27,12 +27,13 @@ class EditGame(QWidget):
         
         #Fields
         self.fields = {}
-        for i,prop in enumerate(game.savekeys):
+        for i,prop in enumerate(game.valid_args):
+            prop,proptype = prop
             label = QLabel("%s:"%prop.capitalize())
             layout.addWidget(label,i,0)
             edit = QLineEdit(str(getattr(game,prop)))
             layout.addWidget(edit,i,1)
-            self.fields[prop] = edit
+            self.fields[prop] = {"w":edit,"t":proptype}
             
         #Save button
         button = QPushButton("Save + Close")
@@ -42,10 +43,11 @@ class EditGame(QWidget):
         self.setLayout(layout)
     def save_close(self):
         for field in self.fields:
-            value = self.fields[field].text()
-            if field in ["finished"]:
+            value = self.fields[field]["w"].text()
+            t = self.fields[field]["t"]
+            if t=="i":
                 value = int(value)
-            elif field in ["playtime"]:
+            elif t=="f":
                 value = float(value)
             setattr(self.game,field,value)
         newid = self.game.gameid

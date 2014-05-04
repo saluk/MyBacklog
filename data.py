@@ -27,7 +27,7 @@ class Game:
         print ("  %.2d:%.2d"%self.hours_minutes)
     @property
     def valid_args(self):
-        return args+source_args[self.source]
+        return self.args+self.source_args[self.source]
     @property
     def hours_minutes(self):
         s = self.playtime
