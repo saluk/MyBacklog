@@ -126,6 +126,8 @@ class Form(QWidget):
         w.hours.setStyleSheet("QWidget {}")
         if game.playtime < 500:
             w.hours.setStyleSheet("QWidget {background-color: red}")
+        if game.hidden:
+            w.deleteLater()
         return w
 
     def update_gamelist_widget(self):
@@ -145,6 +147,8 @@ class Form(QWidget):
         self.update_gamelist_widget()
         self.games.save("games.json")
     def run_game(self,game):
+        if getattr(self,"stop_playing_button",None):
+            return
         self.timer_started = time.time()
         print ("run game",game.name,game.gameid)
         if game.source=="steam":
@@ -161,8 +165,8 @@ class Form(QWidget):
         self.stop_playing_button.clicked.connect(make_callback(self.stop_playing,game))
     def stop_playing(self,game):
         self.buttonLayout1.removeWidget(self.stop_playing_button)
-        self.stop_playing_button.close()
-        del self.stop_playing_button
+        self.stop_playing_button.deleteLater()
+        self.stop_playing_button = None
         elapsed_time = time.time()-self.timer_started
         QMessageBox.information(self, "Success!",
                                     "You played for %d seconds" % elapsed_time)
