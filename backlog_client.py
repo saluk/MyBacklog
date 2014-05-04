@@ -59,9 +59,11 @@ class EditGame(QWidget):
                 value = float(value)
             setattr(self.game,field,value)
         newid = self.game.gameid
+        print("save",newid,self.oldid)
         if newid!=self.oldid:
-            del self.games[self.oldid]
-            self.games[newid] = self.game
+            if self.oldid in self.games.games:
+                del self.games.games[self.oldid]
+            self.games.games[newid] = self.game
         self.games.save("games.json")
         self.app.get_row_for_game(self.game,self.row_widget)
         self.deleteLater()
@@ -90,6 +92,10 @@ class Form(QWidget):
         self.game_scroller.setWidget(self.games_list_widget)
         buttonLayout1.addWidget(self.game_scroller)
         
+        b = QPushButton("Add Game")
+        buttonLayout1.addWidget(b)
+        b.clicked.connect(self.add_game)
+
         self.import_steam_button = QPushButton("Import Steam")
         buttonLayout1.addWidget(self.import_steam_button)
         self.import_steam_button.clicked.connect(self.import_steam)
@@ -182,6 +188,12 @@ class Form(QWidget):
         self.games.save("games.json")
     def edit_game(self,game,row_widget):
         self.egw = EditGame(game,row_widget,self)
+        self.egw.show()
+    def add_game(self):
+        game = data.Game(source="gog")
+        row = self.get_row_for_game(game)
+        self.games_list_widget_layout.addWidget(row)
+        self.egw = EditGame(game,row,self)
         self.egw.show()
  
 if __name__ == '__main__':
