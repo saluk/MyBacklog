@@ -45,17 +45,7 @@ class Form(QWidget):
         self.setWindowTitle("My Backlog")
         
         self.update_gamelist_widget()
- 
-    #~ def submitContact(self):
-        #~ name = self.nameLine.text()
- 
-        #~ if name == "":
-            #~ QMessageBox.information(self, "Empty Field",
-                                    #~ "Please enter a name and address.")
-            #~ return
-        #~ else:
-            #~ QMessageBox.information(self, "Success!",
-                                    #~ "Hello \"%s\"!" % name)
+
     def update_gamelist_widget(self):
         self.gamelist = self.games.list()
         while not self.games_list_widget_layout.isEmpty():
@@ -88,6 +78,7 @@ class Form(QWidget):
         self.update_gamelist_widget()
         self.games.save("games.json")
     def run_game(self,game):
+        self.timer_started = time.time()
         print ("run game",game.name,game.gameid)
         if game.source=="steam":
             os.system("c:\\steam\\steam.exe -applaunch %d"%game.steamid)
@@ -97,7 +88,7 @@ class Form(QWidget):
             os.system('"'+game.install_path+'"')
             os.chdir(curdir)
         
-        self.timer_started = time.time()
+        
         self.stop_playing_button = QPushButton("Stop Playing "+game.name)
         self.buttonLayout1.addWidget(self.stop_playing_button)
         self.stop_playing_button.clicked.connect(self.stop_callback(game))

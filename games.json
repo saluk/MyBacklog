@@ -1,10 +1,19 @@
 {
+    "gog_anvil_of_dawn": {
+        "finished": 0, 
+        "gogid": "anvil_of_dawn", 
+        "install_path": "C:\\GOG Games\\Anvil of Dawn\\Launch Anvil of Dawn.lnk", 
+        "name": "Anvil of Dawn", 
+        "playtime": 13560, 
+        "source": "gog", 
+        "steamid": ""
+    }, 
     "gog_atlantis2_beyond_atlantis": {
         "finished": 0, 
         "gogid": "atlantis2_beyond_atlantis", 
         "install_path": "C:\\GOG Games\\Atlantis2\\atlantis2.exe", 
         "name": "Atlantis 2: Beyond Atlantis", 
-        "playtime": 500.8468236923218, 
+        "playtime": 4125.3026907444, 
         "source": "gog", 
         "steamid": ""
     }, 
