@@ -5,8 +5,56 @@ import os
 import time
 os.environ["QT_QPA_PLATFORM_PLUGIN_PATH"]="C:\\Python33\\Lib\\site-packages\\PyQt5\\plugins\\platforms"
 
-from PyQt5.QtCore import *
-from PyQt5.QtWidgets import *
+from PySide.QtCore import *
+from PySide.QtGui import *
+
+def make_callback(f,*args):
+    return lambda: f(*args)
+
+class EditGame(QWidget):
+    def __init__(self, game, row_widget, app):
+        super(EditGame, self).__init__()
+        self.game = game
+        self.app = app
+        self.games = app.games
+        
+        self.row_widget = row_widget
+        
+        self.oldid = game.gameid
+        
+        #Layout
+        layout = QGridLayout()
+        
+        #Fields
+        self.fields = {}
+        for i,prop in enumerate(game.savekeys):
+            label = QLabel("%s:"%prop.capitalize())
+            layout.addWidget(label,i,0)
+            edit = QLineEdit(str(getattr(game,prop)))
+            layout.addWidget(edit,i,1)
+            self.fields[prop] = edit
+            
+        #Save button
+        button = QPushButton("Save + Close")
+        layout.addWidget(button)
+        button.clicked.connect(self.save_close)
+        
+        self.setLayout(layout)
+    def save_close(self):
+        for field in self.fields:
+            value = self.fields[field].text()
+            if field in ["finished"]:
+                value = int(value)
+            elif field in ["playtime"]:
+                value = float(value)
+            setattr(self.game,field,value)
+        newid = self.game.gameid
+        if newid!=self.oldid:
+            del self.games[self.oldid]
+            self.games[newid] = self.game
+        self.games.save("games.json")
+        self.app.get_row_for_game(self.game,self.row_widget)
+        self.deleteLater()
  
 class Form(QWidget):
     def __init__(self, parent=None):
@@ -45,30 +93,47 @@ class Form(QWidget):
         self.setWindowTitle("My Backlog")
         
         self.update_gamelist_widget()
-
-    def update_gamelist_widget(self):
-        self.gamelist = self.games.list()
-        while not self.games_list_widget_layout.isEmpty():
-            self.games_list_widget_layout.removeWidget(self.games_list_widget_layout.itemAt(0))
-        for g in self.gamelist:
+        
+    def get_row_for_game(self,game,w=None):
+        if not w:
             w = QWidget()
             box = QHBoxLayout()
             w.setLayout(box)
             
-            if g.finished:
-                w.setStyleSheet("QWidget {background-color: green}")
-            
-            label = QLabel(g.name)
+            label = QLabel("GAME NAME")
             box.addWidget(label)
+            w.label = label
             
-            label = QLabel("%.2d:%.2d"%g.hours_minutes)
+            label = QLabel("GAME HOURS")
             box.addWidget(label)
-            if g.playtime < 500:
-                label.setStyleSheet("QWidget {background-color: red}")
+            w.hours = label
             
             run = QPushButton("play")
             box.addWidget(run)
-            run.clicked.connect(self.make_callback(g))
+            run.clicked.connect(make_callback(self.run_game,game))
+            
+            run = QPushButton("edit")
+            box.addWidget(run)
+            run.clicked.connect(make_callback(self.edit_game,game,w))
+        
+        w.setStyleSheet("QWidget {}")
+        if game.finished:
+            w.setStyleSheet("QWidget {background-color: green}")
+        w.label.setText(game.name)
+        w.hours.setText("%.2d:%.2d"%game.hours_minutes)
+        w.hours.setStyleSheet("QWidget {}")
+        if game.playtime < 500:
+            w.hours.setStyleSheet("QWidget {background-color: red}")
+        return w
+
+    def update_gamelist_widget(self):
+        self.gamelist = self.games.list()
+        child = self.games_list_widget_layout.takeAt(0)
+        while child:
+            child.widget().deleteLater()
+            child = self.games_list_widget_layout.takeAt(0)
+        for g in self.gamelist:
+            w = self.get_row_for_game(g)
             self.games_list_widget_layout.addWidget(w)
         self.game_scroller.verticalScrollBar().setValue(0)
         self.update()
@@ -91,7 +156,7 @@ class Form(QWidget):
         
         self.stop_playing_button = QPushButton("Stop Playing "+game.name)
         self.buttonLayout1.addWidget(self.stop_playing_button)
-        self.stop_playing_button.clicked.connect(self.stop_callback(game))
+        self.stop_playing_button.clicked.connect(make_callback(self.stop_playing,game))
     def stop_playing(self,game):
         self.buttonLayout1.removeWidget(self.stop_playing_button)
         self.stop_playing_button.close()
@@ -101,10 +166,9 @@ class Form(QWidget):
                                     "You played for %d seconds" % elapsed_time)
         game.playtime += elapsed_time
         self.games.save("games.json")
-    def make_callback(self,game):
-        return lambda: self.run_game(game)
-    def stop_callback(self,game):
-        return lambda: self.stop_playing(game)
+    def edit_game(self,game,row_widget):
+        self.egw = EditGame(game,row_widget,self)
+        self.egw.show()
  
 if __name__ == '__main__':
     import sys
