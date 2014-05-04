@@ -5,6 +5,8 @@ from datetime import timedelta
 import json
 
 class Game:
+    args = [("name","s"),("playtime","f"),("finished","i"),("source","s")]
+    source_args = {"steam":[("steamid","i")],"gog":[("gogid","s"),("install_path","s")]}
     def __init__(self,**kwargs):
         dontsavekeys = set(dir(self))
         self.name = ""
@@ -23,6 +25,9 @@ class Game:
     def display_print(self):
         print (self.name)
         print ("  %.2d:%.2d"%self.hours_minutes)
+    @property
+    def valid_args(self):
+        return args+source_args[self.source]
     @property
     def hours_minutes(self):
         s = self.playtime
