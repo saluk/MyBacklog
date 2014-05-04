@@ -35,12 +35,20 @@ class EditGame(QWidget):
             layout.addWidget(edit,i,1)
             self.fields[prop] = {"w":edit,"t":proptype}
             
+            if prop=="install_path":
+                button = QPushButton("Set Path")
+                layout.addWidget(button,i,2)
+                button.clicked.connect(make_callback(self.set_filepath,edit))
+            
         #Save button
         button = QPushButton("Save + Close")
         layout.addWidget(button)
         button.clicked.connect(self.save_close)
         
         self.setLayout(layout)
+    def set_filepath(self,w):
+        filename = QFileDialog.getOpenFileName(self,"Open Executable",w.text(),"Executable (*.exe *.lnk *.cmd *.bat)")[0]
+        w.setText(filename.replace("/","\\"))
     def save_close(self):
         for field in self.fields:
             value = self.fields[field]["w"].text()
