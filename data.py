@@ -1,11 +1,22 @@
 #!python3
 import os
 import time
-from datetime import timedelta
+import datetime
 import json
 
+fmt = "%H:%M:%S %Y-%m-%d"
+def now():
+    t = time.localtime()
+    return time.strftime(fmt,t)
+def stot(s):
+    if not s:
+        return time.localtime(0)
+    return time.strptime(s,fmt)
+def ttos(t):
+    return time.strftime(fmt,t)
+
 class Game:
-    args = [("name","s"),("playtime","f"),("finished","i"),("source","s"),("hidden","i")]
+    args = [("name","s"),("playtime","f"),("lastplayed","s"),("finished","i"),("source","s"),("hidden","i")]
     source_args = {"steam":[("steamid","i")],"gog":[("gogid","s"),("install_path","s")]}
     def __init__(self,**kwargs):
         dontsavekeys = set(dir(self))
@@ -13,6 +24,7 @@ class Game:
         self.playtime = 0
         self.finished = 0
         self.hidden = 0
+        self.lastplayed = None   #timestamp
         self.source = "steam"
         
         self.steamid = ""
@@ -23,7 +35,12 @@ class Game:
             if hasattr(self,k):
                 setattr(self,k,kwargs[k])
         if "minutes" in kwargs:
-            self.playtime = timedelta(minutes=kwargs["minutes"]).total_seconds()
+            self.playtime = datetime.timedelta(minutes=kwargs["minutes"]).total_seconds()
+    def played(self):
+        """Resets lastplayed to now"""
+        self.lastplayed = now()
+    def set_played(self,t):
+        self.lastplayed = time.strftime(fmt,t)
     def display_print(self):
         print (self.name)
         print ("  %.2d:%.2d"%self.hours_minutes)
@@ -37,6 +54,12 @@ class Game:
         hour = int(min/60.0)
         min = min-hour*60.0
         return hour,min
+    @property
+    def last_played_nice(self):
+        if not self.lastplayed:
+            return "never"
+        t = time.strptime(self.lastplayed,fmt)
+        return time.strftime("%a, %d %b %Y %H:%M:%S",t)
     @property
     def gameid(self):
         if self.source == "steam":
@@ -86,4 +109,4 @@ class Games:
         return game
     def list(self):
         v = self.games.values()
-        return sorted(v,key=lambda g:(g.finished,g.name))
+        return sorted(v,key=lambda g:(g.finished,-time.mktime(stot(g.lastplayed)),g.name))
