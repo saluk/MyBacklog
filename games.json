@@ -32,6 +32,61 @@
         "source": "gog", 
         "steamid": ""
     }, 
+    "gog_defenders_quest": {
+        "finished": 0, 
+        "gogid": "defenders_quest", 
+        "hidden": 0, 
+        "install_path": "C:\\GOG Games\\Defender's Quest\\DefendersQuest.exe", 
+        "lastplayed": null, 
+        "name": "Defender's Quest", 
+        "playtime": 0.0, 
+        "source": "gog", 
+        "steamid": ""
+    }, 
+    "gog_dracula_trilogy.1": {
+        "finished": 1, 
+        "gogid": "dracula_trilogy.1", 
+        "hidden": 0, 
+        "install_path": "C:\\GOG Games\\Dracula Trilogy\\Dracula - The Resurrection\\Dracula.exe", 
+        "lastplayed": null, 
+        "name": "Dracula Trilogy(1)", 
+        "playtime": 36000.0, 
+        "source": "gog", 
+        "steamid": ""
+    }, 
+    "gog_dracula_trilogy.2": {
+        "finished": 1, 
+        "gogid": "dracula_trilogy.2", 
+        "hidden": 0, 
+        "install_path": "C:\\GOG Games\\Dracula Trilogy\\Dracula 2 - The Last Sanctuary\\Launch Dracula 2 - The Last Sanctuary.lnk", 
+        "lastplayed": null, 
+        "name": "Dracula Trilogy(2)", 
+        "playtime": 36000.0, 
+        "source": "gog", 
+        "steamid": ""
+    }, 
+    "gog_dracula_trilogy.3": {
+        "finished": 0, 
+        "gogid": "dracula_trilogy.3", 
+        "hidden": 0, 
+        "install_path": "C:\\GOG Games\\Dracula Trilogy\\Dracula 3 - The Path of the Dragon\\Launch Dracula 3 - The Path of the Dragon.lnk", 
+        "lastplayed": "16:37:00 2014-05-05", 
+        "name": "Dracula Trilogy(3)", 
+        "playtime": 1391.8554289340973, 
+        "source": "gog", 
+        "steamid": ""
+    }, 
+    "gog_dreamfall_the_longest_journey": {
+        "finished": 0, 
+        "gogid": "dreamfall_the_longest_journey", 
+        "hidden": 0, 
+        "install_path": "C:\\GOG Games\\Dreamfall\\dreamfall.exe", 
+        "lastplayed": null, 
+        "name": "Dreamfall: The Longest Journey", 
+        "playtime": 0.0, 
+        "source": "gog", 
+        "steamid": ""
+    }, 
     "gog_pod_gold": {
         "finished": 0, 
         "gogid": "pod_gold", 
