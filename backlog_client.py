@@ -46,6 +46,7 @@ class EditGame(QWidget):
         button.clicked.connect(self.save_close)
         
         self.setLayout(layout)
+        
     def set_filepath(self,w):
         filename = QFileDialog.getOpenFileName(self,"Open Executable",w.text(),"Executable (*.exe *.lnk *.cmd *.bat)")[0]
         w.setText(filename.replace("/","\\"))
@@ -112,6 +113,8 @@ class Form(QWidget):
         self.setLayout(mainLayout)
         self.setWindowTitle("My Backlog")
         
+        self.icons = {"steam":QPixmap("steam.bmp").scaled(24,24),"gog":QPixmap("gog.bmp").scaled(24,24)}
+        
         self.update_gamelist_widget()
         
     def get_row_for_game(self,game,w=None):
@@ -119,6 +122,11 @@ class Form(QWidget):
             w = QWidget()
             box = QHBoxLayout()
             w.setLayout(box)
+            
+            label = QLabel("test icon")
+            label.setFixedWidth(24)
+            box.addWidget(label)
+            w.icon = label
             
             label = QLabel("GAME NAME")
             box.addWidget(label)
@@ -140,6 +148,8 @@ class Form(QWidget):
             box.addWidget(run)
             run.clicked.connect(make_callback(self.edit_game,game,w))
         
+        if game.source in self.icons:
+            w.icon.setPixmap(self.icons[game.source])
         w.setStyleSheet("QWidget {}")
         if game.finished:
             w.setStyleSheet("QWidget {background-color: green}")
