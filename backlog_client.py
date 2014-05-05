@@ -152,7 +152,7 @@ class Form(QWidget):
             w.icon.setPixmap(self.icons[game.source])
         w.setStyleSheet("QWidget {}")
         if game.finished:
-            w.setStyleSheet("QWidget {background-color: green}")
+            w.setStyleSheet("QWidget {background-color: rgb(100,200,150);}")
         w.label.setText(game.name)
         w.hours.setText("%.2d:%.2d"%game.hours_minutes)
         w.hours.setStyleSheet("QWidget {}")
@@ -216,6 +216,7 @@ class Form(QWidget):
     def add_game(self):
         game = data.Game(source="gog")
         row = self.get_row_for_game(game)
+        self.gamelist.append({"game":game,"widget":row,"hidden":0})
         self.games_list_widget_layout.addWidget(row)
         self.egw = EditGame(game,row,self)
         self.egw.show()
