@@ -80,6 +80,10 @@ class Form(QWidget):
  
         buttonLayout1 = QVBoxLayout()
         
+        search = QLineEdit()
+        buttonLayout1.addWidget(search)
+        search.textChanged.connect(self.dosearch)
+        
         self.games_list_widget = QWidget()
         self.games_list_widget_layout = QGridLayout()
         self.games_list_widget_layout.setSpacing(0)
@@ -124,6 +128,10 @@ class Form(QWidget):
             box.addWidget(label)
             w.hours = label
             
+            label = QLabel("GAME LAST PLAYED")
+            box.addWidget(label)
+            w.last_played = label
+            
             run = QPushButton("play")
             box.addWidget(run)
             run.clicked.connect(make_callback(self.run_game,game))
@@ -141,17 +149,19 @@ class Form(QWidget):
         if game.playtime < 500:
             w.hours.setStyleSheet("QWidget {background-color: red}")
         if game.hidden:
-            w.deleteLater()
+            w.hide()
+        w.last_played.setText(game.last_played_nice)
         return w
 
     def update_gamelist_widget(self):
-        self.gamelist = self.games.list()
+        self.gamelist = [{"game":g,"widget":None,"hidden":g.hidden} for g in self.games.list()]
         child = self.games_list_widget_layout.takeAt(0)
         while child:
             child.widget().deleteLater()
             child = self.games_list_widget_layout.takeAt(0)
         for g in self.gamelist:
-            w = self.get_row_for_game(g)
+            w = self.get_row_for_game(g["game"])
+            g["widget"] = w
             self.games_list_widget_layout.addWidget(w)
         self.game_scroller.verticalScrollBar().setValue(0)
         self.update()
@@ -184,8 +194,12 @@ class Form(QWidget):
         elapsed_time = time.time()-self.timer_started
         QMessageBox.information(self, "Success!",
                                     "You played for %d seconds" % elapsed_time)
+        game.played()
         game.playtime += elapsed_time
         self.games.save("games.json")
+        for g in self.gamelist:
+            if g["game"].gameid == game.gameid:
+                self.get_row_for_game(game,g["widget"])
     def edit_game(self,game,row_widget):
         self.egw = EditGame(game,row_widget,self)
         self.egw.show()
@@ -195,6 +209,16 @@ class Form(QWidget):
         self.games_list_widget_layout.addWidget(row)
         self.egw = EditGame(game,row,self)
         self.egw.show()
+    def dosearch(self,text):
+        for g in self.gamelist:
+            if text.lower() in g["game"].name.lower() and not g["game"].hidden:
+                if g["hidden"]:
+                    g["widget"].show()
+                    g["hidden"] = 0
+            else:
+                if not g["hidden"]:
+                    g["widget"].hide()
+                    g["hidden"] = 1
  
 if __name__ == '__main__':
     import sys
