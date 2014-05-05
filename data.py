@@ -16,7 +16,7 @@ def ttos(t):
     return time.strftime(fmt,t)
 
 class Game:
-    args = [("name","s"),("playtime","f"),("lastplayed","s"),("finished","i"),("source","s"),("hidden","i")]
+    args = [("name","s"),("playtime","f"),("finished","i"),("source","s"),("hidden","i")]
     source_args = {"steam":[("steamid","i")],"gog":[("gogid","s"),("install_path","s")]}
     def __init__(self,**kwargs):
         dontsavekeys = set(dir(self))
