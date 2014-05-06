@@ -24,20 +24,21 @@ class EditGame(QWidget):
         
         #Layout
         layout = QGridLayout()
+        layout.addWidget(QLabel("Editing:"+game.gameid))
         
         #Fields
         self.fields = {}
         for i,prop in enumerate(game.valid_args):
             prop,proptype = prop
             label = QLabel("%s:"%prop.capitalize())
-            layout.addWidget(label,i,0)
+            layout.addWidget(label,i+1,0)
             edit = QLineEdit(str(getattr(game,prop)))
-            layout.addWidget(edit,i,1)
+            layout.addWidget(edit,i+1,1)
             self.fields[prop] = {"w":edit,"t":proptype}
             
             if prop=="install_path":
                 button = QPushButton("Set Path")
-                layout.addWidget(button,i,2)
+                layout.addWidget(button,i+1,2)
                 button.clicked.connect(make_callback(self.set_filepath,edit))
             
         #Save button

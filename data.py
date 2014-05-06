@@ -16,7 +16,7 @@ def ttos(t):
     return time.strftime(fmt,t)
 
 class Game:
-    args = [("name","s"),("playtime","f"),("finished","i"),("source","s"),("hidden","i")]
+    args = [("name","s"),("playtime","f"),("finished","i"),("source","s"),("hidden","i"),("exe_count","i")]
     source_args = {"steam":[("steamid","i")],"gog":[("gogid","s"),("install_path","s")]}
     def __init__(self,**kwargs):
         dontsavekeys = set(dir(self))
@@ -24,6 +24,7 @@ class Game:
         self.playtime = 0
         self.finished = 0
         self.hidden = 0
+        self.exe_count = 0   #If 0, only one exe for this game
         self.lastplayed = None   #timestamp
         self.source = "steam"
         
@@ -62,11 +63,14 @@ class Game:
         return time.strftime("%a, %d %b %Y %H:%M:%S",t)
     @property
     def gameid(self):
-        if self.source == "steam":
-            return "steam_%s"%self.steamid
-        elif self.source == "gog":
-            return "gog_%s"%self.gogid
-        return "ERROR"
+        s = ""
+        if self.source == "steam" and self.steamid:
+            s = "steam_%s"%self.steamid
+        elif self.source == "gog" and self.gogid:
+            s = "gog_%s"%self.gogid
+        if self.exe_count and s:
+            s += ".%d"%self.exe_count
+        return s
     def dict(self):
         d = {}
         for k in self.savekeys:
