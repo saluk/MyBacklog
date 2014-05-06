@@ -1,6 +1,7 @@
 #!python3
 import requests
 import data
+import vdf
 
 MY_API_KEY = "98934075AAB5F4E1223BEC4C40E88AA8"
 MY_STEAM_ID = "76561197999655940"
@@ -33,6 +34,7 @@ def match_finished_games(games,finished):
     return matched
     
 def import_steam(userid=MY_STEAM_ID):
+    apps = load_userdata()["UserLocalConfigStore"]["Software"]["Valve"]["Steam"]["apps"]
     games = get_games()
     is_finished = match_finished_games(games,finished)
     library = []
@@ -40,12 +42,29 @@ def import_steam(userid=MY_STEAM_ID):
         set_finished = 0
         if g in is_finished:
             set_finished = 1
-        library.append(data.Game(name=g["name"],minutes=g["playtime_forever"],finished=set_finished,source="steam",steamid=g["appid"]))
+        lastplayed = None
+        if str(g["appid"]) in apps:
+            app = apps[str(g["appid"])]
+            if "LastPlayed" in app:
+                lastplayed=data.sec_to_ts(int(app["LastPlayed"]))
+        library.append(
+            data.Game(name=g["name"],
+                            minutes=g["playtime_forever"],
+                            finished=set_finished,
+                            source="steam",
+                            steamid=g["appid"],
+                            lastplayed=lastplayed
+        )
+    )
     return library
+    
+def load_userdata(path="C:\\Steam\\userdata\\39390212\\config\\localconfig.vdf"):
+    f = open(path)
+    data = vdf.parse(f)
+    f.close()
+    return data
 
 if __name__=="__main__":
-    games = get_games()
-    finished = match_finished_games(games,finished)
-    for game in finished:
-        game = data.Game(name=game["name"],minutes=game["playtime_forever"],finished=1)
-        game.display_print()
+    import json
+    for game in import_steam():
+        print (game.name,game.lastplayed)
