@@ -42,6 +42,9 @@ def import_steam(userid=MY_STEAM_ID):
         set_finished = 0
         if g in is_finished:
             set_finished = 1
+        icon_url = ""
+        if "img_icon_url" in g:
+            icon_url  = "http://media.steampowered.com/steamcommunity/public/images/apps/%(appid)s/%(img_icon_url)s.jpg"%g
         lastplayed = None
         if str(g["appid"]) in apps:
             app = apps[str(g["appid"])]
@@ -53,7 +56,8 @@ def import_steam(userid=MY_STEAM_ID):
                             finished=set_finished,
                             source="steam",
                             steamid=g["appid"],
-                            lastplayed=lastplayed
+                            lastplayed=lastplayed,
+                            icon_url=icon_url
         )
     )
     return library
@@ -67,4 +71,4 @@ def load_userdata(path="C:\\Steam\\userdata\\39390212\\config\\localconfig.vdf")
 if __name__=="__main__":
     import json
     for game in import_steam():
-        print (game.name,game.lastplayed)
+        print (game.name,game.icon_url)

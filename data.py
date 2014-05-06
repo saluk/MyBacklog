@@ -33,6 +33,7 @@ class Game:
         self.steamid = ""
         self.gogid = ""
         self.install_path = ""
+        self.icon_url = ""
         self.savekeys = set(dir(self)) - dontsavekeys
         for k in kwargs:
             if hasattr(self,k):
@@ -110,6 +111,7 @@ class Games:
         if not cur_game or force:
             self.games[gameid] = game
             return
+        cur_game.icon_url = game.icon_url
         if game.playtime > cur_game.playtime:
             cur_game.playtime = game.playtime
         if game.finished:
