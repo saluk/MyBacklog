@@ -3,10 +3,12 @@ import data
 import steamapi
 import os
 import time
+import requests
 os.environ["QT_QPA_PLATFORM_PLUGIN_PATH"]="C:\\Python33\\Lib\\site-packages\\PyQt5\\plugins\\platforms"
 
-from PySide.QtCore import *
-from PySide.QtGui import *
+from PyQt5.QtCore import *
+from PyQt5.QtWidgets import *
+from PyQt5.QtGui import *
 
 def make_callback(f,*args):
     return lambda: f(*args)
@@ -72,13 +74,13 @@ class EditGame(QWidget):
  
 class Form(QWidget):
     def __init__(self, parent=None):
+        super(Form, self).__init__(parent)
+        
         self.timer_started = 0
         
         self.games = data.Games()
         self.games.load("games.json")
         self.gamelist = []
-        
-        super(Form, self).__init__(parent)
  
         buttonLayout1 = QVBoxLayout()
         
@@ -115,8 +117,11 @@ class Form(QWidget):
         self.setWindowTitle("My Backlog")
         
         self.icons = {"steam":QPixmap("steam.bmp").scaled(24,24),"gog":QPixmap("gog.bmp").scaled(24,24)}
+        self.gicons = {}
         
         self.update_gamelist_widget()
+        self.setMinimumSize(800,600)
+        self.adjustSize()
         
     def get_row_for_game(self,game,w=None):
         if not w:
@@ -124,33 +129,52 @@ class Form(QWidget):
             box = QHBoxLayout()
             w.setLayout(box)
             
-            label = QLabel("test icon")
+            label = QLabel("source icon")
             label.setFixedWidth(24)
             box.addWidget(label)
             w.icon = label
+            
+            label = QLabel("")
+            label.setFixedWidth(24)
+            box.addWidget(label)
+            w.gicon = label
             
             label = QLabel("GAME NAME")
             box.addWidget(label)
             w.label = label
             
             label = QLabel("GAME HOURS")
+            label.setMaximumWidth(50)
             box.addWidget(label)
             w.hours = label
             
             label = QLabel("GAME LAST PLAYED")
+            label.setMaximumWidth(150)
             box.addWidget(label)
             w.last_played = label
             
             run = QPushButton("play")
+            run.setFixedWidth(50)
             box.addWidget(run)
             run.clicked.connect(make_callback(self.run_game,game))
             
             run = QPushButton("edit")
+            run.setFixedWidth(50)
             box.addWidget(run)
             run.clicked.connect(make_callback(self.edit_game,game,w))
         
         if game.source in self.icons:
             w.icon.setPixmap(self.icons[game.source])
+        if game.icon_url:
+            fpath = "cache/"+game.icon_url.replace("http","").replace(":","").replace("/","")
+            if not os.path.exists(fpath):
+                r = requests.get(game.icon_url)
+                f = open(fpath,"wb")
+                f.write(r.content)
+                f.close()
+            if not fpath in self.gicons:
+                self.gicons[fpath] = QPixmap(fpath).scaled(24,24)
+            w.gicon.setPixmap(self.gicons[fpath])
         w.setStyleSheet("QWidget {}")
         if game.finished:
             w.setStyleSheet("QWidget {background-color: rgb(100,200,150);}")
