@@ -14,6 +14,8 @@ def stot(s):
     return time.strptime(s,fmt)
 def ttos(t):
     return time.strftime(fmt,t)
+def sec_to_ts(sec):
+    return ttos(time.localtime(sec))
 
 class Game:
     args = [("name","s"),("playtime","f"),("finished","i"),("source","s"),("hidden","i"),("exe_count","i")]
@@ -25,7 +27,7 @@ class Game:
         self.finished = 0
         self.hidden = 0
         self.exe_count = 0   #If 0, only one exe for this game
-        self.lastplayed = None   #timestamp
+        self.lastplayed = None   #timestamp in fmt
         self.source = "steam"
         
         self.steamid = ""
@@ -37,6 +39,8 @@ class Game:
                 setattr(self,k,kwargs[k])
         if "minutes" in kwargs:
             self.playtime = datetime.timedelta(minutes=kwargs["minutes"]).total_seconds()
+        if stot(self.lastplayed).tm_year<1971:
+            self.lastplayed = None
     def played(self):
         """Resets lastplayed to now"""
         self.lastplayed = now()
@@ -110,6 +114,8 @@ class Games:
             cur_game.playtime = game.playtime
         if game.finished:
             cur_game.finished = 1
+        if game.lastplayed and (not cur_game.lastplayed or stot(game.lastplayed)>stot(cur_game.lastplayed)):
+            cur_game.lastplayed = game.lastplayed
         return game
     def list(self):
         v = self.games.values()
