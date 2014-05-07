@@ -166,7 +166,7 @@ class Form(QWidget):
         if game.source in self.icons:
             w.icon.setPixmap(self.icons[game.source])
         if game.icon_url:
-            fpath = "cache/"+game.icon_url.replace("http","").replace(":","").replace("/","")
+            fpath = "cache/icons/"+game.icon_url.replace("http","").replace(":","").replace("/","")
             if not os.path.exists(fpath):
                 r = requests.get(game.icon_url)
                 f = open(fpath,"wb")
