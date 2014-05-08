@@ -84,6 +84,10 @@ multipack = {"leisure_suit_larry":["leisure suit larry 1","leisure suit larry 2"
                 "police_quest_1_2_3_4":["police quest 1","police quest 2","police quest 3","police quest 4"],
                 "megarace_1_2":["megarace 1","megarace 2"],
                 "wizardry_6_7":["wizardry 6","wizardry 7"],
+                "the_zork_anthology":["zork 1","zork 2","zork 3","beyond zork","zork zero","planetfall"],
+                "tex_murphy_1_2":["tex murphy mean streets","tex murphy martian memorandum"],
+                "alone_in_the_dark":["alone in the dark 1","alone in the dark 2","alone in the dark 3"],
+                "cultures_34":["cultures 3","cultures 4"]
 }
 """
 <div class="shelf_game" data-gameindex="dracula_trilogy" data-gameid="1207659251" data-orderid="3LKULVG353S" data-background="/upload/images/2013/07/50f3b525242c1a0129eabcbf5a6951c2e3f42194.jpg" data-title="dracula trilogy anuman interactive anuman interactive adventure pointandclick horror">
@@ -94,7 +98,7 @@ def get_gog_games_html(html):
     t = f.read()
     f.close()
     print (len(re.findall("data-gameindex",t)))
-    games = re.findall('<div.*?data\-gameindex.*?>',t)
+    games = re.findall('<div.*?data\-gameindex.*?>.*?</div>',t)
     for g in games:
         d = {}
         d["gameindex"] = re.findall('data-gameindex="(.*?)"',g)[0]
@@ -102,6 +106,7 @@ def get_gog_games_html(html):
         d["orderid"] = re.findall('data-orderid="(.*?)"',g)[0]
         d["background"] = re.findall('data-background="(.*?)"',g)[0]
         d["titlekeys"] = re.findall('data-title="(.*?)"',g)[0]
+        d["icon"] = re.findall('<img src="(.*?)"',g)[0]
         gog_games[d["gameindex"]] = d
     return gog_games
 def import_gog():
@@ -118,7 +123,7 @@ def import_gog():
             id = g["gameindex"]
             if g2:
                 id = id+"."+g2.replace(" ","_")
-            game = data.Game(name=name,source="gog",gogid=id)
+            game = data.Game(name=name,source="gog",gogid=id,icon_url="http://www.gog.com"+g["icon"])
             games.append(game)
     return games
 
