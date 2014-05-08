@@ -51,41 +51,41 @@
         "source": "gog", 
         "steamid": ""
     }, 
-    "gog_dracula_trilogy.1": {
+    "gog_dracula_trilogy.dracula_1": {
         "exe_count": 1, 
         "finished": 1, 
-        "gogid": "dracula_trilogy", 
+        "gogid": "dracula_trilogy.dracula_1", 
         "hidden": 0, 
         "icon_url": "", 
         "install_path": "C:\\GOG Games\\Dracula Trilogy\\Dracula - The Resurrection\\Dracula.exe", 
         "lastplayed": null, 
-        "name": "Dracula Trilogy(1)", 
+        "name": "Dracula 1", 
         "playtime": 36000.0, 
         "source": "gog", 
         "steamid": ""
     }, 
-    "gog_dracula_trilogy.2": {
+    "gog_dracula_trilogy.dracula_2": {
         "exe_count": 2, 
         "finished": 1, 
-        "gogid": "dracula_trilogy", 
+        "gogid": "dracula_trilogy.dracula_2", 
         "hidden": 0, 
         "icon_url": "", 
         "install_path": "C:\\GOG Games\\Dracula Trilogy\\Dracula 2 - The Last Sanctuary\\Launch Dracula 2 - The Last Sanctuary.lnk", 
         "lastplayed": null, 
-        "name": "Dracula Trilogy(2)", 
+        "name": "Dracula 2", 
         "playtime": 36000.0, 
         "source": "gog", 
         "steamid": ""
     }, 
-    "gog_dracula_trilogy.3": {
+    "gog_dracula_trilogy.dracula_3": {
         "exe_count": 3, 
         "finished": 0, 
-        "gogid": "dracula_trilogy.3", 
+        "gogid": "dracula_trilogy.dracula_3", 
         "hidden": 0, 
         "icon_url": "http://static.giantbomb.com/uploads/scale_small/10/103881/2244685-cover.jpg", 
         "install_path": "C:\\GOG Games\\Dracula Trilogy\\Dracula 3 - The Path of the Dragon\\Launch Dracula 3 - The Path of the Dragon.lnk", 
         "lastplayed": "21:02:32 2014-05-06", 
-        "name": "Dracula Trilogy(3)", 
+        "name": "Dracula 3", 
         "playtime": 6788.637302875519, 
         "source": "gog", 
         "steamid": ""
@@ -103,28 +103,28 @@
         "source": "gog", 
         "steamid": ""
     }, 
-    "gog_lands_of_lore_1_2.1": {
+    "gog_lands_of_lore_1_2.lands_of_lore_1": {
         "exe_count": 1, 
         "finished": 1, 
-        "gogid": "lands_of_lore_1_2", 
+        "gogid": "lands_of_lore_1_2.lands_of_lore_1", 
         "hidden": 0, 
         "icon_url": "http://pics.mobygames.com/images/covers/small/989603331-00.jpg", 
         "install_path": "C:\\GOG Games\\Lands Of Lore 1 and 2\\Lands of Lore 1\\Launch Lands Of Lore - The Throne of Chaos.lnk", 
         "lastplayed": "16:53:24 2014-05-05", 
-        "name": "Lands of Lore 1+2 (1)", 
+        "name": "Lands of Lore 1", 
         "playtime": 54247.667593955994, 
         "source": "gog", 
         "steamid": ""
     }, 
-    "gog_lands_of_lore_1_2.2": {
+    "gog_lands_of_lore_1_2.lands_of_lore_2": {
         "exe_count": 2, 
         "finished": 0, 
-        "gogid": "lands_of_lore_1_2", 
+        "gogid": "lands_of_lore_1_2.lands_of_lore_2", 
         "hidden": 0, 
         "icon_url": "http://pics.mobygames.com/images/covers/small/1070816290-00.jpg", 
         "install_path": "C:\\GOG Games\\Lands Of Lore 1 and 2\\Lands of Lore 2\\Launch Lands Of Lore - Guardians of Destiny - 3dfx.lnk", 
         "lastplayed": "16:55:44 2014-05-05", 
-        "name": "Lands of Lore 1+2 (2)", 
+        "name": "Lands of Lore 2", 
         "playtime": 36137.63745999336, 
         "source": "gog", 
         "steamid": ""
