@@ -1,6 +1,7 @@
 #!python3
 import data
 import steamapi
+import gogapi
 import os
 import time
 import requests
@@ -107,6 +108,10 @@ class Form(QWidget):
         self.import_steam_button = QPushButton("Import Steam")
         buttonLayout1.addWidget(self.import_steam_button)
         self.import_steam_button.clicked.connect(self.import_steam)
+        
+        self.import_gog_button = QPushButton("Import Gog")
+        buttonLayout1.addWidget(self.import_gog_button)
+        self.import_gog_button.clicked.connect(self.import_gog)
  
         self.buttonLayout1 = buttonLayout1
         mainLayout = QGridLayout()
@@ -202,6 +207,11 @@ class Form(QWidget):
         self.update()
     def import_steam(self):
         games = steamapi.import_steam()
+        self.games.add_games(games)
+        self.update_gamelist_widget()
+        self.games.save("games.json")
+    def import_gog(self):
+        games = gogapi.import_gog()
         self.games.add_games(games)
         self.update_gamelist_widget()
         self.games.save("games.json")

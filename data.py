@@ -111,7 +111,8 @@ class Games:
         if not cur_game or force:
             self.games[gameid] = game
             return
-        cur_game.icon_url = game.icon_url
+        if game.icon_url:
+            cur_game.icon_url = game.icon_url
         if game.playtime > cur_game.playtime:
             cur_game.playtime = game.playtime
         if game.finished:
