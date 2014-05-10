@@ -22,23 +22,25 @@ def make_callback(f,*args):
 class Cookies(QNetworkCookieJar):
     def __init__(self):
         super(Cookies,self).__init__()
-        self.cookies = {"all":[]}
+        self.cookies = {}
         if os.path.exists("cache/qtcookies"):
             with open("cache/qtcookies","r") as f:
                 self.cookies = json.loads(f.read())
-                for i,c in enumerate(self.cookies["all"]):
-                    self.cookies["all"][i] = QNetworkCookie(c["name"],c["value"])
     def cookiesForUrl(self, url):
-        return self.cookies["all"]
+        cookies = []
+        for name in self.cookies:
+            c = self.cookies[name]
+            qnc = QNetworkCookie(c["name"],c["value"])
+            qnc.setDomain(c["domain"])
+            qnc.setPath(c["path"])
+            cookies.append(qnc)
+        return cookies
     def setCookiesFromUrl(self, cookielist, url):
         for c in cookielist:
-            self.cookies["all"].append(c)
-        savecookies = {"all":[]}
-        for c in self.cookies["all"]:
-            savecookies["all"].append({"name":str(c.name()),"value":str(c.value())})
-        print(savecookies)
+            self.cookies[c.name().data().decode("utf8")] = {"name":c.name().data().decode("utf8"),"path":c.path(),"value":c.value().data().decode("utf8"),"domain":c.domain()}
+        print(self.cookies)
         with open("cache/qtcookies","w") as f:
-            f.write(json.dumps(savecookies))
+            f.write(json.dumps(self.cookies))
     
 class Browser(QWidget):
     def __init__(self,url,app):
