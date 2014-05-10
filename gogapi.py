@@ -93,20 +93,22 @@ multipack = {"leisure_suit_larry":["leisure suit larry 1","leisure suit larry 2"
 <div class="shelf_game" data-gameindex="dracula_trilogy" data-gameid="1207659251" data-orderid="3LKULVG353S" data-background="/upload/images/2013/07/50f3b525242c1a0129eabcbf5a6951c2e3f42194.jpg" data-title="dracula trilogy anuman interactive anuman interactive adventure pointandclick horror">
 """
 def get_gog_games_html(html):
+    from bs4 import BeautifulSoup
     gog_games = {}
     f = open(html)
     t = f.read()
     f.close()
-    print (len(re.findall("data-gameindex",t)))
-    games = re.findall('<div.*?data\-gameindex.*?>.*?</div>',t)
+    soup = BeautifulSoup(t)
+    games = soup.find_all(lambda tag: tag.has_attr("data-gameindex"))
     for g in games:
         d = {}
-        d["gameindex"] = re.findall('data-gameindex="(.*?)"',g)[0]
-        d["gameid"] = re.findall('data-gameid="(.*?)"',g)[0]
-        d["orderid"] = re.findall('data-orderid="(.*?)"',g)[0]
-        d["background"] = re.findall('data-background="(.*?)"',g)[0]
-        d["titlekeys"] = re.findall('data-title="(.*?)"',g)[0]
-        d["icon"] = re.findall('<img src="(.*?)"',g)[0]
+        d["gameindex"] = g['data-gameindex']
+        d["gameid"] = g['data-gameid']
+        d["orderid"] = g['data-orderid']
+        d["background"] = g['data-background']
+        d["titlekeys"] = g['data-title']
+        for image in g.find_all('img'):
+            d["icon"] = image['src']
         gog_games[d["gameindex"]] = d
     return gog_games
 def import_gog():
@@ -126,8 +128,8 @@ def import_gog():
             game = data.Game(name=name,source="gog",gogid=id,icon_url="http://www.gog.com"+g["icon"])
             games.append(game)
     return games
-
-if __name__ == "__main__":
+    
+def selenium():
     import pickle
     import selenium
     print (selenium.__version__)
@@ -191,3 +193,7 @@ if __name__ == "__main__":
         print("saving screenshot")
         browser.save_screenshot("phantomshot_shelf.jpg")
     browser.quit()
+
+if __name__ == "__main__":
+    for game in import_gog():
+        print (game.name)

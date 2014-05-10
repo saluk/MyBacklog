@@ -10,9 +10,37 @@ os.environ["QT_QPA_PLATFORM_PLUGIN_PATH"]="C:\\Python33\\Lib\\site-packages\\PyQ
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
+from PyQt5 import QtWebKit
+print (dir(QtWebKit))
+from PyQt5.QtWebKitWidgets import *
 
 def make_callback(f,*args):
     return lambda: f(*args)
+    
+class Browser(QWidget):
+    def __init__(self,url,app):
+        super(QWidget,self).__init__()
+        self.app = app
+        
+        layout = QGridLayout()
+        self.setLayout(layout)
+        
+        button = QPushButton("Do Import")
+        layout.addWidget(button)
+        button.clicked.connect(self.do_import)
+        
+        self.webkit = QWebView()
+        layout.addWidget(self.webkit)
+        
+        self.webkit.load(QUrl(url))
+        self.show()
+    def do_import(self):
+        html = self.webkit.page().mainFrame().toHtml()
+        f = open("mygog_shelf.html","w",encoding="utf8")
+        f.write(html)
+        f.close()
+        self.app.import_gog_html()
+        self.deleteLater()
 
 class EditGame(QWidget):
     def __init__(self, game, row_widget, app):
@@ -211,6 +239,8 @@ class Form(QWidget):
         self.update_gamelist_widget()
         self.games.save("games.json")
     def import_gog(self):
+        self.browser = Browser("http://www.gog.com/account",self)
+    def import_gog_html(self):
         games = gogapi.import_gog()
         self.games.add_games(games)
         self.update_gamelist_widget()
