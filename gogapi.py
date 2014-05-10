@@ -128,5 +128,66 @@ def import_gog():
     return games
 
 if __name__ == "__main__":
-    for game in import_gog():
-        print(game.dict())
+    import pickle
+    import selenium
+    print (selenium.__version__)
+    from selenium import webdriver
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.phantomjs.service import Service as PhantomJSService
+    class NewService(PhantomJSService):
+        def __init__(self, *args, **kwargs):
+            service_args = kwargs.setdefault('service_args', [])
+            service_args = [
+      #          '--load-images=no',
+                '--ignore-ssl-errors=true'
+            ]
+            super(NewService, self).__init__(*args, **kwargs)
+    webdriver.phantomjs.webdriver.Service = NewService
+    #browser = webdriver.PhantomJS("phantomjs/phantomjs.exe",desired_capabilities={"phantomjs.page.settings.resourceTimeout":"1000"})
+    browser = webdriver.Firefox()
+    #browser.set_window_size(1024,768)
+    #browser.set_page_load_timeout(20)
+    #browser.set_script_timeout(20)
+    browser.get("http://127.0.0.1")
+    try:
+        print("opening cookies")
+        cookies = pickle.load(open("cache/cookies","rb"))
+    except:
+        print("error opening cookies")
+    browser.get("http://www.gog.com")
+    for cookie in cookies:
+        browser.add_cookie(cookie)
+    browser.get("http://www.gog.com")
+    logged_in = False
+    try:
+        acct = WebDriverWait(browser,10).until(EC.presence_of_element_located((By.ID,"topMenuAvatarImg")))
+        logged_in = True
+        print("already logged in")
+    except:
+        print("Error logging in")
+    if not logged_in:
+        browser.save_screenshot("phantomshot_prelogin.jpg")
+        print("not logged in, logging in")
+        acct = WebDriverWait(browser,10).until(EC.presence_of_element_located((By.CSS_SELECTOR,".nav_login")))
+        browser.find_element_by_css_selector(".nav_login").click()
+        browser.find_element_by_id("log_email").send_keys("saluk64007@gmail.com")
+        browser.find_element_by_id("log_password").send_keys("wan3bane")
+        browser.find_element_by_id("submitForLoginForm").click()
+    try:
+        acct = WebDriverWait(browser,10).until(EC.presence_of_element_located((By.ID,"topMenuAvatarImg")))
+        logged_in = True
+    except:
+        print("Error logging in")
+    browser.save_screenshot("phantomshot_loggedin.jpg")
+    if logged_in:
+        print("logged in, dumping cookies")
+        pickle.dump(browser.get_cookies(),open("cache/cookies","wb"))
+        print("open shelf")
+        browser.get("http://www.gog.com/account/games/shelf")
+        print("shelf open, waiting for full game list")
+        acct = WebDriverWait(browser,20).until(EC.presence_of_element_located((By.CSS_SELECTOR,"span.all")))
+        print("saving screenshot")
+        browser.save_screenshot("phantomshot_shelf.jpg")
+    browser.quit()
