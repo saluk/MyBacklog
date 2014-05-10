@@ -1,5 +1,6 @@
 #!python3
 import data
+import json
 import steamapi
 import gogapi
 import os
@@ -13,13 +14,35 @@ from PyQt5.QtGui import *
 from PyQt5 import QtWebKit
 print (dir(QtWebKit))
 from PyQt5.QtWebKitWidgets import *
+from PyQt5.QtNetwork import *
 
 def make_callback(f,*args):
     return lambda: f(*args)
     
+class Cookies(QNetworkCookieJar):
+    def __init__(self):
+        super(Cookies,self).__init__()
+        self.cookies = {"all":[]}
+        if os.path.exists("cache/qtcookies"):
+            with open("cache/qtcookies","r") as f:
+                self.cookies = json.loads(f.read())
+                for i,c in enumerate(self.cookies["all"]):
+                    self.cookies["all"][i] = QNetworkCookie(c["name"],c["value"])
+    def cookiesForUrl(self, url):
+        return self.cookies["all"]
+    def setCookiesFromUrl(self, cookielist, url):
+        for c in cookielist:
+            self.cookies["all"].append(c)
+        savecookies = {"all":[]}
+        for c in self.cookies["all"]:
+            savecookies["all"].append({"name":str(c.name()),"value":str(c.value())})
+        print(savecookies)
+        with open("cache/qtcookies","w") as f:
+            f.write(json.dumps(savecookies))
+    
 class Browser(QWidget):
     def __init__(self,url,app):
-        super(QWidget,self).__init__()
+        super(Browser,self).__init__()
         self.app = app
         
         layout = QGridLayout()
@@ -29,7 +52,9 @@ class Browser(QWidget):
         layout.addWidget(button)
         button.clicked.connect(self.do_import)
         
+        self.cookiem = Cookies()
         self.webkit = QWebView()
+        self.webkit.page().networkAccessManager().setCookieJar(self.cookiem)
         layout.addWidget(self.webkit)
         
         self.webkit.load(QUrl(url))
