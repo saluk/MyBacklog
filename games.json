@@ -534,14 +534,14 @@
     }, 
     "gog_blackwell_epiphany_the": {
         "exe_count": 0, 
-        "finished": 0, 
+        "finished": 1, 
         "gogid": "blackwell_epiphany_the", 
         "hidden": 0, 
         "icon_url": "http://www.gog.com/upload/images/2014/04/c78ba47a4d6db561d869cf31c41ac31a5f506813_bbC_20.jpg", 
         "install_path": "C:\\GOG Games\\The Blackwell Epiphany\\Launch The Blackwell Epiphany.lnk", 
-        "lastplayed": "02:21:37 2014-05-11", 
+        "lastplayed": "02:02:06 2014-05-12", 
         "name": "Blackwell Episode 5 Epiphany", 
-        "playtime": 18324.930968999863, 
+        "playtime": 23131.98753809929, 
         "source": "gog", 
         "steamid": ""
     }, 
