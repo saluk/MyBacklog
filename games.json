@@ -9582,10 +9582,10 @@
         "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/243200/d9490b1cd51cb802f8650472cf47ee8dbfec2777.jpg", 
         "install_path": "", 
         "is_package": 0, 
-        "lastplayed": "23:51:43 2014-04-12", 
+        "lastplayed": "17:53:11 2014-05-13", 
         "name": "Memoria", 
         "packageid": "", 
-        "playtime": 780.0, 
+        "playtime": 981.5475039482117, 
         "source": "steam", 
         "steamid": 243200
     }, 
@@ -9728,6 +9728,20 @@
         "playtime": 1140.0, 
         "source": "steam", 
         "steamid": 250580
+    }, 
+    "steam_251430": {
+        "finished": 0, 
+        "gogid": "", 
+        "hidden": 0, 
+        "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/251430/1d80cce2b884a54f983700b4e1b4e98fc4b8cf0f.jpg", 
+        "install_path": "", 
+        "is_package": 0, 
+        "lastplayed": null, 
+        "name": "The Inner World", 
+        "packageid": "", 
+        "playtime": 0.0, 
+        "source": "steam", 
+        "steamid": 251430
     }, 
     "steam_252630": {
         "finished": 0, 
