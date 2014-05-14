@@ -1,6 +1,5 @@
 {
     "gog_a_new_beginning": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "a_new_beginning", 
         "hidden": 0, 
@@ -15,7 +14,6 @@
         "steamid": ""
     }, 
     "gog_age_of_wonders": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "age_of_wonders", 
         "hidden": 0, 
@@ -30,7 +28,6 @@
         "steamid": ""
     }, 
     "gog_age_of_wonders_2_the_wizards_throne": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "age_of_wonders_2_the_wizards_throne", 
         "hidden": 0, 
@@ -45,7 +42,6 @@
         "steamid": ""
     }, 
     "gog_age_of_wonders_shadow_magic": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "age_of_wonders_shadow_magic", 
         "hidden": 0, 
@@ -60,7 +56,6 @@
         "steamid": ""
     }, 
     "gog_alan_wake": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "alan_wake", 
         "hidden": 0, 
@@ -75,7 +70,6 @@
         "steamid": ""
     }, 
     "gog_alan_wakes_american_nightmare": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "alan_wakes_american_nightmare", 
         "hidden": 0, 
@@ -90,7 +84,6 @@
         "steamid": ""
     }, 
     "gog_alien_breed_tower_assault": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "alien_breed_tower_assault", 
         "hidden": 0, 
@@ -105,7 +98,6 @@
         "steamid": ""
     }, 
     "gog_alien_nations": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "alien_nations", 
         "hidden": 0, 
@@ -120,7 +112,6 @@
         "steamid": ""
     }, 
     "gog_alone_in_the_dark": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "alone_in_the_dark", 
         "hidden": 0, 
@@ -135,7 +126,6 @@
         "steamid": ""
     }, 
     "gog_alone_in_the_dark.alone_in_the_dark_1": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "alone_in_the_dark", 
         "hidden": 0, 
@@ -150,7 +140,6 @@
         "steamid": ""
     }, 
     "gog_alone_in_the_dark.alone_in_the_dark_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "alone_in_the_dark", 
         "hidden": 0, 
@@ -165,7 +154,6 @@
         "steamid": ""
     }, 
     "gog_alone_in_the_dark.alone_in_the_dark_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "alone_in_the_dark", 
         "hidden": 0, 
@@ -180,7 +168,6 @@
         "steamid": ""
     }, 
     "gog_alone_in_the_dark_the_new_nightmare": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "alone_in_the_dark_the_new_nightmare", 
         "hidden": 0, 
@@ -195,7 +182,6 @@
         "steamid": ""
     }, 
     "gog_american_conquest": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "american_conquest", 
         "hidden": 0, 
@@ -210,7 +196,6 @@
         "steamid": ""
     }, 
     "gog_anachronox": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "anachronox", 
         "hidden": 0, 
@@ -225,7 +210,6 @@
         "steamid": ""
     }, 
     "gog_another_world_20th_anniversary_edition": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "another_world_20th_anniversary_edition", 
         "hidden": 0, 
@@ -240,7 +224,6 @@
         "steamid": ""
     }, 
     "gog_anvil_of_dawn": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "anvil_of_dawn", 
         "hidden": 0, 
@@ -255,7 +238,6 @@
         "steamid": ""
     }, 
     "gog_aquanox": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "aquanox", 
         "hidden": 0, 
@@ -270,7 +252,6 @@
         "steamid": ""
     }, 
     "gog_aquanox_2_revelation": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "aquanox_2_revelation", 
         "hidden": 0, 
@@ -285,7 +266,6 @@
         "steamid": ""
     }, 
     "gog_arcanum_of_steamworks_and_magick_obscura": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "arcanum_of_steamworks_and_magick_obscura", 
         "hidden": 0, 
@@ -300,7 +280,6 @@
         "steamid": ""
     }, 
     "gog_arma_2_combined_operations": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "arma_2_combined_operations", 
         "hidden": 0, 
@@ -315,7 +294,6 @@
         "steamid": ""
     }, 
     "gog_arma_cold_war_assault": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "arma_cold_war_assault", 
         "hidden": 0, 
@@ -330,7 +308,6 @@
         "steamid": ""
     }, 
     "gog_arma_gold_edition": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "arma_gold_edition", 
         "hidden": 0, 
@@ -345,7 +322,6 @@
         "steamid": ""
     }, 
     "gog_arx_fatalis": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "arx_fatalis", 
         "hidden": 0, 
@@ -360,7 +336,6 @@
         "steamid": ""
     }, 
     "gog_atlantis2_beyond_atlantis": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "atlantis2_beyond_atlantis", 
         "hidden": 0, 
@@ -375,7 +350,6 @@
         "steamid": ""
     }, 
     "gog_atlantis_2_beyond_atlantis": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "atlantis_2_beyond_atlantis", 
         "hidden": 0, 
@@ -390,7 +364,6 @@
         "steamid": ""
     }, 
     "gog_atlantis_3_the_new_world": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "atlantis_3_the_new_world", 
         "hidden": 0, 
@@ -405,7 +378,6 @@
         "steamid": ""
     }, 
     "gog_atlantis_the_lost_tales": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "atlantis_the_lost_tales", 
         "hidden": 0, 
@@ -420,7 +392,6 @@
         "steamid": ""
     }, 
     "gog_avernum_the_complete_saga": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "avernum_the_complete_saga", 
         "hidden": 0, 
@@ -435,7 +406,6 @@
         "steamid": ""
     }, 
     "gog_baldurs_gate_2_complete": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "baldurs_gate_2_complete", 
         "hidden": 0, 
@@ -450,7 +420,6 @@
         "steamid": ""
     }, 
     "gog_baldurs_gate_the_original_saga": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "baldurs_gate_the_original_saga", 
         "hidden": 0, 
@@ -465,7 +434,6 @@
         "steamid": ""
     }, 
     "gog_battle_isle_platinum": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "battle_isle_platinum", 
         "hidden": 0, 
@@ -480,7 +448,6 @@
         "steamid": ""
     }, 
     "gog_battle_realms_winter_of_the_wolf": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "battle_realms_winter_of_the_wolf", 
         "hidden": 0, 
@@ -495,7 +462,6 @@
         "steamid": ""
     }, 
     "gog_beneath_a_steel_sky": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "beneath_a_steel_sky", 
         "hidden": 0, 
@@ -510,7 +476,6 @@
         "steamid": ""
     }, 
     "gog_betrayal_at_krondor": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "betrayal_at_krondor", 
         "hidden": 0, 
@@ -525,7 +490,6 @@
         "steamid": ""
     }, 
     "gog_betrayal_at_krondor.betrayal_at_antara": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "betrayal_at_krondor", 
         "hidden": 0, 
@@ -540,7 +504,6 @@
         "steamid": ""
     }, 
     "gog_betrayal_at_krondor.betrayal_at_krondor": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "betrayal_at_krondor", 
         "hidden": 0, 
@@ -555,7 +518,6 @@
         "steamid": ""
     }, 
     "gog_beyond_divinity": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "beyond_divinity", 
         "hidden": 0, 
@@ -570,7 +532,6 @@
         "steamid": ""
     }, 
     "gog_bioforge": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "bioforge", 
         "hidden": 0, 
@@ -585,7 +546,6 @@
         "steamid": ""
     }, 
     "gog_blackwell_bundle": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "blackwell_bundle", 
         "hidden": 0, 
@@ -600,7 +560,6 @@
         "steamid": ""
     }, 
     "gog_blackwell_bundle.blackwell_convergence": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "blackwell_bundle", 
         "hidden": 0, 
@@ -615,7 +574,6 @@
         "steamid": ""
     }, 
     "gog_blackwell_bundle.blackwell_deception": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "blackwell_bundle", 
         "hidden": 0, 
@@ -630,7 +588,6 @@
         "steamid": ""
     }, 
     "gog_blackwell_bundle.blackwell_legacy": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "blackwell_bundle", 
         "hidden": 0, 
@@ -645,7 +602,6 @@
         "steamid": ""
     }, 
     "gog_blackwell_bundle.blackwell_unbound": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "blackwell_bundle", 
         "hidden": 0, 
@@ -660,7 +616,6 @@
         "steamid": ""
     }, 
     "gog_blackwell_epiphany_the": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "blackwell_epiphany_the", 
         "hidden": 0, 
@@ -675,7 +630,6 @@
         "steamid": ""
     }, 
     "gog_blade_of_darkness": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "blade_of_darkness", 
         "hidden": 0, 
@@ -690,7 +644,6 @@
         "steamid": ""
     }, 
     "gog_blake_stone_aliens_of_gold": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "blake_stone_aliens_of_gold", 
         "hidden": 0, 
@@ -705,7 +658,6 @@
         "steamid": ""
     }, 
     "gog_blake_stone_planet_strike": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "blake_stone_planet_strike", 
         "hidden": 0, 
@@ -720,7 +672,6 @@
         "steamid": ""
     }, 
     "gog_blitzkrieg_anthology": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "blitzkrieg_anthology", 
         "hidden": 0, 
@@ -735,7 +686,6 @@
         "steamid": ""
     }, 
     "gog_blood_2_the_chosen_expansion": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "blood_2_the_chosen_expansion", 
         "hidden": 0, 
@@ -750,7 +700,6 @@
         "steamid": ""
     }, 
     "gog_botanicula": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "botanicula", 
         "hidden": 0, 
@@ -765,7 +714,6 @@
         "steamid": ""
     }, 
     "gog_broken_sword_2__the_smoking_mirror": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "broken_sword_2__the_smoking_mirror", 
         "hidden": 0, 
@@ -780,7 +728,6 @@
         "steamid": ""
     }, 
     "gog_broken_sword_3__the_sleeping_dragon": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "broken_sword_3__the_sleeping_dragon", 
         "hidden": 0, 
@@ -795,7 +742,6 @@
         "steamid": ""
     }, 
     "gog_broken_sword_4": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "broken_sword_4", 
         "hidden": 0, 
@@ -810,7 +756,6 @@
         "steamid": ""
     }, 
     "gog_broken_sword_directors_cut": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "broken_sword_directors_cut", 
         "hidden": 0, 
@@ -825,7 +770,6 @@
         "steamid": ""
     }, 
     "gog_caesar_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "caesar_3", 
         "hidden": 0, 
@@ -840,7 +784,6 @@
         "steamid": ""
     }, 
     "gog_cannon_fodder": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "cannon_fodder", 
         "hidden": 0, 
@@ -855,7 +798,6 @@
         "steamid": ""
     }, 
     "gog_capitalism_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "capitalism_2", 
         "hidden": 0, 
@@ -870,7 +812,6 @@
         "steamid": ""
     }, 
     "gog_capitalism_plus": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "capitalism_plus", 
         "hidden": 0, 
@@ -885,7 +826,6 @@
         "steamid": ""
     }, 
     "gog_carmageddon_max_pack": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "carmageddon_max_pack", 
         "hidden": 0, 
@@ -900,7 +840,6 @@
         "steamid": ""
     }, 
     "gog_castles_castles_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "castles_castles_2", 
         "hidden": 0, 
@@ -915,7 +854,6 @@
         "steamid": ""
     }, 
     "gog_castles_castles_2.castles_1": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "castles_castles_2", 
         "hidden": 0, 
@@ -930,7 +868,6 @@
         "steamid": ""
     }, 
     "gog_castles_castles_2.castles_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "castles_castles_2", 
         "hidden": 0, 
@@ -945,7 +882,6 @@
         "steamid": ""
     }, 
     "gog_children_of_the_nile_complete": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "children_of_the_nile_complete", 
         "hidden": 0, 
@@ -960,7 +896,6 @@
         "steamid": ""
     }, 
     "gog_clive_barkers_undying": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "clive_barkers_undying", 
         "hidden": 0, 
@@ -975,7 +910,6 @@
         "steamid": ""
     }, 
     "gog_combat_mission_beyond_overlord": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "combat_mission_beyond_overlord", 
         "hidden": 0, 
@@ -990,7 +924,6 @@
         "steamid": ""
     }, 
     "gog_commandos_2_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "commandos_2_3", 
         "hidden": 0, 
@@ -1005,7 +938,6 @@
         "steamid": ""
     }, 
     "gog_commandos_2_3.commandos_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "commandos_2_3", 
         "hidden": 0, 
@@ -1020,7 +952,6 @@
         "steamid": ""
     }, 
     "gog_commandos_2_3.commandos_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "commandos_2_3", 
         "hidden": 0, 
@@ -1035,7 +966,6 @@
         "steamid": ""
     }, 
     "gog_commandos_ammo_pack": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "commandos_ammo_pack", 
         "hidden": 0, 
@@ -1050,7 +980,6 @@
         "steamid": ""
     }, 
     "gog_conquest_of_the_new_world": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "conquest_of_the_new_world", 
         "hidden": 0, 
@@ -1065,7 +994,6 @@
         "steamid": ""
     }, 
     "gog_constructor": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "constructor", 
         "hidden": 0, 
@@ -1080,7 +1008,6 @@
         "steamid": ""
     }, 
     "gog_cossacks_anthology": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "cossacks_anthology", 
         "hidden": 0, 
@@ -1095,7 +1022,6 @@
         "steamid": ""
     }, 
     "gog_cossacks_anthology.cossacks_art_of_war": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "cossacks_anthology", 
         "hidden": 0, 
@@ -1110,7 +1036,6 @@
         "steamid": ""
     }, 
     "gog_cossacks_anthology.cossacks_back_to_war": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "cossacks_anthology", 
         "hidden": 0, 
@@ -1125,7 +1050,6 @@
         "steamid": ""
     }, 
     "gog_cossacks_anthology.cossacks_euro_wars": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "cossacks_anthology", 
         "hidden": 0, 
@@ -1140,7 +1064,6 @@
         "steamid": ""
     }, 
     "gog_creatures_exodus": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "creatures_exodus", 
         "hidden": 0, 
@@ -1155,7 +1078,6 @@
         "steamid": ""
     }, 
     "gog_crusader_no_regret": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "crusader_no_regret", 
         "hidden": 0, 
@@ -1170,7 +1092,6 @@
         "steamid": ""
     }, 
     "gog_crusader_no_remorse": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "crusader_no_remorse", 
         "hidden": 0, 
@@ -1185,7 +1106,6 @@
         "steamid": ""
     }, 
     "gog_cultures_12": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "cultures_12", 
         "hidden": 0, 
@@ -1200,7 +1120,6 @@
         "steamid": ""
     }, 
     "gog_cultures_12.cultures_1": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "cultures_12", 
         "hidden": 0, 
@@ -1215,7 +1134,6 @@
         "steamid": ""
     }, 
     "gog_cultures_12.cultures_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "cultures_12", 
         "hidden": 0, 
@@ -1230,7 +1148,6 @@
         "steamid": ""
     }, 
     "gog_cultures_34": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "cultures_34", 
         "hidden": 0, 
@@ -1245,7 +1162,6 @@
         "steamid": ""
     }, 
     "gog_cultures_34.cultures_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "cultures_34", 
         "hidden": 0, 
@@ -1260,7 +1176,6 @@
         "steamid": ""
     }, 
     "gog_cultures_34.cultures_4": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "cultures_34", 
         "hidden": 0, 
@@ -1275,7 +1190,6 @@
         "steamid": ""
     }, 
     "gog_dark_fall_lights_out": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "dark_fall_lights_out", 
         "hidden": 0, 
@@ -1290,7 +1204,6 @@
         "steamid": ""
     }, 
     "gog_dark_fall_the_journal": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "dark_fall_the_journal", 
         "hidden": 0, 
@@ -1305,7 +1218,6 @@
         "steamid": ""
     }, 
     "gog_dark_reign_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "dark_reign_2", 
         "hidden": 0, 
@@ -1320,7 +1232,6 @@
         "steamid": ""
     }, 
     "gog_dark_reign_expansion": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "dark_reign_expansion", 
         "hidden": 0, 
@@ -1335,7 +1246,6 @@
         "steamid": ""
     }, 
     "gog_darklands": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "darklands", 
         "hidden": 0, 
@@ -1350,7 +1260,6 @@
         "steamid": ""
     }, 
     "gog_darkstar_one": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "darkstar_one", 
         "hidden": 0, 
@@ -1365,7 +1274,6 @@
         "steamid": ""
     }, 
     "gog_darkstone": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "darkstone", 
         "hidden": 0, 
@@ -1380,7 +1288,6 @@
         "steamid": ""
     }, 
     "gog_defenders_quest": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "defenders_quest", 
         "hidden": 0, 
@@ -1395,7 +1302,6 @@
         "steamid": ""
     }, 
     "gog_deponia": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "deponia", 
         "hidden": 1, 
@@ -1410,7 +1316,6 @@
         "steamid": ""
     }, 
     "gog_descent_1_descent_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "descent_1_descent_2", 
         "hidden": 0, 
@@ -1425,7 +1330,6 @@
         "steamid": ""
     }, 
     "gog_descent_1_descent_2.descent_1": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "descent_1_descent_2", 
         "hidden": 0, 
@@ -1440,7 +1344,6 @@
         "steamid": ""
     }, 
     "gog_descent_1_descent_2.descent_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "descent_1_descent_2", 
         "hidden": 0, 
@@ -1455,7 +1358,6 @@
         "steamid": ""
     }, 
     "gog_descent_3_expansion": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "descent_3_expansion", 
         "hidden": 0, 
@@ -1470,7 +1372,6 @@
         "steamid": ""
     }, 
     "gog_die_by_the_sword_expansion": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "die_by_the_sword_expansion", 
         "hidden": 0, 
@@ -1485,7 +1386,6 @@
         "steamid": ""
     }, 
     "gog_disciples_2_gold": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "disciples_2_gold", 
         "hidden": 0, 
@@ -1500,7 +1400,6 @@
         "steamid": ""
     }, 
     "gog_disciples_sacred_lands_gold": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "disciples_sacred_lands_gold", 
         "hidden": 0, 
@@ -1515,7 +1414,6 @@
         "steamid": ""
     }, 
     "gog_divine_divinity": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "divine_divinity", 
         "hidden": 0, 
@@ -1530,7 +1428,6 @@
         "steamid": ""
     }, 
     "gog_divinity_2_developers_cut": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "divinity_2_developers_cut", 
         "hidden": 0, 
@@ -1545,7 +1442,6 @@
         "steamid": ""
     }, 
     "gog_dont_starve": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "dont_starve", 
         "hidden": 0, 
@@ -1560,7 +1456,6 @@
         "steamid": ""
     }, 
     "gog_dracula_trilogy": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "dracula_trilogy", 
         "hidden": 0, 
@@ -1575,7 +1470,6 @@
         "steamid": ""
     }, 
     "gog_dracula_trilogy.dracula_1": {
-        "exe_count": 1, 
         "finished": 1, 
         "gogid": "dracula_trilogy", 
         "hidden": 0, 
@@ -1590,7 +1484,6 @@
         "steamid": ""
     }, 
     "gog_dracula_trilogy.dracula_2": {
-        "exe_count": 2, 
         "finished": 1, 
         "gogid": "dracula_trilogy", 
         "hidden": 0, 
@@ -1605,7 +1498,6 @@
         "steamid": ""
     }, 
     "gog_dracula_trilogy.dracula_3": {
-        "exe_count": 3, 
         "finished": 0, 
         "gogid": "dracula_trilogy", 
         "hidden": 0, 
@@ -1620,7 +1512,6 @@
         "steamid": ""
     }, 
     "gog_dragonsphere": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "dragonsphere", 
         "hidden": 0, 
@@ -1635,7 +1526,6 @@
         "steamid": ""
     }, 
     "gog_dreamfall_the_longest_journey": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "dreamfall_the_longest_journey", 
         "hidden": 0, 
@@ -1650,7 +1540,6 @@
         "steamid": ""
     }, 
     "gog_driftmoon": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "driftmoon", 
         "hidden": 0, 
@@ -1665,7 +1554,6 @@
         "steamid": ""
     }, 
     "gog_drod_1_2_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "drod_1_2_3", 
         "hidden": 0, 
@@ -1680,7 +1568,6 @@
         "steamid": ""
     }, 
     "gog_duke_nukem_3d_atomic_edition": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "duke_nukem_3d_atomic_edition", 
         "hidden": 0, 
@@ -1695,7 +1582,6 @@
         "steamid": ""
     }, 
     "gog_duke_nukem_manhattan_project": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "duke_nukem_manhattan_project", 
         "hidden": 0, 
@@ -1710,7 +1596,6 @@
         "steamid": ""
     }, 
     "gog_dungeon_keeper": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "dungeon_keeper", 
         "hidden": 0, 
@@ -1725,7 +1610,6 @@
         "steamid": ""
     }, 
     "gog_dungeon_keeper_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "dungeon_keeper_2", 
         "hidden": 0, 
@@ -1740,7 +1624,6 @@
         "steamid": ""
     }, 
     "gog_eador_genesis": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "eador_genesis", 
         "hidden": 0, 
@@ -1755,7 +1638,6 @@
         "steamid": ""
     }, 
     "gog_earth_2140_trilogy": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "earth_2140_trilogy", 
         "hidden": 0, 
@@ -1770,7 +1652,6 @@
         "steamid": ""
     }, 
     "gog_earth_2150_trilogy": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "earth_2150_trilogy", 
         "hidden": 0, 
@@ -1785,7 +1666,6 @@
         "steamid": ""
     }, 
     "gog_earth_2160": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "earth_2160", 
         "hidden": 0, 
@@ -1800,7 +1680,6 @@
         "steamid": ""
     }, 
     "gog_edna_harvey_harveys_new_eyes": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "edna_harvey_harveys_new_eyes", 
         "hidden": 0, 
@@ -1815,7 +1694,6 @@
         "steamid": ""
     }, 
     "gog_edna_harvey_the_breakout": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "edna_harvey_the_breakout", 
         "hidden": 0, 
@@ -1830,7 +1708,6 @@
         "steamid": ""
     }, 
     "gog_empire_earth_2_gold": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "empire_earth_2_gold", 
         "hidden": 1, 
@@ -1845,7 +1722,6 @@
         "steamid": ""
     }, 
     "gog_empire_earth_gold_edition": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "empire_earth_gold_edition", 
         "hidden": 1, 
@@ -1860,7 +1736,6 @@
         "steamid": ""
     }, 
     "gog_enclave": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "enclave", 
         "hidden": 0, 
@@ -1875,7 +1750,6 @@
         "steamid": ""
     }, 
     "gog_evoland": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "evoland", 
         "hidden": 0, 
@@ -1890,7 +1764,6 @@
         "steamid": ""
     }, 
     "gog_fahrenheit_indigo_prophecy": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "fahrenheit_indigo_prophecy", 
         "hidden": 0, 
@@ -1905,7 +1778,6 @@
         "steamid": ""
     }, 
     "gog_fallout": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "fallout", 
         "hidden": 0, 
@@ -1920,7 +1792,6 @@
         "steamid": ""
     }, 
     "gog_fallout_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "fallout_2", 
         "hidden": 0, 
@@ -1935,7 +1806,6 @@
         "steamid": ""
     }, 
     "gog_fantasy_wars": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "fantasy_wars", 
         "hidden": 0, 
@@ -1950,7 +1820,6 @@
         "steamid": ""
     }, 
     "gog_fez": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "fez", 
         "hidden": 0, 
@@ -1965,7 +1834,6 @@
         "steamid": ""
     }, 
     "gog_flatout": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "flatout", 
         "hidden": 0, 
@@ -1980,7 +1848,6 @@
         "steamid": ""
     }, 
     "gog_flight_of_the_amazon_queen": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "flight_of_the_amazon_queen", 
         "hidden": 0, 
@@ -1995,7 +1862,6 @@
         "steamid": ""
     }, 
     "gog_forgotten_realms_demon_stone": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "forgotten_realms_demon_stone", 
         "hidden": 0, 
@@ -2010,7 +1876,6 @@
         "steamid": ""
     }, 
     "gog_freespace_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "freespace_2", 
         "hidden": 0, 
@@ -2025,7 +1890,6 @@
         "steamid": ""
     }, 
     "gog_freespace_expansion": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "freespace_expansion", 
         "hidden": 0, 
@@ -2040,7 +1904,6 @@
         "steamid": ""
     }, 
     "gog_gabriel_knight_2_the_beast_within": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "gabriel_knight_2_the_beast_within", 
         "hidden": 0, 
@@ -2055,7 +1918,6 @@
         "steamid": ""
     }, 
     "gog_gabriel_knight_3_blood_of_the_sacred_blood_of_the_damned": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "gabriel_knight_3_blood_of_the_sacred_blood_of_the_damned", 
         "hidden": 0, 
@@ -2070,7 +1932,6 @@
         "steamid": ""
     }, 
     "gog_gabriel_knight_sins_of_the_fathers": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "gabriel_knight_sins_of_the_fathers", 
         "hidden": 0, 
@@ -2085,7 +1946,6 @@
         "steamid": ""
     }, 
     "gog_ghost_master": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ghost_master", 
         "hidden": 0, 
@@ -2100,7 +1960,6 @@
         "steamid": ""
     }, 
     "gog_gobliiins_pack": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "gobliiins_pack", 
         "hidden": 0, 
@@ -2115,7 +1974,6 @@
         "steamid": ""
     }, 
     "gog_gobliiins_pack.gobliiins_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "gobliiins_pack", 
         "hidden": 0, 
@@ -2130,7 +1988,6 @@
         "steamid": ""
     }, 
     "gog_gobliiins_pack.gobliins_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "gobliiins_pack", 
         "hidden": 0, 
@@ -2145,7 +2002,6 @@
         "steamid": ""
     }, 
     "gog_gobliiins_pack.goblins_1": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "gobliiins_pack", 
         "hidden": 0, 
@@ -2160,7 +2016,6 @@
         "steamid": ""
     }, 
     "gog_gorky_17": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "gorky_17", 
         "hidden": 0, 
@@ -2175,7 +2030,6 @@
         "steamid": ""
     }, 
     "gog_gothic": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "gothic", 
         "hidden": 0, 
@@ -2190,7 +2044,6 @@
         "steamid": ""
     }, 
     "gog_gothic_2_gold_edition": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "gothic_2_gold_edition", 
         "hidden": 0, 
@@ -2205,7 +2058,6 @@
         "steamid": ""
     }, 
     "gog_gothic_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "gothic_3", 
         "hidden": 0, 
@@ -2220,7 +2072,6 @@
         "steamid": ""
     }, 
     "gog_gothic_3_forsaken_gods": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "gothic_3_forsaken_gods", 
         "hidden": 0, 
@@ -2235,7 +2086,6 @@
         "steamid": ""
     }, 
     "gog_ground_control_2_operation_exodus": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ground_control_2_operation_exodus", 
         "hidden": 0, 
@@ -2250,7 +2100,6 @@
         "steamid": ""
     }, 
     "gog_ground_control_expansion": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ground_control_expansion", 
         "hidden": 0, 
@@ -2265,7 +2114,6 @@
         "steamid": ""
     }, 
     "gog_guilty_gear_x2_reload": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "guilty_gear_x2_reload", 
         "hidden": 0, 
@@ -2280,7 +2128,6 @@
         "steamid": ""
     }, 
     "gog_heritage_of_kings_the_settlers": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "heritage_of_kings_the_settlers", 
         "hidden": 0, 
@@ -2295,7 +2142,6 @@
         "steamid": ""
     }, 
     "gog_heroes_chronicles_all_chapters": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "heroes_chronicles_all_chapters", 
         "hidden": 0, 
@@ -2310,7 +2156,6 @@
         "steamid": ""
     }, 
     "gog_heroes_of_annihilated_empires": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "heroes_of_annihilated_empires", 
         "hidden": 0, 
@@ -2325,7 +2170,6 @@
         "steamid": ""
     }, 
     "gog_heroes_of_might_and_magic": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "heroes_of_might_and_magic", 
         "hidden": 0, 
@@ -2340,7 +2184,6 @@
         "steamid": ""
     }, 
     "gog_heroes_of_might_and_magic_2_gold_edition": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "heroes_of_might_and_magic_2_gold_edition", 
         "hidden": 0, 
@@ -2355,7 +2198,6 @@
         "steamid": ""
     }, 
     "gog_heroes_of_might_and_magic_3_complete_edition": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "heroes_of_might_and_magic_3_complete_edition", 
         "hidden": 0, 
@@ -2370,7 +2212,6 @@
         "steamid": ""
     }, 
     "gog_heroes_of_might_and_magic_4_complete": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "heroes_of_might_and_magic_4_complete", 
         "hidden": 0, 
@@ -2385,7 +2226,6 @@
         "steamid": ""
     }, 
     "gog_heroes_of_might_and_magic_5_bundle": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "heroes_of_might_and_magic_5_bundle", 
         "hidden": 0, 
@@ -2400,7 +2240,6 @@
         "steamid": ""
     }, 
     "gog_hostile_waters_antaeus_rising": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "hostile_waters_antaeus_rising", 
         "hidden": 0, 
@@ -2415,7 +2254,6 @@
         "steamid": ""
     }, 
     "gog_icewind_dale_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "icewind_dale_2", 
         "hidden": 0, 
@@ -2430,7 +2268,6 @@
         "steamid": ""
     }, 
     "gog_icewind_dale_complete": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "icewind_dale_complete", 
         "hidden": 0, 
@@ -2445,7 +2282,6 @@
         "steamid": ""
     }, 
     "gog_imperialism": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "imperialism", 
         "hidden": 0, 
@@ -2460,7 +2296,6 @@
         "steamid": ""
     }, 
     "gog_in_cold_blood": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "in_cold_blood", 
         "hidden": 0, 
@@ -2475,7 +2310,6 @@
         "steamid": ""
     }, 
     "gog_incoming_incoming_forces": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "incoming_incoming_forces", 
         "hidden": 0, 
@@ -2490,7 +2324,6 @@
         "steamid": ""
     }, 
     "gog_incredipede": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "incredipede", 
         "hidden": 0, 
@@ -2505,7 +2338,6 @@
         "steamid": ""
     }, 
     "gog_independence_war_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "independence_war_2", 
         "hidden": 0, 
@@ -2520,7 +2352,6 @@
         "steamid": ""
     }, 
     "gog_independence_war_deluxe": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "independence_war_deluxe", 
         "hidden": 0, 
@@ -2535,7 +2366,6 @@
         "steamid": ""
     }, 
     "gog_interstate76": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "interstate76", 
         "hidden": 0, 
@@ -2550,7 +2380,6 @@
         "steamid": ""
     }, 
     "gog_ishar_compilation": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ishar_compilation", 
         "hidden": 0, 
@@ -2565,7 +2394,6 @@
         "steamid": ""
     }, 
     "gog_ishar_compilation.ishar_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ishar_compilation", 
         "hidden": 0, 
@@ -2580,7 +2408,6 @@
         "steamid": ""
     }, 
     "gog_ishar_compilation.ishar_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ishar_compilation", 
         "hidden": 0, 
@@ -2595,7 +2422,6 @@
         "steamid": ""
     }, 
     "gog_ishar_compilation.ishar_crystals": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ishar_compilation", 
         "hidden": 0, 
@@ -2610,7 +2436,6 @@
         "steamid": ""
     }, 
     "gog_ishar_compilation.ishar_legend": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ishar_compilation", 
         "hidden": 0, 
@@ -2625,7 +2450,6 @@
         "steamid": ""
     }, 
     "gog_jack_orlando_a_cinematic_adventure_dc": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "jack_orlando_a_cinematic_adventure_dc", 
         "hidden": 0, 
@@ -2640,7 +2464,6 @@
         "steamid": ""
     }, 
     "gog_jade_empire_special_edition": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "jade_empire_special_edition", 
         "hidden": 0, 
@@ -2655,7 +2478,6 @@
         "steamid": ""
     }, 
     "gog_jagged_alliance": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "jagged_alliance", 
         "hidden": 0, 
@@ -2670,7 +2492,6 @@
         "steamid": ""
     }, 
     "gog_jagged_alliance_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "jagged_alliance_2", 
         "hidden": 0, 
@@ -2685,7 +2506,6 @@
         "steamid": ""
     }, 
     "gog_jagged_alliance_deadly_games": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "jagged_alliance_deadly_games", 
         "hidden": 0, 
@@ -2700,7 +2520,6 @@
         "steamid": ""
     }, 
     "gog_journeyman_project_1_pegasus_prime_the": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "journeyman_project_1_pegasus_prime_the", 
         "hidden": 0, 
@@ -2715,7 +2534,6 @@
         "steamid": ""
     }, 
     "gog_journeyman_project_2": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "journeyman_project_2", 
         "hidden": 0, 
@@ -2730,7 +2548,6 @@
         "steamid": ""
     }, 
     "gog_journeyman_project_3": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "journeyman_project_3", 
         "hidden": 0, 
@@ -2745,7 +2562,6 @@
         "steamid": ""
     }, 
     "gog_king_of_dragon_pass": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "king_of_dragon_pass", 
         "hidden": 0, 
@@ -2760,7 +2576,6 @@
         "steamid": ""
     }, 
     "gog_kingpin_life_of_crime": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "kingpin_life_of_crime", 
         "hidden": 0, 
@@ -2775,7 +2590,6 @@
         "steamid": ""
     }, 
     "gog_kings_bounty_crossworlds_goty": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "kings_bounty_crossworlds_goty", 
         "hidden": 0, 
@@ -2790,7 +2604,6 @@
         "steamid": ""
     }, 
     "gog_kings_bounty_the_legend": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "kings_bounty_the_legend", 
         "hidden": 0, 
@@ -2805,7 +2618,6 @@
         "steamid": ""
     }, 
     "gog_kings_quest_1_2_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "kings_quest_1_2_3", 
         "hidden": 0, 
@@ -2820,7 +2632,6 @@
         "steamid": ""
     }, 
     "gog_kings_quest_1_2_3.king's_quest_1": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "kings_quest_1_2_3", 
         "hidden": 0, 
@@ -2835,7 +2646,6 @@
         "steamid": ""
     }, 
     "gog_kings_quest_1_2_3.king's_quest_2": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "kings_quest_1_2_3", 
         "hidden": 0, 
@@ -2850,7 +2660,6 @@
         "steamid": ""
     }, 
     "gog_kings_quest_1_2_3.king's_quest_3": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "kings_quest_1_2_3", 
         "hidden": 0, 
@@ -2865,7 +2674,6 @@
         "steamid": ""
     }, 
     "gog_kings_quest_4_5_6": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "kings_quest_4_5_6", 
         "hidden": 0, 
@@ -2880,7 +2688,6 @@
         "steamid": ""
     }, 
     "gog_kings_quest_4_5_6.king's_quest_4": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "kings_quest_4_5_6", 
         "hidden": 0, 
@@ -2895,7 +2702,6 @@
         "steamid": ""
     }, 
     "gog_kings_quest_4_5_6.king's_quest_5": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "kings_quest_4_5_6", 
         "hidden": 0, 
@@ -2910,7 +2716,6 @@
         "steamid": ""
     }, 
     "gog_kings_quest_4_5_6.king's_quest_6": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "kings_quest_4_5_6", 
         "hidden": 0, 
@@ -2925,7 +2730,6 @@
         "steamid": ""
     }, 
     "gog_kings_quest_7_8": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "kings_quest_7_8", 
         "hidden": 0, 
@@ -2940,7 +2744,6 @@
         "steamid": ""
     }, 
     "gog_kings_quest_7_8.king's_quest_7": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "kings_quest_7_8", 
         "hidden": 0, 
@@ -2955,7 +2758,6 @@
         "steamid": ""
     }, 
     "gog_kings_quest_7_8.king's_quest_8": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "kings_quest_7_8", 
         "hidden": 0, 
@@ -2970,7 +2772,6 @@
         "steamid": ""
     }, 
     "gog_knights_and_merchants_the_peasants_rebellion": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "knights_and_merchants_the_peasants_rebellion", 
         "hidden": 0, 
@@ -2985,7 +2786,6 @@
         "steamid": ""
     }, 
     "gog_la_mulana": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "la_mulana", 
         "hidden": 0, 
@@ -3000,7 +2800,6 @@
         "steamid": ""
     }, 
     "gog_lands_of_lore_1_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "lands_of_lore_1_2", 
         "hidden": 0, 
@@ -3015,7 +2814,6 @@
         "steamid": ""
     }, 
     "gog_lands_of_lore_1_2.lands_of_lore_1": {
-        "exe_count": 1, 
         "finished": 1, 
         "gogid": "lands_of_lore_1_2", 
         "hidden": 0, 
@@ -3030,7 +2828,6 @@
         "steamid": ""
     }, 
     "gog_lands_of_lore_1_2.lands_of_lore_2": {
-        "exe_count": 2, 
         "finished": 0, 
         "gogid": "lands_of_lore_1_2", 
         "hidden": 0, 
@@ -3045,7 +2842,6 @@
         "steamid": ""
     }, 
     "gog_lands_of_lore_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "lands_of_lore_3", 
         "hidden": 0, 
@@ -3060,7 +2856,6 @@
         "steamid": ""
     }, 
     "gog_last_express_the": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "last_express_the", 
         "hidden": 0, 
@@ -3075,7 +2870,6 @@
         "steamid": ""
     }, 
     "gog_legacy_of_kain_blood_omen_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "legacy_of_kain_blood_omen_2", 
         "hidden": 0, 
@@ -3090,7 +2884,6 @@
         "steamid": ""
     }, 
     "gog_legacy_of_kain_defiance": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "legacy_of_kain_defiance", 
         "hidden": 0, 
@@ -3105,7 +2898,6 @@
         "steamid": ""
     }, 
     "gog_legacy_of_kain_soul_reaver": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "legacy_of_kain_soul_reaver", 
         "hidden": 0, 
@@ -3120,7 +2912,6 @@
         "steamid": ""
     }, 
     "gog_legacy_of_kain_soul_reaver_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "legacy_of_kain_soul_reaver_2", 
         "hidden": 0, 
@@ -3135,7 +2926,6 @@
         "steamid": ""
     }, 
     "gog_legend_of_kyrandia": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "legend_of_kyrandia", 
         "hidden": 0, 
@@ -3150,7 +2940,6 @@
         "steamid": ""
     }, 
     "gog_legend_of_kyrandia_hand_of_fate": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "legend_of_kyrandia_hand_of_fate", 
         "hidden": 0, 
@@ -3165,7 +2954,6 @@
         "steamid": ""
     }, 
     "gog_legend_of_kyrandia_malcolms_revenge": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "legend_of_kyrandia_malcolms_revenge", 
         "hidden": 0, 
@@ -3180,7 +2968,6 @@
         "steamid": ""
     }, 
     "gog_leisure_suit_larry": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "leisure_suit_larry", 
         "hidden": 0, 
@@ -3195,7 +2982,6 @@
         "steamid": ""
     }, 
     "gog_leisure_suit_larry.leisure_suit_larry_1": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "leisure_suit_larry", 
         "hidden": 0, 
@@ -3210,7 +2996,6 @@
         "steamid": ""
     }, 
     "gog_leisure_suit_larry.leisure_suit_larry_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "leisure_suit_larry", 
         "hidden": 0, 
@@ -3225,7 +3010,6 @@
         "steamid": ""
     }, 
     "gog_leisure_suit_larry.leisure_suit_larry_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "leisure_suit_larry", 
         "hidden": 0, 
@@ -3240,7 +3024,6 @@
         "steamid": ""
     }, 
     "gog_leisure_suit_larry.leisure_suit_larry_4": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "leisure_suit_larry", 
         "hidden": 0, 
@@ -3255,7 +3038,6 @@
         "steamid": ""
     }, 
     "gog_leisure_suit_larry.leisure_suit_larry_5": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "leisure_suit_larry", 
         "hidden": 0, 
@@ -3270,7 +3052,6 @@
         "steamid": ""
     }, 
     "gog_leisure_suit_larry.leisure_suit_larry_6": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "leisure_suit_larry", 
         "hidden": 0, 
@@ -3285,7 +3066,6 @@
         "steamid": ""
     }, 
     "gog_leisure_suit_larry.softporn_adventures": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "leisure_suit_larry", 
         "hidden": 0, 
@@ -3300,7 +3080,6 @@
         "steamid": ""
     }, 
     "gog_leisure_suit_larry_love_for_sail": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "leisure_suit_larry_love_for_sail", 
         "hidden": 0, 
@@ -3315,7 +3094,6 @@
         "steamid": ""
     }, 
     "gog_lionheart_legacy_of_the_crusader": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "lionheart_legacy_of_the_crusader", 
         "hidden": 0, 
@@ -3330,7 +3108,6 @@
         "steamid": ""
     }, 
     "gog_litil_divil": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "litil_divil", 
         "hidden": 0, 
@@ -3345,7 +3122,6 @@
         "steamid": ""
     }, 
     "gog_little_big_adventure": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "little_big_adventure", 
         "hidden": 0, 
@@ -3360,7 +3136,6 @@
         "steamid": ""
     }, 
     "gog_little_big_adventure_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "little_big_adventure_2", 
         "hidden": 0, 
@@ -3375,7 +3150,6 @@
         "steamid": ""
     }, 
     "gog_long_live_the_queen": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "long_live_the_queen", 
         "hidden": 0, 
@@ -3390,7 +3164,6 @@
         "steamid": ""
     }, 
     "gog_lords_of_magic_special_eddition": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "lords_of_magic_special_eddition", 
         "hidden": 0, 
@@ -3405,7 +3178,6 @@
         "steamid": ""
     }, 
     "gog_lords_of_the_realm_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "lords_of_the_realm_3", 
         "hidden": 0, 
@@ -3420,7 +3192,6 @@
         "steamid": ""
     }, 
     "gog_lords_of_the_realm_royal_edition": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "lords_of_the_realm_royal_edition", 
         "hidden": 0, 
@@ -3435,7 +3206,6 @@
         "steamid": ""
     }, 
     "gog_lure_of_the_temptress": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "lure_of_the_temptress", 
         "hidden": 0, 
@@ -3450,7 +3220,6 @@
         "steamid": ""
     }, 
     "gog_m_a_x_m_a_x_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "m_a_x_m_a_x_2", 
         "hidden": 0, 
@@ -3465,7 +3234,6 @@
         "steamid": ""
     }, 
     "gog_m_a_x_m_a_x_2.m.a": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "m_a_x_m_a_x_2.m.a", 
         "hidden": 0, 
@@ -3480,7 +3248,6 @@
         "steamid": ""
     }, 
     "gog_m_a_x_m_a_x_2.m.a.x_1": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "m_a_x_m_a_x_2.m.a", 
         "hidden": 0, 
@@ -3495,7 +3262,6 @@
         "steamid": ""
     }, 
     "gog_m_a_x_m_a_x_2.m.a.x_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "m_a_x_m_a_x_2.m.a", 
         "hidden": 0, 
@@ -3510,7 +3276,6 @@
         "steamid": ""
     }, 
     "gog_magic_carpet": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "magic_carpet", 
         "hidden": 0, 
@@ -3525,7 +3290,6 @@
         "steamid": ""
     }, 
     "gog_magic_carpet_2_the_netherworlds": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "magic_carpet_2_the_netherworlds", 
         "hidden": 0, 
@@ -3540,7 +3304,6 @@
         "steamid": ""
     }, 
     "gog_master_of_magic": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "master_of_magic", 
         "hidden": 0, 
@@ -3555,7 +3318,6 @@
         "steamid": ""
     }, 
     "gog_master_of_orion_1_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "master_of_orion_1_2", 
         "hidden": 0, 
@@ -3570,7 +3332,6 @@
         "steamid": ""
     }, 
     "gog_master_of_orion_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "master_of_orion_3", 
         "hidden": 0, 
@@ -3585,7 +3346,6 @@
         "steamid": ""
     }, 
     "gog_mdk": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "mdk", 
         "hidden": 0, 
@@ -3600,7 +3360,6 @@
         "steamid": ""
     }, 
     "gog_mdk_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "mdk_2", 
         "hidden": 0, 
@@ -3615,7 +3374,6 @@
         "steamid": ""
     }, 
     "gog_megarace_1_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "megarace_1_2", 
         "hidden": 0, 
@@ -3630,7 +3388,6 @@
         "steamid": ""
     }, 
     "gog_megarace_1_2.megarace_1": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "megarace_1_2", 
         "hidden": 0, 
@@ -3645,7 +3402,6 @@
         "steamid": ""
     }, 
     "gog_megarace_1_2.megarace_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "megarace_1_2", 
         "hidden": 0, 
@@ -3660,7 +3416,6 @@
         "steamid": ""
     }, 
     "gog_messiah": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "messiah", 
         "hidden": 0, 
@@ -3675,7 +3430,6 @@
         "steamid": ""
     }, 
     "gog_might_and_magic_6_limited_edition": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "might_and_magic_6_limited_edition", 
         "hidden": 0, 
@@ -3690,7 +3444,6 @@
         "steamid": ""
     }, 
     "gog_might_and_magic_7_for_blood_and_honor": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "might_and_magic_7_for_blood_and_honor", 
         "hidden": 0, 
@@ -3705,7 +3458,6 @@
         "steamid": ""
     }, 
     "gog_might_and_magic_8_day_of_the_destroyer": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "might_and_magic_8_day_of_the_destroyer", 
         "hidden": 0, 
@@ -3720,7 +3472,6 @@
         "steamid": ""
     }, 
     "gog_might_and_magic_9": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "might_and_magic_9", 
         "hidden": 0, 
@@ -3735,7 +3486,6 @@
         "steamid": ""
     }, 
     "gog_moto_racer": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "moto_racer", 
         "hidden": 0, 
@@ -3750,7 +3500,6 @@
         "steamid": ""
     }, 
     "gog_moto_racer_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "moto_racer_2", 
         "hidden": 0, 
@@ -3765,7 +3514,6 @@
         "steamid": ""
     }, 
     "gog_moto_racer_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "moto_racer_3", 
         "hidden": 0, 
@@ -3780,7 +3528,6 @@
         "steamid": ""
     }, 
     "gog_myst_masterpiece_edition": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "myst_masterpiece_edition", 
         "hidden": 0, 
@@ -3795,7 +3542,6 @@
         "steamid": ""
     }, 
     "gog_neverwinter_nights_diamond_edition": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "neverwinter_nights_diamond_edition", 
         "hidden": 0, 
@@ -3810,7 +3556,6 @@
         "steamid": ""
     }, 
     "gog_nexus_the_jupiter_incident": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "nexus_the_jupiter_incident", 
         "hidden": 0, 
@@ -3825,7 +3570,6 @@
         "steamid": ""
     }, 
     "gog_normality": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "normality", 
         "hidden": 0, 
@@ -3840,7 +3584,6 @@
         "steamid": ""
     }, 
     "gog_nox": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "nox", 
         "hidden": 0, 
@@ -3855,7 +3598,6 @@
         "steamid": ""
     }, 
     "gog_oddworld_abes_exoddus": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "oddworld_abes_exoddus", 
         "hidden": 0, 
@@ -3870,7 +3612,6 @@
         "steamid": ""
     }, 
     "gog_oddworld_abes_oddysee": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "oddworld_abes_oddysee", 
         "hidden": 0, 
@@ -3885,7 +3626,6 @@
         "steamid": ""
     }, 
     "gog_omikron_the_nomad_soul": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "omikron_the_nomad_soul", 
         "hidden": 0, 
@@ -3900,7 +3640,6 @@
         "steamid": ""
     }, 
     "gog_one_unit_whole_blood": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "one_unit_whole_blood", 
         "hidden": 0, 
@@ -3915,7 +3654,6 @@
         "steamid": ""
     }, 
     "gog_outcast": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "outcast", 
         "hidden": 0, 
@@ -3930,7 +3668,6 @@
         "steamid": ""
     }, 
     "gog_painkiller": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "painkiller", 
         "hidden": 0, 
@@ -3945,7 +3682,6 @@
         "steamid": ""
     }, 
     "gog_panzer_general_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "panzer_general_2", 
         "hidden": 0, 
@@ -3960,7 +3696,6 @@
         "steamid": ""
     }, 
     "gog_pathologic": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "pathologic", 
         "hidden": 0, 
@@ -3975,7 +3710,6 @@
         "steamid": ""
     }, 
     "gog_patrician_1_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "patrician_1_2", 
         "hidden": 0, 
@@ -3990,7 +3724,6 @@
         "steamid": ""
     }, 
     "gog_patrician_1_2.patrician_1": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "patrician_1_2", 
         "hidden": 0, 
@@ -4005,7 +3738,6 @@
         "steamid": ""
     }, 
     "gog_patrician_1_2.patrician_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "patrician_1_2", 
         "hidden": 0, 
@@ -4020,7 +3752,6 @@
         "steamid": ""
     }, 
     "gog_patrician_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "patrician_3", 
         "hidden": 0, 
@@ -4035,7 +3766,6 @@
         "steamid": ""
     }, 
     "gog_perimeter": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "perimeter", 
         "hidden": 0, 
@@ -4050,7 +3780,6 @@
         "steamid": ""
     }, 
     "gog_personal_nightmare": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "personal_nightmare", 
         "hidden": 0, 
@@ -4065,7 +3794,6 @@
         "steamid": ""
     }, 
     "gog_phantasmagoria": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "phantasmagoria", 
         "hidden": 0, 
@@ -4080,7 +3808,6 @@
         "steamid": ""
     }, 
     "gog_phantasmagoria_2": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "phantasmagoria_2", 
         "hidden": 0, 
@@ -4095,7 +3822,6 @@
         "steamid": ""
     }, 
     "gog_pharaoh_cleopatra": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "pharaoh_cleopatra", 
         "hidden": 0, 
@@ -4110,7 +3836,6 @@
         "steamid": ""
     }, 
     "gog_pid": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "pid", 
         "hidden": 0, 
@@ -4125,7 +3850,6 @@
         "steamid": ""
     }, 
     "gog_planescape_torment": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "planescape_torment", 
         "hidden": 0, 
@@ -4140,7 +3864,6 @@
         "steamid": ""
     }, 
     "gog_pod_gold": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "pod_gold", 
         "hidden": 0, 
@@ -4155,7 +3878,6 @@
         "steamid": ""
     }, 
     "gog_police_quest_1_2_3_4": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "police_quest_1_2_3_4", 
         "hidden": 0, 
@@ -4170,7 +3892,6 @@
         "steamid": ""
     }, 
     "gog_police_quest_1_2_3_4.police_quest_1": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "police_quest_1_2_3_4", 
         "hidden": 0, 
@@ -4185,7 +3906,6 @@
         "steamid": ""
     }, 
     "gog_police_quest_1_2_3_4.police_quest_2": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "police_quest_1_2_3_4", 
         "hidden": 0, 
@@ -4200,7 +3920,6 @@
         "steamid": ""
     }, 
     "gog_police_quest_1_2_3_4.police_quest_3": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "police_quest_1_2_3_4", 
         "hidden": 0, 
@@ -4215,7 +3934,6 @@
         "steamid": ""
     }, 
     "gog_police_quest_1_2_3_4.police_quest_4": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "police_quest_1_2_3_4", 
         "hidden": 0, 
@@ -4230,7 +3948,6 @@
         "steamid": ""
     }, 
     "gog_police_quest_swat_1_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "police_quest_swat_1_2", 
         "hidden": 0, 
@@ -4245,7 +3962,6 @@
         "steamid": ""
     }, 
     "gog_police_quest_swat_1_2.police_quest:_swat_1": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "police_quest_swat_1_2", 
         "hidden": 0, 
@@ -4260,7 +3976,6 @@
         "steamid": ""
     }, 
     "gog_police_quest_swat_1_2.police_quest:_swat_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "police_quest_swat_1_2", 
         "hidden": 0, 
@@ -4275,7 +3990,6 @@
         "steamid": ""
     }, 
     "gog_populous": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "populous", 
         "hidden": 0, 
@@ -4290,7 +4004,6 @@
         "steamid": ""
     }, 
     "gog_populous_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "populous_2", 
         "hidden": 0, 
@@ -4305,7 +4018,6 @@
         "steamid": ""
     }, 
     "gog_populous_the_beginning": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "populous_the_beginning", 
         "hidden": 0, 
@@ -4320,7 +4032,6 @@
         "steamid": ""
     }, 
     "gog_port_royale": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "port_royale", 
         "hidden": 0, 
@@ -4335,7 +4046,6 @@
         "steamid": ""
     }, 
     "gog_post_mortem": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "post_mortem", 
         "hidden": 0, 
@@ -4350,7 +4060,6 @@
         "steamid": ""
     }, 
     "gog_prince_of_persia": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "prince_of_persia", 
         "hidden": 0, 
@@ -4365,7 +4074,6 @@
         "steamid": ""
     }, 
     "gog_prince_of_persia_the_sands_of_time": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "prince_of_persia_the_sands_of_time", 
         "hidden": 0, 
@@ -4380,7 +4088,6 @@
         "steamid": ""
     }, 
     "gog_prince_of_persia_the_two_thrones": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "prince_of_persia_the_two_thrones", 
         "hidden": 0, 
@@ -4395,7 +4102,6 @@
         "steamid": ""
     }, 
     "gog_prince_of_persia_warrior_within": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "prince_of_persia_warrior_within", 
         "hidden": 0, 
@@ -4410,7 +4116,6 @@
         "steamid": ""
     }, 
     "gog_privateer_2_the_darkening": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "privateer_2_the_darkening", 
         "hidden": 0, 
@@ -4425,7 +4130,6 @@
         "steamid": ""
     }, 
     "gog_psychonauts": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "psychonauts", 
         "hidden": 0, 
@@ -4440,7 +4144,6 @@
         "steamid": ""
     }, 
     "gog_quest_for_glory": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "quest_for_glory", 
         "hidden": 0, 
@@ -4455,7 +4158,6 @@
         "steamid": ""
     }, 
     "gog_quest_for_glory.quest_for_glory_1": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "quest_for_glory", 
         "hidden": 0, 
@@ -4470,7 +4172,6 @@
         "steamid": ""
     }, 
     "gog_quest_for_glory.quest_for_glory_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "quest_for_glory", 
         "hidden": 0, 
@@ -4485,7 +4186,6 @@
         "steamid": ""
     }, 
     "gog_quest_for_glory.quest_for_glory_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "quest_for_glory", 
         "hidden": 0, 
@@ -4500,7 +4200,6 @@
         "steamid": ""
     }, 
     "gog_quest_for_glory.quest_for_glory_4": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "quest_for_glory", 
         "hidden": 0, 
@@ -4515,7 +4214,6 @@
         "steamid": ""
     }, 
     "gog_quest_for_glory.quest_for_glory_5": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "quest_for_glory", 
         "hidden": 0, 
@@ -4530,7 +4228,6 @@
         "steamid": ""
     }, 
     "gog_race_driver_grid": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "race_driver_grid", 
         "hidden": 0, 
@@ -4545,7 +4242,6 @@
         "steamid": ""
     }, 
     "gog_raptor_call_of_the_shadows_2010_edition": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "raptor_call_of_the_shadows_2010_edition", 
         "hidden": 0, 
@@ -4560,7 +4256,6 @@
         "steamid": ""
     }, 
     "gog_rayman_2_the_great_escape": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "rayman_2_the_great_escape", 
         "hidden": 0, 
@@ -4575,7 +4270,6 @@
         "steamid": ""
     }, 
     "gog_rayman_3_hoodlum_havoc": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "rayman_3_hoodlum_havoc", 
         "hidden": 0, 
@@ -4590,7 +4284,6 @@
         "steamid": ""
     }, 
     "gog_rayman_forever": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "rayman_forever", 
         "hidden": 0, 
@@ -4605,7 +4298,6 @@
         "steamid": ""
     }, 
     "gog_realms_of_arkania_1_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "realms_of_arkania_1_2", 
         "hidden": 0, 
@@ -4620,7 +4312,6 @@
         "steamid": ""
     }, 
     "gog_realms_of_arkania_1_2.realms_of_arkania_1": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "realms_of_arkania_1_2", 
         "hidden": 0, 
@@ -4635,7 +4326,6 @@
         "steamid": ""
     }, 
     "gog_realms_of_arkania_1_2.realms_of_arkania_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "realms_of_arkania_1_2", 
         "hidden": 0, 
@@ -4650,7 +4340,6 @@
         "steamid": ""
     }, 
     "gog_realms_of_arkania_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "realms_of_arkania_3", 
         "hidden": 0, 
@@ -4665,7 +4354,6 @@
         "steamid": ""
     }, 
     "gog_realms_of_the_haunting": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "realms_of_the_haunting", 
         "hidden": 0, 
@@ -4680,7 +4368,6 @@
         "steamid": ""
     }, 
     "gog_red_baron_pack": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "red_baron_pack", 
         "hidden": 0, 
@@ -4695,7 +4382,6 @@
         "steamid": ""
     }, 
     "gog_red_baron_pack.red_baron_1": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "red_baron_pack", 
         "hidden": 0, 
@@ -4710,7 +4396,6 @@
         "steamid": ""
     }, 
     "gog_red_baron_pack.red_baron_3d": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "red_baron_pack", 
         "hidden": 0, 
@@ -4725,7 +4410,6 @@
         "steamid": ""
     }, 
     "gog_redneck_rampage_collection": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "redneck_rampage_collection", 
         "hidden": 0, 
@@ -4740,7 +4424,6 @@
         "steamid": ""
     }, 
     "gog_resonance": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "resonance", 
         "hidden": 0, 
@@ -4755,7 +4438,6 @@
         "steamid": ""
     }, 
     "gog_restaurant_empire": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "restaurant_empire", 
         "hidden": 0, 
@@ -4770,7 +4452,6 @@
         "steamid": ""
     }, 
     "gog_return_to_mysterious_island": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "return_to_mysterious_island", 
         "hidden": 0, 
@@ -4785,7 +4466,6 @@
         "steamid": ""
     }, 
     "gog_return_to_zork": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "return_to_zork", 
         "hidden": 0, 
@@ -4800,7 +4480,6 @@
         "steamid": ""
     }, 
     "gog_rise_of_the_triad__dark_war": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "rise_of_the_triad__dark_war", 
         "hidden": 0, 
@@ -4815,7 +4494,6 @@
         "steamid": ""
     }, 
     "gog_robin_hood": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "robin_hood", 
         "hidden": 0, 
@@ -4830,7 +4508,6 @@
         "steamid": ""
     }, 
     "gog_robinsons_requiem_collection": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "robinsons_requiem_collection", 
         "hidden": 0, 
@@ -4845,7 +4522,6 @@
         "steamid": ""
     }, 
     "gog_robinsons_requiem_collection.deus": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "robinsons_requiem_collection", 
         "hidden": 0, 
@@ -4860,7 +4536,6 @@
         "steamid": ""
     }, 
     "gog_robinsons_requiem_collection.robinsons_requiem": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "robinsons_requiem_collection", 
         "hidden": 0, 
@@ -4875,7 +4550,6 @@
         "steamid": ""
     }, 
     "gog_runaway_2_the_dream_of_the_turtle": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "runaway_2_the_dream_of_the_turtle", 
         "hidden": 0, 
@@ -4890,7 +4564,6 @@
         "steamid": ""
     }, 
     "gog_runaway_3_a_twist_of_fate": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "runaway_3_a_twist_of_fate", 
         "hidden": 0, 
@@ -4905,7 +4578,6 @@
         "steamid": ""
     }, 
     "gog_runaway_a_road_adventure": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "runaway_a_road_adventure", 
         "hidden": 0, 
@@ -4920,7 +4592,6 @@
         "steamid": ""
     }, 
     "gog_sacrifice": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "sacrifice", 
         "hidden": 0, 
@@ -4935,7 +4606,6 @@
         "steamid": ""
     }, 
     "gog_sanitarium": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "sanitarium", 
         "hidden": 0, 
@@ -4950,7 +4620,6 @@
         "steamid": ""
     }, 
     "gog_scratches_directors_cut": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "scratches_directors_cut", 
         "hidden": 0, 
@@ -4965,7 +4634,6 @@
         "steamid": ""
     }, 
     "gog_septerra_core_legacy_of_the_creator": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "septerra_core_legacy_of_the_creator", 
         "hidden": 1, 
@@ -4980,7 +4648,6 @@
         "steamid": ""
     }, 
     "gog_seven_kingdoms_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "seven_kingdoms_2", 
         "hidden": 0, 
@@ -4995,7 +4662,6 @@
         "steamid": ""
     }, 
     "gog_seven_kingdoms_ancient_adversaries": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "seven_kingdoms_ancient_adversaries", 
         "hidden": 0, 
@@ -5010,7 +4676,6 @@
         "steamid": ""
     }, 
     "gog_shadow_warrior_complete": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "shadow_warrior_complete", 
         "hidden": 0, 
@@ -5025,7 +4690,6 @@
         "steamid": ""
     }, 
     "gog_shattered_steel": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "shattered_steel", 
         "hidden": 0, 
@@ -5040,7 +4704,6 @@
         "steamid": ""
     }, 
     "gog_shelter": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "shelter", 
         "hidden": 0, 
@@ -5055,7 +4718,6 @@
         "steamid": ""
     }, 
     "gog_shogo_mobile_armor_division": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "shogo_mobile_armor_division", 
         "hidden": 0, 
@@ -5070,7 +4732,6 @@
         "steamid": ""
     }, 
     "gog_sid_meiers_alpha_centauri": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "sid_meiers_alpha_centauri", 
         "hidden": 0, 
@@ -5085,7 +4746,6 @@
         "steamid": ""
     }, 
     "gog_silver": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "silver", 
         "hidden": 0, 
@@ -5100,7 +4760,6 @@
         "steamid": ""
     }, 
     "gog_simcity_2000_special_edition": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "simcity_2000_special_edition", 
         "hidden": 0, 
@@ -5115,7 +4774,6 @@
         "steamid": ""
     }, 
     "gog_simon_the_sorcerer": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "simon_the_sorcerer", 
         "hidden": 0, 
@@ -5130,7 +4788,6 @@
         "steamid": ""
     }, 
     "gog_simon_the_sorcerer_2": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "simon_the_sorcerer_2", 
         "hidden": 0, 
@@ -5145,7 +4802,6 @@
         "steamid": ""
     }, 
     "gog_simon_the_sorcerer_3d": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "simon_the_sorcerer_3d", 
         "hidden": 0, 
@@ -5160,7 +4816,6 @@
         "steamid": ""
     }, 
     "gog_soulbringer": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "soulbringer", 
         "hidden": 0, 
@@ -5175,7 +4830,6 @@
         "steamid": ""
     }, 
     "gog_space_quest_1_2_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "space_quest_1_2_3", 
         "hidden": 0, 
@@ -5190,7 +4844,6 @@
         "steamid": ""
     }, 
     "gog_space_quest_1_2_3.space_quest_1": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "space_quest_1_2_3", 
         "hidden": 0, 
@@ -5205,7 +4858,6 @@
         "steamid": ""
     }, 
     "gog_space_quest_1_2_3.space_quest_2": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "space_quest_1_2_3", 
         "hidden": 0, 
@@ -5220,7 +4872,6 @@
         "steamid": ""
     }, 
     "gog_space_quest_1_2_3.space_quest_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "space_quest_1_2_3", 
         "hidden": 0, 
@@ -5235,7 +4886,6 @@
         "steamid": ""
     }, 
     "gog_space_quest_4_5_6": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "space_quest_4_5_6", 
         "hidden": 0, 
@@ -5250,7 +4900,6 @@
         "steamid": ""
     }, 
     "gog_space_quest_4_5_6.space_quest_4": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "space_quest_4_5_6", 
         "hidden": 0, 
@@ -5265,7 +4914,6 @@
         "steamid": ""
     }, 
     "gog_space_quest_4_5_6.space_quest_5": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "space_quest_4_5_6", 
         "hidden": 0, 
@@ -5280,7 +4928,6 @@
         "steamid": ""
     }, 
     "gog_space_quest_4_5_6.space_quest_6": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "space_quest_4_5_6", 
         "hidden": 0, 
@@ -5295,7 +4942,6 @@
         "steamid": ""
     }, 
     "gog_space_rangers_2_reboot": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "space_rangers_2_reboot", 
         "hidden": 0, 
@@ -5310,7 +4956,6 @@
         "steamid": ""
     }, 
     "gog_spellforce_2_dragon_storm": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "spellforce_2_dragon_storm", 
         "hidden": 0, 
@@ -5325,7 +4970,6 @@
         "steamid": ""
     }, 
     "gog_spellforce_2_shadow_wars": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "spellforce_2_shadow_wars", 
         "hidden": 0, 
@@ -5340,7 +4984,6 @@
         "steamid": ""
     }, 
     "gog_spellforce_platinum": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "spellforce_platinum", 
         "hidden": 0, 
@@ -5355,7 +4998,6 @@
         "steamid": ""
     }, 
     "gog_starflight_1_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "starflight_1_2", 
         "hidden": 0, 
@@ -5370,7 +5012,6 @@
         "steamid": ""
     }, 
     "gog_starflight_1_2.starflight_1": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "starflight_1_2", 
         "hidden": 0, 
@@ -5385,7 +5026,6 @@
         "steamid": ""
     }, 
     "gog_starflight_1_2.starflight_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "starflight_1_2", 
         "hidden": 0, 
@@ -5400,7 +5040,6 @@
         "steamid": ""
     }, 
     "gog_startopia": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "startopia", 
         "hidden": 0, 
@@ -5415,7 +5054,6 @@
         "steamid": ""
     }, 
     "gog_still_life": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "still_life", 
         "hidden": 0, 
@@ -5430,7 +5068,6 @@
         "steamid": ""
     }, 
     "gog_still_life_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "still_life_2", 
         "hidden": 0, 
@@ -5445,7 +5082,6 @@
         "steamid": ""
     }, 
     "gog_stonekeep": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "stonekeep", 
         "hidden": 0, 
@@ -5460,7 +5096,6 @@
         "steamid": ""
     }, 
     "gog_strike_commander": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "strike_commander", 
         "hidden": 0, 
@@ -5475,7 +5110,6 @@
         "steamid": ""
     }, 
     "gog_strike_suit_zero": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "strike_suit_zero", 
         "hidden": 0, 
@@ -5490,7 +5124,6 @@
         "steamid": ""
     }, 
     "gog_stronghold": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "stronghold", 
         "hidden": 0, 
@@ -5505,7 +5138,6 @@
         "steamid": ""
     }, 
     "gog_stronghold_crusader": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "stronghold_crusader", 
         "hidden": 0, 
@@ -5520,7 +5152,6 @@
         "steamid": ""
     }, 
     "gog_superfrog": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "superfrog", 
         "hidden": 0, 
@@ -5535,7 +5166,6 @@
         "steamid": ""
     }, 
     "gog_syberia": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "syberia", 
         "hidden": 0, 
@@ -5550,7 +5180,6 @@
         "steamid": ""
     }, 
     "gog_syberia_2": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "syberia_2", 
         "hidden": 0, 
@@ -5565,7 +5194,6 @@
         "steamid": ""
     }, 
     "gog_syndicate": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "syndicate", 
         "hidden": 0, 
@@ -5580,7 +5208,6 @@
         "steamid": ""
     }, 
     "gog_system_shock_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "system_shock_2", 
         "hidden": 0, 
@@ -5595,7 +5222,6 @@
         "steamid": ""
     }, 
     "gog_tesla_effect_a_tex_murphy_adventure": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "tesla_effect_a_tex_murphy_adventure", 
         "hidden": 0, 
@@ -5610,7 +5236,6 @@
         "steamid": ""
     }, 
     "gog_tex_murphy_1_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "tex_murphy_1_2", 
         "hidden": 0, 
@@ -5625,7 +5250,6 @@
         "steamid": ""
     }, 
     "gog_tex_murphy_1_2.tex_murphy_martian_memorandum": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "tex_murphy_1_2", 
         "hidden": 0, 
@@ -5640,7 +5264,6 @@
         "steamid": ""
     }, 
     "gog_tex_murphy_1_2.tex_murphy_mean_streets": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "tex_murphy_1_2", 
         "hidden": 0, 
@@ -5655,7 +5278,6 @@
         "steamid": ""
     }, 
     "gog_tex_murphy_overseer": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "tex_murphy_overseer", 
         "hidden": 0, 
@@ -5670,7 +5292,6 @@
         "steamid": ""
     }, 
     "gog_tex_murphy_the_pandora_directive": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "tex_murphy_the_pandora_directive", 
         "hidden": 0, 
@@ -5685,7 +5306,6 @@
         "steamid": ""
     }, 
     "gog_tex_murphy_under_a_killing_moon": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "tex_murphy_under_a_killing_moon", 
         "hidden": 0, 
@@ -5700,7 +5320,6 @@
         "steamid": ""
     }, 
     "gog_the_7th_guest": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_7th_guest", 
         "hidden": 0, 
@@ -5715,7 +5334,6 @@
         "steamid": ""
     }, 
     "gog_the_bards_tale": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_bards_tale", 
         "hidden": 0, 
@@ -5730,7 +5348,6 @@
         "steamid": ""
     }, 
     "gog_the_cat_lady": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "the_cat_lady", 
         "hidden": 0, 
@@ -5745,7 +5362,6 @@
         "steamid": ""
     }, 
     "gog_the_dark_eye_chains_of_satinav": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "the_dark_eye_chains_of_satinav", 
         "hidden": 0, 
@@ -5760,7 +5376,6 @@
         "steamid": ""
     }, 
     "gog_the_feeble_files": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_feeble_files", 
         "hidden": 0, 
@@ -5775,7 +5390,6 @@
         "steamid": ""
     }, 
     "gog_the_incredible_machine_mega_pack": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_incredible_machine_mega_pack", 
         "hidden": 0, 
@@ -5790,7 +5404,6 @@
         "steamid": ""
     }, 
     "gog_the_incredible_machine_mega_pack.the_incredible_machine_1": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_incredible_machine_mega_pack", 
         "hidden": 0, 
@@ -5805,7 +5418,6 @@
         "steamid": ""
     }, 
     "gog_the_incredible_machine_mega_pack.the_incredible_machine_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_incredible_machine_mega_pack", 
         "hidden": 0, 
@@ -5820,7 +5432,6 @@
         "steamid": ""
     }, 
     "gog_the_incredible_machine_mega_pack.the_incredible_machine_contraptions": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_incredible_machine_mega_pack", 
         "hidden": 0, 
@@ -5835,7 +5446,6 @@
         "steamid": ""
     }, 
     "gog_the_incredible_machine_mega_pack.the_incredible_machine_even_more_contraptions": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_incredible_machine_mega_pack", 
         "hidden": 0, 
@@ -5850,7 +5460,6 @@
         "steamid": ""
     }, 
     "gog_the_longest_journey": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "the_longest_journey", 
         "hidden": 0, 
@@ -5865,7 +5474,6 @@
         "steamid": ""
     }, 
     "gog_the_lords_of_midnight": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_lords_of_midnight", 
         "hidden": 0, 
@@ -5880,7 +5488,6 @@
         "steamid": ""
     }, 
     "gog_the_nations_gold_edition": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_nations_gold_edition", 
         "hidden": 0, 
@@ -5895,7 +5502,6 @@
         "steamid": ""
     }, 
     "gog_the_real_texas": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_real_texas", 
         "hidden": 0, 
@@ -5910,7 +5516,6 @@
         "steamid": ""
     }, 
     "gog_the_settlers_2_10th_anniversary": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_settlers_2_10th_anniversary", 
         "hidden": 0, 
@@ -5925,7 +5530,6 @@
         "steamid": ""
     }, 
     "gog_the_settlers_2_gold_edition": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_settlers_2_gold_edition", 
         "hidden": 0, 
@@ -5940,7 +5544,6 @@
         "steamid": ""
     }, 
     "gog_the_settlers_3_ultimate_collection": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_settlers_3_ultimate_collection", 
         "hidden": 0, 
@@ -5955,7 +5558,6 @@
         "steamid": ""
     }, 
     "gog_the_settlers_4_gold_edition": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_settlers_4_gold_edition", 
         "hidden": 0, 
@@ -5970,7 +5572,6 @@
         "steamid": ""
     }, 
     "gog_the_temple_of_elemental_evil": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_temple_of_elemental_evil", 
         "hidden": 0, 
@@ -5985,7 +5586,6 @@
         "steamid": ""
     }, 
     "gog_the_whispered_world_special_edition": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "the_whispered_world_special_edition", 
         "hidden": 0, 
@@ -6000,7 +5600,6 @@
         "steamid": ""
     }, 
     "gog_the_witcher": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "the_witcher", 
         "hidden": 0, 
@@ -6015,7 +5614,6 @@
         "steamid": ""
     }, 
     "gog_the_witcher_2": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "the_witcher_2", 
         "hidden": 0, 
@@ -6030,7 +5628,6 @@
         "steamid": ""
     }, 
     "gog_the_zork_anthology": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_zork_anthology", 
         "hidden": 0, 
@@ -6045,7 +5642,6 @@
         "steamid": ""
     }, 
     "gog_the_zork_anthology.beyond_zork": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_zork_anthology", 
         "hidden": 0, 
@@ -6060,7 +5656,6 @@
         "steamid": ""
     }, 
     "gog_the_zork_anthology.planetfall": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_zork_anthology", 
         "hidden": 0, 
@@ -6075,7 +5670,6 @@
         "steamid": ""
     }, 
     "gog_the_zork_anthology.zork_1": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_zork_anthology", 
         "hidden": 0, 
@@ -6090,7 +5684,6 @@
         "steamid": ""
     }, 
     "gog_the_zork_anthology.zork_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_zork_anthology", 
         "hidden": 0, 
@@ -6105,7 +5698,6 @@
         "steamid": ""
     }, 
     "gog_the_zork_anthology.zork_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_zork_anthology", 
         "hidden": 0, 
@@ -6120,7 +5712,6 @@
         "steamid": ""
     }, 
     "gog_the_zork_anthology.zork_zero": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "the_zork_anthology", 
         "hidden": 0, 
@@ -6135,7 +5726,6 @@
         "steamid": ""
     }, 
     "gog_theme_hospital": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "theme_hospital", 
         "hidden": 0, 
@@ -6150,7 +5740,6 @@
         "steamid": ""
     }, 
     "gog_theme_park": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "theme_park", 
         "hidden": 0, 
@@ -6165,7 +5754,6 @@
         "steamid": ""
     }, 
     "gog_thief_2_the_metal_age": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "thief_2_the_metal_age", 
         "hidden": 0, 
@@ -6180,7 +5768,6 @@
         "steamid": ""
     }, 
     "gog_thief_gold": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "thief_gold", 
         "hidden": 0, 
@@ -6195,7 +5782,6 @@
         "steamid": ""
     }, 
     "gog_tiny_and_big_grandpas_leftovers": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "tiny_and_big_grandpas_leftovers", 
         "hidden": 0, 
@@ -6210,7 +5796,6 @@
         "steamid": ""
     }, 
     "gog_to_the_moon": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "to_the_moon", 
         "hidden": 0, 
@@ -6225,7 +5810,6 @@
         "steamid": ""
     }, 
     "gog_torchlight": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "torchlight", 
         "hidden": 0, 
@@ -6240,7 +5824,6 @@
         "steamid": ""
     }, 
     "gog_torins_passage": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "torins_passage", 
         "hidden": 0, 
@@ -6255,7 +5838,6 @@
         "steamid": ""
     }, 
     "gog_total_anihilation_commander_pack": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "total_anihilation_commander_pack", 
         "hidden": 0, 
@@ -6270,7 +5852,6 @@
         "steamid": ""
     }, 
     "gog_total_overdose_a_gunslingers_tale_in_mexico": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "total_overdose_a_gunslingers_tale_in_mexico", 
         "hidden": 0, 
@@ -6285,7 +5866,6 @@
         "steamid": ""
     }, 
     "gog_treasure_adventure_game": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "treasure_adventure_game", 
         "hidden": 0, 
@@ -6300,7 +5880,6 @@
         "steamid": ""
     }, 
     "gog_tropico_reloaded": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "tropico_reloaded", 
         "hidden": 0, 
@@ -6315,7 +5894,6 @@
         "steamid": ""
     }, 
     "gog_tyrian_2000": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "tyrian_2000", 
         "hidden": 0, 
@@ -6330,7 +5908,6 @@
         "steamid": ""
     }, 
     "gog_ultima_1_2_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ultima_1_2_3", 
         "hidden": 0, 
@@ -6345,7 +5922,6 @@
         "steamid": ""
     }, 
     "gog_ultima_1_2_3.ultima_1": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "ultima_1_2_3", 
         "hidden": 0, 
@@ -6360,7 +5936,6 @@
         "steamid": ""
     }, 
     "gog_ultima_1_2_3.ultima_2": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "ultima_1_2_3", 
         "hidden": 0, 
@@ -6375,7 +5950,6 @@
         "steamid": ""
     }, 
     "gog_ultima_1_2_3.ultima_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ultima_1_2_3", 
         "hidden": 0, 
@@ -6390,7 +5964,6 @@
         "steamid": ""
     }, 
     "gog_ultima_4": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ultima_4", 
         "hidden": 0, 
@@ -6405,7 +5978,6 @@
         "steamid": ""
     }, 
     "gog_ultima_456": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ultima_456", 
         "hidden": 0, 
@@ -6420,7 +5992,6 @@
         "steamid": ""
     }, 
     "gog_ultima_456.ultima_4": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ultima_456", 
         "hidden": 0, 
@@ -6435,7 +6006,6 @@
         "steamid": ""
     }, 
     "gog_ultima_456.ultima_5": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ultima_456", 
         "hidden": 0, 
@@ -6450,7 +6020,6 @@
         "steamid": ""
     }, 
     "gog_ultima_456.ultima_6": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ultima_456", 
         "hidden": 0, 
@@ -6465,7 +6034,6 @@
         "steamid": ""
     }, 
     "gog_ultima_7_complete": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ultima_7_complete", 
         "hidden": 0, 
@@ -6480,7 +6048,6 @@
         "steamid": ""
     }, 
     "gog_ultima_8_gold_edition": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ultima_8_gold_edition", 
         "hidden": 0, 
@@ -6495,7 +6062,6 @@
         "steamid": ""
     }, 
     "gog_ultima_9_ascension": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ultima_9_ascension", 
         "hidden": 0, 
@@ -6510,7 +6076,6 @@
         "steamid": ""
     }, 
     "gog_ultima_underworld_1_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ultima_underworld_1_2", 
         "hidden": 0, 
@@ -6525,7 +6090,6 @@
         "steamid": ""
     }, 
     "gog_ultima_underworld_1_2.ultima_underworld_1": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ultima_underworld_1_2", 
         "hidden": 0, 
@@ -6540,7 +6104,6 @@
         "steamid": ""
     }, 
     "gog_ultima_underworld_1_2.ultima_underworld_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ultima_underworld_1_2", 
         "hidden": 0, 
@@ -6555,7 +6118,6 @@
         "steamid": ""
     }, 
     "gog_ultima_worlds_of_adventure_2_martian_dreams": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "ultima_worlds_of_adventure_2_martian_dreams", 
         "hidden": 0, 
@@ -6570,7 +6132,6 @@
         "steamid": ""
     }, 
     "gog_unepic": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "unepic", 
         "hidden": 0, 
@@ -6585,7 +6146,6 @@
         "steamid": ""
     }, 
     "gog_vampire_the_masquerade_redemption": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "vampire_the_masquerade_redemption", 
         "hidden": 0, 
@@ -6600,7 +6160,6 @@
         "steamid": ""
     }, 
     "gog_waking_mars": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "waking_mars", 
         "hidden": 0, 
@@ -6615,7 +6174,6 @@
         "steamid": ""
     }, 
     "gog_warlords_battlecry_3": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "warlords_battlecry_3", 
         "hidden": 0, 
@@ -6630,7 +6188,6 @@
         "steamid": ""
     }, 
     "gog_wasteland_the_classic_original": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "wasteland_the_classic_original", 
         "hidden": 0, 
@@ -6645,7 +6202,6 @@
         "steamid": ""
     }, 
     "gog_waxworks": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "waxworks", 
         "hidden": 0, 
@@ -6660,7 +6216,6 @@
         "steamid": ""
     }, 
     "gog_wing_commander_1_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "wing_commander_1_2", 
         "hidden": 0, 
@@ -6675,7 +6230,6 @@
         "steamid": ""
     }, 
     "gog_wing_commander_1_2.wing_commander_1": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "wing_commander_1_2", 
         "hidden": 0, 
@@ -6690,7 +6244,6 @@
         "steamid": ""
     }, 
     "gog_wing_commander_1_2.wing_commander_2": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "wing_commander_1_2", 
         "hidden": 0, 
@@ -6705,7 +6258,6 @@
         "steamid": ""
     }, 
     "gog_wing_commander_3_heart_of_the_tiger": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "wing_commander_3_heart_of_the_tiger", 
         "hidden": 0, 
@@ -6720,7 +6272,6 @@
         "steamid": ""
     }, 
     "gog_wing_commander_4_the_price_of_freedom": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "wing_commander_4_the_price_of_freedom", 
         "hidden": 0, 
@@ -6735,7 +6286,6 @@
         "steamid": ""
     }, 
     "gog_wing_commander_5_prophecy": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "wing_commander_5_prophecy", 
         "hidden": 0, 
@@ -6750,7 +6300,6 @@
         "steamid": ""
     }, 
     "gog_wing_commander_privateer": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "wing_commander_privateer", 
         "hidden": 0, 
@@ -6765,7 +6314,6 @@
         "steamid": ""
     }, 
     "gog_wizardry_6_7": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "wizardry_6_7", 
         "hidden": 0, 
@@ -6780,7 +6328,6 @@
         "steamid": ""
     }, 
     "gog_wizardry_6_7.wizardry_6": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "wizardry_6_7", 
         "hidden": 0, 
@@ -6795,7 +6342,6 @@
         "steamid": ""
     }, 
     "gog_wizardry_6_7.wizardry_7": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "wizardry_6_7", 
         "hidden": 0, 
@@ -6810,7 +6356,6 @@
         "steamid": ""
     }, 
     "gog_wizardry_8": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "wizardry_8", 
         "hidden": 0, 
@@ -6825,7 +6370,6 @@
         "steamid": ""
     }, 
     "gog_worlds_of_ultima_the_savage_empire": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "worlds_of_ultima_the_savage_empire", 
         "hidden": 0, 
@@ -6840,7 +6384,6 @@
         "steamid": ""
     }, 
     "gog_zafehouse_diaries": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "zafehouse_diaries", 
         "hidden": 0, 
@@ -6855,7 +6398,6 @@
         "steamid": ""
     }, 
     "gog_zeus_poseidon": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "zeus_poseidon", 
         "hidden": 0, 
@@ -6870,7 +6412,6 @@
         "steamid": ""
     }, 
     "gog_zork_grand_inquisitor": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "zork_grand_inquisitor", 
         "hidden": 0, 
@@ -6885,7 +6426,6 @@
         "steamid": ""
     }, 
     "gog_zork_nemesis_the_forbidden_lands": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "zork_nemesis_the_forbidden_lands", 
         "hidden": 0, 
@@ -6900,7 +6440,6 @@
         "steamid": ""
     }, 
     "steam_102500": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -6915,7 +6454,6 @@
         "steamid": 102500
     }, 
     "steam_104100": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -6930,7 +6468,6 @@
         "steamid": 104100
     }, 
     "steam_105100": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -6945,7 +6482,6 @@
         "steamid": 105100
     }, 
     "steam_105600": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -6960,7 +6496,6 @@
         "steamid": 105600
     }, 
     "steam_105800": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -6975,7 +6510,6 @@
         "steamid": 105800
     }, 
     "steam_107100": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -6990,7 +6524,6 @@
         "steamid": 107100
     }, 
     "steam_107200": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7005,7 +6538,6 @@
         "steamid": 107200
     }, 
     "steam_107300": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -7020,7 +6552,6 @@
         "steamid": 107300
     }, 
     "steam_107310": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7035,7 +6566,6 @@
         "steamid": 107310
     }, 
     "steam_107410": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7050,7 +6580,6 @@
         "steamid": 107410
     }, 
     "steam_108800": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7065,7 +6594,6 @@
         "steamid": 108800
     }, 
     "steam_11040": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -7080,7 +6608,6 @@
         "steamid": 11040
     }, 
     "steam_110800": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -7095,7 +6622,6 @@
         "steamid": 110800
     }, 
     "steam_11130": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -7110,7 +6636,6 @@
         "steamid": 11130
     }, 
     "steam_11140": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -7125,7 +6650,6 @@
         "steamid": 11140
     }, 
     "steam_11150": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -7140,7 +6664,6 @@
         "steamid": 11150
     }, 
     "steam_11180": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -7155,7 +6678,6 @@
         "steamid": 11180
     }, 
     "steam_111800": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7170,7 +6692,6 @@
         "steamid": 111800
     }, 
     "steam_11190": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -7185,7 +6706,6 @@
         "steamid": 11190
     }, 
     "steam_11200": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7200,7 +6720,6 @@
         "steamid": 11200
     }, 
     "steam_112100": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7215,7 +6734,6 @@
         "steamid": 112100
     }, 
     "steam_113020": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7230,7 +6748,6 @@
         "steamid": 113020
     }, 
     "steam_113200": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7245,7 +6762,6 @@
         "steamid": 113200
     }, 
     "steam_11420": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 1, 
@@ -7260,7 +6776,6 @@
         "steamid": 11420
     }, 
     "steam_11450": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7275,7 +6790,6 @@
         "steamid": 11450
     }, 
     "steam_115100": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7290,7 +6804,6 @@
         "steamid": 115100
     }, 
     "steam_115110": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7305,7 +6818,6 @@
         "steamid": 115110
     }, 
     "steam_115120": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7320,7 +6832,6 @@
         "steamid": 115120
     }, 
     "steam_12100": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7335,7 +6846,6 @@
         "steamid": 12100
     }, 
     "steam_12110": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -7350,7 +6860,6 @@
         "steamid": 12110
     }, 
     "steam_12120": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7365,7 +6874,6 @@
         "steamid": 12120
     }, 
     "steam_12130": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7380,7 +6888,6 @@
         "steamid": 12130
     }, 
     "steam_12140": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -7395,7 +6902,6 @@
         "steamid": 12140
     }, 
     "steam_12150": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -7410,7 +6916,6 @@
         "steamid": 12150
     }, 
     "steam_12160": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7425,7 +6930,6 @@
         "steamid": 12160
     }, 
     "steam_12170": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7440,7 +6944,6 @@
         "steamid": 12170
     }, 
     "steam_12180": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7455,7 +6958,6 @@
         "steamid": 12180
     }, 
     "steam_12190": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 1, 
@@ -7470,7 +6972,6 @@
         "steamid": 12190
     }, 
     "steam_12200": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7485,7 +6986,6 @@
         "steamid": 12200
     }, 
     "steam_12210": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7500,7 +7000,6 @@
         "steamid": 12210
     }, 
     "steam_12220": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7515,7 +7014,6 @@
         "steamid": 12220
     }, 
     "steam_12230": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 1, 
@@ -7530,7 +7028,6 @@
         "steamid": 12230
     }, 
     "steam_12240": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 1, 
@@ -7545,7 +7042,6 @@
         "steamid": 12240
     }, 
     "steam_12250": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 1, 
@@ -7560,7 +7056,6 @@
         "steamid": 12250
     }, 
     "steam_12310": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -7575,7 +7070,6 @@
         "steamid": 12310
     }, 
     "steam_12320": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7590,7 +7084,6 @@
         "steamid": 12320
     }, 
     "steam_12340": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -7605,7 +7098,6 @@
         "steamid": 12340
     }, 
     "steam_12710": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7620,7 +7112,6 @@
         "steamid": 12710
     }, 
     "steam_12810": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7635,7 +7126,6 @@
         "steamid": 12810
     }, 
     "steam_12840": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7650,7 +7140,6 @@
         "steamid": 12840
     }, 
     "steam_130": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7665,7 +7154,6 @@
         "steamid": 130
     }, 
     "steam_13200": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7680,7 +7168,6 @@
         "steamid": 13200
     }, 
     "steam_13210": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7695,7 +7182,6 @@
         "steamid": 13210
     }, 
     "steam_13230": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7710,7 +7196,6 @@
         "steamid": 13230
     }, 
     "steam_13240": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7725,7 +7210,6 @@
         "steamid": 13240
     }, 
     "steam_13250": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7740,7 +7224,6 @@
         "steamid": 13250
     }, 
     "steam_13510": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7755,7 +7238,6 @@
         "steamid": 13510
     }, 
     "steam_13560": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -7770,7 +7252,6 @@
         "steamid": 13560
     }, 
     "steam_13570": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7785,7 +7266,6 @@
         "steamid": 13570
     }, 
     "steam_13580": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7800,7 +7280,6 @@
         "steamid": 13580
     }, 
     "steam_13620": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7815,7 +7294,6 @@
         "steamid": 13620
     }, 
     "steam_13630": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7830,7 +7308,6 @@
         "steamid": 13630
     }, 
     "steam_13640": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7845,7 +7322,6 @@
         "steamid": 13640
     }, 
     "steam_1500": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7860,7 +7336,6 @@
         "steamid": 1500
     }, 
     "steam_1510": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7875,7 +7350,6 @@
         "steamid": 1510
     }, 
     "steam_15170": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7890,7 +7364,6 @@
         "steamid": 15170
     }, 
     "steam_1520": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7905,7 +7378,6 @@
         "steamid": 1520
     }, 
     "steam_1530": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7920,7 +7392,6 @@
         "steamid": 1530
     }, 
     "steam_15300": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7935,7 +7406,6 @@
         "steamid": 15300
     }, 
     "steam_15370": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7950,7 +7420,6 @@
         "steamid": 15370
     }, 
     "steam_15380": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7965,7 +7434,6 @@
         "steamid": 15380
     }, 
     "steam_15560": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -7980,7 +7448,6 @@
         "steamid": 15560
     }, 
     "steam_17300": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -7995,7 +7462,6 @@
         "steamid": 17300
     }, 
     "steam_17330": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -8010,7 +7476,6 @@
         "steamid": 17330
     }, 
     "steam_17340": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -8025,7 +7490,6 @@
         "steamid": 17340
     }, 
     "steam_17410": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -8040,7 +7504,6 @@
         "steamid": 17410
     }, 
     "steam_17450": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8055,7 +7518,6 @@
         "steamid": 17450
     }, 
     "steam_18040": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -8070,7 +7532,6 @@
         "steamid": 18040
     }, 
     "steam_18050": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8085,7 +7546,6 @@
         "steamid": 18050
     }, 
     "steam_18070": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8100,7 +7560,6 @@
         "steamid": 18070
     }, 
     "steam_18700": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8115,7 +7574,6 @@
         "steamid": 18700
     }, 
     "steam_19680": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8130,7 +7588,6 @@
         "steamid": 19680
     }, 
     "steam_19900": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8145,7 +7602,6 @@
         "steamid": 19900
     }, 
     "steam_200260": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 1, 
@@ -8160,7 +7616,6 @@
         "steamid": 200260
     }, 
     "steam_200510": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8175,7 +7630,6 @@
         "steamid": 200510
     }, 
     "steam_200710": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8190,7 +7644,6 @@
         "steamid": 200710
     }, 
     "steam_200900": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8205,7 +7658,6 @@
         "steamid": 200900
     }, 
     "steam_200960": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8220,7 +7672,6 @@
         "steamid": 200960
     }, 
     "steam_200980": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8235,7 +7686,6 @@
         "steamid": 200980
     }, 
     "steam_200990": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8250,7 +7700,6 @@
         "steamid": 200990
     }, 
     "steam_201000": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8265,7 +7714,6 @@
         "steamid": 201000
     }, 
     "steam_201010": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8280,7 +7728,6 @@
         "steamid": 201010
     }, 
     "steam_201280": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8295,7 +7742,6 @@
         "steamid": 201280
     }, 
     "steam_201310": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8310,7 +7756,6 @@
         "steamid": 201310
     }, 
     "steam_201830": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8325,7 +7770,6 @@
         "steamid": 201830
     }, 
     "steam_201870": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -8340,7 +7784,6 @@
         "steamid": 201870
     }, 
     "steam_202090": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8355,7 +7798,6 @@
         "steamid": 202090
     }, 
     "steam_202170": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -8370,7 +7812,6 @@
         "steamid": 202170
     }, 
     "steam_202200": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8385,7 +7826,6 @@
         "steamid": 202200
     }, 
     "steam_203160": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8400,7 +7840,6 @@
         "steamid": 203160
     }, 
     "steam_203770": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8415,7 +7854,6 @@
         "steamid": 203770
     }, 
     "steam_204060": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 1, 
@@ -8430,7 +7868,6 @@
         "steamid": 204060
     }, 
     "steam_204100": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -8445,7 +7882,6 @@
         "steamid": 204100
     }, 
     "steam_204240": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8460,7 +7896,6 @@
         "steamid": 204240
     }, 
     "steam_204450": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8475,7 +7910,6 @@
         "steamid": 204450
     }, 
     "steam_204630": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8490,7 +7924,6 @@
         "steamid": 204630
     }, 
     "steam_20500": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8505,7 +7938,6 @@
         "steamid": 20500
     }, 
     "steam_20510": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8520,7 +7952,6 @@
         "steamid": 20510
     }, 
     "steam_205100": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8535,7 +7966,6 @@
         "steamid": 205100
     }, 
     "steam_20530": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -8550,7 +7980,6 @@
         "steamid": 20530
     }, 
     "steam_20550": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8565,7 +7994,6 @@
         "steamid": 20550
     }, 
     "steam_205650": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -8580,7 +8008,6 @@
         "steamid": 205650
     }, 
     "steam_205790": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 1, 
@@ -8595,7 +8022,6 @@
         "steamid": 205790
     }, 
     "steam_20710": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8610,7 +8036,6 @@
         "steamid": 20710
     }, 
     "steam_207170": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8625,7 +8050,6 @@
         "steamid": 207170
     }, 
     "steam_207320": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8640,7 +8064,6 @@
         "steamid": 207320
     }, 
     "steam_207350": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8655,7 +8078,6 @@
         "steamid": 207350
     }, 
     "steam_207610": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8670,7 +8092,6 @@
         "steamid": 207610
     }, 
     "steam_20820": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8685,7 +8106,6 @@
         "steamid": 20820
     }, 
     "steam_208480": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -8700,7 +8120,6 @@
         "steamid": 208480
     }, 
     "steam_208580": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8715,7 +8134,6 @@
         "steamid": 208580
     }, 
     "steam_208600": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8730,7 +8148,6 @@
         "steamid": 208600
     }, 
     "steam_208730": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8745,7 +8162,6 @@
         "steamid": 208730
     }, 
     "steam_20900": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -8760,7 +8176,6 @@
         "steamid": 20900
     }, 
     "steam_209170": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 1, 
@@ -8775,7 +8190,6 @@
         "steamid": 209170
     }, 
     "steam_209330": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 1, 
@@ -8790,7 +8204,6 @@
         "steamid": 209330
     }, 
     "steam_209370": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8805,7 +8218,6 @@
         "steamid": 209370
     }, 
     "steam_209830": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8820,7 +8232,6 @@
         "steamid": 209830
     }, 
     "steam_2100": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8835,7 +8246,6 @@
         "steamid": 2100
     }, 
     "steam_21100": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8850,7 +8260,6 @@
         "steamid": 21100
     }, 
     "steam_211260": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8865,7 +8274,6 @@
         "steamid": 211260
     }, 
     "steam_211400": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8880,7 +8288,6 @@
         "steamid": 211400
     }, 
     "steam_211420": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8895,7 +8302,6 @@
         "steamid": 211420
     }, 
     "steam_212680": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8910,7 +8316,6 @@
         "steamid": 212680
     }, 
     "steam_2130": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 1, 
@@ -8925,7 +8330,6 @@
         "steamid": 2130
     }, 
     "steam_213670": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8940,7 +8344,6 @@
         "steamid": 213670
     }, 
     "steam_214340": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -8955,7 +8358,6 @@
         "steamid": 214340
     }, 
     "steam_214560": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8970,7 +8372,6 @@
         "steamid": 214560
     }, 
     "steam_214770": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -8985,7 +8386,6 @@
         "steamid": 214770
     }, 
     "steam_214830": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9000,7 +8400,6 @@
         "steamid": 214830
     }, 
     "steam_215160": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -9015,7 +8414,6 @@
         "steamid": 215160
     }, 
     "steam_215670": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -9030,7 +8428,6 @@
         "steamid": 215670
     }, 
     "steam_21660": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9045,7 +8442,6 @@
         "steamid": 21660
     }, 
     "steam_21690": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9060,7 +8456,6 @@
         "steamid": 21690
     }, 
     "steam_217140": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9075,7 +8470,6 @@
         "steamid": 217140
     }, 
     "steam_218090": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9090,7 +8484,6 @@
         "steamid": 218090
     }, 
     "steam_219150": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9105,7 +8498,6 @@
         "steamid": 219150
     }, 
     "steam_219890": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9120,7 +8512,6 @@
         "steamid": 219890
     }, 
     "steam_219990": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9135,7 +8526,6 @@
         "steamid": 219990
     }, 
     "steam_220": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9150,7 +8540,6 @@
         "steamid": 220
     }, 
     "steam_220090": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9165,7 +8554,6 @@
         "steamid": 220090
     }, 
     "steam_220200": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9180,7 +8568,6 @@
         "steamid": 220200
     }, 
     "steam_220240": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -9195,7 +8582,6 @@
         "steamid": 220240
     }, 
     "steam_220740": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -9210,7 +8596,6 @@
         "steamid": 220740
     }, 
     "steam_220780": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -9225,7 +8610,6 @@
         "steamid": 220780
     }, 
     "steam_220860": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -9240,7 +8624,6 @@
         "steamid": 220860
     }, 
     "steam_22100": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9255,7 +8638,6 @@
         "steamid": 22100
     }, 
     "steam_22120": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -9270,7 +8652,6 @@
         "steamid": 22120
     }, 
     "steam_22140": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -9285,7 +8666,6 @@
         "steamid": 22140
     }, 
     "steam_22180": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -9300,7 +8680,6 @@
         "steamid": 22180
     }, 
     "steam_221810": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -9315,7 +8694,6 @@
         "steamid": 221810
     }, 
     "steam_221830": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -9330,7 +8708,6 @@
         "steamid": 221830
     }, 
     "steam_222660": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9345,7 +8722,6 @@
         "steamid": 222660
     }, 
     "steam_222730": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9360,7 +8736,6 @@
         "steamid": 222730
     }, 
     "steam_222980": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9375,7 +8750,6 @@
         "steamid": 222980
     }, 
     "steam_22320": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9390,7 +8764,6 @@
         "steamid": 22320
     }, 
     "steam_223220": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9405,7 +8778,6 @@
         "steamid": 223220
     }, 
     "steam_22330": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9420,7 +8792,6 @@
         "steamid": 22330
     }, 
     "steam_223510": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9435,7 +8806,6 @@
         "steamid": 223510
     }, 
     "steam_223530": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 1, 
@@ -9450,7 +8820,6 @@
         "steamid": 223530
     }, 
     "steam_22370": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9465,7 +8834,6 @@
         "steamid": 22370
     }, 
     "steam_22380": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9480,7 +8848,6 @@
         "steamid": 22380
     }, 
     "steam_223810": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9495,7 +8862,6 @@
         "steamid": 223810
     }, 
     "steam_223870": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9510,7 +8876,6 @@
         "steamid": 223870
     }, 
     "steam_224480": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9525,7 +8890,6 @@
         "steamid": 224480
     }, 
     "steam_224960": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -9540,7 +8904,6 @@
         "steamid": 224960
     }, 
     "steam_224980": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9555,7 +8918,6 @@
         "steamid": 224980
     }, 
     "steam_225000": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9570,7 +8932,6 @@
         "steamid": 225000
     }, 
     "steam_225020": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9585,7 +8946,6 @@
         "steamid": 225020
     }, 
     "steam_225080": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -9600,7 +8960,6 @@
         "steamid": 225080
     }, 
     "steam_225260": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9615,7 +8974,6 @@
         "steamid": 225260
     }, 
     "steam_225300": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9630,7 +8988,6 @@
         "steamid": 225300
     }, 
     "steam_225320": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9645,7 +9002,6 @@
         "steamid": 225320
     }, 
     "steam_227000": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -9660,7 +9016,6 @@
         "steamid": 227000
     }, 
     "steam_227220": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9675,7 +9030,6 @@
         "steamid": 227220
     }, 
     "steam_227280": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9690,7 +9044,6 @@
         "steamid": 227280
     }, 
     "steam_227780": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9705,7 +9058,6 @@
         "steamid": 227780
     }, 
     "steam_228320": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 1, 
@@ -9720,7 +9072,6 @@
         "steamid": 228320
     }, 
     "steam_228960": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9735,7 +9086,6 @@
         "steamid": 228960
     }, 
     "steam_230050": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -9750,7 +9100,6 @@
         "steamid": 230050
     }, 
     "steam_230820": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9765,7 +9114,6 @@
         "steamid": 230820
     }, 
     "steam_231160": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9780,7 +9128,6 @@
         "steamid": 231160
     }, 
     "steam_231200": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9795,7 +9142,6 @@
         "steamid": 231200
     }, 
     "steam_232430": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -9810,7 +9156,6 @@
         "steamid": 232430
     }, 
     "steam_232790": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9825,7 +9170,6 @@
         "steamid": 232790
     }, 
     "steam_233230": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9840,7 +9184,6 @@
         "steamid": 233230
     }, 
     "steam_233270": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9855,7 +9198,6 @@
         "steamid": 233270
     }, 
     "steam_233390": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9870,7 +9212,6 @@
         "steamid": 233390
     }, 
     "steam_233450": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9885,7 +9226,6 @@
         "steamid": 233450
     }, 
     "steam_233720": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9900,7 +9240,6 @@
         "steamid": 233720
     }, 
     "steam_233740": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9915,7 +9254,6 @@
         "steamid": 233740
     }, 
     "steam_233980": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9930,7 +9268,6 @@
         "steamid": 233980
     }, 
     "steam_234190": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9945,7 +9282,6 @@
         "steamid": 234190
     }, 
     "steam_234370": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9960,7 +9296,6 @@
         "steamid": 234370
     }, 
     "steam_234390": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -9975,7 +9310,6 @@
         "steamid": 234390
     }, 
     "steam_23460": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -9990,7 +9324,6 @@
         "steamid": 23460
     }, 
     "steam_234650": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10005,7 +9338,6 @@
         "steamid": 234650
     }, 
     "steam_234710": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10020,7 +9352,6 @@
         "steamid": 234710
     }, 
     "steam_234900": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10035,7 +9366,6 @@
         "steamid": 234900
     }, 
     "steam_236090": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10050,7 +9380,6 @@
         "steamid": 236090
     }, 
     "steam_236850": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10065,7 +9394,6 @@
         "steamid": 236850
     }, 
     "steam_237990": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10080,7 +9408,6 @@
         "steamid": 237990
     }, 
     "steam_238010": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10095,7 +9422,6 @@
         "steamid": 238010
     }, 
     "steam_238280": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10110,7 +9436,6 @@
         "steamid": 238280
     }, 
     "steam_238320": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10125,7 +9450,6 @@
         "steamid": 238320
     }, 
     "steam_238890": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10140,7 +9464,6 @@
         "steamid": 238890
     }, 
     "steam_239030": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10155,7 +9478,6 @@
         "steamid": 239030
     }, 
     "steam_239350": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10170,7 +9492,6 @@
         "steamid": 239350
     }, 
     "steam_239700": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10185,7 +9506,6 @@
         "steamid": 239700
     }, 
     "steam_241600": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10200,7 +9520,6 @@
         "steamid": 241600
     }, 
     "steam_241910": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -10215,7 +9534,6 @@
         "steamid": 241910
     }, 
     "steam_242050": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10230,7 +9548,6 @@
         "steamid": 242050
     }, 
     "steam_242780": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -10245,7 +9562,6 @@
         "steamid": 242780
     }, 
     "steam_242920": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10260,7 +9576,6 @@
         "steamid": 242920
     }, 
     "steam_243200": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10275,7 +9590,6 @@
         "steamid": 243200
     }, 
     "steam_24420": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10290,7 +9604,6 @@
         "steamid": 24420
     }, 
     "steam_244590": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 1, 
@@ -10305,7 +9618,6 @@
         "steamid": 244590
     }, 
     "steam_244730": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10320,7 +9632,6 @@
         "steamid": 244730
     }, 
     "steam_244810": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10335,7 +9646,6 @@
         "steamid": 244810
     }, 
     "steam_247870": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10350,7 +9660,6 @@
         "steamid": 247870
     }, 
     "steam_248190": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10365,7 +9674,6 @@
         "steamid": 248190
     }, 
     "steam_248820": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10380,7 +9688,6 @@
         "steamid": 248820
     }, 
     "steam_24960": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10395,7 +9702,6 @@
         "steamid": 24960
     }, 
     "steam_2500": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10410,7 +9716,6 @@
         "steamid": 2500
     }, 
     "steam_250580": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10425,7 +9730,6 @@
         "steamid": 250580
     }, 
     "steam_252630": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10440,7 +9744,6 @@
         "steamid": 252630
     }, 
     "steam_255280": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10455,7 +9758,6 @@
         "steamid": 255280
     }, 
     "steam_255300": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10470,7 +9772,6 @@
         "steamid": 255300
     }, 
     "steam_25700": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10485,7 +9786,6 @@
         "steamid": 25700
     }, 
     "steam_257120": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10500,7 +9800,6 @@
         "steamid": 257120
     }, 
     "steam_25890": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10515,7 +9814,6 @@
         "steamid": 25890
     }, 
     "steam_264240": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10530,7 +9828,6 @@
         "steamid": 264240
     }, 
     "steam_26500": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10545,7 +9842,6 @@
         "steamid": 26500
     }, 
     "steam_265330": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10560,7 +9856,6 @@
         "steamid": 265330
     }, 
     "steam_26800": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10575,7 +9870,6 @@
         "steamid": 26800
     }, 
     "steam_26900": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10590,7 +9884,6 @@
         "steamid": 26900
     }, 
     "steam_2760": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10605,7 +9898,6 @@
         "steamid": 2760
     }, 
     "steam_280": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10620,7 +9912,6 @@
         "steamid": 280
     }, 
     "steam_2800": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10635,7 +9926,6 @@
         "steamid": 2800
     }, 
     "steam_28050": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10650,7 +9940,6 @@
         "steamid": 28050
     }, 
     "steam_2810": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10665,7 +9954,6 @@
         "steamid": 2810
     }, 
     "steam_2820": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10680,7 +9968,6 @@
         "steamid": 2820
     }, 
     "steam_2840": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10695,7 +9982,6 @@
         "steamid": 2840
     }, 
     "steam_2850": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10710,7 +9996,6 @@
         "steamid": 2850
     }, 
     "steam_29720": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10725,7 +10010,6 @@
         "steamid": 29720
     }, 
     "steam_31170": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -10740,7 +10024,6 @@
         "steamid": 31170
     }, 
     "steam_31180": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -10755,7 +10038,6 @@
         "steamid": 31180
     }, 
     "steam_31190": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -10770,7 +10052,6 @@
         "steamid": 31190
     }, 
     "steam_31200": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -10785,7 +10066,6 @@
         "steamid": 31200
     }, 
     "steam_31210": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -10800,7 +10080,6 @@
         "steamid": 31210
     }, 
     "steam_32360": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -10815,7 +10094,6 @@
         "steamid": 32360
     }, 
     "steam_32380": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10830,7 +10108,6 @@
         "steamid": 32380
     }, 
     "steam_32390": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10845,7 +10122,6 @@
         "steamid": 32390
     }, 
     "steam_32400": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -10860,7 +10136,6 @@
         "steamid": 32400
     }, 
     "steam_32460": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -10875,7 +10150,6 @@
         "steamid": 32460
     }, 
     "steam_3270": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10890,7 +10164,6 @@
         "steamid": 3270
     }, 
     "steam_33220": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10905,7 +10178,6 @@
         "steamid": 33220
     }, 
     "steam_33460": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10920,7 +10192,6 @@
         "steamid": 33460
     }, 
     "steam_33650": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10935,7 +10206,6 @@
         "steamid": 33650
     }, 
     "steam_340": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10950,7 +10220,6 @@
         "steamid": 340
     }, 
     "steam_34010": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10965,7 +10234,6 @@
         "steamid": 34010
     }, 
     "steam_34330": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10980,7 +10248,6 @@
         "steamid": 34330
     }, 
     "steam_35000": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -10995,7 +10262,6 @@
         "steamid": 35000
     }, 
     "steam_35010": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -11010,7 +10276,6 @@
         "steamid": 35010
     }, 
     "steam_35070": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11025,7 +10290,6 @@
         "steamid": 35070
     }, 
     "steam_35130": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11040,7 +10304,6 @@
         "steamid": 35130
     }, 
     "steam_35140": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 1, 
@@ -11055,7 +10318,6 @@
         "steamid": 35140
     }, 
     "steam_35460": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11070,7 +10332,6 @@
         "steamid": 35460
     }, 
     "steam_35700": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11085,7 +10346,6 @@
         "steamid": 35700
     }, 
     "steam_35720": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11100,7 +10360,6 @@
         "steamid": 35720
     }, 
     "steam_3590": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11115,7 +10374,6 @@
         "steamid": 3590
     }, 
     "steam_360": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11130,7 +10388,6 @@
         "steamid": 360
     }, 
     "steam_37260": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -11145,7 +10402,6 @@
         "steamid": 37260
     }, 
     "steam_37400": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -11160,7 +10416,6 @@
         "steamid": 37400
     }, 
     "steam_37420": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -11175,7 +10430,6 @@
         "steamid": 37420
     }, 
     "steam_380": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11190,7 +10444,6 @@
         "steamid": 380
     }, 
     "steam_39530": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11205,7 +10458,6 @@
         "steamid": 39530
     }, 
     "steam_39560": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11220,7 +10472,6 @@
         "steamid": 39560
     }, 
     "steam_400": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11235,7 +10486,6 @@
         "steamid": 400
     }, 
     "steam_40300": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -11250,7 +10500,6 @@
         "steamid": 40300
     }, 
     "steam_40390": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11265,7 +10514,6 @@
         "steamid": 40390
     }, 
     "steam_40700": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11280,7 +10528,6 @@
         "steamid": 40700
     }, 
     "steam_40720": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11295,7 +10542,6 @@
         "steamid": 40720
     }, 
     "steam_40800": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11310,7 +10556,6 @@
         "steamid": 40800
     }, 
     "steam_40930": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11325,7 +10570,6 @@
         "steamid": 40930
     }, 
     "steam_40990": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 1, 
@@ -11340,7 +10584,6 @@
         "steamid": 40990
     }, 
     "steam_41000": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11355,7 +10598,6 @@
         "steamid": 41000
     }, 
     "steam_41050": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11370,7 +10612,6 @@
         "steamid": 41050
     }, 
     "steam_41060": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11385,7 +10626,6 @@
         "steamid": 41060
     }, 
     "steam_41100": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11400,7 +10640,6 @@
         "steamid": 41100
     }, 
     "steam_41500": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11415,7 +10654,6 @@
         "steamid": 41500
     }, 
     "steam_41800": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11430,7 +10668,6 @@
         "steamid": 41800
     }, 
     "steam_420": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11445,7 +10682,6 @@
         "steamid": 420
     }, 
     "steam_42890": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11460,7 +10696,6 @@
         "steamid": 42890
     }, 
     "steam_42910": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11475,7 +10710,6 @@
         "steamid": 42910
     }, 
     "steam_43110": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -11490,7 +10724,6 @@
         "steamid": 43110
     }, 
     "steam_4540": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11505,7 +10738,6 @@
         "steamid": 4540
     }, 
     "steam_4550": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11520,7 +10752,6 @@
         "steamid": 4550
     }, 
     "steam_4600": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11535,7 +10766,6 @@
         "steamid": 4600
     }, 
     "steam_46250": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11550,7 +10780,6 @@
         "steamid": 46250
     }, 
     "steam_4700": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11565,7 +10794,6 @@
         "steamid": 4700
     }, 
     "steam_47780": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11580,7 +10808,6 @@
         "steamid": 47780
     }, 
     "steam_4780": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11595,7 +10822,6 @@
         "steamid": 4780
     }, 
     "steam_48000": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -11610,7 +10836,6 @@
         "steamid": 48000
     }, 
     "steam_48190": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -11625,7 +10850,6 @@
         "steamid": 48190
     }, 
     "steam_48700": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11640,7 +10864,6 @@
         "steamid": 48700
     }, 
     "steam_48720": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11655,7 +10878,6 @@
         "steamid": 48720
     }, 
     "steam_49520": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11670,7 +10892,6 @@
         "steamid": 49520
     }, 
     "steam_49600": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11685,7 +10906,6 @@
         "steamid": 49600
     }, 
     "steam_49800": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11700,7 +10920,6 @@
         "steamid": 49800
     }, 
     "steam_50": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11715,7 +10934,6 @@
         "steamid": 50
     }, 
     "steam_500": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11730,7 +10948,6 @@
         "steamid": 500
     }, 
     "steam_50000": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11745,7 +10962,6 @@
         "steamid": 50000
     }, 
     "steam_50300": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11760,7 +10976,6 @@
         "steamid": 50300
     }, 
     "steam_50620": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11775,7 +10990,6 @@
         "steamid": 50620
     }, 
     "steam_50650": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11790,7 +11004,6 @@
         "steamid": 50650
     }, 
     "steam_550": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11805,7 +11018,6 @@
         "steamid": 550
     }, 
     "steam_55110": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11820,7 +11032,6 @@
         "steamid": 55110
     }, 
     "steam_55230": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -11835,7 +11046,6 @@
         "steamid": 55230
     }, 
     "steam_57200": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11850,7 +11060,6 @@
         "steamid": 57200
     }, 
     "steam_57300": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -11865,7 +11074,6 @@
         "steamid": 57300
     }, 
     "steam_57400": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -11880,7 +11088,6 @@
         "steamid": 57400
     }, 
     "steam_57800": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11895,7 +11102,6 @@
         "steamid": 57800
     }, 
     "steam_58200": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11910,7 +11116,6 @@
         "steamid": 58200
     }, 
     "steam_58230": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -11925,7 +11130,6 @@
         "steamid": 58230
     }, 
     "steam_58570": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -11940,7 +11144,6 @@
         "steamid": 58570
     }, 
     "steam_6020": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11955,7 +11158,6 @@
         "steamid": 6020
     }, 
     "steam_6030": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11970,7 +11172,6 @@
         "steamid": 6030
     }, 
     "steam_60600": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -11985,7 +11186,6 @@
         "steamid": 60600
     }, 
     "steam_6120": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12000,7 +11200,6 @@
         "steamid": 6120
     }, 
     "steam_620": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12015,7 +11214,6 @@
         "steamid": 620
     }, 
     "steam_63710": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12030,7 +11228,6 @@
         "steamid": 63710
     }, 
     "steam_644": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 1, 
@@ -12045,7 +11242,6 @@
         "steamid": 644
     }, 
     "steam_65560": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12060,7 +11256,6 @@
         "steamid": 65560
     }, 
     "steam_6850": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12075,7 +11270,6 @@
         "steamid": 6850
     }, 
     "steam_6860": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12090,7 +11284,6 @@
         "steamid": 6860
     }, 
     "steam_6870": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12105,7 +11298,6 @@
         "steamid": 6870
     }, 
     "steam_6880": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12120,7 +11312,6 @@
         "steamid": 6880
     }, 
     "steam_6900": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12135,7 +11326,6 @@
         "steamid": 6900
     }, 
     "steam_6910": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12150,7 +11340,6 @@
         "steamid": 6910
     }, 
     "steam_6920": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12165,7 +11354,6 @@
         "steamid": 6920
     }, 
     "steam_6980": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12180,7 +11368,6 @@
         "steamid": 6980
     }, 
     "steam_70": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12195,7 +11382,6 @@
         "steamid": 70
     }, 
     "steam_7000": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -12210,7 +11396,6 @@
         "steamid": 7000
     }, 
     "steam_7010": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12225,7 +11410,6 @@
         "steamid": 7010
     }, 
     "steam_70120": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12240,7 +11424,6 @@
         "steamid": 70120
     }, 
     "steam_7020": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12255,7 +11438,6 @@
         "steamid": 7020
     }, 
     "steam_70300": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12270,7 +11452,6 @@
         "steamid": 70300
     }, 
     "steam_70420": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12285,7 +11466,6 @@
         "steamid": 70420
     }, 
     "steam_7060": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12300,7 +11480,6 @@
         "steamid": 7060
     }, 
     "steam_72200": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12315,7 +11494,6 @@
         "steamid": 72200
     }, 
     "steam_72850": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12330,7 +11508,6 @@
         "steamid": 72850
     }, 
     "steam_7650": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12345,7 +11522,6 @@
         "steamid": 7650
     }, 
     "steam_7660": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12360,7 +11536,6 @@
         "steamid": 7660
     }, 
     "steam_7730": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12375,7 +11550,6 @@
         "steamid": 7730
     }, 
     "steam_7760": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12390,7 +11564,6 @@
         "steamid": 7760
     }, 
     "steam_7770": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12405,7 +11578,6 @@
         "steamid": 7770
     }, 
     "steam_7850": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12420,7 +11592,6 @@
         "steamid": 7850
     }, 
     "steam_7860": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12435,7 +11606,6 @@
         "steamid": 7860
     }, 
     "steam_8000": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12450,7 +11620,6 @@
         "steamid": 8000
     }, 
     "steam_80300": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -12465,7 +11634,6 @@
         "steamid": 80300
     }, 
     "steam_8080": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -12480,7 +11648,6 @@
         "steamid": 8080
     }, 
     "steam_8100": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12495,7 +11662,6 @@
         "steamid": 8100
     }, 
     "steam_8140": {
-        "exe_count": 0, 
         "finished": 1, 
         "gogid": "", 
         "hidden": 0, 
@@ -12510,7 +11676,6 @@
         "steamid": 8140
     }, 
     "steam_8160": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 1, 
@@ -12525,7 +11690,6 @@
         "steamid": 8160
     }, 
     "steam_8170": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12540,7 +11704,6 @@
         "steamid": 8170
     }, 
     "steam_8190": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12555,7 +11718,6 @@
         "steamid": 8190
     }, 
     "steam_8500": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12570,7 +11732,6 @@
         "steamid": 8500
     }, 
     "steam_8850": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12585,7 +11746,6 @@
         "steamid": 8850
     }, 
     "steam_8870": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12600,7 +11760,6 @@
         "steamid": 8870
     }, 
     "steam_8930": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12615,7 +11774,6 @@
         "steamid": 8930
     }, 
     "steam_8980": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12630,7 +11788,6 @@
         "steamid": 8980
     }, 
     "steam_91310": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12645,7 +11802,6 @@
         "steamid": 91310
     }, 
     "steam_92000": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12660,7 +11816,6 @@
         "steamid": 92000
     }, 
     "steam_92800": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12675,7 +11830,6 @@
         "steamid": 92800
     }, 
     "steam_93200": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12690,7 +11844,6 @@
         "steamid": 93200
     }, 
     "steam_94200": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12705,7 +11858,6 @@
         "steamid": 94200
     }, 
     "steam_9500": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12720,7 +11872,6 @@
         "steamid": 9500
     }, 
     "steam_95300": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12735,7 +11886,6 @@
         "steamid": 95300
     }, 
     "steam_98100": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12750,7 +11900,6 @@
         "steamid": 98100
     }, 
     "steam_98200": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12765,7 +11914,6 @@
         "steamid": 98200
     }, 
     "steam_98800": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12780,7 +11928,6 @@
         "steamid": 98800
     }, 
     "steam_99400": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
@@ -12795,7 +11942,6 @@
         "steamid": 99400
     }, 
     "steam_99700": {
-        "exe_count": 0, 
         "finished": 0, 
         "gogid": "", 
         "hidden": 0, 
