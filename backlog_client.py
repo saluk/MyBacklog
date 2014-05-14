@@ -54,18 +54,18 @@ class Browser(QWidget):
         layout.addWidget(button)
         button.clicked.connect(self.do_import)
         
-        self.cookiem = Cookies()
+        #self.cookiem = Cookies()
         self.webkit = QWebView()
-        self.webkit.page().networkAccessManager().setCookieJar(self.cookiem)
+        #self.webkit.page().networkAccessManager().setCookieJar(self.cookiem)
         layout.addWidget(self.webkit)
         
         self.webkit.load(QUrl(url))
         self.show()
     def do_import(self):
         html = self.webkit.page().mainFrame().toHtml()
-        f = open("mygog_shelf.html","w",encoding="utf8")
-        f.write(html)
-        f.close()
+        #~ f = open("mygog_shelf.html","w",encoding="utf8")
+        #~ f.write(html)
+        #~ f.close()
         self.app.import_gog_html()
         self.deleteLater()
 
@@ -167,6 +167,10 @@ class Form(QWidget):
         self.import_gog_button = QPushButton("Import Gog")
         buttonLayout1.addWidget(self.import_gog_button)
         self.import_gog_button.clicked.connect(self.import_gog)
+        
+        button = QPushButton("Fix Gog Packages")
+        buttonLayout1.addWidget(button)
+        button.clicked.connect(self.fix_gog)
  
         self.buttonLayout1 = buttonLayout1
         mainLayout = QGridLayout()
@@ -271,6 +275,9 @@ class Form(QWidget):
         games = gogapi.import_gog()
         self.games.add_games(games)
         self.update_gamelist_widget()
+        self.games.save("games.json")
+    def fix_gog(self):
+        self.games.import_packages()
         self.games.save("games.json")
     def run_game(self,game):
         if getattr(self,"stop_playing_button",None):

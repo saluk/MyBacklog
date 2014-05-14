@@ -112,6 +112,7 @@ def get_gog_games_html(html):
         gog_games[d["gameindex"]] = d
     return gog_games
 def import_gog():
+    packs = {}
     games = []
     gog_games = get_gog_games_html("mygog_shelf.html")
     for key in gog_games:
@@ -125,7 +126,11 @@ def import_gog():
             id = g["gameindex"]
             if g2:
                 id = id+"."+g2.replace(" ","_")
-            game = data.Game(name=name,source="gog",gogid=id,icon_url="http://www.gog.com"+g["icon"])
+                if not g["gameindex"] in packs:
+                    package = data.Game(name=" ".join([x.capitalize() for x in g["gameindex"].split("_")]),source="gog",gogid=g["gameindex"],is_package=1)
+                    packs[package.gameid] = package
+                    games.append(package)
+            game = data.Game(name=name,source="gog",gogid=g["gameindex"],icon_url="http://www.gog.com"+g["icon"],packageid=g2.replace(" ","_"))
             games.append(game)
     return games
     

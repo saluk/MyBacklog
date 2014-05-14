@@ -26,9 +26,11 @@ class Game:
         self.playtime = 0
         self.finished = 0
         self.hidden = 0
-        self.exe_count = 0   #If 0, only one exe for this game
+        self.is_package = 0   #Set to 1 if it includes multiple games
+        self.exe_count = 0   #If 0, only one exe for this game, DEPRECIATED
         self.lastplayed = None   #timestamp in fmt
         self.source = "steam"
+        self.packageid = ""  #Id of game within a package
         
         self.steamid = ""
         self.gogid = ""
@@ -73,8 +75,8 @@ class Game:
             s = "steam_%s"%self.steamid
         elif self.source == "gog" and self.gogid:
             s = "gog_%s"%self.gogid
-        if self.exe_count and s:
-            s += ".%d"%self.exe_count
+        if self.packageid and s:
+            s += ".%s"%self.packageid
         return s
     def dict(self):
         d = {}
@@ -95,6 +97,19 @@ class Games:
         load_data = json.loads(d)
         for k in load_data:
             self.games[k] = Game(**load_data[k])
+    def import_packages(self):
+        for gkey in list(self.games.keys()):
+            game = self.games[gkey]
+            if game.source=="gog" and "." in game.gogid:
+                gogid,packageid = game.gogid.rsplit(".",1)
+                game.gogid = gogid
+                game.packageid = packageid
+                package = Game(name=" ".join([x.capitalize() for x in gogid.split("_")]),
+                        is_package=1,source="gog",gogid=gogid)
+                if not package.gameid in self.games:
+                    self.games[package.gameid] = package
+                del self.games[gkey]
+                self.games[game.gameid] = game
     def save(self,file):
         save_data = {}
         for k in self.games:
