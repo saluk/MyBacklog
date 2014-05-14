@@ -18,8 +18,8 @@ def sec_to_ts(sec):
     return ttos(time.localtime(sec))
 
 class Game:
-    args = [("name","s"),("playtime","f"),("finished","i"),("source","s"),("hidden","i"),("exe_count","i"),("icon_url","s")]
-    source_args = {"steam":[("steamid","i")],"gog":[("gogid","s"),("install_path","s")]}
+    args = [("name","s"),("playtime","f"),("finished","i"),("source","s"),("hidden","i"),("icon_url","s")]
+    source_args = {"steam":[("steamid","i")],"gog":[("gogid","s"),("install_path","s"),("packageid","s"),("is_package","i")]}
     def __init__(self,**kwargs):
         dontsavekeys = set(dir(self))
         self.name = ""
@@ -27,7 +27,6 @@ class Game:
         self.finished = 0
         self.hidden = 0
         self.is_package = 0   #Set to 1 if it includes multiple games
-        self.exe_count = 0   #If 0, only one exe for this game, DEPRECIATED
         self.lastplayed = None   #timestamp in fmt
         self.source = "steam"
         self.packageid = ""  #Id of game within a package
