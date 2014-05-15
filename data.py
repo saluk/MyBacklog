@@ -82,10 +82,25 @@ class Game:
         for k in self.savekeys:
             d[k] = getattr(self,k)
         return d
+    def copy(self):
+        return Game(**self.dict())
+    def games_for_pack(self,games):
+        if not self.is_package:
+            raise Exception("Not a package")
+        gamelist = []
+        for g in games.games.values():
+            if g==self:
+                continue
+            if g.is_package:
+                continue
+            if g.gogid == self.gogid and self.source=="gog" and g.source=="gog":
+                gamelist.append(g)
+        return gamelist
 
 class Games:
     def __init__(self):
         self.games = {}
+        self.multipack = json.loads(open("gog_packages.json").read())
     def load(self,file):
         if not os.path.exists(file):
             print("Warning, no save file to load:",file)
@@ -116,6 +131,9 @@ class Games:
         f = open(file,"w")
         f.write(json.dumps(save_data,sort_keys=True,indent=4))
         f.close()
+        f = open("gog_packages.json","w")
+        f.write(json.dumps(self.multipack))
+        f.close()
     def add_games(self,game_list):
         for g in game_list:
             self.update_game(g.gameid,g)
@@ -133,6 +151,8 @@ class Games:
             cur_game.finished = 1
         if game.lastplayed and (not cur_game.lastplayed or stot(game.lastplayed)>stot(cur_game.lastplayed)):
             cur_game.lastplayed = game.lastplayed
+        cur_game.is_package = game.is_package
+        cur_game.packageid = game.packageid
         return game
     def list(self):
         v = self.games.values()
