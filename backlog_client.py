@@ -68,6 +68,66 @@ class Browser(QWidget):
         #~ f.close()
         self.app.import_gog_html()
         self.deleteLater()
+        
+class ListGamesForPack(QWidget):
+    def __init__(self, game, row_widget, app):
+        super(ListGamesForPack, self).__init__()
+        self.game = game
+        self.game.is_package = 1
+        self.app = app
+        
+        self.row_widget = row_widget
+        
+        self.oldid = game.gameid
+        
+        #Layout
+        layout = QGridLayout()
+        layout.addWidget(QLabel("Editing Package:"+game.gameid))
+        
+        current_games = game.games_for_pack(self.app.games)
+        
+        #Fields
+        self.fields = {}
+        for i in range(10):
+            label = QLabel("Game %d"%i)
+            layout.addWidget(label,i+1,0)
+            
+            gname = ""
+            next_game = None
+            if current_games:
+                next_game = current_games.pop(0)
+                gname = next_game.name
+            
+            edit = QLineEdit(gname)
+            layout.addWidget(edit,i+1,1)
+            self.fields[i] = {"w":edit,"g":next_game}
+            
+        #Save button
+        button = QPushButton("Save + Close")
+        layout.addWidget(button)
+        button.clicked.connect(self.save_close)
+        
+        self.setLayout(layout)
+
+    def save_close(self):
+        self.app.games.multipack[self.game.gogid] = []
+        for field in self.fields:
+            field = self.fields[field]
+            name = field["w"].text()
+            if not name:
+                continue
+            game = field["g"]
+            if not game:
+                game = self.game.copy()
+                game.is_package = 0
+            game.name = name
+            game.packageid = name.lower().replace(" ","_")
+            self.app.games.multipack[self.game.gogid].append(game.packageid)
+            self.app.games.games[game.gameid] = game
+            #Add or update row in list
+        self.app.games.save("games.json")
+        self.app.get_row_for_game(self.game,self.row_widget)
+        self.deleteLater()
 
 class EditGame(QWidget):
     def __init__(self, game, row_widget, app):
@@ -98,6 +158,13 @@ class EditGame(QWidget):
                 button = QPushButton("Set Path")
                 layout.addWidget(button,i+1,2)
                 button.clicked.connect(make_callback(self.set_filepath,edit))
+        if game.source=="gog":
+            name = "Make Package"
+            if game.is_package:
+                name = "Edit Package"
+            button = QPushButton(name)
+            layout.addWidget(button,i+2,0)
+            button.clicked.connect(make_callback(self.make_package))
             
         #Save button
         button = QPushButton("Save + Close")
@@ -109,6 +176,9 @@ class EditGame(QWidget):
     def set_filepath(self,w):
         filename = QFileDialog.getOpenFileName(self,"Open Executable",w.text(),"Executable (*.exe *.lnk *.cmd *.bat)")[0]
         w.setText(filename.replace("/","\\"))
+    def make_package(self):
+        self.lg = ListGamesForPack(self.game,self.row_widget,self.app)
+        self.lg.show()
     def save_close(self):
         for field in self.fields:
             value = self.fields[field]["w"].text()
