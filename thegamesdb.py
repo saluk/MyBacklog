@@ -1,3 +1,6 @@
+#!python3
+import json
+import os
 import sys
 import difflib
 import requests
@@ -24,7 +27,7 @@ def get_value(child):
     return v
 
 def to_dict(tree):
-    d = {}
+    d = {"genre":[]}
     lists = {}
     for child in tree:
         v = get_value(child)
@@ -38,10 +41,15 @@ def to_dict(tree):
     return d
 
 def find_game(name):
+    ckey = "cache/gamedb/fg"+name.replace(" ","_").replace(":","-").replace("/","_slsh_")
+    if os.path.exists(ckey):
+        return json.loads(open(ckey).read())
     r = requests.get(gamelistep,params={"name":'"'+name+'"',"platform":"pc"})
     xml = r.text
     root = etree.XML(xml)
     list = [to_dict(game) for game in root]
+    if not list:
+        return None
     #find best match
     def match(n1,n2):
         n1=n1.lower()
@@ -50,15 +58,23 @@ def find_game(name):
         if n2.startswith(n1):
             score += 0.1
         return score
-    print [(li["GameTitle"],match(name,li["GameTitle"])) for li in list]
+    print ( [(li["GameTitle"],match(name,li["GameTitle"])) for li in list] )
     list.sort(key=lambda li: -match(name,li["GameTitle"]))
+    with open(ckey,"w") as f:
+        f.write(json.dumps(list[0]))
     return list[0]
 
 def get_game_info(game_id):
+    ckey = "cache/gamedb/gi"+str(game_id)
+    if os.path.exists(ckey):
+        return json.loads(open(ckey).read())
     r = requests.get(gameep,params={"id":game_id})
     xml = r.text
-    print xml
+    #print xml
     root = etree.XML(xml)
+    with open(ckey,"w") as f:
+        f.write(json.dumps(to_dict(root)))
     return to_dict(root)
 
-print get_game_info(find_game(sys.argv[1])["id"])
+if __name__=="__main__":
+    print (get_game_info(find_game("dark souls")["id"]))

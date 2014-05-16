@@ -3,6 +3,7 @@ import data
 import json
 import steamapi
 import gogapi
+import thegamesdb
 import os
 import time
 import requests
@@ -210,9 +211,18 @@ class Form(QWidget):
  
         buttonLayout1 = QVBoxLayout()
         
-        search = QLineEdit()
-        buttonLayout1.addWidget(search)
-        search.textChanged.connect(self.dosearch)
+        self.searchbar = QWidget()
+        self.searchbarlayout = QHBoxLayout()
+        self.searchbar.setLayout(self.searchbarlayout)
+        buttonLayout1.addWidget(self.searchbar)
+        
+        self.search_name = QLineEdit()
+        self.searchbarlayout.addWidget(self.search_name)
+        self.search_name.textChanged.connect(self.dosearch)
+        
+        self.search_genre = QLineEdit()
+        self.searchbarlayout.addWidget(self.search_genre)
+        self.search_genre.textChanged.connect(self.dosearch)
         
         self.games_list_widget = QWidget()
         self.games_list_widget_layout = QGridLayout()
@@ -241,6 +251,10 @@ class Form(QWidget):
         button = QPushButton("Fix Gog Packages")
         buttonLayout1.addWidget(button)
         button.clicked.connect(self.fix_gog)
+        
+        button = QPushButton("Games DB")
+        buttonLayout1.addWidget(button)
+        button.clicked.connect(self.gamesdb)
  
         self.buttonLayout1 = buttonLayout1
         mainLayout = QGridLayout()
@@ -276,6 +290,10 @@ class Form(QWidget):
             label = QLabel("GAME NAME")
             box.addWidget(label)
             w.label = label
+            
+            label = QLabel("GAME GENRE")
+            box.addWidget(label)
+            w.genre = label
             
             label = QLabel("GAME HOURS")
             label.setMaximumWidth(50)
@@ -317,6 +335,7 @@ class Form(QWidget):
         w.hours.setStyleSheet("QWidget {}")
         if game.playtime < 500:
             w.hours.setStyleSheet("QWidget {background-color: red}")
+        w.genre.setText(game.genre)
         if game.hidden:
             w.hide()
         w.last_played.setText(game.last_played_nice)
@@ -348,6 +367,20 @@ class Form(QWidget):
         self.games.save("games.json")
     def fix_gog(self):
         self.games.import_packages()
+        self.games.save("games.json")
+    def gamesdb(self):
+        for g in self.games.games.values():
+            gdbg = thegamesdb.find_game(g.name)
+            if gdbg:
+                data = thegamesdb.get_game_info(gdbg["id"])
+                #print(data)
+                if data and "Game" in data and "Genres" in data["Game"]:
+                    genre = data["Game"]["Genres"]["genre"]
+                    if type(genre) not in [str,bytes]:
+                        genre = [x for x in genre if type(x) in [str,bytes]][0]
+                    print(genre)
+                    g.genre = genre.lower()
+                    print(g.genre)
         self.games.save("games.json")
     def run_game(self,game):
         if getattr(self,"stop_playing_button",None):
@@ -390,8 +423,10 @@ class Form(QWidget):
         self.egw = EditGame(game,row,self)
         self.egw.show()
     def dosearch(self,text):
+        sn = self.search_name.text().lower()
+        sg = self.search_genre.text().lower()
         for g in self.gamelist:
-            if text.lower() in g["game"].name.lower() and not g["game"].hidden:
+            if (not sn or sn in g["game"].name.lower()) and (not sg or sg in g["game"].genre.lower()) and not g["game"].hidden:
                 if g["hidden"]:
                     g["widget"].show()
                     g["hidden"] = 0
