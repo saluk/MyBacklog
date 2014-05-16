@@ -9673,6 +9673,20 @@
         "source": "steam", 
         "steamid": 244810
     }, 
+    "steam_247240": {
+        "finished": 0, 
+        "gogid": "", 
+        "hidden": 0, 
+        "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/247240/c6e7168b2be1a7fb1876a2e688eea8b69260c601.jpg", 
+        "install_path": "", 
+        "is_package": 0, 
+        "lastplayed": "01:41:34 2014-05-15", 
+        "name": "Volgarr the Viking", 
+        "packageid": "", 
+        "playtime": 552.6312820911407, 
+        "source": "steam", 
+        "steamid": 247240
+    }, 
     "steam_247870": {
         "finished": 0, 
         "gogid": "", 
