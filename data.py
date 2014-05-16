@@ -18,8 +18,9 @@ def sec_to_ts(sec):
     return ttos(time.localtime(sec))
 
 class Game:
-    args = [("name","s"),("playtime","f"),("finished","i"),("source","s"),("hidden","i"),("icon_url","s")]
-    source_args = {"steam":[("steamid","i")],"gog":[("gogid","s"),("install_path","s"),("packageid","s"),("is_package","i")]}
+    args = [("name","s"),("playtime","f"),("finished","i"),("genre","s"),("source","s"),("hidden","i"),("icon_url","s"),
+    ("packageid","s"),("is_package","i")]
+    source_args = {"steam":[("steamid","i")],"gog":[("gogid","s"),("install_path","s")]}
     def __init__(self,**kwargs):
         dontsavekeys = set(dir(self))
         self.name = ""
@@ -30,6 +31,7 @@ class Game:
         self.lastplayed = None   #timestamp in fmt
         self.source = "steam"
         self.packageid = ""  #Id of game within a package
+        self.genre = ""
         
         self.steamid = ""
         self.gogid = ""
