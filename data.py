@@ -20,7 +20,7 @@ def sec_to_ts(sec):
 class Game:
     args = [("name","s"),("playtime","f"),("finished","i"),("genre","s"),("source","s"),("hidden","i"),("icon_url","s"),
     ("packageid","s"),("is_package","i")]
-    source_args = {"steam":[("steamid","i")],"gog":[("gogid","s"),("install_path","s")]}
+    source_args = {"steam":[("steamid","i")],"gog":[("gogid","s"),("install_path","s")],"none":[("install_path","s"),("website","s")]}
     def __init__(self,**kwargs):
         dontsavekeys = set(dir(self))
         self.name = ""
@@ -32,11 +32,12 @@ class Game:
         self.source = "steam"
         self.packageid = ""  #Id of game within a package
         self.genre = ""
+        self.icon_url = ""
         
         self.steamid = ""
         self.gogid = ""
         self.install_path = ""
-        self.icon_url = ""
+        self.website = ""
         self.savekeys = set(dir(self)) - dontsavekeys
         for k in kwargs:
             if hasattr(self,k):
@@ -55,7 +56,7 @@ class Game:
         print ("  %.2d:%.2d"%self.hours_minutes)
     @property
     def valid_args(self):
-        return self.args+self.source_args[self.source]
+        return self.args+self.source_args.get(self.source,[])
     @property
     def hours_minutes(self):
         s = self.playtime
@@ -76,6 +77,12 @@ class Game:
             s = "steam_%s"%self.steamid
         elif self.source == "gog" and self.gogid:
             s = "gog_%s"%self.gogid
+        elif self.source == "none":
+            print(self.name)
+            s = [x.lower() for x in self.name if x.lower() in "abcdefghijklmnopqrstuvwxyz1234567890 "]
+            s = "".join(s).replace(" ","_")
+        else:
+            raise Exception("Invalid source")
         if self.packageid and s:
             s += ".%s"%self.packageid
         return s
