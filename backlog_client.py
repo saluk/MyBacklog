@@ -410,7 +410,7 @@ class Form(QWidget):
         print ("run game",game.name,game.gameid)
         if game.source=="steam":
             os.system("c:\\steam\\steam.exe -applaunch %d"%game.steamid)
-        if game.source=="gog":
+        if game.source in ["gog","none"]:
             curdir = os.path.abspath(os.curdir)
             os.chdir(game.install_path.rsplit("\\",1)[0])
             os.system('"'+game.install_path+'"')
@@ -440,7 +440,7 @@ class Form(QWidget):
         self.egw.show()
 
     def add_game(self):
-        game = data.Game(source="gog")
+        game = data.Game(source="none")
         row = self.get_row_for_game(game)
         self.gamelist.append({"game":game,"widget":row,"hidden":0})
         self.games_list_widget_layout.addWidget(row)
