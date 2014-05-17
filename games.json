@@ -9359,6 +9359,21 @@
         "source": "steam", 
         "steamid": 221830
     }, 
+    "steam_221910": {
+        "finished": 0, 
+        "genre": "", 
+        "gogid": "", 
+        "hidden": 0, 
+        "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/221910/d4958966dbc02d7a282c52552f71ce6910957b63.jpg", 
+        "install_path": "", 
+        "is_package": 0, 
+        "lastplayed": null, 
+        "name": "The Stanley Parable", 
+        "packageid": "", 
+        "playtime": 0.0, 
+        "source": "steam", 
+        "steamid": 221910
+    }, 
     "steam_222660": {
         "finished": 0, 
         "genre": "music", 
@@ -10252,10 +10267,10 @@
         "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/242050/a03c06290af00eed66814815663b68f5fd063882.jpg", 
         "install_path": "", 
         "is_package": 0, 
-        "lastplayed": "23:47:23 2014-05-13", 
+        "lastplayed": "02:01:05 2014-05-16", 
         "name": "Assassin's Creed IV Black Flag", 
         "packageid": "", 
-        "playtime": 45130.28264713287, 
+        "playtime": 57179.447810173035, 
         "source": "steam", 
         "steamid": 242050
     }, 
@@ -12217,10 +12232,10 @@
         "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/6920/8feb3c4e692882dbd1f30f3a8bfe89b9928c68c1.jpg", 
         "install_path": "", 
         "is_package": 0, 
-        "lastplayed": "21:38:13 2010-04-23", 
+        "lastplayed": "12:52:18 2014-05-16", 
         "name": "Deus Ex: Invisible War", 
         "packageid": "", 
-        "playtime": 300.0, 
+        "playtime": 4515.716807126999, 
         "source": "steam", 
         "steamid": 6920
     }, 
