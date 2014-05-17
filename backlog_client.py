@@ -7,45 +7,54 @@ import thegamesdb
 import os
 import time
 import requests
-os.environ["QT_QPA_PLATFORM_PLUGIN_PATH"]="C:\\Python33\\Lib\\site-packages\\PyQt5\\plugins\\platforms"
+os.environ["QT_QPA_PLATFORM_PLUGIN_PATH"] = "C:\\Python33\\Lib\\site-packages\\PyQt5\\plugins\\platforms"
 
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5 import QtWebKit
-print (dir(QtWebKit))
+print(dir(QtWebKit))
 from PyQt5.QtWebKitWidgets import *
 from PyQt5.QtNetwork import *
 
-def make_callback(f,*args):
+
+def make_callback(f, *args):
     return lambda: f(*args)
-    
+
+
 class Cookies(QNetworkCookieJar):
     def __init__(self):
-        super(Cookies,self).__init__()
+        super(Cookies, self).__init__()
         self.cookies = {}
         if os.path.exists("cache/qtcookies"):
-            with open("cache/qtcookies","r") as f:
+            with open("cache/qtcookies", "r") as f:
                 self.cookies = json.loads(f.read())
+
     def cookiesForUrl(self, url):
         cookies = []
         for name in self.cookies:
             c = self.cookies[name]
-            qnc = QNetworkCookie(c["name"],c["value"])
+            qnc = QNetworkCookie(c["name"], c["value"])
             qnc.setDomain(c["domain"])
             qnc.setPath(c["path"])
             cookies.append(qnc)
         return cookies
+
     def setCookiesFromUrl(self, cookielist, url):
         for c in cookielist:
-            self.cookies[c.name().data().decode("utf8")] = {"name":c.name().data().decode("utf8"),"path":c.path(),"value":c.value().data().decode("utf8"),"domain":c.domain()}
+            self.cookies[c.name().data().decode("utf8")] = {
+                "name": c.name().data().decode("utf8"),
+                "path": c.path(),
+                "value": c.value().data().decode("utf8"),
+                "domain": c.domain()}
         print(self.cookies)
-        with open("cache/qtcookies","w") as f:
+        with open("cache/qtcookies", "w") as f:
             f.write(json.dumps(self.cookies))
-    
+
+
 class Browser(QWidget):
-    def __init__(self,url,app):
-        super(Browser,self).__init__()
+    def __init__(self, url, app):
+        super(Browser, self).__init__()
         self.app = app
         
         layout = QGridLayout()
@@ -62,6 +71,7 @@ class Browser(QWidget):
         
         self.webkit.load(QUrl(url))
         self.show()
+
     def do_import(self):
         html = self.webkit.page().mainFrame().toHtml()
         #~ f = open("mygog_shelf.html","w",encoding="utf8")
@@ -69,7 +79,8 @@ class Browser(QWidget):
         #~ f.close()
         self.app.import_gog_html()
         self.deleteLater()
-        
+
+
 class ListGamesForPack(QWidget):
     def __init__(self, game, row_widget, app):
         super(ListGamesForPack, self).__init__()
@@ -130,6 +141,7 @@ class ListGamesForPack(QWidget):
         self.app.get_row_for_game(self.game,self.row_widget)
         self.deleteLater()
 
+
 class EditGame(QWidget):
     def __init__(self, game, row_widget, app):
         super(EditGame, self).__init__()
@@ -164,7 +176,7 @@ class EditGame(QWidget):
             if game.is_package:
                 name = "Edit Package"
             button = QPushButton(name)
-            layout.addWidget(button,i+2,0)
+            layout.addWidget(button, i+2, 0)
             button.clicked.connect(make_callback(self.make_package))
             
         #Save button
@@ -173,24 +185,26 @@ class EditGame(QWidget):
         button.clicked.connect(self.save_close)
         
         self.setLayout(layout)
-        
+
     def set_filepath(self,w):
         filename = QFileDialog.getOpenFileName(self,"Open Executable",w.text(),"Executable (*.exe *.lnk *.cmd *.bat)")[0]
         w.setText(filename.replace("/","\\"))
+
     def make_package(self):
         self.lg = ListGamesForPack(self.game,self.row_widget,self.app)
         self.lg.show()
+
     def save_close(self):
         for field in self.fields:
             value = self.fields[field]["w"].text()
             t = self.fields[field]["t"]
-            if t=="i":
+            if t == "i":
                 value = int(value)
-            elif t=="f":
+            elif t == "f":
                 value = float(value)
             setattr(self.game,field,value)
         newid = self.game.gameid
-        print("save",newid,self.oldid)
+        print("save", newid, self.oldid)
         if newid!=self.oldid:
             if self.oldid in self.games.games:
                 del self.games.games[self.oldid]
@@ -198,7 +212,8 @@ class EditGame(QWidget):
         self.games.save("games.json")
         self.app.get_row_for_game(self.game,self.row_widget)
         self.deleteLater()
- 
+
+
 class Form(QWidget):
     def __init__(self, parent=None):
         super(Form, self).__init__(parent)
@@ -353,21 +368,26 @@ class Form(QWidget):
             self.games_list_widget_layout.addWidget(w)
         self.game_scroller.verticalScrollBar().setValue(0)
         self.update()
+
     def import_steam(self):
         games = steamapi.import_steam()
         self.games.add_games(games)
         self.update_gamelist_widget()
         self.games.save("games.json")
+
     def import_gog(self):
         self.browser = Browser("http://www.gog.com/account",self)
+
     def import_gog_html(self):
         games = gogapi.import_gog()
         self.games.add_games(games)
         self.update_gamelist_widget()
         self.games.save("games.json")
+
     def fix_gog(self):
         self.games.import_packages()
         self.games.save("games.json")
+
     def gamesdb(self):
         for g in self.games.games.values():
             gdbg = thegamesdb.find_game(g.name)
@@ -382,6 +402,7 @@ class Form(QWidget):
                     g.genre = genre.lower()
                     print(g.genre)
         self.games.save("games.json")
+
     def run_game(self,game):
         if getattr(self,"stop_playing_button",None):
             return
@@ -399,6 +420,7 @@ class Form(QWidget):
         self.stop_playing_button = QPushButton("Stop Playing "+game.name)
         self.buttonLayout1.addWidget(self.stop_playing_button)
         self.stop_playing_button.clicked.connect(make_callback(self.stop_playing,game))
+
     def stop_playing(self,game):
         self.buttonLayout1.removeWidget(self.stop_playing_button)
         self.stop_playing_button.deleteLater()
@@ -412,9 +434,11 @@ class Form(QWidget):
         for g in self.gamelist:
             if g["game"].gameid == game.gameid:
                 self.get_row_for_game(game,g["widget"])
+
     def edit_game(self,game,row_widget):
         self.egw = EditGame(game,row_widget,self)
         self.egw.show()
+
     def add_game(self):
         game = data.Game(source="gog")
         row = self.get_row_for_game(game)
@@ -422,6 +446,7 @@ class Form(QWidget):
         self.games_list_widget_layout.addWidget(row)
         self.egw = EditGame(game,row,self)
         self.egw.show()
+
     def dosearch(self,text):
         sn = self.search_name.text().lower()
         sg = self.search_genre.text().lower()
