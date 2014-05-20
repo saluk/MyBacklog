@@ -19,7 +19,7 @@ def sec_to_ts(sec):
 
 class Game:
     args = [("name","s"),("playtime","f"),("finished","i"),("genre","s"),("source","s"),("hidden","i"),("icon_url","s"),
-    ("packageid","s"),("is_package","i")]
+    ("packageid","s"),("is_package","i"),("notes","s")]
     source_args = {"steam":[("steamid","i")],"gog":[("gogid","s"),("install_path","s")],"none":[("install_path","s"),("website","s")]}
     def __init__(self,**kwargs):
         dontsavekeys = set(dir(self))
@@ -33,6 +33,7 @@ class Game:
         self.packageid = ""  #Id of game within a package
         self.genre = ""
         self.icon_url = ""
+        self.notes = ""
         
         self.steamid = ""
         self.gogid = ""
