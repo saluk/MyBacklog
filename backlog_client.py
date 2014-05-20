@@ -1,12 +1,17 @@
 #!python3
-import data
+
+#STDLIB
 import json
-import steamapi
-import gogapi
-import thegamesdb
 import os
 import time
 import requests
+import subprocess
+
+#backloglib
+import data
+import steamapi
+import gogapi
+import thegamesdb
 os.environ["QT_QPA_PLATFORM_PLUGIN_PATH"] = "C:\\Python33\\Lib\\site-packages\\PyQt5\\plugins\\platforms"
 
 from PyQt5.QtCore import *
@@ -408,13 +413,20 @@ class Form(QWidget):
             return
         self.timer_started = time.time()
         print ("run game",game.name,game.gameid)
+        args = []
+        folder = "."
         if game.source=="steam":
-            os.system("c:\\steam\\steam.exe -applaunch %d"%game.steamid)
+            args = ["c:\\steam\\steam.exe", "-applaunch", "%d"%game.steamid]
         if game.source in ["gog","none"]:
-            curdir = os.path.abspath(os.curdir)
-            os.chdir(game.install_path.rsplit("\\",1)[0])
-            os.system('"'+game.install_path+'"')
-            os.chdir(curdir)
+            folder = game.install_path.rsplit("\\",1)[0] #Navigate to executable's directory
+            import winshell, shlex
+            with winshell.shortcut(game.install_path) as link:
+                args = [link.path] + shlex.split(link.arguments)
+                folder = link.working_directory
+
+        print(args)
+        import sys
+        subprocess.Popen(args, cwd=folder, stdout=sys.stdout, stderr=sys.stderr)
         
         
         self.stop_playing_button = QPushButton("Stop Playing "+game.name)
