@@ -188,6 +188,11 @@ class EditGame(QWidget):
         button = QPushButton("Save + Close")
         layout.addWidget(button)
         button.clicked.connect(self.save_close)
+
+        #Delete button
+        button = QPushButton("Delete")
+        layout.addWidget(button)
+        button.clicked.connect(self.delete)
         
         self.setLayout(layout)
 
@@ -217,6 +222,12 @@ class EditGame(QWidget):
         self.games.save("games.json")
         self.app.get_row_for_game(self.game,self.row_widget)
         self.deleteLater()
+
+    def delete(self):
+        self.games.delete(self.game)
+        self.games.save("games.json")
+        self.deleteLater()
+        self.row_widget.deleteLater()
 
 
 class Form(QWidget):
@@ -415,18 +426,38 @@ class Form(QWidget):
         print ("run game",game.name,game.gameid)
         args = []
         folder = "."
+        startupinfo = None
+        creationflags = 0
         if game.source=="steam":
             args = ["c:\\steam\\steam.exe", "-applaunch", "%d"%game.steamid]
         if game.source in ["gog","none"]:
             folder = game.install_path.rsplit("\\",1)[0] #Navigate to executable's directory
+            startupinfo = subprocess.STARTUPINFO()
+            startupinfo.dwFlags = subprocess.STARTF_USESHOWWINDOW
+            startupinfo.wShowWindow = 0
+            creationflags = subprocess.CREATE_NEW_PROCESS_GROUP
             import winshell, shlex
-            with winshell.shortcut(game.install_path) as link:
-                args = [link.path] + shlex.split(link.arguments)
-                folder = link.working_directory
+            if game.install_path.endswith(".lnk"):
+                with winshell.shortcut(game.install_path) as link:
+                    args = [link.path] + shlex.split(link.arguments)
+                    folder = link.working_directory
+            else:
+                #Make batch file to run
+                if not os.path.exists("cache/batches/"+game.gameid+".bat"):
+                    with open("cache/batches/"+game.gameid+".bat", "w") as f:
+                        f.write('cd "%s"\n'%folder)
+                        f.write('"%s"\n'%game.install_path)
+                args = [game.gameid+".bat"]
+                folder = os.path.abspath("cache\\batches\\")
 
         print(args)
         import sys
-        subprocess.Popen(args, cwd=folder, stdout=sys.stdout, stderr=sys.stderr)
+        curdir = os.path.abspath(os.curdir)
+        os.chdir(folder)
+        print(os.path.abspath(os.curdir))
+        subprocess.Popen(args, cwd=folder, stdout=sys.stdout, stderr=sys.stderr, creationflags=creationflags, shell=True)
+        print("subprocess open")
+        os.chdir(curdir)
         
         
         self.stop_playing_button = QPushButton("Stop Playing "+game.name)
