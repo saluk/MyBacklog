@@ -19,7 +19,7 @@ def sec_to_ts(sec):
 
 class Game:
     args = [("name","s"),("playtime","f"),("finished","i"),("genre","s"),("source","s"),("hidden","i"),("icon_url","s"),
-    ("packageid","s"),("is_package","i"),("notes","s")]
+    ("packageid","s"),("is_package","i"),("notes","s"),("priority","i")]
     source_args = {"steam":[("steamid","i")],"gog":[("gogid","s"),("install_path","s")],"none":[("install_path","s"),("website","s")]}
     def __init__(self,**kwargs):
         dontsavekeys = set(dir(self))
@@ -34,6 +34,7 @@ class Game:
         self.genre = ""
         self.icon_url = ""
         self.notes = ""
+        self.priority = 0
         
         self.steamid = ""
         self.gogid = ""
@@ -166,4 +167,6 @@ class Games:
         return game
     def list(self):
         v = self.games.values()
-        return sorted(v,key=lambda g:(g.finished,-time.mktime(stot(g.lastplayed)),g.name))
+        return sorted(v,key=lambda g:(g.finished,g.priority,-time.mktime(stot(g.lastplayed)),g.name))
+    def delete(self, game):
+        del self.games[game.gameid]
