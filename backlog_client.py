@@ -27,6 +27,14 @@ def make_callback(f, *args):
     return lambda: f(*args)
 
 
+class RunGameThread(QThread):
+    process = None
+    stopfunc = None
+    def run(self):
+        while self.process.returncode is None:
+            self.process.communicate()
+
+
 class Cookies(QNetworkCookieJar):
     def __init__(self):
         super(Cookies, self).__init__()
@@ -455,7 +463,7 @@ class Form(QWidget):
         curdir = os.path.abspath(os.curdir)
         os.chdir(folder)
         print(os.path.abspath(os.curdir))
-        subprocess.Popen(args, cwd=folder, stdout=sys.stdout, stderr=sys.stderr, creationflags=creationflags, shell=True)
+        self.running = subprocess.Popen(args, cwd=folder, stdout=sys.stdout, stderr=sys.stderr, creationflags=creationflags, shell=True)
         print("subprocess open")
         os.chdir(curdir)
         
@@ -463,6 +471,11 @@ class Form(QWidget):
         self.stop_playing_button = QPushButton("Stop Playing "+game.name)
         self.buttonLayout1.addWidget(self.stop_playing_button)
         self.stop_playing_button.clicked.connect(make_callback(self.stop_playing,game))
+
+        self.runthread = RunGameThread()
+        self.runthread.process = self.running
+        self.runthread.finished.connect(make_callback(self.stop_playing,game))
+        #self.runthread.start()
 
     def stop_playing(self,game):
         self.buttonLayout1.removeWidget(self.stop_playing_button)

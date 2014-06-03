@@ -77,4 +77,4 @@ def get_game_info(game_id):
     return to_dict(root)
 
 if __name__=="__main__":
-    print (get_game_info(find_game("dark souls")["id"]))
+    print (get_game_info(find_game("lands of lore ii")["id"]))
