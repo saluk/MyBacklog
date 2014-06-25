@@ -438,6 +438,8 @@ class Form(QWidget):
         creationflags = 0
         if game.source=="steam":
             args = ["c:\\steam\\steam.exe", "-applaunch", "%d"%game.steamid]
+        if game.source=="gba":
+            args = ["c:\\emu\\gb\\vbam\\VisualBoyAdvance-M.exe",game.install_path]
         if game.source in ["gog","none"]:
             folder = game.install_path.rsplit("\\",1)[0] #Navigate to executable's directory
             startupinfo = subprocess.STARTUPINFO()
@@ -451,7 +453,7 @@ class Form(QWidget):
                     folder = link.working_directory
             else:
                 #Make batch file to run
-                if not os.path.exists("cache/batches/"+game.gameid+".bat"):
+                if 1:#not os.path.exists("cache/batches/"+game.gameid+".bat"):
                     with open("cache/batches/"+game.gameid+".bat", "w") as f:
                         f.write('cd "%s"\n'%folder)
                         f.write('"%s"\n'%game.install_path)
