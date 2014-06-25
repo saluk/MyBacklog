@@ -20,7 +20,8 @@ def sec_to_ts(sec):
 class Game:
     args = [("name","s"),("playtime","f"),("finished","i"),("genre","s"),("source","s"),("hidden","i"),("icon_url","s"),
     ("packageid","s"),("is_package","i"),("notes","s"),("priority","i")]
-    source_args = {"steam":[("steamid","i")],"gog":[("gogid","s"),("install_path","s")],"none":[("install_path","s"),("website","s")]}
+    source_args = {"steam":[("steamid","i")],"gog":[("gogid","s"),("install_path","s")],"none":[("install_path","s"),("website","s")],
+                   "gba":[("install_path","s")]}
     def __init__(self,**kwargs):
         dontsavekeys = set(dir(self))
         self.name = ""
@@ -79,7 +80,7 @@ class Game:
             s = "steam_%s"%self.steamid
         elif self.source == "gog" and self.gogid:
             s = "gog_%s"%self.gogid
-        elif self.source == "none":
+        elif self.source in ["none","gba"]:
             print(self.name)
             s = [x.lower() for x in self.name if x.lower() in "abcdefghijklmnopqrstuvwxyz1234567890 "]
             s = "".join(s).replace(" ","_")
