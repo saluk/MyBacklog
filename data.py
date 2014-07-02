@@ -17,6 +17,8 @@ def ttos(t):
 def sec_to_ts(sec):
     return ttos(time.localtime(sec))
 
+PRIORITIES = {-1:"now playing",0:"unprioritized",1:"soon",2:"later",3:"much later",5:"next year",99:"probably never"}
+
 class Game:
     args = [("name","s"),("playtime","f"),("finished","i"),("genre","s"),("source","s"),("hidden","i"),("icon_url","s"),
     ("packageid","s"),("is_package","i"),("notes","s"),("priority","i")]

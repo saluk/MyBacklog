@@ -369,6 +369,9 @@ class Form(QWidget):
         w.setStyleSheet("QWidget {}")
         if game.finished:
             w.setStyleSheet("QWidget {background-color: rgb(100,200,150);}")
+        elif game.priority:
+            b = max(100,215-game.priority*40)
+            w.setStyleSheet("QWidget {background-color: rgb(%(bright)d,%(bright)d,%(bright)d);}"%{"bright":b})
         w.label.setText(game.name)
         w.hours.setText("%.2d:%.2d"%game.hours_minutes)
         w.hours.setStyleSheet("QWidget {}")
@@ -488,6 +491,7 @@ class Form(QWidget):
                                     "You played for %d seconds" % elapsed_time)
         game.played()
         game.playtime += elapsed_time
+        game.priority = -1
         self.games.save("games.json")
         for g in self.gamelist:
             if g["game"].gameid == game.gameid:
