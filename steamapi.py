@@ -36,7 +36,7 @@ def match_finished_games(games,finished):
 def import_steam(userid=MY_STEAM_ID):
     apps = load_userdata()["UserLocalConfigStore"]["Software"]["Valve"]["Steam"]["apps"]
     games = get_games()
-    is_finished = match_finished_games(games,finished)
+    is_finished = []#match_finished_games(games,finished)
     library = []
     for g in games:
         set_finished = 0
