@@ -173,9 +173,98 @@ def selenium():
         f.write("<html>"+browser.find_element_by_css_selector("html").get_attribute("innerHTML")+"</html>")
         f.close()
     browser.quit()
+
+class Browser:
+    def __init__(self):
+        self.cookies = {}
+        #self.cookies = {"guc_al":"0","sessions_gog_com":"0","__utma":"95732803.1911890316.1399672018.1399672018.1399672018.1","__utmb":"95732803.5.9.1399672201295","__utmz":"95732803.1399672018.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"}
+        self.headers = {"Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8","Accept-Encoding":"gzip, deflate","Accept-Language":"en-us,ko;q=0.7,en;q=0.3",
+"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:28.0) Gecko/20100101 Firefox/28.0",
+"Referer":"http://www.gog.com"}
+    def post(self,url,data={},params={}):
+        self.json = {}
+        self.text = ""
+        answer = requests.post(url,data=data,params=params,cookies=self.cookies,headers=self.headers,allow_redirects=True)
+        self.answer = answer
+        self.cookies.update(answer.cookies)
+        try:
+            self.json = answer.json()
+        except:
+            pass
+        try:
+            self.text = answer.text
+            self.url = answer.url
+        except:
+            pass
+    def get(self,url,params={}):
+        self.json = {}
+        self.text = ""
+        answer = requests.get(url,params=params,cookies=self.cookies,headers=self.headers)
+        self.cookies.update(answer.cookies)
+        try:
+            self.json = answer.json()
+        except:
+            pass
+        try:
+            self.text = answer.text
+            self.url = answer.url
+        except:
+            pass
+import time
+def better_get_shelf():
+    print(time.time())
+    b = Browser()
+    b.get("https://www.gog.com/")
+    login_auth = re.findall("https\:\/\/auth\.gog\.com.*?\"",b.text)
+    print(login_auth)
+    b.get(login_auth[0])
+    token = re.findall("<input.*?login\[\_token\].*?>",b.text)
+    token_value = re.findall("value\=\"(.*?)\"",token[0])[0]
+    print(token_value)
+    print("cur url:",b.url)
+    b.post("https://login.gog.com/login_check",{
+        "login[username]":"saluk64007@gmail.com",
+        "login[password]":"wan3bane",
+        "login[_token]":token_value,
+        #~ "register[email]":"",
+        #~ "register[password]":"",
+        #~ "register[_token]":token_value,
+        "login[login]":"",
+        },
+        )
+    print(b.url)
+    
+    #Properly follow redirect!
+    print(b.answer.history[0].content)
+    link = re.findall(b"content\=.*?https(.*?)\"",b.answer.history[0].content)
+    print(link)
+    linknice = "https"+link[0].decode("utf8").replace("auth?amp;","auth?").replace("%22&amp;amp;","&").replace("https%3A%2F%2F","https://").replace("%2F","/").replace("&amp;amp;","&").replace("&amp;","&")
+    print(linknice)
+    b.get(linknice)
+    print(b.url)
+    print(b.cookies)
+    
+    #Should be logged in now
+    count = 50
+    page=1
+    f = open("mygog_shelf.html","w")
+    while count:
+        b.get("https://secure.gog.com/account/ajax",params={
+            "a":"gamesShelfMore",
+            "p":page,
+            "s":"date_purchased",
+            "h":0,
+            "q":"",
+            "t":"%d"%time.time()*100
+            })
+        print(b.json)
+        f.write(b.json["html"])
+        page+=1
+        count=b.json["count"]
+    f.close()
     
 
 if __name__ == "__main__":
-    selenium()
-    #~ for game in import_gog():
-        #~ print (game.name)
+    better_get_shelf()
+    for game in import_gog():
+        print (game.name)

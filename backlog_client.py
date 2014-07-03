@@ -404,7 +404,7 @@ class Form(QWidget):
 
     def import_gog(self):
         #self.browser = Browser("https://secure.gog.com/account/games",self)
-        gogapi.selenium()
+        gogapi.better_get_shelf()
         self.import_gog_html()
 
     def import_gog_html(self):
