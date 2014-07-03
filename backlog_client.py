@@ -87,9 +87,9 @@ class Browser(QWidget):
 
     def do_import(self):
         html = self.webkit.page().mainFrame().toHtml()
-        #~ f = open("mygog_shelf.html","w",encoding="utf8")
-        #~ f.write(html)
-        #~ f.close()
+        f = open("mygog_shelf.html","w",encoding="utf8")
+        f.write(html)
+        f.close()
         self.app.import_gog_html()
         self.deleteLater()
 
@@ -403,7 +403,9 @@ class Form(QWidget):
         self.games.save("games.json")
 
     def import_gog(self):
-        self.browser = Browser("http://www.gog.com/account",self)
+        #self.browser = Browser("https://secure.gog.com/account/games",self)
+        gogapi.selenium()
+        self.import_gog_html()
 
     def import_gog_html(self):
         games = gogapi.import_gog()
