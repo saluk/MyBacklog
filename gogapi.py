@@ -214,37 +214,62 @@ import time
 def better_get_shelf():
     print(time.time())
     b = Browser()
-    b.get("https://www.gog.com/")
-    login_auth = re.findall("https\:\/\/auth\.gog\.com.*?\"",b.text)
-    print(login_auth)
-    b.get(login_auth[0])
-    token = re.findall("<input.*?login\[\_token\].*?>",b.text)
-    token_value = re.findall("value\=\"(.*?)\"",token[0])[0]
-    print(token_value)
-    print("cur url:",b.url)
-    b.post("https://login.gog.com/login_check",{
-        "login[username]":"saluk64007@gmail.com",
-        "login[password]":"wan3bane",
-        "login[_token]":token_value,
-        #~ "register[email]":"",
-        #~ "register[password]":"",
-        #~ "register[_token]":token_value,
-        "login[login]":"",
-        },
-        )
-    print(b.url)
+    #Try cookies
+    logged_in = False
+    try:
+        f = open("cache/cookies","r")
+        b.cookies = eval(f.read())
+        f.close()
+        b.get("https://secure.gog.com/account/ajax",params={
+            "a":"gamesShelfMore",
+            "p":0,
+            "s":"date_purchased",
+            "h":0,
+            "q":"",
+            "t":"%d"%time.time()*100
+            })
+        assert b.json["count"]
+        print("Logged in")
+        logged_in = True
+    except:
+        print("Not logged in")
+        pass
     
-    #Properly follow redirect!
-    print(b.answer.history[0].content)
-    link = re.findall(b"content\=.*?https(.*?)\"",b.answer.history[0].content)
-    print(link)
-    linknice = "https"+link[0].decode("utf8").replace("auth?amp;","auth?").replace("%22&amp;amp;","&").replace("https%3A%2F%2F","https://").replace("%2F","/").replace("&amp;amp;","&").replace("&amp;","&")
-    print(linknice)
-    b.get(linknice)
-    print(b.url)
-    print(b.cookies)
+    if not logged_in:
+        b.get("https://www.gog.com/")
+        login_auth = re.findall("https\:\/\/auth\.gog\.com.*?\"",b.text)
+        print(login_auth)
+        b.get(login_auth[0])
+        token = re.findall("<input.*?login\[\_token\].*?>",b.text)
+        token_value = re.findall("value\=\"(.*?)\"",token[0])[0]
+        print(token_value)
+        print("cur url:",b.url)
+        b.post("https://login.gog.com/login_check",{
+            "login[username]":"saluk64007@gmail.com",
+            "login[password]":"wan3bane",
+            "login[_token]":token_value,
+            #~ "register[email]":"",
+            #~ "register[password]":"",
+            #~ "register[_token]":token_value,
+            "login[login]":"",
+            },
+            )
+        print(b.url)
+        
+        #Properly follow redirect!
+        print(b.answer.history[0].content)
+        link = re.findall(b"content\=.*?https(.*?)\"",b.answer.history[0].content)
+        print(link)
+        linknice = "https"+link[0].decode("utf8").replace("auth?amp;","auth?").replace("%22&amp;amp;","&").replace("https%3A%2F%2F","https://").replace("%2F","/").replace("&amp;amp;","&").replace("&amp;","&")
+        print(linknice)
+        b.get(linknice)
+        print(b.url)
+        print(b.cookies)
     
     #Should be logged in now
+    f = open("cache/cookies","w")
+    f.write(repr(b.cookies))
+    f.close()
     count = 50
     page=1
     f = open("mygog_shelf.html","w")
@@ -257,7 +282,7 @@ def better_get_shelf():
             "q":"",
             "t":"%d"%time.time()*100
             })
-        print(b.json)
+        print(b.json["count"])
         f.write(b.json["html"])
         page+=1
         count=b.json["count"]
