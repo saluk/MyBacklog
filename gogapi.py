@@ -110,17 +110,25 @@ def selenium():
         def __init__(self, *args, **kwargs):
             service_args = kwargs.setdefault('service_args', [])
             service_args = [
-      #          '--load-images=no',
+                '--load-images=no',
                 '--ignore-ssl-errors=true'
             ]
             super(NewService, self).__init__(*args, **kwargs)
     webdriver.phantomjs.webdriver.Service = NewService
-    #browser = webdriver.PhantomJS("phantomjs/phantomjs.exe",desired_capabilities={"phantomjs.page.settings.resourceTimeout":"1000"})
+    #~ browser = webdriver.PhantomJS("phantomjs/phantomjs.exe",
+        #~ desired_capabilities={"phantomjs.page.settings.resourceTimeout":"1000"}
+    #~ )
     browser = webdriver.Firefox()
     #browser.set_window_size(1024,768)
-    #browser.set_page_load_timeout(20)
-    #browser.set_script_timeout(20)
-    browser.get("http://127.0.0.1")
+    browser.set_page_load_timeout(1)
+    browser.set_script_timeout(1)
+    try:
+        browser.get("http://127.0.0.1")
+    except:
+        pass
+    browser.set_page_load_timeout(20)
+    browser.set_script_timeout(20)
+    cookies = []
     try:
         print("opening cookies")
         cookies = pickle.load(open("cache/cookies","rb"))
@@ -142,9 +150,10 @@ def selenium():
         print("not logged in, logging in")
         acct = WebDriverWait(browser,10).until(EC.presence_of_element_located((By.CSS_SELECTOR,".nav_login")))
         browser.find_element_by_css_selector(".nav_login").click()
-        browser.find_element_by_id("log_email").send_keys("saluk64007@gmail.com")
-        browser.find_element_by_id("log_password").send_keys("wan3bane")
-        browser.find_element_by_id("submitForLoginForm").click()
+        browser.switch_to.frame("GalaxyAccountsFrame")
+        browser.find_element_by_id("login_username").send_keys("saluk64007@gmail.com")
+        browser.find_element_by_id("login_password").send_keys("wan3bane")
+        browser.find_element_by_id("login_login").click()
     try:
         acct = WebDriverWait(browser,10).until(EC.presence_of_element_located((By.ID,"topMenuAvatarImg")))
         logged_in = True
@@ -155,13 +164,18 @@ def selenium():
         print("logged in, dumping cookies")
         pickle.dump(browser.get_cookies(),open("cache/cookies","wb"))
         print("open shelf")
-        browser.get("http://www.gog.com/account/games/shelf")
+        browser.get("https://secure.gog.com/account/games/shelf")
         print("shelf open, waiting for full game list")
         acct = WebDriverWait(browser,20).until(EC.presence_of_element_located((By.CSS_SELECTOR,"span.all")))
         print("saving screenshot")
         browser.save_screenshot("phantomshot_shelf.jpg")
+        f = open("mygog_shelf.html","w")
+        f.write("<html>"+browser.find_element_by_css_selector("html").get_attribute("innerHTML")+"</html>")
+        f.close()
     browser.quit()
+    
 
 if __name__ == "__main__":
-    for game in import_gog():
-        print (game.name)
+    selenium()
+    #~ for game in import_gog():
+        #~ print (game.name)
