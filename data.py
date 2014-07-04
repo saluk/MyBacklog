@@ -156,7 +156,7 @@ class Games:
         f.write(json.dumps(save_data,sort_keys=True,indent=4))
         f.close()
         f = open("gog_packages.json","w")
-        f.write(json.dumps(self.multipack))
+        f.write(json.dumps(self.multipack,sort_keys=True,indent=4))
         f.close()
     def add_games(self,game_list):
         for g in game_list:
