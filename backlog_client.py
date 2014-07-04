@@ -11,6 +11,7 @@ import subprocess
 import data
 import steamapi
 import gogapi
+import humbleapi
 import thegamesdb
 os.environ["QT_QPA_PLATFORM_PLUGIN_PATH"] = "C:\\Python33\\Lib\\site-packages\\PyQt5\\plugins\\platforms"
 
@@ -113,7 +114,7 @@ class ListGamesForPack(QWidget):
         
         #Fields
         self.fields = {}
-        for i in range(10):
+        for i in range(15):
             label = QLabel("Game %d"%i)
             layout.addWidget(label,i+1,0)
             
@@ -184,7 +185,7 @@ class EditGame(QWidget):
                 button = QPushButton("Set Path")
                 layout.addWidget(button,i+1,2)
                 button.clicked.connect(make_callback(self.set_filepath,edit))
-        if game.source=="gog":
+        if game.source=="gog" or game.source=="humble":
             name = "Make Package"
             if game.is_package:
                 name = "Edit Package"
@@ -286,6 +287,10 @@ class Form(QWidget):
         self.import_gog_button = QPushButton("Import Gog")
         buttonLayout1.addWidget(self.import_gog_button)
         self.import_gog_button.clicked.connect(self.import_gog)
+
+        self.import_humble_button = QPushButton("Import Humble")
+        buttonLayout1.addWidget(self.import_humble_button)
+        self.import_humble_button.clicked.connect(self.import_humble)
         
         button = QPushButton("Fix Gog Packages")
         buttonLayout1.addWidget(button)
@@ -303,7 +308,9 @@ class Form(QWidget):
         self.setLayout(mainLayout)
         self.setWindowTitle("My Backlog")
         
-        self.icons = {"steam":QPixmap("steam.bmp").scaled(24,24),"gog":QPixmap("gog.bmp").scaled(24,24)}
+        self.icons = {"steam":QPixmap("steam.bmp").scaled(24,24),
+                      "gog":QPixmap("gog.bmp").scaled(24,24),
+                      "humble":QPixmap("humble.bmp").scaled(24,24)}
         self.gicons = {}
         
         self.update_gamelist_widget()
@@ -398,6 +405,12 @@ class Form(QWidget):
 
     def import_steam(self):
         games = steamapi.import_steam()
+        self.games.add_games(games)
+        self.update_gamelist_widget()
+        self.games.save("games.json")
+
+    def import_humble(self):
+        games = humbleapi.get_humble_gamelist()
         self.games.add_games(games)
         self.update_gamelist_widget()
         self.games.save("games.json")
