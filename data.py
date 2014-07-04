@@ -21,8 +21,10 @@ PRIORITIES = {-1:"now playing",0:"unprioritized",1:"soon",2:"later",3:"much late
 
 class Game:
     args = [("name","s"),("playtime","f"),("finished","i"),("genre","s"),("source","s"),("hidden","i"),("icon_url","s"),
-    ("packageid","s"),("is_package","i"),("notes","s"),("priority","i")]
-    source_args = {"steam":[("steamid","i")],"gog":[("gogid","s"),("install_path","s")],"none":[("install_path","s"),("website","s")],
+    ("packageid","s"),("is_package","i"),("notes","s"),("priority","i"),("website","s")]
+    source_args = {"steam":[("steamid","i")],"gog":[("gogid","s"),("install_path","s")],
+                    "humble":[("humble_machinename","s"),("install_path","s"),("humble_package","s")],
+                    "none":[("install_path","s")],
                    "gba":[("install_path","s")]}
     def __init__(self,**kwargs):
         dontsavekeys = set(dir(self))
@@ -41,6 +43,8 @@ class Game:
         
         self.steamid = ""
         self.gogid = ""
+        self.humble_machinename = ""
+        self.humble_package = ""
         self.install_path = ""
         self.website = ""
         self.savekeys = set(dir(self)) - dontsavekeys
@@ -82,6 +86,8 @@ class Game:
             s = "steam_%s"%self.steamid
         elif self.source == "gog" and self.gogid:
             s = "gog_%s"%self.gogid
+        elif self.source == "humble" and self.humble_machinename:
+            s = "humble_%s"%self.humble_machinename
         elif self.source in ["none","gba"]:
             print(self.name)
             s = [x.lower() for x in self.name if x.lower() in "abcdefghijklmnopqrstuvwxyz1234567890 "]
@@ -109,7 +115,11 @@ class Game:
                 continue
             if g.gogid == self.gogid and self.source=="gog" and g.source=="gog":
                 gamelist.append(g)
+            if g.source=="humble" and self.source=="humble" and self.humble_package==g.humble_package:
+                gamelist.append(g)
         return gamelist
+    def __repr__(self):
+        return repr(self.dict())
 
 class Games:
     def __init__(self):
