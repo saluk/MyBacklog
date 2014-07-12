@@ -19,13 +19,115 @@ def sec_to_ts(sec):
 
 PRIORITIES = {-1:"now playing",0:"unprioritized",1:"soon",2:"later",3:"much later",5:"next year",99:"probably never"}
 
+run_with_steam = 1
+#   NEW METHOD TO RUN THROUGH STEAM:
+#   Export function which creates shortcuts to all non-steam games that aren't in steam yet
+#   Manually creat shortcut for often played game, and put it in cache/steamshortcuts
+#   When running a game, if a steam shortcut exists in cache/steamshortcuts, run that
+
+class Source:
+    """Definition of a source of games"""
+    def args(self):
+        """Return editable arguments that are unique to this source
+        Defaults to install_path as that is pretty common"""
+        return [("install_path","s")]
+    def gameid(self,game):
+        """Returns the unique id for the game according to this source
+        If a unique id cannot be generated raise an error
+        Defaults to a letters only version of the game's name"""
+        if not game.name:
+            raise InvalidIdException()
+        s = [x.lower() for x in game.name if x.lower() in "abcdefghijklmnopqrstuvwxyz1234567890 "]
+        s = "".join(s).replace(" ","_")
+        return s
+    def get_run_args(self,game):
+        """Returns the method to run the game. Defaults to using a batch file to run the install_path exe"""
+        import subprocess
+        folder = game.install_folder #Navigate to executable's directory
+        startupinfo = subprocess.STARTUPINFO()
+        startupinfo.dwFlags = subprocess.STARTF_USESHOWWINDOW
+        startupinfo.wShowWindow = 0
+        creationflags = subprocess.CREATE_NEW_PROCESS_GROUP
+        import winshell, shlex
+        if game.install_path.endswith(".lnk"):
+            with winshell.shortcut(game.install_path) as link:
+                args = [link.path] + shlex.split(link.arguments)
+                folder = link.working_directory
+        else:
+            #Make batch file to run
+            if 1:#not os.path.exists("cache/batches/"+game.gameid+".bat"):
+                with open("cache/batches/"+game.gameid+".bat", "w") as f:
+                    f.write('cd "%s"\n'%folder)
+                    f.write('"%s"\n'%game.install_path)
+            args = [game.gameid+".bat"]
+            folder = os.path.abspath("cache\\batches\\")
+            if not self.missing_steam_launch(game):
+            #HACKY - run game through steam
+                args = ["cache\\steamshortcuts\\%s.url"%game.shortcut_name]
+                folder = os.path.abspath("")
+        return args,folder
+    def missing_steam_launch(self,game):
+        """Returns True if the game type wants a steam launcher and it doesn't exist"""
+        if not run_with_steam:
+            return False
+        dest_shortcut_path = "cache/steamshortcuts/%s.url"%game.shortcut_name
+        userhome = os.path.expanduser("~")
+        desktop = userhome + "/Desktop/"
+        shortcut_path = desktop+"%s.url"%game.shortcut_name
+        if os.path.exists(shortcut_path):
+            import shutil
+            shutil.move(shortcut_path,dest_shortcut_path)
+        if os.path.exists(dest_shortcut_path):
+            return False
+        return True
+class InvalidIdException(Exception):
+    pass
+
+sources = {}
+class SteamSource(Source):
+    def args(self):
+        return [("steamid","i")]
+    def gameid(self,game):
+        if not game.steamid:
+            raise InvalidIdException()
+        return "steam_%s"%game.steamid
+    def get_run_args(self,game):
+        args = ["c:\\steam\\steam.exe", "-applaunch", "%d"%game.steamid]
+        return args,"."
+    def missing_steam_launch(self,game):
+        return False
+sources["steam"] = SteamSource()
+class GogSource(Source):
+    def args(self):
+        return [("gogid","s"),("install_path","s")]
+    def gameid(self,game):
+        if not game.gogid:
+            raise InvalidIdException()
+        return "gog_%s"%game.gogid
+sources["gog"] = GogSource()
+class HumbleSource(Source):
+    def args(self):
+        return [("humble_machinename","s"),("install_path","s"),("humble_package","s")]
+    def gameid(self,game):
+        if not game.humble_machinename:
+            raise InvalidIdException()
+        return "humble_%s"%game.humble_machinename
+sources["humble"] = HumbleSource()
+class GBASource(Source):
+    def get_run_args(self,game):
+        args = ["c:\\emu\\gb\\vbam\\VisualBoyAdvance-M.exe",game.install_path]
+        return args,"."
+sources["gba"] = GBASource()
+class NoneSource(Source):
+    pass
+sources["none"] = NoneSource()
+class OriginSource(Source):
+    pass
+sources["origin"] = OriginSource()
+
 class Game:
     args = [("name","s"),("playtime","f"),("finished","i"),("genre","s"),("source","s"),("hidden","i"),("icon_url","s"),
     ("packageid","s"),("is_package","i"),("notes","s"),("priority","i"),("website","s")]
-    source_args = {"steam":[("steamid","i")],"gog":[("gogid","s"),("install_path","s")],
-                    "humble":[("humble_machinename","s"),("install_path","s"),("humble_package","s")],
-                    "none":[("install_path","s")],
-                   "gba":[("install_path","s")]}
     def __init__(self,**kwargs):
         dontsavekeys = set(dir(self))
         self.name = ""
@@ -64,8 +166,12 @@ class Game:
         print (self.name)
         print ("  %.2d:%.2d"%self.hours_minutes)
     @property
+    def shortcut_name(self):
+        """Returns game.name according to steam shortcut options"""
+        return self.name.replace(":","")
+    @property
     def valid_args(self):
-        return self.args+self.source_args.get(self.source,[])
+        return self.args+sources[self.source].args()
     @property
     def hours_minutes(self):
         s = self.playtime
@@ -82,21 +188,19 @@ class Game:
     @property
     def gameid(self):
         s = ""
-        if self.source == "steam" and self.steamid:
-            s = "steam_%s"%self.steamid
-        elif self.source == "gog" and self.gogid:
-            s = "gog_%s"%self.gogid
-        elif self.source == "humble" and self.humble_machinename:
-            s = "humble_%s"%self.humble_machinename
-        elif self.source in ["none","gba"]:
-            print(self.name)
-            s = [x.lower() for x in self.name if x.lower() in "abcdefghijklmnopqrstuvwxyz1234567890 "]
-            s = "".join(s).replace(" ","_")
-        else:
-            raise Exception("Invalid source")
+        s = sources[self.source].gameid(self)
         if self.packageid and s:
             s += ".%s"%self.packageid
         return s
+    @property
+    def install_folder(self):
+        """Full path to folder where executable is located"""
+        return self.install_path.rsplit("\\",1)[0]
+    def get_run_args(self):
+        """Returns the args and folder to pass to the subprocess to run the game, according to our source"""
+        return sources[self.source].get_run_args(self)
+    def missing_steam_launch(self):
+        return sources[self.source].missing_steam_launch(self)
     def dict(self):
         d = {}
         for k in self.savekeys:
@@ -133,8 +237,8 @@ class Games:
         d = f.read()
         f.close()
         load_data = json.loads(d)
-        for k in load_data:
-            self.games[k] = Game(**load_data[k])
+        for k in load_data["games"]:
+            self.games[k] = Game(**load_data["games"][k])
     def import_packages(self):
         for gkey in list(self.games.keys()):
             game = self.games[gkey]
@@ -149,9 +253,9 @@ class Games:
                 del self.games[gkey]
                 self.games[game.gameid] = game
     def save(self,file):
-        save_data = {}
+        save_data = {"games":{}}
         for k in self.games:
-            save_data[k] = self.games[k].dict()
+            save_data["games"][k] = self.games[k].dict()
         f = open(file,"w")
         f.write(json.dumps(save_data,sort_keys=True,indent=4))
         f.close()

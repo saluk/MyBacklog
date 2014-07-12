@@ -23,6 +23,21 @@ print(dir(QtWebKit))
 from PyQt5.QtWebKitWidgets import *
 from PyQt5.QtNetwork import *
 
+#steam_session = steamapi.login_for_chat()
+
+def playrequest(game):
+    try:
+        r = requests.post("http://dawnsoft.org:9600/users/saluk/play",data={"game":game.name})
+    except:
+        pass
+    #steamapi.set_username(steam_session,"saluk [Playing %s]"%game.name)
+def stoprequest():
+    try:
+        r = requests.post("http://dawnsoft.org:9600/users/saluk/play",data={"game":""})
+    except:
+        pass
+    #steamapi.set_username(steam_session,"saluk")
+
 
 def make_callback(f, *args):
     return lambda: f(*args)
@@ -157,19 +172,24 @@ class ListGamesForPack(QWidget):
 
 
 class EditGame(QWidget):
-    def __init__(self, game, row_widget, app):
+    def __init__(self, game, row_widget, app, new=False):
         super(EditGame, self).__init__()
         self.game = game
         self.app = app
         self.games = app.games
         
         self.row_widget = row_widget
-        
-        self.oldid = game.gameid
+
+        self.oldid = None
+        if not new:
+            self.oldid = game.gameid
         
         #Layout
         layout = QGridLayout()
-        layout.addWidget(QLabel("Editing:"+game.gameid))
+        if new:
+            layout.addWidget(QLabel("Adding new game"))
+        else:
+            layout.addWidget(QLabel("Editing:"+game.gameid))
         
         #Fields
         self.fields = {}
@@ -284,6 +304,10 @@ class Form(QWidget):
         buttonLayout1.addWidget(self.import_steam_button)
         self.import_steam_button.clicked.connect(self.import_steam)
         
+        self.steam_shortcut_button = QPushButton("Steam Shortcuts")
+        buttonLayout1.addWidget(self.steam_shortcut_button)
+        self.steam_shortcut_button.clicked.connect(self.add_steam_shortcuts)
+        
         self.import_gog_button = QPushButton("Import Gog")
         buttonLayout1.addWidget(self.import_gog_button)
         self.import_gog_button.clicked.connect(self.import_gog)
@@ -350,8 +374,11 @@ class Form(QWidget):
             label.setMaximumWidth(150)
             box.addWidget(label)
             w.last_played = label
-            
-            run = QPushButton("play")
+
+            if not game.missing_steam_launch():
+                run = QPushButton("play")
+            else:
+                run = QPushButton("playalone")
             run.setFixedWidth(50)
             box.addWidget(run)
             run.clicked.connect(make_callback(self.run_game,game))
@@ -408,6 +435,9 @@ class Form(QWidget):
         self.games.add_games(games)
         self.update_gamelist_widget()
         self.games.save("games.json")
+        
+    def add_steam_shortcuts(self):
+        steamapi.create_nonsteam_shortcuts(self.games.games)
 
     def import_humble(self):
         games = humbleapi.get_humble_gamelist()
@@ -454,29 +484,7 @@ class Form(QWidget):
         folder = "."
         startupinfo = None
         creationflags = 0
-        if game.source=="steam":
-            args = ["c:\\steam\\steam.exe", "-applaunch", "%d"%game.steamid]
-        if game.source=="gba":
-            args = ["c:\\emu\\gb\\vbam\\VisualBoyAdvance-M.exe",game.install_path]
-        if game.source in ["gog","none"]:
-            folder = game.install_path.rsplit("\\",1)[0] #Navigate to executable's directory
-            startupinfo = subprocess.STARTUPINFO()
-            startupinfo.dwFlags = subprocess.STARTF_USESHOWWINDOW
-            startupinfo.wShowWindow = 0
-            creationflags = subprocess.CREATE_NEW_PROCESS_GROUP
-            import winshell, shlex
-            if game.install_path.endswith(".lnk"):
-                with winshell.shortcut(game.install_path) as link:
-                    args = [link.path] + shlex.split(link.arguments)
-                    folder = link.working_directory
-            else:
-                #Make batch file to run
-                if 1:#not os.path.exists("cache/batches/"+game.gameid+".bat"):
-                    with open("cache/batches/"+game.gameid+".bat", "w") as f:
-                        f.write('cd "%s"\n'%folder)
-                        f.write('"%s"\n'%game.install_path)
-                args = [game.gameid+".bat"]
-                folder = os.path.abspath("cache\\batches\\")
+        args,folder = game.get_run_args()
 
         print(args)
         import sys
@@ -495,9 +503,11 @@ class Form(QWidget):
         self.runthread = RunGameThread()
         self.runthread.process = self.running
         self.runthread.finished.connect(make_callback(self.stop_playing,game))
+        playrequest(game)
         #self.runthread.start()
 
     def stop_playing(self,game):
+        stoprequest()
         self.buttonLayout1.removeWidget(self.stop_playing_button)
         self.stop_playing_button.deleteLater()
         self.stop_playing_button = None
@@ -521,7 +531,7 @@ class Form(QWidget):
         row = self.get_row_for_game(game)
         self.gamelist.append({"game":game,"widget":row,"hidden":0})
         self.games_list_widget_layout.addWidget(row)
-        self.egw = EditGame(game,row,self)
+        self.egw = EditGame(game,row,self,new=True)
         self.egw.show()
 
     def dosearch(self,text):
