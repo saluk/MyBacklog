@@ -258,6 +258,28 @@ class EditGame(QWidget):
         self.deleteLater()
         self.row_widget.deleteLater()
 
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super(MainWindow,self).__init__()
+        self.main_form = Form()
+
+        menus = {}
+        for folder in ["file","import","cleanup"]:
+            menus[folder] = self.menuBar().addMenu("&"+folder.capitalize())
+            for x in dir(self.main_form):
+                if x.startswith(folder+"_"):
+                    name = " ".join([y.capitalize() for y in x.split("_")[1:]])
+                    menus[folder].addAction(QAction("&"+name,self,triggered=getattr(self.main_form,x)))
+
+        menus["file"].addAction(QAction("&Exit",self,triggered=self.close))
+        #self.menubar = QMenuBar(self)
+        #self.menu_file = QMenu("File")
+        #self.menubar.addMenu(self.menu_file)
+        #self.menubar.addSeparator()
+
+        self.setCentralWidget(self.main_form)
+        #self.setMinimumSize(self.main_form.minimumSize())
+        print (self.children())
 
 class Form(QWidget):
     def __init__(self, parent=None):
@@ -299,36 +321,12 @@ class Form(QWidget):
         b = QPushButton("Add Game")
         buttonLayout1.addWidget(b)
         b.clicked.connect(self.add_game)
-
-        self.import_steam_button = QPushButton("Import Steam")
-        buttonLayout1.addWidget(self.import_steam_button)
-        self.import_steam_button.clicked.connect(self.import_steam)
-        
-        self.steam_shortcut_button = QPushButton("Steam Shortcuts")
-        buttonLayout1.addWidget(self.steam_shortcut_button)
-        self.steam_shortcut_button.clicked.connect(self.add_steam_shortcuts)
-        
-        self.import_gog_button = QPushButton("Import Gog")
-        buttonLayout1.addWidget(self.import_gog_button)
-        self.import_gog_button.clicked.connect(self.import_gog)
-
-        self.import_humble_button = QPushButton("Import Humble")
-        buttonLayout1.addWidget(self.import_humble_button)
-        self.import_humble_button.clicked.connect(self.import_humble)
-        
-        button = QPushButton("Fix Gog Packages")
-        buttonLayout1.addWidget(button)
-        button.clicked.connect(self.fix_gog)
-        
-        button = QPushButton("Games DB")
-        buttonLayout1.addWidget(button)
-        button.clicked.connect(self.gamesdb)
  
         self.buttonLayout1 = buttonLayout1
         mainLayout = QGridLayout()
         # mainLayout.addWidget(nameLabel, 0, 0)
         mainLayout.addLayout(buttonLayout1, 0, 1)
- 
+
         self.setLayout(mainLayout)
         self.setWindowTitle("My Backlog")
         
@@ -436,7 +434,7 @@ class Form(QWidget):
         self.update_gamelist_widget()
         self.games.save("games.json")
         
-    def add_steam_shortcuts(self):
+    def cleanup_add_steam_shortcuts(self):
         steamapi.create_nonsteam_shortcuts(self.games.games)
 
     def import_humble(self):
@@ -456,11 +454,11 @@ class Form(QWidget):
         self.update_gamelist_widget()
         self.games.save("games.json")
 
-    def fix_gog(self):
+    def cleanup_fix_gog(self):
         self.games.import_packages()
         self.games.save("games.json")
 
-    def gamesdb(self):
+    def cleanup_gamesdb(self):
         for g in self.games.games.values():
             gdbg = thegamesdb.find_game(g.name)
             if gdbg:
@@ -551,8 +549,8 @@ if __name__ == '__main__':
     import sys
  
     app = QApplication(sys.argv)
- 
-    screen = Form()
-    screen.show()
+
+    window = MainWindow()
+    window.show()
  
     sys.exit(app.exec_())
