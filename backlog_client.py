@@ -260,7 +260,7 @@ class EditGame(QWidget):
 
 class MainWindow(QMainWindow):
     def __init__(self):
-        super(MainWindow,self).__init__()
+        super(MainWindow,self).__init__(None,Qt.WindowStaysOnTopHint)
         self.main_form = Form()
 
         menus = {}
@@ -272,14 +272,8 @@ class MainWindow(QMainWindow):
                     menus[folder].addAction(QAction("&"+name,self,triggered=getattr(self.main_form,x)))
 
         menus["file"].addAction(QAction("&Exit",self,triggered=self.close))
-        #self.menubar = QMenuBar(self)
-        #self.menu_file = QMenu("File")
-        #self.menubar.addMenu(self.menu_file)
-        #self.menubar.addSeparator()
 
         self.setCentralWidget(self.main_form)
-        #self.setMinimumSize(self.main_form.minimumSize())
-        print (self.children())
 
 class Form(QWidget):
     def __init__(self, parent=None):
@@ -520,17 +514,22 @@ class Form(QWidget):
             if g["game"].gameid == game.gameid:
                 self.get_row_for_game(game,g["widget"])
 
+    def show_edit_widget(self,*args,**kwargs):
+        self.egw = EditGame(*args,**kwargs)
+        dock = QDockWidget("Dock Widget",self)
+        dock.setWidget(self.egw)
+        self.window().addDockWidget(Qt.LeftDockWidgetArea,dock)
+        return self.egw
+
     def edit_game(self,game,row_widget):
-        self.egw = EditGame(game,row_widget,self)
-        self.egw.show()
+        self.show_edit_widget(game,row_widget,self)
 
     def add_game(self):
         game = data.Game(source="none")
         row = self.get_row_for_game(game)
         self.gamelist.append({"game":game,"widget":row,"hidden":0})
         self.games_list_widget_layout.addWidget(row)
-        self.egw = EditGame(game,row,self,new=True)
-        self.egw.show()
+        self.show_edit_widget(game,row,self,new=True)
 
     def dosearch(self,text):
         sn = self.search_name.text().lower()
