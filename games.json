@@ -562,7 +562,7 @@
         }, 
         "gog_avadon_2_the_corruption": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "role-playing", 
             "gogid": "avadon_2_the_corruption", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -582,7 +582,7 @@
         }, 
         "gog_avadon_the_black_fortress": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "role-playing", 
             "gogid": "avadon_the_black_fortress", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -790,11 +790,11 @@
             "icon_url": "http://www.gog.com/upload/images/2009/10/7bc9204911597419288e19317a7b9938b0554648_bbC_20.jpg", 
             "install_path": "C:\\GOG Games\\Beyond Divinity\\rundiv.bat", 
             "is_package": 0, 
-            "lastplayed": "02:17:22 2014-07-11", 
+            "lastplayed": "02:48:19 2014-07-12", 
             "name": "Beyond Divinity", 
             "notes": "", 
             "packageid": "", 
-            "playtime": 4288.403078317642, 
+            "playtime": 8008.309786319733, 
             "priority": -1, 
             "source": "gog", 
             "steamid": "", 
@@ -1922,7 +1922,7 @@
         }, 
         "gog_democracy_3": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "strategy", 
             "gogid": "democracy_3", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -1962,7 +1962,7 @@
         }, 
         "gog_depths_of_peril": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "depths_of_peril", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -2142,7 +2142,7 @@
         }, 
         "gog_divinity_2_developers_cut": {
             "finished": 0, 
-            "genre": "role-playing and stuff", 
+            "genre": "role-playing", 
             "gogid": "divinity_2_developers_cut", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -2502,7 +2502,7 @@
         }, 
         "gog_dust_an_elysian_tail": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "dust_an_elysian_tail", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -2982,7 +2982,7 @@
         }, 
         "gog_geneforge_15": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "role-playing", 
             "gogid": "geneforge_15", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -3242,7 +3242,7 @@
         }, 
         "gog_guacamelee_gold_edition": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "guacamelee_gold_edition", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -3462,7 +3462,7 @@
         }, 
         "gog_i_have_no_mouth_and_i_must_scream": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "i_have_no_mouth_and_i_must_scream", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -3642,7 +3642,7 @@
         }, 
         "gog_inherit_the_earth": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "inherit_the_earth", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -4262,7 +4262,7 @@
         }, 
         "gog_knock_knock": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "fighting", 
             "gogid": "knock_knock", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -5222,7 +5222,7 @@
         }, 
         "gog_might_and_magic_6_limited_edition.might_and_magic_book_one:_the_secret_of_the_inner_sanctum": {
             "finished": 0, 
-            "genre": "role-playing", 
+            "genre": "strategy", 
             "gogid": "might_and_magic_6_limited_edition", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -5682,7 +5682,7 @@
         }, 
         "gog_paper_sorcerer": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "paper_sorcerer", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -6502,7 +6502,7 @@
         }, 
         "gog_rayman_2_the_great_escape": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "platform", 
             "gogid": "rayman_2_the_great_escape", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -6822,7 +6822,7 @@
         }, 
         "gog_ring_runner_flight_of_the_sages": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "ring_runner_flight_of_the_sages", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -7002,7 +7002,7 @@
         }, 
         "gog_rune_classic": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "rune_classic", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -7142,7 +7142,7 @@
         }, 
         "gog_shadow_man": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "shooter", 
             "gogid": "shadow_man", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -7802,7 +7802,7 @@
         }, 
         "gog_strike_suit_zero_directors_cut": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "strike_suit_zero_directors_cut", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -8002,7 +8002,7 @@
         }, 
         "gog_teslagrad": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "platform", 
             "gogid": "teslagrad", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -8242,7 +8242,7 @@
         }, 
         "gog_the_guild_2": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "life simulation", 
             "gogid": "the_guild_2", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -8282,7 +8282,7 @@
         }, 
         "gog_the_guild_2_renaissance": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "strategy", 
             "gogid": "the_guild_2_renaissance", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -8302,7 +8302,7 @@
         }, 
         "gog_the_guild_gold_edition": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "the_guild_gold_edition", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -8482,7 +8482,7 @@
         }, 
         "gog_the_raven_legacy_of_a_master_thief": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "the_raven_legacy_of_a_master_thief", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -9082,7 +9082,7 @@
         }, 
         "gog_two_worlds": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "role-playing", 
             "gogid": "two_worlds", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -9482,7 +9482,7 @@
         }, 
         "gog_valdis_story_abyssal_city": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "valdis_story_abyssal_city", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -9962,7 +9962,7 @@
         }, 
         "humble_amnesiafortnight2014": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "life simulation", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "amnesiafortnight2014", 
@@ -9982,7 +9982,7 @@
         }, 
         "humble_amnesiafortnight2014_soundtrack": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "life simulation", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "amnesiafortnight2014_soundtrack", 
@@ -10022,7 +10022,7 @@
         }, 
         "humble_andyetitmoves": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "andyetitmoves", 
@@ -10042,7 +10042,7 @@
         }, 
         "humble_andyetitmoves_soundtrack": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "andyetitmoves_soundtrack", 
@@ -10062,7 +10062,7 @@
         }, 
         "humble_anodyne": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "anodyne", 
@@ -10082,7 +10082,7 @@
         }, 
         "humble_anomalykorea_android": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "anomalykorea_android", 
@@ -10102,7 +10102,7 @@
         }, 
         "humble_anomalykorea_soundtrack": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "anomalykorea_soundtrack", 
@@ -10122,7 +10122,7 @@
         }, 
         "humble_anotherworld_android": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "platform", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "anotherworld_android", 
@@ -10142,7 +10142,7 @@
         }, 
         "humble_aquaria": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "aquaria", 
@@ -10162,7 +10162,7 @@
         }, 
         "humble_autonomous_prototype": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "autonomous_prototype", 
@@ -10182,7 +10182,7 @@
         }, 
         "humble_banished": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "sandbox", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "banished", 
@@ -10202,7 +10202,7 @@
         }, 
         "humble_bittriprunner": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "bittriprunner", 
@@ -10222,7 +10222,7 @@
         }, 
         "humble_bittriprunner_soundtrack": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "bittriprunner_soundtrack", 
@@ -10242,7 +10242,7 @@
         }, 
         "humble_black_lake_prototype": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "black_lake_prototype", 
@@ -10282,7 +10282,7 @@
         }, 
         "humble_brazen_prototype": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "brazen_prototype", 
@@ -10302,7 +10302,7 @@
         }, 
         "humble_broforce_betaonline": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "shooter", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "broforce_betaonline", 
@@ -10322,7 +10322,7 @@
         }, 
         "humble_broforce_storefront": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "racing", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "broforce_storefront", 
@@ -10342,7 +10342,7 @@
         }, 
         "humble_brokenage": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "brokenage", 
@@ -10382,7 +10382,7 @@
         }, 
         "humble_cavestoryplus": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "cavestoryplus", 
@@ -10402,7 +10402,7 @@
         }, 
         "humble_cavestoryplus_soundtrack": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "cavestoryplus_soundtrack", 
@@ -10442,7 +10442,7 @@
         }, 
         "humble_cogs": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "puzzle", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "cogs", 
@@ -10482,7 +10482,7 @@
         }, 
         "humble_costumequest_prototype": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "costumequest_prototype", 
@@ -10502,7 +10502,7 @@
         }, 
         "humble_crayonphysicsdeluxe": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "puzzle", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "crayonphysicsdeluxe", 
@@ -10522,7 +10522,7 @@
         }, 
         "humble_darwinia": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "strategy", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "darwinia", 
@@ -10542,7 +10542,7 @@
         }, 
         "humble_dearleader_prototype": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "dearleader_prototype", 
@@ -10562,7 +10562,7 @@
         }, 
         "humble_defcon": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "strategy", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "defcon", 
@@ -10582,7 +10582,7 @@
         }, 
         "humble_dreamfallchapters_longestjourney_kstier3": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "dreamfallchapters_longestjourney_kstier3", 
@@ -10602,7 +10602,7 @@
         }, 
         "humble_dungeonsofdredmor": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "dungeonsofdredmor", 
@@ -10622,7 +10622,7 @@
         }, 
         "humble_elliotquest": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "elliotquest", 
@@ -10642,7 +10642,7 @@
         }, 
         "humble_frozensynapse": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "strategy", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "frozensynapse", 
@@ -10662,7 +10662,7 @@
         }, 
         "humble_frozensynapse_soundtrack": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "strategy", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "frozensynapse_soundtrack", 
@@ -10682,7 +10682,7 @@
         }, 
         "humble_frozensynapsebundle": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "strategy", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "frozensynapsebundle", 
@@ -10702,7 +10702,7 @@
         }, 
         "humble_funkysmugglers_android": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "role-playing", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "funkysmugglers_android", 
@@ -10722,7 +10722,7 @@
         }, 
         "humble_funkysmugglers_soundtrack": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "role-playing", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "funkysmugglers_soundtrack", 
@@ -10742,7 +10742,7 @@
         }, 
         "humble_gratuitousspacebattles": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "gratuitousspacebattles", 
@@ -10762,7 +10762,7 @@
         }, 
         "humble_gratuitousspacebattles_soundtrack": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "gratuitousspacebattles_soundtrack", 
@@ -10782,7 +10782,7 @@
         }, 
         "humble_grimdawn-2": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "platform", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "grimdawn-2", 
@@ -10802,7 +10802,7 @@
         }, 
         "humble_grimdawn_soundtrack": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "grimdawn_soundtrack", 
@@ -10822,7 +10822,7 @@
         }, 
         "humble_hack_n_slash_prototype": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "hack_n_slash_prototype", 
@@ -10842,7 +10842,7 @@
         }, 
         "humble_hammerfight": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "hammerfight", 
@@ -10862,7 +10862,7 @@
         }, 
         "humble_haob1": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "strategy", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "haob1", 
@@ -10882,7 +10882,7 @@
         }, 
         "humble_happysong_prototype": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "happysong_prototype", 
@@ -10902,7 +10902,7 @@
         }, 
         "humble_hib4": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "role-playing", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "hib4", 
@@ -10922,7 +10922,7 @@
         }, 
         "humble_introversionbundle": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "strategy", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "introversionbundle", 
@@ -10962,7 +10962,7 @@
         }, 
         "humble_jamestown": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "jamestown", 
@@ -10982,7 +10982,7 @@
         }, 
         "humble_jonshafersatthegates_ks1": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "jonshafersatthegates_ks1", 
@@ -11002,7 +11002,7 @@
         }, 
         "humble_legendofdungeon-k2": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "legendofdungeon-k2", 
@@ -11022,7 +11022,7 @@
         }, 
         "humble_legendofdungeon_finalbuild": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "legendofdungeon_finalbuild", 
@@ -11042,7 +11042,7 @@
         }, 
         "humble_legendofdungeon_soundtrack": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "legendofdungeon_soundtrack", 
@@ -11062,7 +11062,7 @@
         }, 
         "humble_legendofgrimrock": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "role-playing", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "legendofgrimrock", 
@@ -11082,7 +11082,7 @@
         }, 
         "humble_littlepinkbestbuds_prototype": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "littlepinkbestbuds_prototype", 
@@ -11102,7 +11102,7 @@
         }, 
         "humble_metalslug3_android": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "metalslug3_android", 
@@ -11122,7 +11122,7 @@
         }, 
         "humble_mnemonic_prototype": {
             "finished": 1, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "mnemonic_prototype", 
@@ -11142,7 +11142,7 @@
         }, 
         "humble_multiwinia": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "multiwinia", 
@@ -11162,7 +11162,7 @@
         }, 
         "humble_nightsky": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "platform", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "nightsky", 
@@ -11182,7 +11182,7 @@
         }, 
         "humble_nightsky_soundtrack": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "platform", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "nightsky_soundtrack", 
@@ -11202,7 +11202,7 @@
         }, 
         "humble_octodad_dadliestcatch": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "octodad_dadliestcatch", 
@@ -11222,7 +11222,7 @@
         }, 
         "humble_plantsvszombies_android": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "strategy", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "plantsvszombies_android", 
@@ -11242,7 +11242,7 @@
         }, 
         "humble_raidenlegacy_android": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "shooter", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "raidenlegacy_android", 
@@ -11262,7 +11262,7 @@
         }, 
         "humble_roadredemption": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "shooter", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "roadredemption", 
@@ -11282,7 +11282,7 @@
         }, 
         "humble_roadredemption_kstier1": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "shooter", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "roadredemption_kstier1", 
@@ -11302,7 +11302,7 @@
         }, 
         "humble_shadowgrounds": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "shooter", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "shadowgrounds", 
@@ -11322,7 +11322,7 @@
         }, 
         "humble_shadowgrounds_soundtrack": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "shooter", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "shadowgrounds_soundtrack", 
@@ -11342,7 +11342,7 @@
         }, 
         "humble_shadowgroundssurvivor": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "shooter", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "shadowgroundssurvivor", 
@@ -11362,7 +11362,7 @@
         }, 
         "humble_shadowgroundssurvivor_soundtrack": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "shooter", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "shadowgroundssurvivor_soundtrack", 
@@ -11382,7 +11382,7 @@
         }, 
         "humble_shank": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "shank", 
@@ -11402,7 +11402,7 @@
         }, 
         "humble_spacebase_df9_prototype": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "spacebase_df9_prototype", 
@@ -11422,7 +11422,7 @@
         }, 
         "humble_spacechem_pc_soundtrack": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "puzzle", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "spacechem_pc_soundtrack", 
@@ -11462,7 +11462,7 @@
         }, 
         "humble_spudsquest": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "spudsquest", 
@@ -11482,7 +11482,7 @@
         }, 
         "humble_steed_prototype": {
             "finished": 1, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "steed_prototype", 
@@ -11502,7 +11502,7 @@
         }, 
         "humble_supermeatboy": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "supermeatboy", 
@@ -11522,7 +11522,7 @@
         }, 
         "humble_the_white_birch_prototype": {
             "finished": 1, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "the_white_birch_prototype", 
@@ -11542,7 +11542,7 @@
         }, 
         "humble_theinnerworld": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "theinnerworld", 
@@ -11562,7 +11562,7 @@
         }, 
         "humble_theinnerworld_storefront": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "theinnerworld_storefront", 
@@ -11582,7 +11582,7 @@
         }, 
         "humble_theroom_android": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "theroom_android", 
@@ -11602,7 +11602,7 @@
         }, 
         "humble_theswapper": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "theswapper", 
@@ -11622,7 +11622,7 @@
         }, 
         "humble_trauma": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "trauma", 
@@ -11642,7 +11642,7 @@
         }, 
         "humble_trine": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "platform", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "trine", 
@@ -11662,7 +11662,7 @@
         }, 
         "humble_trine_soundtrack": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "platform", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "trine_soundtrack", 
@@ -11682,7 +11682,7 @@
         }, 
         "humble_uplink_pc": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "strategy", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "uplink_pc", 
@@ -11722,7 +11722,7 @@
         }, 
         "humble_vvvvvvwithsoundtrack": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "vvvvvvwithsoundtrack", 
@@ -12022,7 +12022,7 @@
         }, 
         "steam_108210": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "mmo", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -12742,7 +12742,7 @@
         }, 
         "steam_12310": {
             "finished": 1, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -13402,7 +13402,7 @@
         }, 
         "steam_17520": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -13542,7 +13542,7 @@
         }, 
         "steam_200210": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "mmo", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -13764,7 +13764,7 @@
             "finished": 0, 
             "genre": "flight simulator", 
             "gogid": "", 
-            "hidden": 0, 
+            "hidden": 1, 
             "humble_machinename": "", 
             "humble_package": "", 
             "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/201310/0a56b4bf737c11beabe52496ed018800f37ec310.jpg", 
@@ -13882,7 +13882,7 @@
         }, 
         "steam_203140": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "shooter", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -13942,7 +13942,7 @@
         }, 
         "steam_204030": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -14022,7 +14022,7 @@
         }, 
         "steam_204360": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -14035,7 +14035,7 @@
             "notes": "", 
             "packageid": "", 
             "playtime": 660.8912487030029, 
-            "priority": -1, 
+            "priority": 1, 
             "source": "steam", 
             "steamid": 204360, 
             "website": ""
@@ -14222,7 +14222,7 @@
         }, 
         "steam_205930": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "shooter", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -14242,7 +14242,7 @@
         }, 
         "steam_206190": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "platform", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -14262,7 +14262,7 @@
         }, 
         "steam_206420": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -14982,7 +14982,7 @@
         }, 
         "steam_219680": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -15222,7 +15222,7 @@
         }, 
         "steam_221360": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "role-playing", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -15322,7 +15322,7 @@
         }, 
         "steam_221910": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -15330,12 +15330,12 @@
             "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/221910/d4958966dbc02d7a282c52552f71ce6910957b63.jpg", 
             "install_path": "", 
             "is_package": 0, 
-            "lastplayed": null, 
+            "lastplayed": "11:05:38 2014-07-12", 
             "name": "The Stanley Parable", 
             "notes": "", 
             "packageid": "", 
-            "playtime": 0.0, 
-            "priority": 0, 
+            "playtime": 1711.261795759201, 
+            "priority": 1, 
             "source": "steam", 
             "steamid": 221910, 
             "website": ""
@@ -15582,7 +15582,7 @@
         }, 
         "steam_224460": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -15830,12 +15830,12 @@
             "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/227280/755becd44fffb591c366859a701b2199f60e53cc.jpg", 
             "install_path": "", 
             "is_package": 0, 
-            "lastplayed": null, 
+            "lastplayed": "10:28:03 2014-07-12", 
             "name": "No Time to Explain", 
             "notes": "", 
             "packageid": "", 
-            "playtime": 0.0, 
-            "priority": 0, 
+            "playtime": 7.847172021865845, 
+            "priority": -1, 
             "source": "steam", 
             "steamid": 227280, 
             "website": ""
@@ -15922,7 +15922,7 @@
         }, 
         "steam_230410": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -16022,7 +16022,7 @@
         }, 
         "steam_232750": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -16522,7 +16522,7 @@
         }, 
         "steam_239070": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -16602,7 +16602,7 @@
         }, 
         "steam_240760": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -16622,7 +16622,7 @@
         }, 
         "steam_241540": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -16630,12 +16630,12 @@
             "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/241540/32fa1abe69d8d0fe2f4ebce58dc8a72129c114a0.jpg", 
             "install_path": "", 
             "is_package": 0, 
-            "lastplayed": null, 
+            "lastplayed": "12:09:07 2014-07-12", 
             "name": "State of Decay", 
             "notes": "", 
             "packageid": "", 
-            "playtime": 0.0, 
-            "priority": 0, 
+            "playtime": 3755.8405351638794, 
+            "priority": 1, 
             "source": "steam", 
             "steamid": 241540, 
             "website": ""
@@ -16720,6 +16720,26 @@
             "steamid": 242780, 
             "website": ""
         }, 
+        "steam_242880": {
+            "finished": 0, 
+            "genre": "", 
+            "gogid": "", 
+            "hidden": 0, 
+            "humble_machinename": "", 
+            "humble_package": "", 
+            "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/242880/0dd6a9e0329aa47053be0e6bb178a7e29c4a765c.jpg", 
+            "install_path": "", 
+            "is_package": 0, 
+            "lastplayed": "10:23:54 2014-07-12", 
+            "name": "Sir, You Are Being Hunted", 
+            "notes": "", 
+            "packageid": "", 
+            "playtime": 1574.5950050354004, 
+            "priority": 2, 
+            "source": "steam", 
+            "steamid": 242880, 
+            "website": ""
+        }, 
         "steam_242920": {
             "finished": 0, 
             "genre": "sandbox", 
@@ -16762,7 +16782,7 @@
         }, 
         "steam_243470": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -16862,7 +16882,7 @@
         }, 
         "steam_245280": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -16962,7 +16982,7 @@
         }, 
         "steam_24920": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -17022,7 +17042,7 @@
         }, 
         "steam_250260": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -17030,19 +17050,19 @@
             "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/250260/6c89bf1c426df1d53dc7b03986977c1693694679.jpg", 
             "install_path": "", 
             "is_package": 0, 
-            "lastplayed": null, 
+            "lastplayed": "10:29:02 2014-07-12", 
             "name": "Jazzpunk", 
             "notes": "", 
             "packageid": "", 
-            "playtime": 0.0, 
-            "priority": 0, 
+            "playtime": 6.798561096191406, 
+            "priority": -1, 
             "source": "steam", 
             "steamid": 250260, 
             "website": ""
         }, 
         "steam_250320": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -17102,7 +17122,7 @@
         }, 
         "steam_252630": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -17262,7 +17282,7 @@
         }, 
         "steam_261030": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -17282,7 +17302,7 @@
         }, 
         "steam_262940": {
             "finished": 1, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -17310,19 +17330,19 @@
             "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/263320/ff7f93ce673c5e02ef30cbd747593a15fa4a457f.jpg", 
             "install_path": "", 
             "is_package": 0, 
-            "lastplayed": null, 
+            "lastplayed": "12:22:12 2014-07-12", 
             "name": "Saturday Morning RPG", 
             "notes": "", 
             "packageid": "", 
-            "playtime": 0.0, 
-            "priority": 0, 
+            "playtime": 578.646909236908, 
+            "priority": 2, 
             "source": "steam", 
             "steamid": 263320, 
             "website": ""
         }, 
         "steam_263560": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -17330,12 +17350,12 @@
             "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/263560/f0ec7578778f97583208eb0049aab8c65e5ac37e.jpg", 
             "install_path": "", 
             "is_package": 0, 
-            "lastplayed": null, 
+            "lastplayed": "12:35:48 2014-07-12", 
             "name": "Paper Sorcerer", 
             "notes": "", 
             "packageid": "", 
-            "playtime": 0.0, 
-            "priority": 0, 
+            "playtime": 810.8827970027924, 
+            "priority": 1, 
             "source": "steam", 
             "steamid": 263560, 
             "website": ""
@@ -17402,7 +17422,7 @@
         }, 
         "steam_265930": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "sandbox", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -17410,12 +17430,12 @@
             "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/265930/edf6c28b83d5fc221338ff71d01caa11d11d3b50.jpg", 
             "install_path": "", 
             "is_package": 0, 
-            "lastplayed": null, 
+            "lastplayed": "12:49:46 2014-07-12", 
             "name": "Goat Simulator", 
             "notes": "", 
             "packageid": "", 
-            "playtime": 0.0, 
-            "priority": 0, 
+            "playtime": 832.6188106536865, 
+            "priority": -1, 
             "source": "steam", 
             "steamid": 265930, 
             "website": ""
@@ -17462,7 +17482,7 @@
         }, 
         "steam_269030": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -17482,7 +17502,7 @@
         }, 
         "steam_27040": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "role-playing", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -17564,7 +17584,7 @@
             "finished": 0, 
             "genre": "adventure", 
             "gogid": "", 
-            "hidden": 0, 
+            "hidden": 1, 
             "humble_machinename": "", 
             "humble_package": "", 
             "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/2800/195f21c2b15297a98ca9f6e14e9f4c6e58ce6cff.jpg", 
@@ -17604,7 +17624,7 @@
             "finished": 0, 
             "genre": "flight simulator", 
             "gogid": "", 
-            "hidden": 0, 
+            "hidden": 1, 
             "humble_machinename": "", 
             "humble_package": "", 
             "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/2810/f715f27302974e0f84d0b85f019174a0e7071b9e.jpg", 
@@ -17644,7 +17664,7 @@
             "finished": 0, 
             "genre": "role-playing", 
             "gogid": "", 
-            "hidden": 0, 
+            "hidden": 1, 
             "humble_machinename": "", 
             "humble_package": "", 
             "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/2840/996b514e898dbc8b2a71e8db7900d9940916f3d5.jpg", 
@@ -17664,7 +17684,7 @@
             "finished": 0, 
             "genre": "", 
             "gogid": "", 
-            "hidden": 0, 
+            "hidden": 1, 
             "humble_machinename": "", 
             "humble_package": "", 
             "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/2850/996b514e898dbc8b2a71e8db7900d9940916f3d5.jpg", 
@@ -17682,7 +17702,7 @@
         }, 
         "steam_290770": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -18762,7 +18782,7 @@
         }, 
         "steam_43160": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "adventure", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -18782,7 +18802,7 @@
         }, 
         "steam_440": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "shooter", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -19262,7 +19282,7 @@
         }, 
         "steam_570": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -19522,7 +19542,7 @@
         }, 
         "steam_630": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "shooter", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -19844,7 +19864,7 @@
             "finished": 0, 
             "genre": "", 
             "gogid": "", 
-            "hidden": 0, 
+            "hidden": 1, 
             "humble_machinename": "", 
             "humble_package": "", 
             "icon_url": "http://media.steampowered.com/steamcommunity/public/images/apps/7020/0b220e9e6ece318cdd1dd275edcb591ef6e54d11.jpg", 
@@ -20602,7 +20622,7 @@
         }, 
         "steam_99870": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "shooter", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -20622,7 +20642,7 @@
         }, 
         "sui_generis": {
             "finished": 0, 
-            "genre": "rpg", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -20662,7 +20682,7 @@
         }, 
         "titanfall": {
             "finished": 0, 
-            "genre": "", 
+            "genre": "action", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
@@ -20670,11 +20690,11 @@
             "icon_url": "", 
             "install_path": "C:\\Program Files (x86)\\Origin Games\\Titanfall\\Titanfall.exe", 
             "is_package": 0, 
-            "lastplayed": "12:12:04 2014-07-05", 
+            "lastplayed": "01:09:51 2014-07-12", 
             "name": "Titanfall", 
             "notes": "", 
             "packageid": "", 
-            "playtime": 11340.117307186127, 
+            "playtime": 11364.312291145325, 
             "priority": -1, 
             "source": "origin", 
             "steamid": "", 
@@ -20682,7 +20702,7 @@
         }, 
         "tobias_and_the_dark_sceptres": {
             "finished": 0, 
-            "genre": "platform", 
+            "genre": "role-playing", 
             "gogid": "", 
             "hidden": 0, 
             "humble_machinename": "", 
