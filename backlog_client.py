@@ -251,6 +251,7 @@ class EditGame(QWidget):
         self.games.save("games.json")
         self.app.get_row_for_game(self.game,self.row_widget)
         self.deleteLater()
+        self.parent().deleteLater()
 
     def delete(self):
         self.games.delete(self.game)
@@ -299,6 +300,10 @@ class Form(QWidget):
         self.search_genre = QLineEdit()
         self.searchbarlayout.addWidget(self.search_genre)
         self.search_genre.textChanged.connect(self.dosearch)
+
+        self.search_platform = QLineEdit()
+        self.searchbarlayout.addWidget(self.search_platform)
+        self.search_platform.textChanged.connect(self.dosearch)
         
         self.games_list_widget = QWidget()
         self.games_list_widget_layout = QGridLayout()
@@ -534,8 +539,12 @@ class Form(QWidget):
     def dosearch(self,text):
         sn = self.search_name.text().lower()
         sg = self.search_genre.text().lower()
+        sp = self.search_platform.text().lower()
         for g in self.gamelist:
-            if (not sn or sn in g["game"].name.lower()) and (not sg or sg in g["game"].genre.lower()) and not g["game"].hidden:
+            if (not sn or sn in g["game"].name.lower()) and \
+            (not sg or sg in g["game"].genre.lower()) and \
+            (not sp or sp in g["game"].source.lower()) and \
+            not g["game"].hidden:
                 if g["hidden"]:
                     g["widget"].show()
                     g["hidden"] = 0
