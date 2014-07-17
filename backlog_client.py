@@ -37,6 +37,15 @@ def stoprequest():
     except:
         pass
     #steamapi.set_username(steam_session,"saluk")
+def uploadrequest(games):
+    try:
+        r = requests.post("http://dawnsoft.org:9600/users/saluk/upload_games",data=games.save_data())
+    except:
+        pass
+def downloadrequest():
+    r = requests.get("http://dawnsoft.org:9600/users/saluk/download_games")
+    j = r.json()
+    return j["games"]
 
 
 def make_callback(f, *args):
@@ -265,7 +274,7 @@ class MainWindow(QMainWindow):
         self.main_form = Form()
 
         menus = {}
-        for folder in ["file","import","cleanup"]:
+        for folder in ["file","import","cleanup","sync"]:
             menus[folder] = self.menuBar().addMenu("&"+folder.capitalize())
             for x in dir(self.main_form):
                 if x.startswith(folder+"_"):
@@ -456,6 +465,15 @@ class Form(QWidget):
     def cleanup_fix_gog(self):
         self.games.import_packages()
         self.games.save("games.json")
+
+    def sync_uploadgames(self):
+        uploadrequest(self.games)
+
+    def sync_downloadgames(self):
+        games = downloadrequest()
+        self.games = data.Games()
+        self.games.translate_json(games)
+        self.update_gamelist_widget()
 
     def cleanup_gamesdb(self):
         for g in self.games.games.values():
