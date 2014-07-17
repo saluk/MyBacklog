@@ -236,6 +236,9 @@ class Games:
         f = open(file,"r")
         d = f.read()
         f.close()
+        self.translate_json(d)
+    def translate_json(self,d):
+        self.games = {}
         load_data = json.loads(d)
         for k in load_data["games"]:
             self.games[k] = Game(**load_data["games"][k])
@@ -252,15 +255,19 @@ class Games:
                     self.games[package.gameid] = package
                 del self.games[gkey]
                 self.games[game.gameid] = game
-    def save(self,file):
+    def save_data(self):
         save_data = {"games":{}}
         for k in self.games:
             save_data["games"][k] = self.games[k].dict()
+        return {"games":json.dumps(save_data,sort_keys=True,indent=4),
+                "gog_packages":json.dumps(self.multipack,sort_keys=True,indent=4)}
+    def save(self,file):
+        sd = self.save_data()
         f = open(file,"w")
-        f.write(json.dumps(save_data,sort_keys=True,indent=4))
+        f.write(sd["games"])
         f.close()
         f = open("gog_packages.json","w")
-        f.write(json.dumps(self.multipack,sort_keys=True,indent=4))
+        f.write(sd["gog_packages"])
         f.close()
     def add_games(self,game_list):
         for g in game_list:
