@@ -188,10 +188,10 @@ class GogSource(ExeSource):
             cwd,exe = os.path.split(winreg.QueryValueEx(gamereg,"EXE")[0])
         print("EXE",exe,"cwd",cwd)
         procs = [proc for proc in psutil().process_iter() if exe.lower() in proc.name().lower() and proc.cwd()==cwd]
-        if procs:
-            print(dir(procs[0]))
-            print(procs[0].environ())
-            print(procs[0].cwd())
+        #if procs:
+        #    print(dir(procs[0]))
+        #    print(procs[0].environ())   #weird error for Rime on this print
+        #    print(procs[0].cwd())
         return bool(procs)
 
 class EmulatorSource(ExeSource):

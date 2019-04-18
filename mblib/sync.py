@@ -5,11 +5,17 @@ from mblib import games
 
 app = None
 user = "saluk"
-host = "dawnsoft.org:8000"
+host = "mybacklog.dawnsoft.org:8000"
+
 
 def get_server_revision():
-    r = requests.get("http://%s/games_revision?user=%s"%(host,user))
-    return r.json()["server_revision"]
+    try:
+        r = requests.get("http://%s/games_revision?user=%s"%(host,user),timeout=2)
+        return r.json()["server_revision"]
+    except:
+        print("COULDN'T ACCESS SERVER")
+        return
+
 
 def download_games():
     print("DOWNLOAD GAMES")
@@ -24,8 +30,9 @@ def download_games():
                 break
             read += len(next)
             f.write(next)
-    print("read",read)
-    
+    print("read", read)
+
+
 def refresh_games():
     print("REFRESHING GAMES")
     game_file = app.config["games"]
@@ -47,18 +54,24 @@ def refresh_games():
 def download():
     print("check to download")
     if not app:
-        return
+        print(" no app, no need")
+        return False
     games = app.games
     revision = get_server_revision()
     if not revision:
-        return
+        print(" no db on server")
+        return False
     if revision < games.revision:
-        raise Exception("MAJOR ERROR, server is older than client. shouldn't happen")
+        print(" MAJOR ERROR, server is older than client. shouldn't happen, but we are uploading the version")
+        upload()
+        return False
     if revision == games.revision:
         #We are already in sync
-        return
+        print(" we are good")
+        return False
     download_games()
     refresh_games()
+    return True
     
 def upload():
     print("UPLOAD GAMES")

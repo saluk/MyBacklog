@@ -94,6 +94,84 @@ class ListGamesForPack(QWidget):
         self.deleteLater()
         self.edit_widget.deleteLater()
 
+
+class EditImages(QWidget):
+    def __init__(self, game, app, edit_widget):
+        super(EditImages, self).__init__()
+        self.game = game
+        self.app = app
+        self.edit_widget = edit_widget
+
+        #Layout
+        layout = QGridLayout()
+        layout.addWidget(QLabel("Editing images:"+game.gameid))
+
+        button = QPushButton("Close")
+        layout.addWidget(button)
+        button.clicked.connect(self.save_close)
+
+        i = 2
+        self.image_widgets = {}
+        for image_type in ["logo"]:
+            label = QLabel(image_type)
+            layout.addWidget(label, i, 0)
+
+            image = QLabel()
+            icon = icons.icon_for_game(self.game, 64, self.app.gicons, 
+                self.app.config["root"], image_type)
+            if icon:
+                image.setPixmap(icon.pixmap(64, 64))
+            layout.addWidget(image, i, 1)
+            self.image_widgets[image_type] = image
+            i+=1
+
+        button = QPushButton("Bing Image Search")
+        layout.addWidget(button, i, 0)
+        button.clicked.connect(self.bing_search)
+        self.i = 0
+
+        self.setLayout(layout)
+
+        scrollwidget = QWidget()
+        sclayout = QGridLayout()
+        sclayout.setContentsMargins(1, 1, 1, 1)
+        scrollwidget.setLayout(sclayout)
+        scroll = QScrollArea()
+        scroll.setWidget(scrollwidget)
+        self.main_layout = sclayout
+        layout.addWidget(scrollwidget, i+1, 0)
+
+    def bing_search(self):
+        iconsize = 256
+        def add_image(url, full_url):
+            thumb = QToolButton()
+            thumb.setIconSize(QSize(iconsize,iconsize))
+            image = icons.icon_for_game(self.game, iconsize, self.app.gicons, 
+                                        self.app.config["root"], "logo", 
+                                        "qt", url)
+            if image:
+                thumb.setIcon(QIcon(image.pixmap(iconsize, iconsize)))
+            else:
+                print("ERROR",url)
+            self.main_layout.addWidget(thumb, self.i, 0)
+            self.i += 1
+
+            thumb.clicked.connect(make_callback(self.choose_image, full_url))
+        from mblib.apis.search import bingimage
+        results = bingimage.get_images(self.game.name)
+        for thumb_url, full_url in results[:10]:
+            add_image(thumb_url, full_url)
+
+    def choose_image(self, full_url):
+        print("choose",full_url)
+        self.game.icon_url = full_url
+        print(self.game.icon_url)
+        self.edit_widget.setText(self.game.image_edit)
+        self.save_close()
+
+    def save_close(self):
+        self.deleteLater()
+
 class EditGame(QWidget):
     def __init__(self, game, app, new=False, parented=False):
         super(EditGame, self).__init__()
@@ -136,14 +214,20 @@ class EditGame(QWidget):
         self.source_fields = {}
         for i,prop in enumerate(game.valid_args):
             self.addwidget(i,game,prop,layout)
+        frame = QFrame()
+        frame.setFrameStyle(QFrame.HLine|QFrame.Raised)
+        layout.addWidget(frame, i+1, 0, 1, 3)
         for i2,source in enumerate(game.sources):
-            i+=1
-            layout.addWidget(QLabel(source["source"]),i,0)
+            i+=2
+            layout.addWidget(QLabel(source["source"]), i, 0)
+            icon = QLabel()
+            if source["source"] in self.app.icons:
+                icon.setPixmap(self.app.icons[source["source"]].scaled(48,48,Qt.KeepAspectRatio))
+            layout.addWidget(icon, i, 1)
             source_layout = QGridLayout()
-            print(source["source"],games.get_source(source["source"]),games.get_source(source["source"]).source_args)
-            for i3,prop in enumerate(games.get_source(source["source"]).source_args):
-                self.addwidget(i3,source,prop,source_layout,mode="source",source_index=i2)
-            layout.addLayout(source_layout,i+1,0,1,3)
+            for i3, prop in enumerate(games.get_source(source["source"]).source_args):
+                self.addwidget(i3, source, prop, source_layout, mode="source", source_index=i2)
+            layout.addLayout(source_layout, i+1, 0, 1, 2)
             
 
         scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
@@ -177,11 +261,12 @@ class EditGame(QWidget):
     def addwidget(self,i,resource,prop,layout,mode="game",source_index=None):
         prop,proptype = prop
         
-        def get_value(p):
+        def get_value(p=prop):
             if mode=="game":
-                return getattr(resource,prop)
+                v = getattr(resource,p)
             elif mode=="source":
-                return resource[prop]
+                v = resource[p]
+            return v
         
         label_name = "%s:"%prop.capitalize()
         print("EDIT PROPERTY:",prop,i)
@@ -190,10 +275,10 @@ class EditGame(QWidget):
         layout.addWidget(label,i,0)
 
         if prop=="notes":
-            edit = QTextEdit(str(get_value(prop)))
+            edit = QTextEdit(str(get_value()))
             edit.setMinimumSize(10,20)
-            edit.setMinimumHeight(10)
-            edit.setMaximumHeight(100)
+            edit.setMinimumHeight(20)
+            edit.setMaximumHeight(20)
             button = QPushButton("...")
             button.setFixedWidth(32)
             layout.addWidget(button,i,2)
@@ -202,9 +287,9 @@ class EditGame(QWidget):
         elif proptype == "d":
             edit = QDateTimeEdit()
             edit.setCalendarPopup(True)
-            edit.setDateTime(ts_to_qtdt(get_value(prop)))
+            edit.setDateTime(ts_to_qtdt(get_value()))
         elif proptype == "f":
-            edit = QLineEdit("%.2f"%get_value(prop))
+            edit = QLineEdit("%.2f"%get_value())
             validator = QDoubleValidator(0.0,3153600000.0,2)
             edit.setValidator(validator)
         elif proptype == "p":
@@ -213,10 +298,10 @@ class EditGame(QWidget):
             edit = QComboBox()
             for pi,k in enumerate(pkeys):
                 edit.addItem(priorities[k])
-                if k == get_value(prop):
+                if k == get_value():
                     edit.setCurrentIndex(pi)
         else:
-            edit = QLineEdit(str(get_value(prop)))
+            edit = QLineEdit(str(get_value()))
         if prop == "website":
             button = QPushButton("->")
             button.setFixedWidth(32)
@@ -239,16 +324,21 @@ class EditGame(QWidget):
             button = QPushButton("-->")
             button.setFixedWidth(32)
             layout.addWidget(button,i,3)
-            button.clicked.connect(make_callback(self.open_filepath,edit))
+            button.clicked.connect(make_callback(self.open_filepath, edit))
 
+        if prop=="image_edit":
+            button = QPushButton("...")
+            button.setFixedWidth(32)
+            layout.addWidget(button, i, 2)
+            button.clicked.connect(make_callback(self.edit_images, edit))
     def expand_notes(self,game,prop,edit,i,layout):
         if edit.maximumHeight()<100:
             edit.setMinimumSize(10,20)
             edit.setMinimumHeight(100)
             edit.setMaximumHeight(100)
         else:
-            edit.setMinimumHeight(10)
-            edit.setMaximumHeight(10)
+            edit.setMinimumHeight(20)
+            edit.setMaximumHeight(20)
         edit.updateGeometry()
         self.layout().update()
         
@@ -259,7 +349,7 @@ class EditGame(QWidget):
         filename = QFileDialog.getOpenFileName(self,"Open Executable",w.text(),"Executable/Rom (*.app *.exe *.lnk *.cmd *.bat %s)"%self.game.rom_extension)[0]
         w.setText(filename.replace("/","\\"))
         
-    def open_filepath(self,w):
+    def open_filepath(self, w):
         import os
         s = w.text()
         if not os.path.isdir(s):
@@ -269,6 +359,9 @@ class EditGame(QWidget):
     def make_package(self):
         self.lg = ListGamesForPack(self.game,self.app,self)
         self.lg.show()
+    def edit_images(self, w):
+        self.ei = EditImages(self.game,self.app,w)
+        self.ei.show()
     def save_close(self):
         game = self.game
         for field in self.fields:
@@ -388,12 +481,12 @@ class GameOptions(QWidget):
             
         if game.finished:
             w = QPushButton("Unfinish")
-            w.clicked.connect(make_callback(self.app.operation,game,"unfinish"))
+            w.clicked.connect(make_callback(self.app.operation,"unfinish",game))
             buttons.addWidget(w)
         else:
             w = QPushButton("Finish")
             w.setStyleSheet("background-color:rgb(100,200,150);")
-            w.clicked.connect(make_callback(self.app.operation,game,"finish"))
+            w.clicked.connect(make_callback(self.app.operation,"finish",game))
             buttons.addWidget(w)
             
         if game.hidden:

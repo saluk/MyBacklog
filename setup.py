@@ -5,7 +5,7 @@ from cx_Freeze import setup, Executable
 
 # Dependencies are automatically detected, but it might need fine tuning.
 build_exe_options = {
-    "packages": ["os","pkg_resources","requests","idna","code"], 
+    "packages": ["os","pkg_resources","requests","idna","mblib"], 
     "excludes": ["tkinter","mybacklog"],
                      "include_msvcr":True,
                      }
@@ -26,7 +26,7 @@ setup(name = "mybacklog",
             targetName="MyBacklog.exe")])
 
 shutil.copy("mybacklog.py","build/exe.win32-3.6")
-#shutil.copytree("code","build/exe.win32-3.6/code")
+#shutil.copytree("mblib","build/exe.win32-3.6/mblib")
 shutil.copytree("icons","build/exe.win32-3.6/icons")
 shutil.copytree("tools","build/exe.win32-3.6/tools")
 #shutil.copytree("build/requests","build/exe.win32-3.6/requests")

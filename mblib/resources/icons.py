@@ -23,8 +23,13 @@ headers = {
     'From': 'saluk64007@gmail.com'
 }
 
-def generate_icon(fpath,game,filecache_root):
-    im = Image.new('RGB',[460,265])
+def generate_icon(fpath,game,filecache_root,from_image = None):
+    if not from_image:
+        im = Image.new('RGB',[460,265])
+        print("generate new image for",fpath)
+    else:
+        print("LOADED IMAGE",from_image)
+        im = Image.open(from_image).resize([460,265],Image.BILINEAR)
     draw = ImageDraw.Draw(im)
     font = ImageFont.truetype(os.path.join("data","Muli-Light.ttf"),25)
     wt = "wwww"
@@ -37,53 +42,61 @@ def generate_icon(fpath,game,filecache_root):
         draw.text((5, y), line, font=font)
         y += ww[1]+5
     im.save(fpath)
-    
 
-def path_to_icon(game,filecache_root,category="icon"):
-    url = ""
-    if category=="icon": 
+def urlclean(url):
+    return url.replace("http", "").replace("https", "").replace(
+        ":", "").replace("/", "").replace("=", "_").replace(
+        "\\", "").replace("?","q").replace("&","aa")
+
+def path_to_icon(game,filecache_root,category="icon",url=""):
+    if url:
+        pass
+    elif category=="icon": 
         url = game.icon_url
     elif category=="logo": 
         url = game.logo_url
     if url:
-        return filecache_root+"/cache/icons/"+url.replace("http","").replace("https","").replace(":","").replace("/","")+".png","download",url
+        return filecache_root+"/cache/icons/"+urlclean(url)+".png","download",url
     elif game.get_exe():
         exe_path = game.get_exe()
-        return filecache_root+"/cache/icons/"+exe_path.replace("http","").replace("https","").replace(":","").replace("/","").replace("\\","")+".png","extract",exe_path
+        return filecache_root+"/cache/icons/"+urlclean(exe_path)+".png","extract",exe_path
     elif game.get_gba():
         gba_path = game.get_gba()
-        return filecache_root+"/cache/icons/"+gba_path.replace("http","").replace(":","").replace("/","").replace("\\","")+".png","gba",gba_path
+        return filecache_root+"/cache/icons/"+urlclean(gba_path)+".png","gba",gba_path
     else:
         name = "custom_"+str(game.gameid)+"_icon.png"
         return filecache_root+"/cache/icons/"+name,"generate",name
 
-def icon_in_cache(game,size,cache,filecache_root,category="icon",imode="qt"):
-    fpath,mode,url = path_to_icon(game,filecache_root,category)
+def icon_in_cache(game,size,cache,filecache_root,category="icon",imode="qt",url=""):
+    fpath,mode,url = path_to_icon(game,filecache_root,category,url)
     if (fpath,size) in cache:
         if imode=="qt":
             return QIcon(cache[(fpath,size)])
         return cache[(fpath,size)]
     return None
 
-def icon_for_game(game,size,icon_cache,filecache_root,category="icon",imode="qt"):
+def icon_for_game(game,size,icon_cache,filecache_root,category="icon",imode="qt",url=""):
     cur = icon_in_cache(game,size,icon_cache,filecache_root,category,imode)
     if cur:
+        print("1.cached")
         return cur
         
-    fpath,mode,url = path_to_icon(game,filecache_root,category)
+    fpath,mode,url = path_to_icon(game,filecache_root,category,url=url)
     if not os.path.exists(fpath):
         p = None #p == image bytes or a local file path that Image can .open()
         if mode == "download":
-            print("Download icon:",url)
+            print("2.Download icon:",url)
             r = requests.get(url,headers=headers)
             p = BytesIO(r.content)
         elif mode == "extract":
-            print("Extract icon:",url.encode("ascii","backslashreplace"))
-            p = extract_icons.get_icon(url,filecache_root)
+            print("3.Extract icon:",url.encode("ascii","backslashreplace"))
+            extracted_path = extract_icons.get_icon(url,filecache_root)
+            #Add text on top of icon - usually has no title
+            generate_icon(fpath,game,filecache_root,from_image=extracted_path)
         elif mode == "gba":
-            print("Download gba icon:",url)
+            print("4.Download gba icon:",url)
             p = extract_icons.get_gba(url)
-        elif mode == "generate":
+        elif mode == "5.generate":
             print("Generate custom icon:",url)
             generate_icon(fpath,game,filecache_root)
         #Save all images as .png
@@ -93,6 +106,7 @@ def icon_for_game(game,size,icon_cache,filecache_root,category="icon",imode="qt"
             except OSError:
                 print("None image provided, no icon loaded:",url)
             else:
+                print("6.save")
                 pil_image.save(fpath)
     if os.path.exists(fpath) and not (fpath,size) in icon_cache:
         if imode=="path":
@@ -117,4 +131,4 @@ def icon_for_game(game,size,icon_cache,filecache_root,category="icon",imode="qt"
                 icon_cache[(fpath,size)] = pygame.transform.scale(pygame.image.load(fpath),[size,size])
             except:
                 pass
-    return icon_in_cache(game,size,icon_cache,filecache_root,category,imode)
+    return icon_in_cache(game,size,icon_cache,filecache_root,category,imode,url)
