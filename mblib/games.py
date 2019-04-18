@@ -51,11 +51,12 @@ def source_id(s):
             restpart = int(restpart)
             if restpart>id[0]:
                 id = (restpart,k)
-    return s["source"] + "_" + s.get(id[1],"")
+    print(repr(s["source"]),repr(s.get(id[1],"")))
+    return "%s_%s"%(s["source"],s.get(id[1],""))
 
 class Game:
-    args = [("name","s"),("playtime","f"),("lastplayed","d"),("genre","s"),("icon_url","s"),("logo_url","s"),
-    ("notes","s"),("priority","p"),("priority_date","d"),("website","s"),("import_date","d"),("finish_date","d")]
+    args = [("name","s"),("hours_played","s"),("lastplayed","d"),("genre","s"),
+    ("image_edit","s"),("notes","s"),("priority","p"),("finish_date","d")]
     def __init__(self,**kwargs):
         dontsavekeys = set(dir(self))
         self.gameid = BAD_GAMEID
@@ -80,9 +81,9 @@ class Game:
         self.website = ""
         self.savekeys = set(dir(self)) - dontsavekeys
         for k in kwargs:
-            if k == "icon_url":
+            if k == "icon_url" and kwargs[k]:
                 self.images.append({"size":"icon","url":kwargs[k]})
-            elif k == "logo_url":
+            elif k == "logo_url" and kwargs[k]:
                 self.images.append({"size":"logo","url":kwargs[k]})
             elif hasattr(self,k):
                 setattr(self,k,kwargs[k])
@@ -91,6 +92,7 @@ class Game:
         self.games = None
         if "games" in kwargs:
             self.games = kwargs["games"]
+
     def set(self, key, value):
         if key=="hidden" and value not in [0,1]:
             return False,[0,1]
@@ -111,15 +113,23 @@ class Game:
     def icon_url(self,url):
         assert url is not None
         for image in self.images:
-            if image["size"]=="icon": image["url"] = url
-            return
+            if image["size"]=="icon": 
+                image["url"] = url
+                return
         self.images.append({"size":"icon","url":url})
     @logo_url.setter
     def logo_url(self,url):
         for image in self.images:
-            if image["size"]=="logo": image["url"] = url
-            return
+            if image["size"]=="logo": 
+                image["url"] = url
+                return
         self.images.append({"size":"logo","url":url})
+    @property
+    def image_edit(self):
+        return repr(self.images)
+    @image_edit.setter
+    def image_edit(self, d):
+        self.images = eval(d)
     @property
     def name_stripped(self):
         if not self.name:
@@ -183,7 +193,7 @@ class Game:
         self.priority = -1
     def finish(self):
         self.finished = 1
-        self.finish_date = games.now()
+        self.finish_date = now()
     def unfinish(self):
         self.finished = 0
         self.finish_date = ""
@@ -196,25 +206,23 @@ class Game:
         return self.name.replace(":","")
     @property
     def valid_args(self):
-        #FIXME: this is a really bad hack, especially with sources
+        # FIXME: this is a really bad hack, especially with sources
         a = self.args[:]
-        for i,s in enumerate(self.sources):
-            print(get_source(s["source"]))
-            print(get_source(s["source"]).extra_args)
+        for i, s in enumerate(self.sources):
             args = []
             for arg in get_source(s["source"]).args():
                 args.append(arg)
             a.extend(args)
         return a
     @property
-    def playtime_hours_minutes(self):
+    def hours_played(self):
         s = self.playtime
         min = s/60.0
         hour = int(min/60.0)
         min = min-hour*60.0
         return "%.2d:%.2d"%(hour,min)
-    @playtime_hours_minutes.setter
-    def playtime_hours_minutes(self,s):
+    @hours_played.setter
+    def hours_played(self,s):
         hour,min = s.split(":")
         t = int(hour)*60*60+int(min)*60
         self.playtime = t

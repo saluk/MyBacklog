@@ -82,7 +82,7 @@ text_cache = {}
 
 def get_text(game,selected):
     if (game.name,selected) not in text_cache:
-        text = game.name+" ... "+game.playtime_hours_minutes+" last:"+game.last_played_nice
+        text = game.name+" ... "+game.hours_played+" last:"+game.last_played_nice
         color = [250,250,250]
         if selected:
             color = [250,150,150]

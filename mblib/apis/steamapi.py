@@ -491,12 +491,13 @@ def create_nonsteam_shortcuts(gamelist,shortcutpath,filecache_root=""):
     print(current_cuts)
             
     for game in gamelist:
-        print(repr(game.name))
-        if game.is_installed() and not game.get_source("steam"):
-            if "shin megami tensei" in game.name.lower():
+        if "dragon" in game.name.lower():
+            print(repr(game.name))
+        if not game.get_source("steam"):
+            if "dragon" in game.name.lower():
                 print ("( ok )Valid nonsteam game")
         else:
-            if "shin megami tensei" in game.name.lower():
+            if "dragon" in game.name.lower():
                 print (game.get_source("steam"),"(skip)Game is in steam or no install path")
             continue
         tags = ["mybacklog"]

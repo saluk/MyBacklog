@@ -5,6 +5,7 @@ import json
 import os
 import time
 import threading
+import traceback
 
 from mblib import sync
 
@@ -18,6 +19,7 @@ from mblib.resources import icons,enc
 #os.environ["QT_QPA_PLATFORM_PLUGIN_PATH"] = "C:\\Python33\\Lib\\site-packages\\PyQt5\\plugins\\platforms"
 VERSION = "0.26 alpha"
 
+import PyQt5.Qt
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
@@ -27,13 +29,6 @@ from PyQt5.QtNetwork import *
 
 #steam_session = steamapi.login_for_chat()
 
-class RunGameThread(QThread):
-    process = None
-    stopfunc = None
-    def run(self):
-        while self.process and self.process.returncode is None:
-            self.process.communicate()
-
 class ProcessIconsThread(QThread):
     app = None
     def run(self):
@@ -41,7 +36,6 @@ class ProcessIconsThread(QThread):
         try:
             self.app.process_icons()
         except:
-            import traceback
             traceback.print_exc()
             
 class ImportThread(QThread):
@@ -51,39 +45,58 @@ class ImportThread(QThread):
         try:
             self.func(self.app)
         except:
-            import traceback
             traceback.print_exc()
 
-class Cookies(QNetworkCookieJar):
-    def __init__(self):
-        super(Cookies, self).__init__()
-        self.cookies = {}
-        #TODO: change path to cache path if browser is reinstated
-        if os.path.exists("cache/qtcookies"):
-            with open("cache/qtcookies", "r") as f:
-                self.cookies = json.loads(f.read())
 
-    def cookiesForUrl(self, url):
-        cookies = []
-        for name in self.cookies:
-            c = self.cookies[name]
-            qnc = QNetworkCookie(c["name"], c["value"])
-            qnc.setDomain(c["domain"])
-            qnc.setPath(c["path"])
-            cookies.append(qnc)
-        return cookies
+class SyncThread(QThread):
+    app = None
+    func = None
+    func2 = None
+    do_upload = True
+    do_download = True
+    def run(self):
+        if self.do_download:
+            try:
+                if sync.download():
+                    self.app.update_gamelist_widget()
+            except Exception:
+                traceback.print_exc()
+        if self.func:
+            self.func()
+        if self.do_upload:
+            try:
+                sync.upload()
+            except Exception:
+                traceback.print_exc()
+        if self.func2:
+            self.func2()
+    def begin_work(self):
+        #self.app.set_style("syncing")
+        #self.finished.connect(self.app.set_style)
+        self.start()
+    def upload(self, func=None):
+        self.func = func
+        self.do_download = False
+        self.do_upload = True
+        self.begin_work()
+    def download(self, func=None):
+        self.func = func
+        self.do_download = True
+        self.do_upload = False
+        self.begin_work()
+    def sync(self, func1, func2):
+        self.func = func1
+        self.func2 = func2
+        self.do_download = True
+        self.do_upload = True
+        self.begin_work()
+    def export_steam(self):
+        def func1():
+            self.app.steam.export()
+        self.func = func1
+        self.do_download = self.do_upload = False
+        self.begin_work()
 
-    def setCookiesFromUrl(self, cookielist, url):
-        for c in cookielist:
-            self.cookies[c.name().data().decode("utf8")] = {
-                "name": c.name().data().decode("utf8"),
-                "path": c.path(),
-                "value": c.value().data().decode("utf8"),
-                "domain": c.domain()}
-        print(self.cookies)
-        #TODO: change path to cache path if browser is reinstated
-        with open("cache/qtcookies", "w") as f:
-            f.write(json.dumps(self.cookies))
 
 from PyQt5.QtWebEngineWidgets import *
 class BrowserAuth(QWidget):
@@ -127,13 +140,21 @@ class BrowserAuth(QWidget):
             self.finish_function()
         self.app.browser = None
 
+class MyBacklog(PyQt5.Qt.QApplication):
+    def __init__(self, *args, **kwargs):
+        super(MyBacklog, self).__init__(*args, **kwargs)
+        self.focusChanged.connect(self.change_focus)
+    def change_focus(self, oldwindow, newwindow):
+        if newwindow and not oldwindow:
+            self.game_form.sync_thread.download()
 
-class MyBacklog(QMainWindow):
+class MyBacklogWindow(QMainWindow):
     def __init__(self,app):
         self.app = app
+        self.app
         self.set_styles()
         #super(MainWindow,self).__init__(None,Qt.WindowStaysOnTopHint)
-        super(MyBacklog,self).__init__(None)
+        super(MyBacklogWindow,self).__init__(None)
         #self.showFullScreen()
         self.setWindowTitle("MyBacklog %s"%VERSION)
         self.setWindowIcon(QIcon(QPixmap("icons/main.png")))
@@ -203,6 +224,7 @@ class MyBacklog(QMainWindow):
     def click_tray_icon(self):
         self.show()
     def really_close(self):
+        self.main_form.sync_thread.wait()
         self.exit_requested = True
         self.trayicon.hide()
         self.close()
@@ -263,7 +285,7 @@ class GamelistForm(QWidget):
         self.error_trigger.connect(self.handle_error)
         
         self.columns = [("s",None,None),("icon",None,None),("name","widget_name","name"),
-                        ("genre","genre","genre"),("playtime",None,"playtime_hours_minutes"),("lastplay",None,None)]
+                        ("genre","genre","genre"),("playtime",None,"hours_played"),("lastplay",None,None)]
         self.changed = []
 
         self.hide_packages = True
@@ -341,21 +363,30 @@ class GamelistForm(QWidget):
             if source not in self.icons:
                 self.icons[source] = QPixmap("icons/blank.png")
         self.gicons = {}
+
+        self.threads = []
+
         self.icon_processes = []
         self.icon_thread = ProcessIconsThread()
         self.icon_thread.app = self
+        self.threads.append(self.icon_thread)
         
         ImportThread.app = self
         self.importer_threads = {"gog":ImportThread(),"steam":ImportThread(),"humble":ImportThread()}
+        self.threads.extend([x for x in self.importer_threads.values()])
+        
+        self.sync_thread = SyncThread()
+        self.sync_thread.app = self
+        self.threads.append(self.sync_thread)
 
         self.detected_game_start = False
         self.timer = QTimer(self)
         self.timer.setInterval(5000)
         self.timer.timeout.connect(self.detect_game_end)
+        self.threads.append(self.timer)
         
         self.setMinimumSize(600,640)
         #self.setMaximumWidth(1080)
-        self.adjustSize()
 
         self.running = None #Game currently being played
 
@@ -365,7 +396,11 @@ class GamelistForm(QWidget):
         self.game_options_dock.setMinimumWidth(300)
         self.game_options_dock.setMaximumHeight(800)
         self.window().addDockWidget(Qt.LeftDockWidgetArea,self.game_options_dock)
+        self.game_options_dock.hide()
 
+        self.old_style = self.parent().styleSheet()
+
+        self.adjustSize()
     def zoom_icon(self,amt):
         self.icon_size += amt
         self.config["icon_size"] = self.icon_size
@@ -445,7 +480,7 @@ class GamelistForm(QWidget):
         self.games_lock = threading.Lock()
         print("loading games",self.config["games"])
         self.games.load(self.config["games"],self.config["local"])
-        sync.download()
+        self.sync_thread.download()
         self.gamelist = []
         self.update_gamelist_widget()
         
@@ -517,8 +552,10 @@ class GamelistForm(QWidget):
     def detect_game_end(self):
         currently_running = self.running.game_is_running(self)
         if not self.detected_game_start and currently_running:
+            self.log.write("[game has been detected as started]")
             self.detected_game_start = True
         elif self.detected_game_start and not currently_running:
+            self.log.write("[game has been detected as stopped]")
             self.stop_playing(self.running)
     def get_row_for_game(self,game):
         for row in range(self.games_list_widget.rowCount()):
@@ -620,7 +657,7 @@ class GamelistForm(QWidget):
         #TODO: CURRENTLY DISABLED
         hours.setFlags(Qt.ItemIsSelectable|Qt.ItemIsEnabled)
         hours.setBackground(bg)
-        hours.setText(game.playtime_hours_minutes)
+        hours.setText(game.hours_played)
         hours.setData(DATA_SORT,game.playtime)
         list_widget.setItem(row,4,hours)
 
@@ -699,7 +736,7 @@ class GamelistForm(QWidget):
         self.import_humble()
         
     def import_export_steam(self):
-        self.steam.export()
+        self.sync_thread.export_steam()
 
     def import_steam(self):
         self.view_log()
@@ -754,16 +791,6 @@ class GamelistForm(QWidget):
         
     def cleanup_add_steam_shortcuts(self):
         self.steam.create_nonsteam_shortcuts(self.games.games)
-
-    def sync_uploadgames(self):
-        uploadrequest(self.games)
-
-    def sync_downloadgames(self):
-        games = downloadrequest()
-        self.games = games.Games(self.log)
-        self.games.translate_json(games)
-        self.save()
-        self.update_gamelist_widget()
         
     def gamesdb(self,game):
         #self.thegamesdb.update_game_data(game)
@@ -812,11 +839,9 @@ class GamelistForm(QWidget):
         if(search):
             game = self.games.find(search)
         self.update_game_options(game)
-        #self.setStyleSheet("background-color:red;")
-        self.old_style = self.parent().styleSheet()
         if track_time:
             self.timer_started = time.time()
-        print ("run game",game.name,game.gameid)
+        self.log.write("run game",game.name,game.gameid)
         self.timer.start()
         
         if track_time:
@@ -825,39 +850,45 @@ class GamelistForm(QWidget):
             self.stop_playing_button.clicked.connect(make_callback(self.stop_playing,game))
             self.stop_playing_button.setStyleSheet("background-color:green;")
             self.stop_playing_button.setFixedHeight(64)
-            self.parent().setWindowIcon(QIcon(QPixmap("icons/playing.png")))
-            self.parent().trayicon.setIcon(QIcon(QPixmap("icons/playing.png")))
-            self.parent().setStyleSheet("background-color:red;")
-            self.parent().setWindowTitle("MyBacklog %s (Playing %s)"%(VERSION,game.name))
+            self.set_style("playing")
 
         self.running = game
         if launch:
+            self.log.write("game.run_game")
             game.run_game(self.config["root"])
         
-    def operation(self,message,obj,*args):
-        sync.download()
-        getattr(obj,message)(*args)
-        self.games.revision += 1
-        self.save()
-        self.upload_thread = QThread()
-        self.upload_thread.run = lambda: sync.upload()
-        self.upload_thread.start()
-        self.update_gamelist_widget()
-        if isinstance(obj,games.Game) and self.game_options:
-            self.update_game_options(obj)
-            self.select_game(obj)
+    def operation(self, message, obj, *args):
+        def func1():
+            getattr(obj, message)(*args)
+            self.games.revision += 1
+            self.save()
+        def func2():
+            self.update_gamelist_widget()
+        self.sync_thread.sync(func1,func2)
             
     def force_update(self,game,oldid):
         updated_game = self.games.force_update_game(oldid,game)
         #self.app.update_game_row(updated_game)
         self.changed.append(updated_game.gameid)
             
+    def set_style(self, mode="reset"):
+        if mode == "reset":
+            self.parent().setStyleSheet(self.old_style)
+            self.parent().setWindowIcon(QIcon(QPixmap("icons/main.png")))
+            self.parent().trayicon.setIcon(QIcon(QPixmap("icons/main.png")))
+            self.parent().setWindowTitle("MyBacklog %s" % VERSION)
+            self.parent().set_styles()
+        if mode == "playing":
+            self.parent().setWindowIcon(QIcon(QPixmap("icons/playing.png")))
+            self.parent().trayicon.setIcon(QIcon(QPixmap("icons/playing.png")))
+            self.parent().setStyleSheet("background-color:red;")
+            self.parent().setWindowTitle("MyBacklog %s (Playing)"%(VERSION,))
+        if mode == "syncing":
+            self.parent().setStyleSheet("background-color:green;")
+            self.parent().setWindowTitle("MyBacklog %s (Syncing)" % (VERSION,))
+
     def stop_playing(self,game):
-        self.parent().setStyleSheet(self.old_style)
-        self.parent().setWindowIcon(QIcon(QPixmap("icons/main.png")))
-        self.parent().trayicon.setIcon(QIcon(QPixmap("icons/main.png")))
-        self.parent().setWindowTitle("MyBacklog %s"%VERSION)
-        self.parent().set_styles()
+        self.set_style("reset")
         self.running = None
         self.timer.stop()
         #stoprequest()
@@ -868,14 +899,8 @@ class GamelistForm(QWidget):
         elapsed_time = time.time()-self.timer_started
         self.operation("played",game,elapsed_time)
         if getattr(self,"quit_on_stop",False):
+            self.log.write("quitting because game is finished")
             self.window().really_close()
-
-    def show_edit_widget(self,*args,**kwargs):
-        self.egw = gameoptions.EditGame(*args,**kwargs)
-        dock = QDockWidget("Edit",self)
-        dock.setWidget(self.egw)
-        self.window().addDockWidget(Qt.LeftDockWidgetArea,dock)
-        return self.egw
 
     def selected_row(self):
         #Clean up from before if we messed with a field
@@ -943,7 +968,7 @@ class GamelistForm(QWidget):
     def update_game_options(self,game,new=False):
         self.game_options = gameoptions.GameOptions(game,self,new)
         self.game_options_dock.setWidget(self.game_options)
-
+        self.game_options_dock.show()
         return self.game_options
 
     def download(self,game):
@@ -953,7 +978,6 @@ class GamelistForm(QWidget):
         print("adding game with source:",source)
         game = games.Game(sources=[{"source":source}],import_date=games.now(),games=self.games)
         self.gamelist.append({"game":game,"widget":None})
-        #self.show_edit_widget(game,self,new=True)
         self.update_game_options(game,new=True)
 
     def dosearch(self):
@@ -1008,7 +1032,7 @@ class GamelistForm(QWidget):
             total_hours.setText("%.2d:%.2d"%(hour,min))
         self.total_played_list.setItem(0,4,total_hours)
  
-def run():
+def run(args=None):
     import sys
     import PyQt5.Qt
     print(PyQt5.Qt.PYQT_VERSION_STR)
@@ -1024,7 +1048,7 @@ def run():
     print("INITIALIZE")
     awareness = ["-platform","windows:dpiawareness=0"]
     #awareness = []
-    app = PyQt5.Qt.QApplication(sys.argv+awareness)
+    app = MyBacklog(sys.argv+awareness)
     print(QCoreApplication.applicationDirPath())
     print(dir(QCoreApplication))
     print(os.environ)
@@ -1032,7 +1056,8 @@ def run():
     app.setAttribute(Qt.AA_EnableHighDpiScaling)
     print(os.path.join(os.path.dirname(PyQt5.__file__),"Qt", "plugins"))
     print("Build mybacklog")
-    window = MyBacklog(app)
+    window = MyBacklogWindow(app)
+    app.game_form = window.main_form
     window.set_styles()
     print("Show mybacklog")
     window.show()
@@ -1042,7 +1067,8 @@ def run():
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("-p","--play")
-    args = parser.parse_args()
+    if not args:
+        args = parser.parse_args()
     if args.play:
         window.main_form.quit_on_stop = True
         window.main_form.run_game(search=args.play)
