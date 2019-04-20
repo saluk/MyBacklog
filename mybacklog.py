@@ -151,7 +151,6 @@ class MyBacklog(PyQt5.Qt.QApplication):
 class MyBacklogWindow(QMainWindow):
     def __init__(self,app):
         self.app = app
-        self.app
         self.set_styles()
         #super(MainWindow,self).__init__(None,Qt.WindowStaysOnTopHint)
         super(MyBacklogWindow,self).__init__(None)
@@ -224,9 +223,9 @@ class MyBacklogWindow(QMainWindow):
     def click_tray_icon(self):
         self.show()
     def really_close(self):
-        self.main_form.sync_thread.wait()
+        self.trayicon.setVisible(False)
+        [t.wait() for t in self.main_form.threads]
         self.exit_requested = True
-        self.trayicon.hide()
         self.close()
     def closeEvent(self, event):
         if self.exit_requested:
