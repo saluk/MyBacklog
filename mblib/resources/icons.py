@@ -78,7 +78,6 @@ def icon_in_cache(game,size,cache,filecache_root,category="icon",imode="qt",url=
 def icon_for_game(game,size,icon_cache,filecache_root,category="icon",imode="qt",url=""):
     cur = icon_in_cache(game,size,icon_cache,filecache_root,category,imode)
     if cur:
-        print("1.cached")
         return cur
         
     fpath,mode,url = path_to_icon(game,filecache_root,category,url=url)
