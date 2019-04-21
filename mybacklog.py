@@ -382,7 +382,6 @@ class GamelistForm(QWidget):
         self.timer = QTimer(self)
         self.timer.setInterval(5000)
         self.timer.timeout.connect(self.detect_game_end)
-        self.threads.append(self.timer)
         
         self.setMinimumSize(600,640)
         #self.setMaximumWidth(1080)
@@ -405,6 +404,10 @@ class GamelistForm(QWidget):
         self.config["icon_size"] = self.icon_size
         self.save_config()
         self.update_gamelist_widget()
+
+    def file_crash(self):
+        """Let's just crash the game"""
+        raise Exception("Test a crash")
         
     def log_if_window(self,text):
         self.logwindow_lock.acquire()
