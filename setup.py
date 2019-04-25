@@ -1,6 +1,7 @@
 import sys
 import os
 import shutil
+import mblib
 from cx_Freeze import setup, Executable
 
 # Dependencies are automatically detected, but it might need fine tuning.
@@ -20,7 +21,7 @@ if sys.platform == "win32":
 if os.path.exists("build/exe.win32-3.6"):
     shutil.rmtree("build/exe.win32-3.6")
 setup(name = "mybacklog",
-        version = "0.6",
+        version = mblib.VERSION,
         description = "MyBacklog game database",
         options = {"build_exe": build_exe_options},
         executables = [Executable("runit.py", base=base, icon="icons\\main.ico", 

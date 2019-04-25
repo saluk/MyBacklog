@@ -2,15 +2,14 @@
 
 #os.environ["QT_QPA_PLATFORM_PLUGIN_PATH"] = "C:\\Python33\\Lib\\site-packages\\PyQt5\\plugins\\platforms"
 
-VERSION = "0.26 alpha"
-
 import os
 import sys
 import PyQt5.Qt
 from PyQt5 import QtCore
 
 from mblib.interface.gamelist_form import MyBacklog
- 
+
+
 def run():
 
     print(PyQt5.Qt.PYQT_VERSION_STR)
@@ -25,7 +24,7 @@ def run():
     print("INITIALIZE")
     awareness = ["-platform", "windows:dpiawareness=0"]
     #awareness = []
-    app = MyBacklog(base_args=sys.argv+awareness, version=VERSION)
+    app = MyBacklog(base_args=sys.argv+awareness)
     sys.exit(app.exec_())
 
 if __name__ == '__main__':

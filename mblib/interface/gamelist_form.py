@@ -4,6 +4,7 @@ import time
 import threading
 import traceback
 
+import mblib
 from mblib import sync
 
 #backloglib
@@ -69,8 +70,8 @@ class SyncThread(QThread):
             self.func2()
 
     def begin_work(self):
-        #self.app.set_style("syncing")
-        #self.finished.connect(self.app.set_style)
+        self.app.window().set_mode("syncing")
+        self.finished.connect(self.app.window().set_mode)
         self.start()
 
     def upload(self, func=None):
@@ -132,7 +133,7 @@ class BrowserAuth(QWidget):
         self.show()
 
     def cookie_added(self, cookie):
-        if not self.domain in cookie.domain():
+        if self.domain not in cookie.domain():
             return
         self.cookie_info["cookies"][str(cookie.name().data())] = str(
             cookie.value().data())
@@ -148,7 +149,7 @@ class BrowserAuth(QWidget):
 
 
 class MyBacklog(PyQt5.Qt.QApplication):
-    def __init__(self, base_args, version):
+    def __init__(self, base_args):
         super(MyBacklog, self).__init__(base_args)
         self.focusChanged.connect(self.change_focus)
 
@@ -159,10 +160,9 @@ class MyBacklog(PyQt5.Qt.QApplication):
         self.setAttribute(Qt.AA_EnableHighDpiScaling)
         print(os.path.join(os.path.dirname(PyQt5.__file__), "Qt", "plugins"))
         print("Build mybacklog")
-        self.window = MyBacklogWindow(self, version)
+        self.window = MyBacklogWindow(self)
         self.game_form = self.window.main_form
-        self.game_form.version = version
-        self.window.set_styles()
+        self.window.set_theme()
         print("Show mybacklog")
         self.window.show()
         self.window.reset_games()
@@ -178,18 +178,15 @@ class MyBacklog(PyQt5.Qt.QApplication):
             self.window.main_form.run_game(search=args.play)
 
     def change_focus(self, oldwindow, newwindow):
-        if newwindow and not oldwindow:
+        if newwindow and not oldwindow and not self.game_form.running:
             self.game_form.sync_thread.download()
 
 
 class MyBacklogWindow(QMainWindow):
-    def __init__(self, app, version):
-        self.app = app
-        self.set_styles()
-        #super(MainWindow,self).__init__(None,Qt.WindowStaysOnTopHint)
+    def __init__(self, app):
         super(MyBacklogWindow, self).__init__(None)
-        #self.showFullScreen()
-        self.setWindowTitle("MyBacklog %s" % version)
+        self.app = app
+
         self.setWindowIcon(QIcon(QPixmap("icons/main.png")))
         self.main_form = GamelistForm(self)
 
@@ -217,7 +214,11 @@ class MyBacklogWindow(QMainWindow):
         self.trayicon.show()
         self.trayicon.activated.connect(self.click_tray_icon)
 
-    def set_styles(self):
+        self.set_theme()
+        self.old_style = self.styleSheet()
+        self.set_mode()
+
+    def set_theme(self):
         self.app.setStyle("Fusion")
         palette = QPalette()
         palette.setColor(QPalette.Window, QColor(53, 53, 53))
@@ -234,6 +235,28 @@ class MyBacklogWindow(QMainWindow):
         palette.setColor(QPalette.Highlight, QColor(142, 45, 197).lighter())
         palette.setColor(QPalette.HighlightedText, Qt.black)
         self.app.setPalette(palette)
+
+    def set_mode(self, mode="reset"):
+        if mode == "reset":
+            self.setStyleSheet(self.old_style)
+            self.setWindowIcon(QIcon(QPixmap("icons/main.png")))
+            self.trayicon.setIcon(QIcon(QPixmap("icons/main.png")))
+            self.set_theme()
+        if mode == "playing":
+            self.setWindowIcon(QIcon(QPixmap("icons/playing.png")))
+            self.trayicon.setIcon(QIcon(QPixmap("icons/playing.png")))
+            self.setStyleSheet("background-color:red;")
+        if mode == "syncing":
+            self.setStyleSheet("background-color:green;")
+        self.set_title(mode)
+
+    def set_title(self, mode):
+        mode = "("+mode.capitalize()+")"
+        self.setWindowTitle("MyBacklog %s %s (R:%s S:%s L:%s)" %
+                            (mblib.VERSION, mode,
+                             mblib.last_revision_received,
+                             mblib.last_revision_sent,
+                             mblib.last_revision_loaded))
 
     def reset_games(self):
         #self.main_form.deleteLater()
@@ -447,8 +470,6 @@ class GamelistForm(QWidget):
         self.window().addDockWidget(Qt.LeftDockWidgetArea, self.game_options_dock)
         self.game_options_dock.hide()
 
-        self.old_style = self.parent().styleSheet()
-
         self.adjustSize()
 
     def zoom_icon(self, amt):
@@ -460,6 +481,10 @@ class GamelistForm(QWidget):
     def file_crash(self):
         """Let's just crash the game"""
         raise Exception("Test a crash")
+
+    def file_upload(self):
+        """Do an upload"""
+        self.sync_thread.upload()
 
     def log_if_window(self, text):
         self.logwindow_lock.acquire()
@@ -537,6 +562,7 @@ class GamelistForm(QWidget):
         self.games_lock = threading.Lock()
         print("loading games", self.config["games"])
         self.games.load(self.config["games"], self.config["local"])
+        mblib.last_revision_loaded = self.games.revision
         self.sync_thread.download()
         self.gamelist = []
         self.update_gamelist_widget()
@@ -905,7 +931,7 @@ class GamelistForm(QWidget):
         return self.run_game(game, track_time=True, launch=False)
 
     def run_game(self, game=None, track_time=True, launch=True, search=None):
-        if getattr(self, "stop_playing_button", None):
+        if self.running:
             return
         if(search):
             game = self.games.find(search)
@@ -922,7 +948,7 @@ class GamelistForm(QWidget):
                 make_callback(self.stop_playing, game))
             self.stop_playing_button.setStyleSheet("background-color:green;")
             self.stop_playing_button.setFixedHeight(64)
-            self.set_style("playing")
+            self.window().set_mode("playing")
 
         self.running = game
         if launch:
@@ -930,38 +956,22 @@ class GamelistForm(QWidget):
             game.run_game(self.config["root"])
 
     def operation(self, message, obj, *args):
-        def func1():
+        def before_sync():
             getattr(obj, message)(*args)
             self.games.revision += 1
             self.save()
 
-        def func2():
+        def after_sync():
             self.update_gamelist_widget()
-        self.sync_thread.sync(func1, func2)
+        self.sync_thread.sync(before_sync, after_sync)
 
     def force_update(self, game, oldid):
         updated_game = self.games.force_update_game(oldid, game)
         #self.app.update_game_row(updated_game)
         self.changed.append(updated_game.gameid)
 
-    def set_style(self, mode="reset"):
-        if mode == "reset":
-            self.parent().setStyleSheet(self.old_style)
-            self.parent().setWindowIcon(QIcon(QPixmap("icons/main.png")))
-            self.parent().trayicon.setIcon(QIcon(QPixmap("icons/main.png")))
-            self.parent().setWindowTitle("MyBacklog %s" % self.version)
-            self.parent().set_styles()
-        if mode == "playing":
-            self.parent().setWindowIcon(QIcon(QPixmap("icons/playing.png")))
-            self.parent().trayicon.setIcon(QIcon(QPixmap("icons/playing.png")))
-            self.parent().setStyleSheet("background-color:red;")
-            self.parent().setWindowTitle("MyBacklog %s (Playing)" % (self.version,))
-        if mode == "syncing":
-            self.parent().setStyleSheet("background-color:green;")
-            self.parent().setWindowTitle("MyBacklog %s (Syncing)" % (self.version,))
-
     def stop_playing(self, game):
-        self.set_style("reset")
+        self.window().set_mode("reset")
         self.running = None
         self.timer.stop()
         #stoprequest()
