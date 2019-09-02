@@ -40,9 +40,10 @@ BAD_GAMEID = InvalidId("Do not save me")
 
 def get_source(s):
     return sources.all[s]
-    
-def source_id(s):
-    id = (0, "")
+
+#TODO this should be cleaned up 
+def source_id(s, game_id):
+    id = (0, game_id)
     for k in s:
         if k.startswith("id"):
             idpart = k
@@ -306,7 +307,7 @@ class Game:
     def source_match(self):
         string = ""
         for s in sorted(self.sources):
-            string += source_id(s) + ";"
+            string += source_id(s, self.gameid) + ";"
         return string
     def same_game(self,other_game):
         """Is this game logically the same game as other_game?
@@ -548,7 +549,7 @@ class Games:
             game = self.games[gameid]
             keys = []
             for s in game.sources:
-                keys.append(source_id(s))
+                keys.append(source_id(s, game.gameid))
             for key in keys:
                 if key not in self.source_map:
                     self.source_map[key] = []
@@ -562,7 +563,7 @@ class Games:
 
         ids = []
         for s in game.sources:
-            for g in self.source_map.get(source_id(s),[]):
+            for g in self.source_map.get(source_id(s, game.gameid),[]):
                 ids.append(g.gameid)
 
         print(game.gameid,"should be in self.games")
@@ -743,5 +744,8 @@ class Games:
                 gamelist.append(self.games[game["gameid"]])
         return gamelist
     def delete(self, game):
-        if game.gameid in self.games:
-            del self.games[game.gameid]
+        #TODO - this is dangerous there should be a warning
+        for k in list(self.games.keys()):
+            if self.games[k].gameid == game.gameid:
+                print("deleting gameid",k,self.games[k].name)
+                del self.games[k]
