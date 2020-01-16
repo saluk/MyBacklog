@@ -450,6 +450,8 @@ def nicediff(diff):
         s+=k+":"+str(n[k]["v"])+"  "
     return s
 
+game_log = syslog.SysLog("games_log.txt")
+
 class Games:
     def __init__(self,log=None):
         self.revision = 0
@@ -458,7 +460,7 @@ class Games:
         self.multipack = {}
         self.local = {}
         self.source_definitions = {}
-        self.log = log or syslog.SysLog()
+        self.log = log or game_log
     def find(self,search):
         if search in self.games:
             return self.games[search]
