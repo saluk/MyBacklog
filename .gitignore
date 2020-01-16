@@ -14,3 +14,5 @@ mybacklog_setup*.exe
 data/goghtml/*
 build/exe.win32-3.6/*
 .env/*
+tools/x360ce_x64.exe
+tools/x360ce.exe
