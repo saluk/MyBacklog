@@ -231,6 +231,8 @@ def import_steam(apikey=MY_API_KEY,userid=MY_STEAM_ID,cache_root=".",user_data=N
     #apps = load_userdata()["UserLocalConfigStore"]["Software"]["valve"]["Steam"]["apps"]
     apps = {}
     if user_data:
+        print("loading", user_data["userlocalconfigstore"]
+              ["software"]["valve"]["steam"]["apps"])
         apps = user_data["userlocalconfigstore"]["software"]["valve"]["steam"]["apps"]
     db = {}
     is_finished = []

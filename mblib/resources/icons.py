@@ -24,12 +24,15 @@ headers = {
 }
 
 def generate_icon(fpath,game,filecache_root,from_image = None):
+    if from_image:
+        try:
+            print("LOADED IMAGE", from_image)
+            im = Image.open(from_image).resize([460, 265], Image.BILINEAR)
+        except:
+            from_image = None
     if not from_image:
         im = Image.new('RGB',[460,265])
         print("generate new image for",fpath)
-    else:
-        print("LOADED IMAGE",from_image)
-        im = Image.open(from_image).resize([460,265],Image.BILINEAR)
     draw = ImageDraw.Draw(im)
     font = ImageFont.truetype(os.path.join("data","Muli-Light.ttf"),25)
     wt = "wwww"

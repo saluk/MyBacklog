@@ -377,9 +377,11 @@ class EditGame(QWidget):
         print(game in self.games.games.values())
         self.app.operation("force_update",self.app,game,self.oldid)
 
-        if not self.parented:
+        if not self.parented or self.new:
             self.deleteLater()
             self.parent().deleteLater()
+        
+        #self.app.select_game(game)
     def save_prop(self,field,props):
         t = props["t"]
         w = props["w"]

@@ -102,11 +102,38 @@ class ExeSource(Source):
             print("subprocess open")
             os.chdir(curdir)
     def game_is_running(self, game, data, app):
-        args,folder,search = self.get_run_args(game,data,"",write_batch=False)
+        args, folder, search = self.get_run_args(
+            game, data, app.config["root"], write_batch=False)
         print("search:",search)
         procs = [proc.name() for proc in psutil().process_iter() if search.lower() in proc.name().lower()]
         return bool(procs)
-            
+
+class EpicSource(ExeSource):
+    def get_run_args(self, game, source, cache_root, write_batch=True):
+        import webbrowser
+        import json
+        folder = game.install_folder
+        root = folder.split("\\", 1)[0]
+        appname = None
+        for filename in os.listdir(folder+"/.egstore"):
+            if filename.endswith(".mancpn"):
+                with open(folder+"/.egstore/"+filename) as f:
+                    dat = json.loads(f.read())
+                    appname = dat["AppName"]
+        if not appname:
+            return None
+        with open(cache_root+"/cache/batches/"+game.gameid+".bat", "w") as f:
+            f.write('%s\ncd "%s"\n'%(root,folder))
+            f.write('start "" "com.epicgames.launcher://apps/%s?action=launch&silent=true"\n' % appname)
+        args = [game.gameid+".bat"]
+        folder = os.path.abspath(cache_root+"/cache/batches/")
+        path = game.get_path()
+        filepath = os.path.basename(path)
+        exe,args2 = filepath.split(".exe")
+        exe = exe+".exe"
+        search = exe
+        return args, folder, search
+
 class HumbleSource(ExeSource):
     source_args = [("id","s"),("package","s")]
 
