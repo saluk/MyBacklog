@@ -51,11 +51,12 @@ class SyncThread(QThread):
     func2 = None
     do_upload = True
     do_download = True
+    update_widget_on_download = True
 
     def run(self):
         if self.do_download:
             try:
-                if sync.download():
+                if sync.download() and self.update_widget_on_download:
                     self.app.update_gamelist_widget()
             except Exception:
                 traceback.print_exc()
@@ -86,11 +87,12 @@ class SyncThread(QThread):
         self.do_upload = False
         self.begin_work()
 
-    def sync(self, func1, func2):
+    def sync(self, func1, func2, update_widget_on_download=True):
         self.func = func1
         self.func2 = func2
         self.do_download = True
         self.do_upload = True
+        self.update_widget_on_download = update_widget_on_download
         self.begin_work()
 
     def export_steam(self):
@@ -963,7 +965,8 @@ class GamelistForm(QWidget):
 
         def after_sync():
             self.update_gamelist_widget()
-        self.sync_thread.sync(before_sync, after_sync)
+        self.sync_thread.sync(before_sync, after_sync, 
+                              update_widget_on_download=False)
 
     def force_update(self, game, oldid):
         updated_game = self.games.force_update_game(oldid, game)
