@@ -8,7 +8,7 @@ import gzip
 import hmac
 import copy
 import io
-from mblib import sources,syslog
+from mblib import sources
 
 fmt = "%H:%M:%S %Y-%m-%d"
 def now():
@@ -459,7 +459,7 @@ class Games:
         self.multipack = {}
         self.local = {}
         self.source_definitions = {}
-        self.log = log or syslog.SysLog()
+        self.log = log
     def find(self,search):
         if search in self.games:
             return self.games[search]

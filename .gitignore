@@ -16,3 +16,5 @@ build/exe.win32-3.6/*
 .env/*
 tools/x360ce_x64.exe
 tools/x360ce.exe
+mblib/server/.env/*
+mblib/server/*log.*

@@ -1,9 +1,11 @@
 import hug
-import sys,os,traceback
+import sys, os, traceback
 import base64
-sys.path.insert(0,"../..")
+sys.path.insert(0, "../..")
 import mblib
-from mblib import games
+from mblib import games, syslog
+
+game_log = syslog.SysLog("games_log.txt")
 
 def nice_user(user):
     fixed_user = "".join([x for x in user if x in "abcdefghijklmnopqrstuvwxyz0123456789"])
@@ -43,13 +45,13 @@ def game_database(body,user,input=raw):
     user.make_ready()
     try:
         data = body.read()
-        gdbmu = games.Games()
+        gdbmu = games.Games(log=game_log)
         gdbmu.load_games(filedata=data)
     except:
         traceback.print_exc()
         return {"error":"Not a valid game database"}
     try:
-        gdbms = games.Games()
+        gdbms = games.Games(log=game_log)
         gdbms.load_games(filename=user.game_path)
         if gdbms.revision>gdbmu.revision:
             return {"error":"server has newer revision","client_revision":gdbmu.revision,"server_revision":gdbms.revision}
@@ -65,7 +67,7 @@ def games_revision(user):
     if not user.is_ready():
         return {"server_revision":None}
     try:
-        gdbm = games.Games()
+        gdbm = games.Games(log=game_log)
         gdbm.load_games(filename=user.game_path)
     except:
         traceback.print_exc()
@@ -78,7 +80,7 @@ def bump_revision(user):
     if not user.is_ready():
         return {"error":"user not initialized"}
     try:
-        gdbm = games.Games()
+        gdbm = games.Games(log=game_log)
         gdbm.load_games(filename=user.game_path)
         gdbm.revision += 1
         gdbm.save(user.game_path)
