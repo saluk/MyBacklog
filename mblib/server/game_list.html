@@ -1,0 +1,144 @@
+<html>
+
+<head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/js?js_file=moment.js"></script>
+
+    <!-- Add this to <head> -->
+
+    <!-- Load required Bootstrap and BootstrapVue CSS -->
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+
+    <!-- Load polyfills to support older browsers -->
+    <script src="//polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script>
+
+    <!-- Load Vue followed by BootstrapVue -->
+    <script src="//unpkg.com/vue@latest/dist/vue.min.js"></script>
+    <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+
+    <!-- Load the following for BootstrapVueIcons support -->
+    <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script type="text/javascript">
+        //import { PaginationPlugin } from 'bootstrap-vue'
+        Vue.use(BootstrapVue)
+    </script>
+
+    <!-- DatetimePicker -->
+    <link rel="stylesheet" href="https://unpkg.com/vue-datetime@1.0.0-beta.10/dist/vue-datetime.css"></link>
+    <script src="https://unpkg.com/luxon@1.22.0/build/global/luxon.min.js"></script>
+    <script src="https://unpkg.com/weekstart@1.0.1/dist/commonjs/main.js"></script>
+    <script src="https://unpkg.com/vue-datetime@1.0.0-beta.11/dist/vue-datetime.js"></script>
+
+</head>
+
+<body>
+
+    <div id="game_list">
+
+        <b-modal id="playing_game" title="Playing game" v-on:ok="end_playing_modal">
+			<p class="my-4" v-if="edit_game">
+				Playing {{edit_game.name}}...
+			</p>
+		</b-modal>
+
+        <b-modal id="edit_game_playtime" title="Edit Game Playtime" v-on:ok="send_game_updates">
+			<p class="my-4" v-if="edit_game">
+				Editing {{edit_game.name}}
+				<b-form-input id="edit_game_playtime" :value="nice_time(edit_game)" @change="update_playtime"></b-form-input>
+			</p>
+		</b-modal>
+
+        <b-modal id="edit_game_lastplayed" title="Edit Game Lastplayed" v-on:ok="send_game_updates">
+			<p class="my-4" v-if="edit_game">
+                Editing {{edit_game.name}}
+                Now {{moment.utc().format('H:m:s YYYY-M-D')}}
+				<b-form-input v-model="edit_game.lastplayed"></b-form-input>
+            </p>
+		</b-modal>
+
+        <div id="user form">
+            Select User:
+            <form name="username">
+                <input name="username" v-bind:value="username">
+                <input type=submit value="Load">
+            </form>
+        </div>
+
+        <b-tabs content-class="mt-3">
+
+            <b-tab title="Add Game">
+                <b-card title="Add Game" class="mb-4">
+                    <b-container cols=4>
+                        <b-form-input v-model="add_name" placeholder="Game Name"></b-form-input>
+                        <b-form-select v-model="add_source" :options="sources"></b-form-select>
+                        <b-button v-on:click="add_game">Add</b-button>
+                    </b-container>
+                </b-card>
+            </b-tab>
+
+            <b-tab title="List Games" active>
+                <b-card title="Game List" class="h-75" style="max-width:40rem">
+
+                    <b-container id="filters" cols=4>
+                        <b-row>
+                            <b-col>
+                                <b-form-input v-model="name_filter" v-on:change="dosearch"></b-form-input>
+                            </b-col>
+                            <b-col>
+                                <b-form-select v-model="source_selected" :options="sources" v-on:change="dosearch"></b-form-select>
+                            </b-col>
+                            <b-col>
+                                <b-form-select v-model="finished_filter" :options="finished_options" v-on:change="dosearch"></b-form-select>
+                            </b-col>
+                        </b-row>
+                    </b-container>
+
+                    <b-container class="p-0">
+                        <b-pagination v-model="currentPage" :total-rows="rows" :per-page="perPage" limit=10 aria-controls="my-table"></b-pagination>
+
+						<b-container class="h-75 p-0 overflow-auto">
+							<b-container>
+                                <b-row v-if="!get_game_page().length>0 && load_games_state">Loading...</b-row>
+                                <b-row v-if="!get_game_page().length>0 && !load_games_state">No games found for current filter</b-row>
+								<b-row v-on v-for="game in get_game_page()" class="game-row pt-1 m-1 border">
+                                    <b-col cols=8>
+                                        <b-container>
+                                            <b-row>
+                                                <b-col class="mx-auto bg-info text-light">
+                                                <img v-bind:src="img(game)" width=32 height=32 v-if="img(game)">
+                                                {{ game.name }}
+                                                </b-col>
+                                            </b-row>
+                                            <b-row>
+                                                <b-col class="text-info">
+                                                {{ src(game) }}
+                                                </b-col>
+                                                
+                                                <b-col><b-link href="#" v-on:click="set_time_modal(game)">{{ nice_time(game) }}</b-link></b-col>
+                                                
+                                                <b-col><b-link href="#" v-on:click="set_lastplayed_modal(game)">{{ nice_date(game) }}</b-link></b-col>
+                                            </b-row>
+                                        </b-container>
+									</b-col>
+                                    <b-col cols=4>
+                                        <b-button v-on:click="game_submit(game, 'finished')" v-show="!game.finished">Finish</b-button>
+                                        <b-button v-on:click="playing_modal(game)" v-show="!edit_game || !edit_game.is_playing">Play</b-button>
+                                    </b-col>
+								</b-row>
+							</b-container>
+                        </div>
+
+                    </b-container>
+                </b-card>
+            </b-tab>
+
+        </b-tabs>
+    </div>
+
+    <script type="text/javascript" src="/js?js_file=mybacklog.js"></script>
+</body>
+
+</html>

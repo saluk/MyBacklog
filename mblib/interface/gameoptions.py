@@ -83,7 +83,7 @@ class ListGamesForPack(QWidget):
 
             self.app.games.multipack[self.game.sources[0]["id"]].append(game.gameid)
 
-            game = self.app.games.update_game(game.gameid,game)
+            game, diff = self.app.games.update_game(game.gameid,game)
             pack_games.append({"gameid":game.gameid,"name":game.name})
         self.game.package_data = {"type":"bundle",
                                   "contents":pack_games,

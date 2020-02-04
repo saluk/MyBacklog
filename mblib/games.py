@@ -1,5 +1,6 @@
 #!python3
 import os
+import sys
 import time
 import datetime
 import json
@@ -64,11 +65,11 @@ class Game:
 
         self.name = ""
         self.playtime = 0
+        self.start_playing_time = 0
         self.finished = 0
         self.hidden = 0
         self.package_data = {}
         self.lastplayed = ""   #timestamp in fmt
-        self.data_changed_date = ""
         self.import_date = ""
         self.finish_date = ""
         self.sources = []
@@ -194,7 +195,10 @@ class Game:
         self.priority = -1
     def finish(self):
         self.finished = 1
-        self.finish_date = now()
+        if self.lastplayed:
+            self.finish_date = self.lastplayed
+        else:
+            self.finish_data = now()
     def unfinish(self):
         self.finished = 0
         self.finish_date = ""
@@ -459,7 +463,26 @@ class Games:
         self.multipack = {}
         self.local = {}
         self.source_definitions = {}
+        self.track_playing_game = None
+        if not log:
+            from mblib import syslog
+            log = syslog.PrintLog()
         self.log = log
+    def start_playing_game(self, gameid):
+        if self.track_playing_game:
+            self.stop_playing_game()
+        self.track_playing_game = {"gameid": gameid, "start_time": now()}
+        self.games[gameid].lastplayed = now()
+    def stop_playing_game(self, **kwargs):
+        if not self.track_playing_game:
+            return
+        g = self.games[self.track_playing_game["gameid"]]
+        n = now()
+        g.lastplayed = now()
+        t1 = stot(self.track_playing_game["start_time"])
+        t2 = stot(n)
+        difftime = time.mktime(t2)-time.mktime(t1)
+        g.playtime += difftime
     def find(self,search):
         if search in self.games:
             return self.games[search]
@@ -507,8 +530,9 @@ class Games:
             if source not in self.source_definitions:
                 self.source_definitions[source] = loaded_defs[source]
             self.source_definitions[source].update(loaded_defs[source])
-        self.log.write("source definitions: ",self.source_definitions)
-        self.revision = load_data.get("revision",self.revision)
+        self.log.write("source definitions: ", self.source_definitions)
+        self.revision = load_data.get("revision", self.revision)
+        self.track_playing_game = load_data.get("track_playing_game", self.track_playing_game)
     def load_local(self,file):
         if not os.path.exists(file):
             print("Warning, no local save file to load:",file)
@@ -531,6 +555,7 @@ class Games:
         save_data["multipack"] = self.multipack
         save_data["source_definitions"] = self.source_definitions
         save_data["revision"] = self.revision
+        save_data["track_playing_game"] = self.track_playing_game
         #return json.dumps(save_data)
         return ubjson.dumpb(save_data)
     def save(self,game_db_file,local_db_file=None):
@@ -635,12 +660,13 @@ class Games:
             else:
                 print("UPDATE... did not change game")
         else:
+            diff = game.dict()
             print("ADD GAME ACTION")
             print("adding",game.gameid,game.source_match)
             game.data_changed_date = now()
             self.games[game.gameid] = game
             self.log.write("GAMEDB: Add (",game.gameid,",",game.name,")")
-        return game
+        return game, diff
     def update_game(self,gameid,game):
         assert(isinstance(game,Game))
         game.games = self
@@ -694,7 +720,7 @@ class Games:
             self.log.write("GAMEDB: Update ",previous_data["gameid"]," ",nicediff(diff))
         else:
             print("no updates to",cur_game.gameid,cur_game.source_match)
-        return cur_game
+        return cur_game, diff
     def list(self,sort="priority"):
         v = self.games.values()
         if not sort:

@@ -11,10 +11,10 @@ class SysLog:
         if logfile:
             self.logfile = open(logfile,"w",errors="ignore")
             self.callbacks.append(self.logfile_write)
-            self.lock = threading.Lock()
             sys.stderr = self.logfile
             sys.stdout = self.logfile
             sys.excepthook = self.uncaught_exception
+        self.lock = threading.Lock()
     def add_callback(self,f):
         self.callbacks.append(f)
     def write(self,*message):
@@ -30,3 +30,7 @@ class SysLog:
         return "\n".join(self.log)
     def uncaught_exception(self, etype, value, tb):
         self.write(*traceback.format_exception(etype, value, tb))
+
+class PrintLog(SysLog):
+    def write(self,*message):
+        print(*message)

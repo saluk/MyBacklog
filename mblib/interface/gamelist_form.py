@@ -966,7 +966,7 @@ class GamelistForm(QWidget):
         self.sync_thread.sync(before_sync, after_sync)
 
     def force_update(self, game, oldid):
-        updated_game = self.games.force_update_game(oldid, game)
+        updated_game, diff = self.games.force_update_game(oldid, game)
         #self.app.update_game_row(updated_game)
         self.changed.append(updated_game.gameid)
 
