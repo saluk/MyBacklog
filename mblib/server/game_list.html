@@ -54,8 +54,8 @@
         <b-modal id="edit_game_lastplayed" title="Edit Game Lastplayed" v-on:ok="send_game_updates">
 			<p class="my-4" v-if="edit_game">
                 Editing {{edit_game.name}}
-                Now {{moment.utc().format('H:m:s YYYY-M-D')}}
-				<b-form-input v-model="edit_game.lastplayed"></b-form-input>
+                Now {{moment().format('H:m:s YYYY-M-D')}}
+				<b-form-input v-model="edit_game.lastplayed_local"></b-form-input>
             </p>
 		</b-modal>
 

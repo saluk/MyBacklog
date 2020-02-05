@@ -65,7 +65,10 @@ def list(user,start=0,count=50,name_filter='',source_filter='',finished_filter='
     len_filtered = len(l)
     l = l[int(start):int(start)+int(count)]
     games_dict = [game.dict() for game in l]
-    return {"length":len_filtered, "total": len_total, "games":games_dict}
+    playing = user.games.playing_game
+    if playing:
+        playing["game"] = playing["game"].dict()
+    return {"length":len_filtered, "total": len_total, "games":games_dict, "playing":playing}
 
 @hug.put(examples="user=saluk&game_name=Mario&source_name=NES")
 def game(user, game_name, source_name):
@@ -110,6 +113,8 @@ def game(user, gameid, finished=None, playtime=None, rawdata=None):
         game_d.update(rawdata)
         game = games.Game(**game_d)
     updated_game, diff = user.games.force_update_game(game.gameid, game)
+    if not diff:
+        return {"gameid": game.gameid, "diff": diff, "error": "No change was made"}
     user.games.revision += 1
     success, message = user.save_games()
     if success:
@@ -129,7 +134,8 @@ def games_method(user, method, gameid):
     if not game:
         return {"error":"no game found"}
     f = getattr(user.games, method)
-    f(gameid=gameid)
+    if not f(gameid=gameid):
+        return {"error": "No operation needed."}
     user.games.revision += 1
     success, message = user.save_games()
     if success:

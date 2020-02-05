@@ -473,9 +473,10 @@ class Games:
             self.stop_playing_game()
         self.track_playing_game = {"gameid": gameid, "start_time": now()}
         self.games[gameid].lastplayed = now()
+        return self.games[gameid]
     def stop_playing_game(self, **kwargs):
         if not self.track_playing_game:
-            return
+            return False
         g = self.games[self.track_playing_game["gameid"]]
         n = now()
         g.lastplayed = now()
@@ -483,6 +484,16 @@ class Games:
         t2 = stot(n)
         difftime = time.mktime(t2)-time.mktime(t1)
         g.playtime += difftime
+        self.track_playing_game = None
+        return g
+    @property
+    def playing_game(self):
+        if not self.track_playing_game:
+            return None
+        return {
+            "game":self.find(self.track_playing_game["gameid"]),
+            "start_time":self.track_playing_game["start_time"]
+        }
     def find(self,search):
         if search in self.games:
             return self.games[search]

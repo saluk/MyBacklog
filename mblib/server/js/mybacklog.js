@@ -1,3 +1,5 @@
+const fmtstr = "H:m:s YYYY-MM-DD"
+
 function pad(num) {
     var s = "00" + num;
     return s.substr(s.length-2);
@@ -63,12 +65,8 @@ var app = new Vue({
             if(!game.lastplayed) {
                 return 'never'
             }
-            var dt = moment.utc(game.lastplayed,'H:m:s YYYY-M-D');
+            var dt = moment.utc(game.lastplayed,fmtstr);
             return dt.fromNow();
-            return {
-                'date': dt.format('MM/DD/YYYY'),
-                'time': dt.format('hh:mm a')
-            }
         },
         get_game_page: function(reset = false) {
             var start = (this.currentPage - 1) * this.perPage;
@@ -115,17 +113,24 @@ var app = new Vue({
             //this.add_name = '';
             //this.add_source = '';
         },
-        set_time_modal(game) {
+        set_edit_game(game) {
             this.edit_game = game;
+            this.edit_game.lastplayed_local = moment.utc(game.lastplayed, fmtstr)
+                                                    .local().format(fmtstr)
+        },
+        set_time_modal(game) {
+            this.set_edit_game(game);
             this.$bvModal.show('edit_game_playtime');
         },
         set_lastplayed_modal(game) {
-            this.edit_game = game;
+            this.set_edit_game(game);
             this.$bvModal.show('edit_game_lastplayed');
         },
-        playing_modal(game) {
-            games_method(game, 'start_playing_game');
-            this.edit_game = game;
+        playing_modal(game, init_request=true) {
+            if(init_request){
+                games_method(game, 'start_playing_game');
+            }
+            this.set_edit_game(game);
             this.edit_game.is_playing = true;
             this.$bvModal.show('playing_game');
         },
@@ -138,6 +143,8 @@ var app = new Vue({
             this.edit_game.playtime = playtime;
         },
         send_game_updates() {
+            this.edit_game.lastplayed = moment(this.edit_game.lastplayed_local, fmtstr)
+                                              .utc().format(fmtstr);
             game_submit(this.edit_game, "rawdata", this.edit_game);
         }
     }
@@ -163,6 +170,9 @@ load_games = function(start = 0, count = 50) {
             app.games = response.data.games;
             app.games_length = response.data.length;
             app.loaded_index = start;
+            if(response.data.playing){
+                app.playing_modal(response.data.playing.game, false);
+            }
         })
         .catch(function(error) {
             if (axios.isCancel(error)) {
@@ -281,14 +291,14 @@ games_method = function(game, method) {
         .then(function(response) {
             console.log(response);
             if (response.data.error) {
-                app.$bvToast.toast(message = 'Error on method ' + method + ' for ',game.name + ': ' + response.data.error,
+                app.$bvToast.toast(message = 'Error on method ' + method + ' for ' + game.name + ': ' + response.data.error,
                     options = {
                         title: 'Error',
                         autoHideDelay: 5000
                     });
                 return;
             }
-            app.$bvToast.toast(message = 'Successfully operation on ' + game.name + ' as gameid ' + response.data.gameid,
+            app.$bvToast.toast(message = 'Successfully '+method+' on ' + game.name + ' as gameid ' + response.data.gameid,
                 options = {
                     title: 'Success',
                     autoHideDelay: 5000
