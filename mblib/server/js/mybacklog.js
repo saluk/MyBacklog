@@ -1,8 +1,12 @@
 const fmtstr = "H:m:s YYYY-MM-DD"
 
 function pad(num) {
-    var s = "00" + num;
-    return s.substr(s.length-2);
+    var s = "" + num;
+    if(s.length<2) {
+        s = "00" + num;
+        return s.substr(s.length-2);
+    }
+    return s;
 }
 
 playtime_to_hour_min_sec = function(pt) {
@@ -57,6 +61,12 @@ var app = new Vue({
                 return '';
             }
             return game.sources[0]['source'];
+        },
+        row_color: function(game) {
+            if(game.finished){
+                return 'bg-success';
+            }
+            return 'bg-info';
         },
         nice_time: function(game) {
             return playtime_to_hour_min_sec(game.playtime);
@@ -117,6 +127,10 @@ var app = new Vue({
             this.edit_game = game;
             this.edit_game.lastplayed_local = moment.utc(game.lastplayed, fmtstr)
                                                     .local().format(fmtstr)
+            this.edit_game.finish_date_local = moment.utc(game.finish_date, fmtstr)
+                                                    .local().format(fmtstr)
+            this.edit_game.import_date_local = moment.utc(game.import_date, fmtstr)
+                                                    .local().format(fmtstr)
         },
         set_time_modal(game) {
             this.set_edit_game(game);
@@ -125,6 +139,10 @@ var app = new Vue({
         set_lastplayed_modal(game) {
             this.set_edit_game(game);
             this.$bvModal.show('edit_game_lastplayed');
+        },
+        edit_modal(game) {
+            this.set_edit_game(game);
+            this.$bvModal.show('edit_game_other');
         },
         playing_modal(game, init_request=true) {
             if(init_request){
@@ -145,7 +163,14 @@ var app = new Vue({
         send_game_updates() {
             this.edit_game.lastplayed = moment(this.edit_game.lastplayed_local, fmtstr)
                                               .utc().format(fmtstr);
+            this.edit_game.finish_date = moment(this.edit_game.finish_date_local, fmtstr)
+                                              .utc().format(fmtstr);
+            this.edit_game.import_date = moment(this.edit_game.import_date_local, fmtstr)
+                                              .utc().format(fmtstr);
             game_submit(this.edit_game, "rawdata", this.edit_game);
+        },
+        update_screenshots(source) {
+            update_screenshots(source);
         }
     }
 });
@@ -239,6 +264,7 @@ add_game = function(name, source) {
 }
 
 game_submit = function(game, message, data) {
+    app.$bvModal.hide('edit_game_other');
     var params = {
         user: app.username,
         gameid: game.gameid,
@@ -248,6 +274,8 @@ game_submit = function(game, message, data) {
     };
     if(message=="finished"){
         params['finished'] = 1;
+    } else if(message=="unfinished"){
+        params['finished'] = 0;
     } else if(message=="playtime"){
         params['playtime'] = data;
     } else if(message=="rawdata"){
@@ -308,6 +336,40 @@ games_method = function(game, method) {
         .catch(function(error) {
             console.log(error);
             app.$bvToast.toast(message = 'Error updating ' + game.name + ': ' + error,
+                options = {
+                    title: 'Error',
+                    autoHideDelay: 5000
+                });
+        });
+}
+
+update_screenshots = function(source) {
+    var params = {
+        user: app.username,
+        method: 'screenshots',
+        source: source
+    };
+    axios.patch('/update_method', params)
+        .then(function(response) {
+            console.log(response);
+            if (response.data.error) {
+                app.$bvToast.toast(message = 'Error updating screenshots.' + response.data.error,
+                    options = {
+                        title: 'Error',
+                        autoHideDelay: 5000
+                    });
+                return;
+            }
+            app.$bvToast.toast(message = 'Successfully started job update screenshots',
+                options = {
+                    title: 'Success',
+                    autoHideDelay: 5000
+                });
+            app.get_game_page(true);
+        })
+        .catch(function(error) {
+            console.log(error);
+            app.$bvToast.toast(message = 'Error updating screenshots',
                 options = {
                     title: 'Error',
                     autoHideDelay: 5000
