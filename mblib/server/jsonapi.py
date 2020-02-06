@@ -87,14 +87,14 @@ def game(user, game_name, source_name):
     if success:
         return {"gameid": game.gameid, "diff": diff}
     else:
-        return {"gameid": game.gameid, "diff": diff, "error": "message"}
+        return {"gameid": game.gameid, "diff": diff, "error": message}
 
 @hug.patch(examples="user=saluk&gameid=1234&finished=true")
 def game(user, gameid, finished=None, playtime=None, rawdata=None):
     user = User(user, load_games=True)
     if not user.is_ready():
         return {"error":"no_games_saved"}
-    game = user.games.find(gameid)
+    game = user.games.find(gameid).copy()
     if not game:
         return {"error":"no game found"}
     toggle = False
@@ -120,7 +120,7 @@ def game(user, gameid, finished=None, playtime=None, rawdata=None):
     if success:
         return {"gameid": game.gameid, "diff": diff}
     else:
-        return {"gameid": game.gameid, "diff": diff, "error": "message"}
+        return {"gameid": game.gameid, "diff": diff, "error": message}
 
 
 @hug.patch(examples="user=saluk&method=start&gameid=123")
@@ -141,7 +141,43 @@ def games_method(user, method, gameid):
     if success:
         return {"gameid": game.gameid}
     else:
-        return {"gameid": game.gameid, "error": "message"}
+        return {"gameid": game.gameid, "error": message}
+
+
+@hug.patch(examples="user=saluk&method=screenshots&source=switch")
+def update_method(user, method, source=None):
+    user = User(user, load_games=True)
+    if not user.is_ready():
+        return {"error":"no_games_saved"}
+    if method not in ["screenshots"]:
+        return {"error":"invalid method"}
+
+    if source=="switch":
+        from mblib.apis import nintendo
+        converter = nintendo.find_screenshot
+    elif source=="epic":
+        from mblib.apis import epic
+        converter = epic.find_screenshot
+    else:
+        return {"error":"no image converter for source "+source}
+    
+    changed = None
+    for g in user.games.list():
+        if not g.get_source(source):
+            continue
+        #if g.images:
+        #    continue
+        img_url = converter(g.name)
+        g.images = []
+        g.images.append({"url": img_url, "size": "icon"})
+        changed = True
+
+    user.games.revision += 1
+    success, message = user.save_games()
+    if success:
+        return {}
+    else:
+        return {"error": message}
 
 
 @hug.get(examples="user=saluk")

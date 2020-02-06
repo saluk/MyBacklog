@@ -65,7 +65,6 @@ class Game:
 
         self.name = ""
         self.playtime = 0
-        self.start_playing_time = 0
         self.finished = 0
         self.hidden = 0
         self.package_data = {}
