@@ -2,7 +2,7 @@
 
 import os
 import sys
-import json,difflib,xml.etree
+import json, difflib, xml.etree
 import xml.etree.cElementTree
 import hmac
 import sip
@@ -24,4 +24,5 @@ from concurrent import futures
 from bs4 import BeautifulSoup
 
 import mybacklog
+
 mybacklog.run()

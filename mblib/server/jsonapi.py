@@ -1,46 +1,56 @@
 import hug
 import sys, os, traceback
 import base64
+
 sys.path.insert(0, "../..")
 import mblib
 from mblib import games, syslog
 
 game_log = syslog.SysLog("games_log.txt")
 
+
 def nice_user(user):
-    fixed_user = "".join([x for x in user if x in "abcdefghijklmnopqrstuvwxyz0123456789"])
-    if user!=fixed_user:
+    fixed_user = "".join(
+        [x for x in user if x in "abcdefghijklmnopqrstuvwxyz0123456789"]
+    )
+    if user != fixed_user:
         raise Exception("Username must only contain english alpha and digits")
     return fixed_user
-        
+
+
 class User:
     def __init__(self, user):
         self.user = nice_user(user)
-        self.up = os.path.join("__users__",user)
-        self.game_path = os.path.join(self.up,"games.json")
+        self.up = os.path.join("__users__", user)
+        self.game_path = os.path.join(self.up, "games.json")
+
     def is_ready(self):
         return os.path.exists(self.game_path)
+
     def make_ready(self):
         if not os.path.exists("__users__"):
             os.mkdir("__users__")
         if not os.path.exists(self.up):
             os.mkdir(self.up)
 
-@hug.format.content_type('application/ubjson')            
+
+@hug.format.content_type("application/ubjson")
 def raw(data, request=None, response=None):
     return data
 
-@hug.get(examples="user=saluk",output=raw)
+
+@hug.get(examples="user=saluk", output=raw)
 def game_database(user):
     user = User(user)
     if not user.is_ready():
-        return {"error":"no_games_saved"}
-    with open(user.game_path,"rb") as gamef:
+        return {"error": "no_games_saved"}
+    with open(user.game_path, "rb") as gamef:
         data = gamef.read()
     return data
 
+
 @hug.put(examples="user=saluk")
-def game_database(body,user,input=raw):
+def game_database(body, user, input=raw):
     user = User(user)
     user.make_ready()
     try:
@@ -49,36 +59,42 @@ def game_database(body,user,input=raw):
         gdbmu.load_games(filedata=data)
     except:
         traceback.print_exc()
-        return {"error":"Not a valid game database"}
+        return {"error": "Not a valid game database"}
     try:
         gdbms = games.Games(log=game_log)
         gdbms.load_games(filename=user.game_path)
-        if gdbms.revision>gdbmu.revision:
-            return {"error":"server has newer revision","client_revision":gdbmu.revision,"server_revision":gdbms.revision}
+        if gdbms.revision > gdbmu.revision:
+            return {
+                "error": "server has newer revision",
+                "client_revision": gdbmu.revision,
+                "server_revision": gdbms.revision,
+            }
     except:
         pass
-    with open(user.game_path,"wb") as gamef:
+    with open(user.game_path, "wb") as gamef:
         gamef.write(data)
-    return {"msg":"success","size":len(data)}
-    
+    return {"msg": "success", "size": len(data)}
+
+
 @hug.get(examples="user=saluk")
 def games_revision(user):
     user = User(user)
     if not user.is_ready():
-        return {"server_revision":None}
+        return {"server_revision": None}
     try:
         gdbm = games.Games(log=game_log)
         gdbm.load_games(filename=user.game_path)
     except:
         traceback.print_exc()
-        return {"error":"Error loading game database"}
-    return {"server_revision":gdbm.revision}
-    
+        return {"error": "Error loading game database"}
+    return {"server_revision": gdbm.revision}
+
+
 @hug.post(examples="user=saluk")
 def bump_revision(user):
     user = User(user)
     if not user.is_ready():
-        return {"error":"user not initialized"}
+        return {"error": "user not initialized"}
     try:
         gdbm = games.Games(log=game_log)
         gdbm.load_games(filename=user.game_path)
@@ -86,5 +102,5 @@ def bump_revision(user):
         gdbm.save(user.game_path)
     except:
         traceback.print_exc()
-        return {"error":"Error loading game database"}
-    return {"server_revision":gdbm.revision}
+        return {"error": "Error loading game database"}
+    return {"server_revision": gdbm.revision}

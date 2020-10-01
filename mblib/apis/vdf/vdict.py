@@ -2,21 +2,26 @@ import sys
 from collections import Counter
 
 if sys.version_info[0] >= 3:
-    _iter_values = 'values'
+    _iter_values = "values"
     _range = range
     _string_type = str
     import collections as _c
+
     class _kView(_c.KeysView):
         def __iter__(self):
             return self._mapping.iterkeys()
+
     class _vView(_c.ValuesView):
         def __iter__(self):
             return self._mapping.itervalues()
+
     class _iView(_c.ItemsView):
         def __iter__(self):
             return self._mapping.iteritems()
+
+
 else:
-    _iter_values = 'itervalues'
+    _iter_values = "itervalues"
     _range = xrange
     _string_type = basestring
     _kView = lambda x: list(x.iterkeys())
@@ -42,7 +47,9 @@ class VDFDict(dict):
 
         if data is not None:
             if not isinstance(data, (list, dict)):
-                raise ValueError("Expected data to be list of pairs or dict, got %s" % type(data))
+                raise ValueError(
+                    "Expected data to be list of pairs or dict, got %s" % type(data)
+                )
             self.update(data)
 
     def __repr__(self):
@@ -85,8 +92,10 @@ class VDFDict(dict):
 
     def __getitem__(self, key):
         return super(VDFDict, self).__getitem__(self._normalize_key(key))
+
     def __contains__(self, key):
         return super(VDFDict, self).__contains__(self._normalize_key(key))
+
     def get(self, key, *args):
         return super(VDFDict, self).get(self._normalize_key(key), *args)
 
