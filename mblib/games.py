@@ -91,6 +91,8 @@ class Game:
         ("notes", "s"),
         ("priority", "p"),
         ("finish_date", "d"),
+        ("save_path", "s"),
+        ("save_filter", "s")
     ]
 
     def __init__(self, **kwargs):
@@ -113,6 +115,8 @@ class Game:
         self.priority = 0
         self.priority_date = ""
         self.local_files = []
+        self.save_path = ""
+        self.save_filter = ""
 
         self.website = ""
         self.savekeys = set(dir(self)) - dontsavekeys
@@ -197,7 +201,7 @@ class Game:
 
     def generate_gameid(self):
         """Used to generate the intial gameid, before collisions are checked when checking into the db"""
-        pool = hmac.new(b"", digestmod='md5')
+        pool = hmac.new(b"", digestmod="md5")
         if self.sources:
             for s in self.sources:
                 pool.update(bytes(s["source"], "utf8"))
@@ -544,11 +548,13 @@ class Game:
         if self.gameid not in local_data:
             local_data[self.gameid] = {}
         local_data[self.gameid]["files"] = self.local_files
+        local_data[self.gameid]["save_path"] = self.save_path
 
     def inject_local_data(self, local_data):
         if self.gameid not in local_data:
             return
         self.local_files = local_data[self.gameid]["files"]
+        self.save_path = local_data[self.gameid].get("save_path", "")
 
 
 test1 = Game(name="blah")

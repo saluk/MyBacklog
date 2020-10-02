@@ -356,6 +356,17 @@ class EditGame(QWidget):
             layout.addWidget(button, i, 3)
             button.clicked.connect(make_callback(self.open_filepath, edit))
 
+        if prop == "save_path":
+            button = QPushButton("...")
+            button.setFixedWidth(32)
+            layout.addWidget(button, i, 2)
+            button.clicked.connect(make_callback(self.set_savepath, edit))
+
+            button = QPushButton("-->")
+            button.setFixedWidth(32)
+            layout.addWidget(button, i, 3)
+            button.clicked.connect(make_callback(self.open_savepath, edit))
+
         if prop == "image_edit":
             button = QPushButton("...")
             button.setFixedWidth(32)
@@ -387,6 +398,22 @@ class EditGame(QWidget):
         w.setText(filename.replace("/", os.path.sep))
 
     def open_filepath(self, w):
+        import os
+
+        s = w.text()
+        if not os.path.isdir(s):
+            s = os.path.split(s)[0]
+        filename = QDesktopServices.openUrl(QUrl("file:///" + s, QUrl.TolerantMode))
+
+    def set_savepath(self, w):
+        foldername = QFileDialog.getExistingDirectory(
+            self,
+            "Open Save Root Path",
+            w.text()
+        )[0]
+        w.setText(filename.replace("/", os.path.sep))
+
+    def open_savepath(self, w):
         import os
 
         s = w.text()
