@@ -7,6 +7,7 @@ from PyQt5.QtGui import *
 
 from mblib.resources import icons
 from mblib import games
+from mblib.interface.widgets.menu_button import MenuButton
 
 
 def make_callback(f, *args):
@@ -529,22 +530,8 @@ class GameOptions(QWidget):
         play_options.append(
             ("Track Time", make_callback(self.app.run_game_track_only, game))
         )
-
-        run = QToolButton()
-        run.setText(play_options[0][0])
-        run.clicked.connect(play_options[0][1])
-        run.setToolButtonStyle(Qt.ToolButtonTextOnly)
-        run.setPopupMode(QToolButton.MenuButtonPopup)
-        run.setFixedHeight(40)
-        run.setMinimumWidth(100)
-        run.setBackgroundRole(QPalette.Highlight)
-        if play_options[1:]:
-            m = QMenu()
-            run.setMenu(m)
-        for opt in play_options[1:]:
-            action = m.addAction(opt[0])
-            action.triggered.connect(opt[1])
-        buttons.addWidget(run)
+    
+        buttons.addWidget(MenuButton(play_options))
 
         if game.needs_download():
             download = QPushButton("Download")
@@ -578,6 +565,21 @@ class GameOptions(QWidget):
                 make_callback(self.app.operation, "set", game, "hidden", 1)
             )
             buttons.addWidget(w)
+
+        if game.save_path and game.save_filter:
+            save_options = [
+                ["Backup Save", make_callback(
+                    game.new_backup, self.app
+                )]
+            ]
+            for saved_game in game.get_saves(self.app):
+                save_options.append(
+                    ["Restore "+saved_game.date_str, make_callback(
+                        game.restore_save, self.app, saved_game
+                    )]
+                )
+            buttons.addWidget(MenuButton(save_options))
+
         w = QPushButton("Gamesdb")
         w.clicked.connect(make_callback(self.app.gamesdb, game))
         buttons.addWidget(w)

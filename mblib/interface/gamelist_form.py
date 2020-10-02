@@ -556,6 +556,7 @@ class GamelistForm(QWidget):
             os.makedirs(self.path_base)
         root = {
             "games": self.path_base + "/games.ubjson",
+            "save_backups": self.path_base + "/saves",
             "local": self.path_base + "/local.json",
             "accounts": self.path_base + "/accounts.json",
             "root_config": self.path_base + "/root.json",
@@ -577,10 +578,15 @@ class GamelistForm(QWidget):
             "/cache/batches",
             "/cache/icons",
             "/cache/extract",
-            "/cache/browser",
+            "/cache/browser"
         ]:
             if not os.path.exists(root["root"] + path):
                 os.mkdir(root["root"] + path)
+        for path in [
+            self.config["save_backups"]
+        ]:
+            if not os.path.exists(path):
+                os.mkdir(path)
 
         account = {
             "steam": {"api": "", "shortcut_folder": "", "id": "", "userfile": ""},

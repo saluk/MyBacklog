@@ -5,6 +5,7 @@ import datetime
 import json
 import ubjson
 import gzip
+import zipfile
 import hmac
 import copy
 import io
@@ -555,6 +556,64 @@ class Game:
             return
         self.local_files = local_data[self.gameid]["files"]
         self.save_path = local_data[self.gameid].get("save_path", "")
+
+    def new_backup(self, app):
+        if not self.save_path and not self.save_filter:
+            raise Exception("Game doesn't know about saves")
+        folder = app.config["save_backups"]
+        our_folder = folder + "/" + self.gameid
+        if not os.path.exists(our_folder):
+            os.mkdir(our_folder)
+        fn = str(int(time.time()))+".mbs"
+
+        def match_pattern_file(pattern, filename):
+            if filename == pattern:
+                return True
+
+        def match_pattern(pattern, path):
+            for root, dirs, files in os.walk(path):
+                for name in files:
+                    if match_pattern_file(pattern, name):
+                        yield os.path.join(root, name)
+
+        sp = self.save_path
+        if not sp.endswith("/"):
+            sp += "/"
+        with zipfile.ZipFile(our_folder + '/' + fn, 'x') as zf:
+            for pattern in self.save_filter.split(","):
+                for file_bit in match_pattern(pattern, self.save_path):
+                    zf.write(file_bit, file_bit.replace(sp, ""))
+
+    def restore_save(self, app, save):
+        if not self.save_path and not self.save_filter:
+            raise Exception("Game doesn't know about saves")
+        folder = app.config["save_backups"]
+        our_folder = folder + "/" + self.gameid
+        if not os.path.exists(our_folder):
+            raise Exception("Save doesn't actually exist")
+        with zipfile.ZipFile(our_folder + '/' + save.filename, 'r') as zf:
+            for fn in zf.namelist():
+                zf.extract(fn, self.save_path)
+
+    def get_saves(self, app):
+        class SavedGame():
+            def __init__(self, filename):
+                self.filename = filename
+                self.date = int(filename.replace(".mbs", ""))
+                self.date_str = str(self.date)
+        folder = app.config["save_backups"]
+        our_folder = folder + "/" + self.gameid
+        if not os.path.exists(our_folder):
+            return []
+        saves = []
+        for fn in os.listdir(our_folder):
+            if not fn.endswith(".mbs"):
+                continue
+            saves.append(
+                SavedGame(fn)
+            )
+        return sorted(saves, key=lambda s: s.date)
+
 
 
 test1 = Game(name="blah")
