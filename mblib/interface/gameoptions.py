@@ -1,4 +1,5 @@
 import time
+import os
 
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
@@ -383,7 +384,7 @@ class EditGame(QWidget):
             "Executable/Rom (*.app *.exe *.lnk *.cmd *.bat %s)"
             % self.game.rom_extension,
         )[0]
-        w.setText(filename.replace("/", "\\"))
+        w.setText(filename.replace("/", os.path.sep))
 
     def open_filepath(self, w):
         import os

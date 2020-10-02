@@ -1,4 +1,5 @@
 import json
+import os
 
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
@@ -199,7 +200,7 @@ class AccountForm(QWidget):
         filename = QFileDialog.getOpenFileName(
             self, "Open Executable", w.text(), "Executable (*.vdf)"
         )[0]
-        w.setText(filename.replace("/", "\\"))
+        w.setText(filename.replace("/", os.path.sep))
 
     def save_close(self):
         save = {}

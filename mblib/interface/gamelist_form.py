@@ -79,6 +79,8 @@ class SyncThread(QThread):
             self.func2()
 
     def begin_work(self):
+        if self.isRunning():
+            return
         self.app.window().set_mode("syncing")
         self.finished.connect(self.app.window().set_mode)
         self.start()
@@ -172,6 +174,7 @@ class MyBacklog(PyQt5.Qt.QApplication):
         print(os.environ)
         print(os.path.dirname(PyQt5.__file__))
         self.setAttribute(Qt.AA_EnableHighDpiScaling)
+        self.setAttribute(Qt.AA_DontUseNativeMenuBar)
         print(os.path.join(os.path.dirname(PyQt5.__file__), "Qt", "plugins"))
         print("Build mybacklog")
         self.window = MyBacklogWindow(self)
@@ -310,7 +313,7 @@ class MyBacklogWindow(QMainWindow):
 
     def really_close(self):
         self.trayicon.setVisible(False)
-        [t.wait() for t in self.main_form.threads]
+        [t.wait(1000) for t in self.main_form.threads]
         self.exit_requested = True
         self.close()
 
@@ -548,7 +551,7 @@ class GamelistForm(QWidget):
         self.crypter = enc.Crypter()
         from mblib.appdirs import appdirs
 
-        self.path_base = appdirs.user_data_dir("MyBacklog").replace("\\", "/")
+        self.path_base = appdirs.user_data_dir("MyBacklog").replace(os.path.sep, "/")
         if not os.path.exists(self.path_base):
             os.makedirs(self.path_base)
         root = {
@@ -708,14 +711,12 @@ class GamelistForm(QWidget):
 
     def process_icons(self):
         for widget, game, size in self.icon_processes:
-            print("gen icon for",repr(game.name), size)
             icon = icons.icon_for_game(
                 game, self.icon_size, self.gicons, self.config["root"]
             )
             if icon:
                 widget.setSizeHint(QSize(size, size))
                 widget.setIcon(icon)
-                print(widget.sizeHint())
 
     def set_icon(self, widget, game, size):
         self.icon_processes.append((widget, game, self.icon_size))
@@ -780,7 +781,8 @@ class GamelistForm(QWidget):
         label.setFlags(Qt.ItemIsSelectable | Qt.ItemIsEnabled)
         label.setBackground(bg)
         self.set_icon(label, game, self.icon_size)
-        self.icon_thread.start()
+        if not self.icon_thread.isRunning():
+            self.icon_thread.start()
         list_widget.setItem(row, 1, label)
 
         name = QTableWidgetItem("GAME NAME")

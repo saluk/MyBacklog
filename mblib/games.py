@@ -197,7 +197,7 @@ class Game:
 
     def generate_gameid(self):
         """Used to generate the intial gameid, before collisions are checked when checking into the db"""
-        pool = hmac.new(b"")
+        pool = hmac.new(b"", digestmod='md5')
         if self.sources:
             for s in self.sources:
                 pool.update(bytes(s["source"], "utf8"))
@@ -330,7 +330,7 @@ class Game:
     @property
     def install_folder(self):
         """Full path to folder where executable is located"""
-        return self.install_path.rsplit("\\", 1)[0]
+        return self.install_path.rsplit(os.path.sep, 1)[0]
 
     @property
     def running_source(self):

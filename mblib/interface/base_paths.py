@@ -1,4 +1,5 @@
 import json
+import os
 
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
@@ -84,7 +85,7 @@ class PathsForm(QWidget):
         filename = QFileDialog.getSaveFileName(
             self, "Set filename", w.text(), "JSON (*.json)"
         )[0]
-        w.setText(filename.replace("/", "\\"))
+        w.setText(filename.replace("/", os.path.sep))
 
     def save_close(self):
         save = {}

@@ -1,5 +1,6 @@
 import json
 import copy
+import os
 
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
@@ -93,7 +94,7 @@ class EmulatorForm(QWidget):
         filename = QFileDialog.getOpenFileName(
             self, "Open Executable", w.text(), "Executable (*)"
         )[0]
-        w.setText(filename.replace("/", "\\"))
+        w.setText(filename.replace("/", os.path.sep))
 
     def save_close(self):
         for emu in self.fields:

@@ -9,10 +9,7 @@ except:
     winreg = None
 
 
-def psutil():
-    import psutil
-
-    return psutil
+import psutil
 
 
 run_with_steam = 1
@@ -84,10 +81,10 @@ class ExeSource(Source):
                 stderr=sys.stderr,
             )
 
-    def get_run_args(self, game, source, cache_root, write_batch=True):
+    def get_run_args_win(self, game, source, cache_root, write_batch=True):
         """Returns the method to run the game. Defaults to using a batch file to run the install_path exe"""
         folder = game.install_folder  # Navigate to executable's directory
-        root = folder.split("\\", 1)[0]
+        root = folder.split(os.path.sep, 1)[0]
         startupinfo = subprocess.STARTUPINFO()
         startupinfo.dwFlags = subprocess.STARTF_USESHOWWINDOW
         startupinfo.wShowWindow = 0
@@ -118,6 +115,20 @@ class ExeSource(Source):
             folder = os.path.abspath(cache_root + "/cache/batches/")
         return args, folder, search
 
+    def get_run_args_mac(self, game, source, cache_root, write_batch=True):
+        """Returns the method to run the game."""
+        folder = game.install_folder  # Navigate to executable's directory
+        root = folder.split("/", 1)[0]
+        exe = game.install_path.rsplit("/", 1)[1]
+        args = ['open', exe]
+        search = exe
+        return args, folder, search
+
+    def get_run_args(self, game, source, cache_root, write_batch=True):
+        if os.system == 'win':
+            return self.get_run_args_win(game, source, cache_root, write_batch)
+        return self.get_run_args_mac(game, source, cache_root, write_batch)
+
     def run_game(self, game, source, cache_root):
         creationflags = 0
         shell = True
@@ -147,12 +158,24 @@ class ExeSource(Source):
             game, data, app.config["root"], write_batch=False
         )
         print("search:", search)
-        procs = [
-            proc.name()
-            for proc in psutil().process_iter()
-            if search.lower() in proc.name().lower()
-        ]
-        return bool(procs)
+        search = search.lower()
+        for proc in psutil.process_iter():
+            if search in proc.name().lower():
+                return True
+            try:
+                cmd = " ".join(proc.cmdline()).lower()
+                print(cmd)
+                if search in cmd:
+                    return True
+            except Exception:
+                pass
+            try:
+                exe = proc.exe().lower()
+                print(exe)
+                if search in exe:
+                    return True
+            except Exception:
+                pass
 
 
 class EpicSource(ExeSource):
@@ -161,7 +184,7 @@ class EpicSource(ExeSource):
         import json
 
         folder = game.install_folder
-        root = folder.split("\\", 1)[0]
+        root = folder.split(os.path.sep, 1)[0]
         appname = None
         for filename in os.listdir(folder + "/.egstore"):
             if filename.endswith(".mancpn"):
@@ -289,7 +312,7 @@ class GogSource(ExeSource):
 
     def game_is_running(self, game, data, app):
         if not winreg:
-            return False
+            return super().game_is_running(game, data, app)
         cwd, exe = None, None
         for gog_game in windows_registry_entries(
             "SOFTWARE\\WOW6432Node\\GOG.com\\Games"
