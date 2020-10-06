@@ -63,7 +63,7 @@ BAD_GAMEID = InvalidId("Do not save me")
 
 
 def get_source(s):
-    return sources.all[s]
+    return sources.all.get(s, sources.Source(s))
 
 
 # TODO this should be cleaned up

@@ -31,86 +31,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtNetwork import *
 from PyQt5.QtWebEngineWidgets import *
 
-
-class ProcessIconsThread(QThread):
-    app = None
-
-    def run(self):
-        print("running icons")
-        try:
-            self.app.process_icons()
-        except:
-            traceback.print_exc()
-
-
-class ImportThread(QThread):
-    app = None
-    func = None
-
-    def run(self):
-        try:
-            self.func(self.app)
-        except:
-            traceback.print_exc()
-
-
-class SyncThread(QThread):
-    app = None
-    func = None
-    func2 = None
-    do_upload = True
-    do_download = True
-
-    def run(self):
-        if self.do_download:
-            try:
-                if sync.download():
-                    self.app.update_gamelist_widget()
-            except Exception:
-                traceback.print_exc()
-        if self.func:
-            self.func()
-        if self.do_upload:
-            try:
-                sync.upload()
-            except Exception:
-                traceback.print_exc()
-        if self.func2:
-            self.func2()
-
-    def begin_work(self):
-        if self.isRunning():
-            return
-        self.app.window().set_mode("syncing")
-        self.finished.connect(self.app.window().set_mode)
-        self.start()
-
-    def upload(self, func=None):
-        self.func = func
-        self.do_download = False
-        self.do_upload = True
-        self.begin_work()
-
-    def download(self, func=None):
-        self.func = func
-        self.do_download = True
-        self.do_upload = False
-        self.begin_work()
-
-    def sync(self, func1, func2):
-        self.func = func1
-        self.func2 = func2
-        self.do_download = True
-        self.do_upload = True
-        self.begin_work()
-
-    def export_steam(self):
-        def func1():
-            self.app.steam.export()
-
-        self.func = func1
-        self.do_download = self.do_upload = False
-        self.begin_work()
+from mblib.interface.threads import ProcessThread
 
 
 class BrowserAuth(QWidget):
@@ -197,13 +118,14 @@ class MyBacklog(PyQt5.Qt.QApplication):
 
     def change_focus(self, oldwindow, newwindow):
         if newwindow and not oldwindow and not self.game_form.running:
-            self.game_form.sync_thread.download()
+            self.game_form.process_thread.download()
 
 
 class MyBacklogWindow(QMainWindow):
     def __init__(self, app):
         super(MyBacklogWindow, self).__init__(None)
         self.app = app
+        self.exit_requested = False
 
         self.setWindowIcon(QIcon(QPixmap("icons/main.png")))
         self.main_form = GamelistForm(self)
@@ -224,7 +146,6 @@ class MyBacklogWindow(QMainWindow):
 
         menus["file"].addAction(QAction("&Exit", self, triggered=self.really_close))
         self.menus = menus
-        self.exit_requested = False
 
         self.setCentralWidget(self.main_form)
 
@@ -468,22 +389,19 @@ class GamelistForm(QWidget):
 
         self.threads = []
 
+        self.sync_status = {'msg':'done'}
+        self.syncTimer = QTimer(self)
+        self.syncTimer.setInterval(500)
+        self.syncTimer.timeout.connect(self.set_sync_state)
+        self.syncTimer.start()
+
         self.icon_processes = []
-        self.icon_thread = ProcessIconsThread()
-        self.icon_thread.app = self
-        self.threads.append(self.icon_thread)
+        self.process_thread = ProcessThread()
+        self.process_thread.gamelist = self
+        self.threads.append(self.process_thread)
+        self.process_thread.start()
 
-        ImportThread.app = self
-        self.importer_threads = {
-            "gog": ImportThread(),
-            "steam": ImportThread(),
-            "humble": ImportThread(),
-        }
-        self.threads.extend([x for x in self.importer_threads.values()])
-
-        self.sync_thread = SyncThread()
-        self.sync_thread.app = self
-        self.threads.append(self.sync_thread)
+        self.importer_threads = []
 
         self.detected_game_start = False
         self.timer = QTimer(self)
@@ -505,6 +423,12 @@ class GamelistForm(QWidget):
 
         self.adjustSize()
 
+    def set_sync_state(self):
+        if self.sync_status['msg'] == "syncing":
+            self.window().set_mode("syncing")
+        elif self.sync_status['msg'] == "done":
+            self.window().set_mode()
+
     def zoom_icon(self, amt):
         self.icon_size += amt
         self.config["icon_size"] = self.icon_size
@@ -517,7 +441,7 @@ class GamelistForm(QWidget):
 
     def file_upload(self):
         """Do an upload"""
-        self.sync_thread.upload()
+        self.process_thread.upload()
 
     def log_if_window(self, text):
         self.logwindow_lock.acquire()
@@ -620,7 +544,7 @@ class GamelistForm(QWidget):
         print("loading games", self.config["games"])
         self.games.load(self.config["games"], self.config["local"])
         mblib.last_revision_loaded = self.games.revision
-        self.sync_thread.download()
+        self.process_thread.download()
         self.gamelist = []
         self.update_gamelist_widget()
 
@@ -715,15 +639,6 @@ class GamelistForm(QWidget):
         row = self.get_row_for_game(game)
         self.games_list_widget.setCurrentCell(row, 2)
 
-    def process_icons(self):
-        for widget, game, size in self.icon_processes:
-            icon = icons.icon_for_game(
-                game, self.icon_size, self.gicons, self.config["root"]
-            )
-            if icon:
-                widget.setSizeHint(QSize(size, size))
-                widget.setIcon(icon)
-
     def set_icon(self, widget, game, size):
         self.icon_processes.append((widget, game, self.icon_size))
 
@@ -787,8 +702,6 @@ class GamelistForm(QWidget):
         label.setFlags(Qt.ItemIsSelectable | Qt.ItemIsEnabled)
         label.setBackground(bg)
         self.set_icon(label, game, self.icon_size)
-        if not self.icon_thread.isRunning():
-            self.icon_thread.start()
         list_widget.setItem(row, 1, label)
 
         name = QTableWidgetItem("GAME NAME")
@@ -890,7 +803,7 @@ class GamelistForm(QWidget):
         self.import_humble()
 
     def import_export_steam(self):
-        self.sync_thread.export_steam()
+        self.process_thread.export_steam()
 
     def import_steam(self):
         self.view_log()
@@ -908,8 +821,7 @@ class GamelistForm(QWidget):
             self.save()
             self.log.write("STEAM IMPORT FINISHED")
 
-        self.importer_threads["steam"].func = f
-        self.importer_threads["steam"].start()
+        self.importer_threads.append(['steam', f])
 
     def import_humble(self):
         self.view_log()
@@ -927,8 +839,7 @@ class GamelistForm(QWidget):
             self.save()
             self.log.write("HUMBLE IMPORT FINISHED")
 
-        self.importer_threads["humble"].func = f
-        self.importer_threads["humble"].start()
+        self.importer_threads.append(['humble', f])
 
     def import_gog(self):
         self.view_log()
@@ -948,8 +859,7 @@ class GamelistForm(QWidget):
             self.save()
             self.log.write("GOG IMPORT FINISHED")
 
-        self.importer_threads["gog"].func = f
-        self.importer_threads["gog"].start()
+        self.importer_threads.append(['gog', f])
 
     def cleanup_add_steam_shortcuts(self):
         self.steam.create_nonsteam_shortcuts(self.games.games)
@@ -1030,7 +940,7 @@ class GamelistForm(QWidget):
         def after_sync():
             self.update_gamelist_widget()
 
-        self.sync_thread.sync(before_sync, after_sync)
+        self.process_thread.sync(before_sync, after_sync)
 
     def force_update(self, game, oldid):
         updated_game = self.games.force_update_game(oldid, game)

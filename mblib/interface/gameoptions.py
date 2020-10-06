@@ -407,11 +407,12 @@ class EditGame(QWidget):
         filename = QDesktopServices.openUrl(QUrl("file:///" + s, QUrl.TolerantMode))
 
     def set_savepath(self, w):
-        foldername = QFileDialog.getExistingDirectory(
+        filename = QFileDialog.getExistingDirectory(
             self,
             "Open Save Root Path",
-            w.text()
-        )[0]
+            w.text(),
+            options=QFileDialog.DontUseNativeDialog
+        )
         w.setText(filename.replace("/", os.path.sep))
 
     def open_savepath(self, w):
