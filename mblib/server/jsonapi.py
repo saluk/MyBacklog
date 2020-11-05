@@ -1,6 +1,7 @@
 import hug
 import sys, os, traceback
 import base64
+
 sys.path.insert(0, "../..")
 import mblib
 from mblib import games, syslog
@@ -11,12 +12,16 @@ from mblib import games, syslog
 def not_found_handler():
     return "Not Found"
 
+
 def nice_user(user):
-    fixed_user = "".join([x for x in user if x in "abcdefghijklmnopqrstuvwxyz0123456789"])
-    if user!=fixed_user:
+    fixed_user = "".join(
+        [x for x in user if x in "abcdefghijklmnopqrstuvwxyz0123456789"]
+    )
+    if user != fixed_user:
         raise Exception("Username must only contain english alpha and digits")
     return fixed_user
-        
+
+
 class User:
     def __init__(self, user, load_games=False):
         self.user = nice_user(user)
@@ -25,8 +30,10 @@ class User:
         self.games = None
         if load_games:
             self.load_games()
+
     def is_ready(self):
         return os.path.exists(self.game_path)
+
     def make_ready(self):
         if not os.path.exists("__users__"):
             os.mkdir("__users__")
@@ -45,7 +52,8 @@ class User:
         except:
             return (False, traceback.format_exc())
 
-@hug.format.content_type('application/ubjson')            
+
+@hug.format.content_type("application/ubjson")
 def raw(data, request=None, response=None):
     return data
 
@@ -191,10 +199,11 @@ def sources(user):
 def game_database(user):
     user = User(user)
     if not user.is_ready():
-        return {"error":"no_games_saved"}
-    with open(user.game_path,"rb") as gamef:
+        return {"error": "no_games_saved"}
+    with open(user.game_path, "rb") as gamef:
         data = gamef.read()
     return data
+
 
 @hug.put(examples="user=saluk")
 def game_database(body, user, input=raw):
@@ -215,21 +224,23 @@ def game_database(body, user, input=raw):
         }
     with open(user.game_path,"wb") as gamef:
         gamef.write(data)
-    return {"msg":"success","size":len(data)}
-    
+    return {"msg": "success", "size": len(data)}
+
+
 @hug.get(examples="user=saluk")
 def games_revision(user):
     user = User(user)
     if not user.is_ready():
-        return {"server_revision":None}
+        return {"server_revision": None}
     try:
         gdbm = games.Games()
         gdbm.load_games(filename=user.game_path)
     except:
         traceback.print_exc()
-        return {"error":"Error loading game database"}
-    return {"server_revision":gdbm.revision}
-    
+        return {"error": "Error loading game database"}
+    return {"server_revision": gdbm.revision}
+
+
 @hug.post(examples="user=saluk")
 def bump_revision(user):
     user = User(user, load_games=True)
