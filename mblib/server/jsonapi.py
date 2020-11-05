@@ -197,7 +197,7 @@ def game_database(user):
     return data
 
 @hug.put(examples="user=saluk")
-def game_database(body,user,input=raw):
+def game_database(body, user, input=raw):
     user = User(user, load_games=True)
     user.make_ready()
     try:
@@ -207,11 +207,11 @@ def game_database(body,user,input=raw):
     except:
         traceback.print_exc()
         return {"error":"Not a valid game database"}
-    if user.games and gdbms.revision > user.games.revision:
+    if user.games and gdbmu.revision < user.games.revision:
         return {
             "error":"server has newer revision",
             "client_revision":user.games.revision,
-            "server_revision":gdbms.revision
+            "server_revision":gdbmu.revision
         }
     with open(user.game_path,"wb") as gamef:
         gamef.write(data)

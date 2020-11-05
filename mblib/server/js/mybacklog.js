@@ -132,6 +132,12 @@ var app = new Vue({
             this.edit_game.import_date_local = moment.utc(game.import_date, fmtstr)
                                                     .local().format(fmtstr)
         },
+        clear_edit_game() {
+            if(this.edit_game){
+                this.edit_game = null;
+            }
+            this.$bvModal.hide('edit_game_other');
+        },
         set_time_modal(game) {
             this.set_edit_game(game);
             this.$bvModal.show('edit_game_playtime');
@@ -145,6 +151,7 @@ var app = new Vue({
             this.$bvModal.show('edit_game_other');
         },
         playing_modal(game, init_request=true) {
+            this.clear_edit_game();
             if(init_request){
                 games_method(game, 'start_playing_game');
             }
