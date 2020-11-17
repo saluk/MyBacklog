@@ -1,0 +1,3 @@
+NAME: "mbserv"
+ENVNAME: ".pypyenv"
+PYTHONVER: "/usr/bin/pypy3"
