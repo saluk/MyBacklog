@@ -1,1 +1,1 @@
-.pypyenv/bin/hug -f jsonapi.py -ho 0.0.0.0 -p 5000
+.env/bin/hug -f jsonapi.py -ho 0.0.0.0 -p 5000
