@@ -129,6 +129,8 @@ class Game:
                 self.images.append({"size": "logo", "url": kwargs[k]})
             elif hasattr(self, k):
                 setattr(self, k, kwargs[k])
+        if not self.images:
+            self.images.append({"size": "logo", "url": ""})
         if "minutes" in kwargs:
             self.playtime = datetime.timedelta(
                 minutes=kwargs["minutes"]
@@ -274,6 +276,7 @@ class Game:
             self.finish_date = self.lastplayed
         else:
             self.finish_data = now()
+
     def unfinish(self):
         self.finished = 0
         self.finish_date = ""
