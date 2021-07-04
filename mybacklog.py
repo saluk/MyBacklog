@@ -14,6 +14,7 @@ def run():
 
     print(PyQt5.Qt.PYQT_VERSION_STR)
     print(sys.version)
+    print(sys.platform)
 
     if os.path.exists("PyQt5/plugins"):
         QtCore.QCoreApplication.addLibraryPath("PyQt5/plugins")
@@ -24,9 +25,9 @@ def run():
     )
 
     print("INITIALIZE")
-    # FIXME: Only set the platform to windows on windows!
-    # awareness = ["-platform", "windows:dpiawareness=0"]
     awareness = []
+    if sys.platform == "win32":
+        awareness = ["-platform", "windows:dpiawareness=0"]
     app = MyBacklog(base_args=sys.argv + awareness)
     sys.exit(app.exec_())
 
