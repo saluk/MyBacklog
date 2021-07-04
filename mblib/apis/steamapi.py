@@ -227,9 +227,10 @@ def get_games(apikey=MY_API_KEY,userid=MY_STEAM_ID):
         raise ApiError()
     return data
 
-def import_steam(apikey=MY_API_KEY,userid=MY_STEAM_ID,cache_root=".",user_data=None,logger=None):
+def import_steam(apikey=MY_API_KEY,userid=MY_STEAM_ID,cache_root=".",user_data=None,logger=None,vdict=None):
     #apps = load_userdata()["UserLocalConfigStore"]["Software"]["valve"]["Steam"]["apps"]
     apps = {}
+    print(vdict)
     if user_data:
         print("loading", user_data["userlocalconfigstore"]
               ["software"]["valve"]["steam"]["apps"])
@@ -239,6 +240,8 @@ def import_steam(apikey=MY_API_KEY,userid=MY_STEAM_ID,cache_root=".",user_data=N
     for g in get_games(apikey,userid):
         set_finished = 0
         if g in is_finished:
+            set_finished = 1
+        if get_is_finished(str(g["appid"]),vdict):
             set_finished = 1
         icon_url = ""
         logo_url = ""
@@ -253,12 +256,14 @@ def import_steam(apikey=MY_API_KEY,userid=MY_STEAM_ID,cache_root=".",user_data=N
             if lp:
                 lastplayed=games.sec_to_ts(int(lp))
         #print(g)
+        finish_date = lastplayed if set_finished else ""
         game = games.Game(name=g["name"],
                             minutes=g["playtime_forever"],
                             finished=set_finished,
                             sources=[
                                 {"source":"steam","id":str(g["appid"])}
                             ],
+                            finish_date=finish_date,
                             lastplayed=lastplayed,
                             icon_url=icon_url,
                             logo_url=logo_url,
@@ -372,11 +377,12 @@ class Steam:
         return paths
     def import_steam(self):
         games = {}
+        vdict = ParsedVdf(self.shared_config)
         try:
-            games = import_steam(self.api_key,self.user_id,self.app.config["root"],self.userdata,self.app.log)
+            games = import_steam(self.api_key,self.user_id,self.app.config["root"],self.userdata,self.app.log,vdict)
         except ApiError:
             user_id = get_user_id(self.profile_name)
-            games = import_steam(self.api_key,user_id,self.app.config["root"],self.userdata,self.app.log)
+            games = import_steam(self.api_key,user_id,self.app.config["root"],self.userdata,self.app.log,vdict)
             if user_id != self.user_id:
                 self.user_id = user_id
         self.update_local_games(games)
@@ -530,6 +536,14 @@ def create_nonsteam_shortcuts(gamelist,shortcutpath,filecache_root=""):
     with open(shortcutpath,"wb") as f:
         f.write(vdf.binary_dumps(vdf.VDFDict({"shortcuts":toklist(current_cuts)})))
     print ("saved")
+def get_is_finished(steamid,vdict):
+    apps = vdict["UserRoamingConfigStore"]["Software"]["Valve"]["Steam"]["apps"]
+    if not steamid in apps.parsed:
+        return False
+    if not "tags" in apps.parsed[steamid]:
+        apps.parsed[steamid]["tags"] = vdf.VDFDict({})
+    cats = tolist(apps.parsed[steamid]["tags"])
+    return 'finished' in [x.lower() for x in cats]
 def export_game_category(game,vdict):
     """Exports attributes from mybacklog into steam"""
     steamid = str(game.get_source("steam")["id"])

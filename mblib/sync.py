@@ -6,7 +6,7 @@ from mblib import games
 
 app = None
 user = "saluk"
-host = "mybacklog.tinycrease.com:5000"
+host = "mybacklog.tinycrease.com"
 
 mblib.last_revision_sent = -1
 mblib.last_revision_received = -1
