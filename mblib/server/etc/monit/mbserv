@@ -1,0 +1,5 @@
+
+
+check process mbserv with pidfile /var/run/mbserv.pid
+  start program = "/etc/init.d/mbserv start" 
+  stop program = "/etc/init.d/mbserv stop"

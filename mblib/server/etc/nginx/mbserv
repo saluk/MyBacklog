@@ -1,0 +1,11 @@
+server {
+    listen 80;
+    listen 443;
+    server_name mybacklog.tinycrease.com;
+    access_log /var/log/nginx/mybacklog.access.log;
+    error_log /var/log/nginx/mybacklog.error.log;
+
+    location / {
+        proxy_pass http://localhost:5000;
+    }
+}
