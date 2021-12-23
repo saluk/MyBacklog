@@ -1,4 +1,7 @@
 const fmtstr = "H:m:s YYYY-MM-DD"
+const fmt_datetime = "MMM DD, YYYY, h:mm A"
+"1:8:9 2021-09-30"
+const luxonfmt = "H:m:s yyyy-LL-dd"
 
 function pad(num) {
     var s = "" + num;
@@ -22,6 +25,16 @@ hour_min_sec_to_playtime = function(hour_sec) {
     return dur.as('seconds');
 }
 
+to_local_string = function(timestamp) {
+    return luxon.DateTime.fromFormat(timestamp, luxonfmt)
+        .setZone('UTC', {keepLocalTime: true})
+        .setZone('local').toString()
+}
+
+to_timestamp = function(local_string) {
+    return luxon.DateTime.fromISO(local_string).toLocal().setZone('UTC').toFormat(luxonfmt)
+}
+
 var params = new URLSearchParams(window.location.search);
 var username = params.get("username");
 
@@ -38,7 +51,7 @@ var app = new Vue({
         finished_filter: '',
         finished_options: [{
             'value': '',
-            text: 'Filter by finished'
+            text: 'All States'
         }, {
             'value': 0,
             'text': 'Unfinished'
@@ -88,6 +101,7 @@ var app = new Vue({
         },
         add_name: '',
         add_source: '',
+        add_nowplayed: 'nowplayed'
     },
     computed: {
         rows() {
@@ -119,18 +133,15 @@ var app = new Vue({
                     title: 'Adding Game',
                     autoHideDelay: 1000
                 });
-            add_game(this.add_name, this.add_source);
+            add_game(this.add_name, this.add_source, this.add_nowplayed);
             //this.add_name = '';
             //this.add_source = '';
         },
         set_edit_game(game) {
             this.edit_game = game;
-            this.edit_game.lastplayed_local = moment.utc(game.lastplayed, fmtstr)
-                                                    .local().format(fmtstr)
-            this.edit_game.finish_date_local = moment.utc(game.finish_date, fmtstr)
-                                                    .local().format(fmtstr)
-            this.edit_game.import_date_local = moment.utc(game.import_date, fmtstr)
-                                                    .local().format(fmtstr)
+            this.edit_game.lastplayed_local = to_local_string(game.lastplayed)
+            this.edit_game.finish_date_local = to_local_string(game.finish_date)
+            this.edit_game.import_date_local = to_local_string(game.import_date)
         },
         clear_edit_game() {
             if(this.edit_game){
@@ -168,12 +179,10 @@ var app = new Vue({
             this.edit_game.playtime = playtime;
         },
         send_game_updates() {
-            this.edit_game.lastplayed = moment(this.edit_game.lastplayed_local, fmtstr)
-                                              .utc().format(fmtstr);
-            this.edit_game.finish_date = moment(this.edit_game.finish_date_local, fmtstr)
-                                              .utc().format(fmtstr);
-            this.edit_game.import_date = moment(this.edit_game.import_date_local, fmtstr)
-                                              .utc().format(fmtstr);
+            console.log(this.edit_game.lastplayed_local)
+            this.edit_game.lastplayed = to_timestamp(this.edit_game.lastplayed_local)
+            this.edit_game.finish_date = to_timestamp(this.edit_game.finish_date_local)
+            this.edit_game.import_date = to_timestamp(this.edit_game.import_date_local)
             game_submit(this.edit_game, "rawdata", this.edit_game);
         },
         update_screenshots(source) {
@@ -222,7 +231,7 @@ load_sources = function() {
         .then(function(response) {
             var sources = [{
                 value: '',
-                text: 'filter by source',
+                text: 'all sources',
                 selected: true
             }];
             for (var key in response.data) {
@@ -238,11 +247,12 @@ load_sources = function() {
         });
 }
 
-add_game = function(name, source) {
+add_game = function(name, source, nowplayed) {
     axios.put('/game', {
             user: app.username,
             game_name: name,
-            source_name: source
+            source_name: source,
+            nowplayed: nowplayed
         })
         .then(function(response) {
             console.log(response);
@@ -309,6 +319,40 @@ game_submit = function(game, message, data) {
         .catch(function(error) {
             console.log(error);
             app.$bvToast.toast(message = 'Error updating ' + game.name + ': ' + error,
+                options = {
+                    title: 'Error',
+                    autoHideDelay: 5000
+                });
+        });
+}
+
+game_delete = function(game) {
+    app.$bvModal.hide('edit_game_other');
+    var params = {
+        user: app.username,
+        gameid: game.gameid,
+    };
+    axios.delete('/game', {data: params})
+        .then(function(response) {
+            console.log(response);
+            if (response.data.error) {
+                app.$bvToast.toast(message = 'Error deleting ' + game.name + ': ' + response.data.error,
+                    options = {
+                        title: 'Error',
+                        autoHideDelay: 5000
+                    });
+                return;
+            }
+            app.$bvToast.toast(message = 'Successfully deleted ' + game.name,
+                options = {
+                    title: 'Success',
+                    autoHideDelay: 5000
+                });
+            app.get_game_page(true);
+        })
+        .catch(function(error) {
+            console.log(error);
+            app.$bvToast.toast(message = 'Error deleting ' + game.name + ': ' + error,
                 options = {
                     title: 'Error',
                     autoHideDelay: 5000

@@ -7,7 +7,7 @@
     <!-- Add this to <head> -->
 
     <!-- Load required Bootstrap and BootstrapVue CSS -->
-    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
 
     <!-- Load polyfills to support older browsers -->
@@ -26,17 +26,20 @@
         Vue.use(BootstrapVue)
     </script>
 
-    <!-- DatetimePicker -->
+    <!-- VueDatetime -->
     <link rel="stylesheet" href="https://unpkg.com/vue-datetime@1.0.0-beta.10/dist/vue-datetime.css"></link>
     <script src="https://unpkg.com/luxon@1.22.0/build/global/luxon.min.js"></script>
     <script src="https://unpkg.com/weekstart@1.0.1/dist/commonjs/main.js"></script>
     <script src="https://unpkg.com/vue-datetime@1.0.0-beta.11/dist/vue-datetime.js"></script>
+
 
 </head>
 
 <body>
 
     <div id="game_list">
+
+        <b-toaster></b-toaster>
 
         <b-modal id="playing_game" title="Playing game" v-on:ok="end_playing_modal">
 			<p class="my-4" v-if="edit_game">
@@ -52,7 +55,7 @@
                     <label for="ego1">Name:</label>
                     <b-form-input id="ego1" v-model="edit_game.name"></b-form-input>
                     <label for="egolp">Last Played</label>
-                    <b-form-input id="egolp" v-model="edit_game.lastplayed_local"></b-form-input>
+                    <datetime id="egolp" v-model="edit_game.lastplayed_local" type="datetime" use12-hour="true"></datetime>
                     <label for="egopt">Total Playtime</label>
                     <b-form-input id="egopt" :value="nice_time(edit_game)" @change="update_playtime"></b-form-input>
                     <label for="egog">Genre:</label>
@@ -62,12 +65,13 @@
                     <label for="egoicon">Icon</label>
                     <b-form-input id="egoicon" v-model="edit_game.images[0]['url']"></b-form-input>
                     <label for="ego2">Import Date</label>
-                    <b-form-input id="ego2" v-model="edit_game.import_date_local"></b-form-input>
+                    <datetime id="ego2" v-model="edit_game.import_date_local" type="datetime" use12-hour="true" zone="local" value-zone="local"></datetime>
                     <label for="ego3">Finish Date</label>
-                    <b-form-input id="ego3" v-model="edit_game.finish_date_local"></b-form-input>
+                    <datetime id="ego3" v-model="edit_game.finish_date_local" type="datetime" use12-hour="true"></datetime>
                 </b-container>
             </p>
             <template v-slot:modal-footer="{ ok, cancel, finish }">
+                <b-button v-on:click="game_delete(edit_game)" variant="danger">Delete</b-button>
                 <b-button size="sm" variant="danger" @click="cancel()">
                     Cancel
                   </b-button>
@@ -103,6 +107,7 @@
                     <b-container cols=4>
                         <b-form-input v-model="add_name" placeholder="Game Name"></b-form-input>
                         <b-form-select v-model="add_source" :options="sources"></b-form-select>
+                        <b-form-checkbox v-model="add_nowplayed" value="nowplayed">Set now played</b-form-checkbox>
                         <b-button v-on:click="add_game">Add</b-button>
                     </b-container>
                 </b-card>
@@ -116,6 +121,8 @@
                             <b-col>
                                 <b-form-input v-model="name_filter" v-on:change="dosearch"></b-form-input>
                             </b-col>
+                        </b-row>
+                        <b-row>
                             <b-col>
                                 <b-form-select v-model="source_selected" :options="sources" v-on:change="dosearch"></b-form-select>
                             </b-col>

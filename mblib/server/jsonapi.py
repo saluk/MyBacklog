@@ -6,8 +6,6 @@ sys.path.insert(0, "../..")
 import mblib
 from mblib import games, syslog
 
-#game_log = syslog.SysLog("games_log.txt")
-
 @hug.not_found()
 def not_found_handler():
     return "Not Found"
@@ -43,7 +41,7 @@ class User:
         try:
             self.games = games.Games()
             self.games.load_games(filename=self.game_path)
-        except:
+        except Exception:
             traceback.print_exc()
     def save_games(self):
         try:
@@ -78,8 +76,8 @@ def list(user,start=0,count=50,name_filter='',source_filter='',finished_filter='
         playing["game"] = playing["game"].dict()
     return {"length":len_filtered, "total": len_total, "games":games_dict, "playing":playing}
 
-@hug.put(examples="user=saluk&game_name=Mario&source_name=NES")
-def game(user, game_name, source_name):
+@hug.put(examples="user=saluk&game_name=Mario&source_name=NES&nowplayed=1")
+def game(user, game_name, source_name, nowplayed):
     user = User(user, load_games=True)
     if not user.is_ready():
         return {"error":"no_games_saved"}
@@ -89,6 +87,8 @@ def game(user, game_name, source_name):
     game.generate_gameid()
     if user.games.find_matching_game(game):
         return {"error":"game exists"}
+    if nowplayed:
+        game.lastplayed = games.now()
     game, diff = user.games.force_update_game(game.gameid, game)
     user.games.revision += 1
     success, message = user.save_games()
@@ -96,6 +96,22 @@ def game(user, game_name, source_name):
         return {"gameid": game.gameid, "diff": diff}
     else:
         return {"gameid": game.gameid, "diff": diff, "error": message}
+
+@hug.delete(examples="user=saluk&game_id=123")
+def game(user, gameid):
+    user = User(user, load_games=True)
+    if not user.is_ready():
+        return {"error":"no_games_saved"}
+    game = user.games.find(gameid).copy()
+    if not game:
+        return {"error":"no game found"}
+    user.games.delete(game)
+    user.games.revision += 1
+    success, message = user.save_games()
+    if success:
+        return {"gameid": game.gameid}
+    else:
+        return {"gameid": game.gameid, "error": message}
 
 @hug.patch(examples="user=saluk&gameid=1234&finished=true")
 def game(user, gameid, finished=None, playtime=None, rawdata=None):
