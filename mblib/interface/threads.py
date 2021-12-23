@@ -51,7 +51,7 @@ class ProcessThread(QThread):
         if self.do_download:
             try:
                 if sync.download():
-                    self.app.update_gamelist_widget()
+                    self.gamelist.update_gamelist_widget()
             except Exception:
                 traceback.print_exc()
             self.do_download = None

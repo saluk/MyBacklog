@@ -138,6 +138,8 @@ class Game:
         self.games = None
         if "games" in kwargs:
             self.games = kwargs["games"]
+        if self.finish_date and len(self.finish_date) > 0 and not self.finish_date[0].isnumeric():
+            self.finish_date = ""
 
     def set(self, key, value):
         if key == "hidden" and value not in [0, 1]:
@@ -965,6 +967,7 @@ class Games:
         cur_game.package_data = game.package_data.copy()
         diff = changed(previous_data, cur_game.dict())
         if diff:
+            print(repr(cur_game.lastplayed))
             cur_game.data_changed_date = now()
             print(
                 "update 2",

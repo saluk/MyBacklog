@@ -431,7 +431,7 @@ class Steam:
             while 1:
                 if str(i) not in libraryfolders["libraryfolders"].keys():
                     break
-                paths.append(libraryfolders["libraryfolders"][str(i)] + "/steamapps")
+                paths.append(libraryfolders["libraryfolders"][str(i)]['path'] + "/steamapps")
                 i += 1
         print("found steam paths:", paths)
         return paths
