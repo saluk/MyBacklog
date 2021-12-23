@@ -132,8 +132,8 @@ def icon_for_game(
         elif mode == "gba":
             print("4.Download gba icon:", url)
             p = extract_icons.get_gba(url)
-        elif mode == "5.generate":
-            print("Generate custom icon:", url)
+        elif mode == "generate":
+            print("5.Generate custom icon:", url)
             generate_icon(fpath, game, filecache_root)
         # Save all images as .png
         if p:

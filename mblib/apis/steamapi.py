@@ -571,6 +571,8 @@ def shortcut_id(
 
 
 def make_grid_for_shortcut(name, target, iconpath, shortcutpath):
+    if not iconpath:
+        return
     if not os.path.exists(iconpath):
         return
     import shutil
@@ -606,9 +608,9 @@ def create_nonsteam_shortcuts(gamelist, shortcutpath, filecache_root=""):
             continue
         tags = ["mybacklog"]
         if game.finished:
-            tags += ["finished"]
+            tags += ["MBLfinished"]
         else:
-            tags += ["unfinished"]
+            tags += ["MBLunfinished"]
         logopath = icons.icon_for_game(
             game, 64, {}, filecache_root, category="logo", imode="path"
         )
