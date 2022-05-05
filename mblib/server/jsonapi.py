@@ -55,8 +55,8 @@ class User:
 def raw(data, request=None, response=None):
     return data
 
-@hug.get(examples="user=saluk&start=0&count=50&name_filter=mario&source_filter=steam&finished_filter=1")
-def list(user,start=0,count=50,name_filter='',source_filter='',finished_filter=''):
+@hug.get(examples="user=saluk&start=0&count=50&name_filter=mario&source_filter=steam&finished_filter=1&hidden=0")
+def list(user,start=0,count=50,name_filter='',source_filter='',finished_filter='',hidden=False):
     user = User(user, load_games=True)
     if not user.is_ready():
         return {"error":"no_games_saved"}
@@ -68,6 +68,8 @@ def list(user,start=0,count=50,name_filter='',source_filter='',finished_filter='
         l = [game for game in l if bool(game.finished)==bool(int(finished_filter))]
     if name_filter:
         l = [game for game in l if name_filter.lower() in game.name.lower()]
+    if not hidden:
+        l = [game for game in l if not game.hidden]
     len_filtered = len(l)
     l = l[int(start):int(start)+int(count)]
     games_dict = [game.dict() for game in l]
@@ -270,7 +272,7 @@ def bump_revision(user):
 
 @hug.get('/js', output=hug.output_format.file)
 def get_js_file(js_file):
-    if js_file in ['moment.js', 'mybacklog.js']:
+    if js_file in ['moment.js', 'mybacklog.js', 'notify.wav']:
         return 'js/'+js_file
 
 @hug.get('/', output=hug.output_format.html)

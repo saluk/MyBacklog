@@ -26,6 +26,9 @@ hour_min_sec_to_playtime = function(hour_sec) {
 }
 
 to_local_string = function(timestamp) {
+    if(timestamp===null) {
+        return ''
+    }
     return luxon.DateTime.fromFormat(timestamp, luxonfmt)
         .setZone('UTC', {keepLocalTime: true})
         .setZone('local').toString()
@@ -187,9 +190,17 @@ var app = new Vue({
         },
         update_screenshots(source) {
             update_screenshots(source);
+        },
+        interval () {
+            if(this.edit_game.is_playing) {
+                var audio = new Audio('/js?js_file=notify.wav')
+                audio.play()
+            }
         }
     }
 });
+
+var interval = setInterval(app.interval, 10 * 60 * 1000)
 
 var img = function(game) {}
 
